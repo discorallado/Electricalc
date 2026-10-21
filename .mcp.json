@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "rea": {
+      "command": "npx",
+      "args": ["-y", "rea-agents@6.7.0", "mcp"],
+      "env": {
+        "REA_JADX_MCP_JAR": "${HOME}/.local/share/rea/android/jadx-headless-mcp-0.7.1-all.jar"
+      }
+    }
+  }
+}
