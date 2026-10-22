@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="seccion_principal">Calculations</string>
+    <string name="calc_ley_ohm">Ohm\'s law and power</string>
+    <string name="calc_ley_ohm_desc">Voltage, current, resistance, impedance, power and power factor</string>
+    <string name="sistema">System</string>
+    <string name="sistema_continua">DC</string>
+    <string name="sistema_monofasica">Single-phase</string>
+    <string name="sistema_bifasica">Two-phase</string>
+    <string name="sistema_trifasica">Three-phase</string>
+    <string name="calcular">Calculate</string>
+    <string name="resultado">Result</string>
+    <string name="dato_a_calcular">Calculate</string>
+    <string name="datos_conocidos">Known values</string>
+    <string name="cos_phi">cosφ</string>
+    <string name="mag_tension">Voltage (V)</string>
+    <string name="mag_corriente">Current (A)</string>
+    <string name="mag_resistencia">Resistance (Ω)</string>
+    <string name="mag_impedancia">Impedance (Ω)</string>
+    <string name="mag_potencia_activa">Active power (W)</string>
+    <string name="mag_potencia_reactiva">Reactive power (var)</string>
+    <string name="mag_potencia_aparente">Apparent power (VA)</string>
+    <string name="mag_cos_phi">Power factor (cosφ)</string>
+    <string name="err_datos_insuficientes">Not enough data for this calculation</string>
+    <string name="err_no_aplica_continua">Not applicable to direct current</string>
+    <string name="err_valor_no_valido">Check the values entered</string>
+    <string name="err_cos_phi">Power factor must be between 0 and 1</string>
+    <string name="volver">Back</string>
+</resources>

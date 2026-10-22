@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Electricalc</string>
+    <string name="seccion_principal">Cálculos</string>
+    <string name="calc_ley_ohm">Ley de Ohm y potencias</string>
+    <string name="calc_ley_ohm_desc">Tensión, corriente, resistencia, impedancia, potencias y cosφ</string>
+    <string name="sistema">Sistema</string>
+    <string name="sistema_continua">Continua</string>
+    <string name="sistema_monofasica">Monofásica</string>
+    <string name="sistema_bifasica">Bifásica</string>
+    <string name="sistema_trifasica">Trifásica</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado</string>
+    <string name="dato_a_calcular">Calcular</string>
+    <string name="datos_conocidos">Datos conocidos</string>
+    <string name="cos_phi">cosφ</string>
+    <string name="mag_tension">Tensión (V)</string>
+    <string name="mag_corriente">Corriente (A)</string>
+    <string name="mag_resistencia">Resistencia (Ω)</string>
+    <string name="mag_impedancia">Impedancia (Ω)</string>
+    <string name="mag_potencia_activa">Potencia activa (W)</string>
+    <string name="mag_potencia_reactiva">Potencia reactiva (var)</string>
+    <string name="mag_potencia_aparente">Potencia aparente (VA)</string>
+    <string name="mag_cos_phi">Factor de potencia (cosφ)</string>
+    <string name="err_datos_insuficientes">Faltan datos para este cálculo</string>
+    <string name="err_no_aplica_continua">No aplica en corriente continua</string>
+    <string name="err_valor_no_valido">Revisa los valores ingresados</string>
+    <string name="err_cos_phi">El cosφ debe estar entre 0 y 1</string>
+    <string name="volver">Volver</string>
+</resources>
