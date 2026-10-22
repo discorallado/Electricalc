@@ -166,8 +166,38 @@ Historial de cálculos, exportación de memorias de cálculo en PDF, normativa c
 - La implementación (Fase 5) empieza apenas termine la Ola 1 de extracción; no hay
   que esperar al resto.
 
-## Decisiones pendientes
+## Decisiones tomadas
 
-1. Stack: Kotlin + Compose (recomendado), KMP, Flutter o web.
-2. ¿Incluimos normativa chilena SEC desde el inicio?
-3. ¿Modelo gratuito o con funciones PRO?
+1. **Stack**: Kotlin + Jetpack Compose, con `core-calc` en Kotlin puro.
+2. **Normativa chilena**: se incluyen los Pliegos Técnicos Normativos RIC de la SEC
+   (DS 8/2019) como norma seleccionable junto a IEC, NEC y CEC. Ver Fase 4b.
+3. **Modelo**: app gratuita, sin anuncios ni compras. La arquitectura deja un punto
+   de extensión (`FuncionPremium`) por si se monetiza más adelante, pero hoy todo está
+   desbloqueado.
+
+## Fase 4b: Normativa chilena (RIC)
+
+- Norma `RIC` seleccionable y por defecto cuando el país es Chile.
+- Pliegos relevantes para las calculadoras: RIC N°03 (alimentadores y demanda), N°04
+  (conductores y canalizaciones: capacidad de corriente, factores de corrección,
+  secciones mínimas), N°05 (protección contra tensiones peligrosas, diferenciales), N°06
+  (puesta a tierra) y N°10 (instalaciones de uso general).
+- Cada tabla y límite (p. ej. caídas de tensión máximas admisibles) se transcribe desde
+  el texto oficial publicado por la SEC, con la referencia exacta (pliego, tabla,
+  numeral) en `data/ric/`. No se usa ningún valor RIC sin su fuente.
+- Calculadoras con verificación RIC: sección y caída de tensión (con semáforo de
+  cumplimiento), protecciones, puesta a tierra, canalizaciones.
+
+## Estado
+
+- [x] Fase 0: REA, JADX y Apktool instalados; APK descompilado.
+- [x] Riesgos revisados: PairIP solo virtualiza receptores de sistema y anuncios, y el
+  código nativo solo hace verificación de licencia. Las fórmulas están en el DEX legible.
+- [x] Fase 1 (parcial): menú completo extraído a `spec/catalogo.json` (155 herramientas
+  en 5 secciones + 66 fichas de formulario, con marca PRO).
+- [x] Proyecto Gradle con `core-calc` (Kotlin JVM) y tests JUnit 5.
+- [x] Ola 1 (motor): `LeyOhm` cubre V, I, R, Z, P, Q, S y cosφ en CC, monofásica,
+  bifásica y trifásica. Coincide con la app de referencia en 2.016 vectores dorados.
+- [ ] Módulo `app` (Compose). Necesita el SDK de Android, que no se puede descargar en el
+  entorno de nube actual (dl.google.com bloqueado); se compila en CI o en local.
+- [ ] Olas 2 a 7.

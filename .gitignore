@@ -1,3 +1,9 @@
 apk/
 *.apk
 *.xapk
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.kotlin/

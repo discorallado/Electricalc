@@ -1,0 +1,2056 @@
+[
+ {
+  "id": "principale",
+  "titulo_es": "Principal",
+  "titulo_en": "Main",
+  "items": [
+   {
+    "string": "calcolo_sezione",
+    "titulo_es": "Dimensionamiento de conductores",
+    "titulo_en": "Conductor sizing",
+    "fragment": "FragmentTabCalcoloSezione",
+    "icono": "ico_sezione",
+    "pro": false,
+    "clave": "ActivityCalcoloSezioneIEC",
+    "formula": "FragmentFormulaTabCalcoloSezione"
+   },
+   {
+    "string": "calcolo_sezione_e_coordinamento_disp_protezione",
+    "titulo_es": "Dimensionamiento de conductores y coordinación del dispositivo de protección",
+    "titulo_en": "Conductor sizing and protective device coordination",
+    "fragment": "FragmentTabCalcoloSezioneAvanzata",
+    "icono": "ico_sezione_e_protezione",
+    "pro": true,
+    "clave": "calcolo_sezione_avanzata",
+    "formula": "FragmentFormulaTabCalcoloSezioneAvanzata"
+   },
+   {
+    "string": "calcolo_caduta",
+    "titulo_es": "Cálculo de caída de tensión",
+    "titulo_en": "Calculation of voltage drop",
+    "fragment": "FragmentCalcoloCaduta",
+    "icono": "ico_caduta",
+    "pro": false,
+    "clave": "ActivityCalcoloCaduta",
+    "formula": "FragmentFormulaCaduta"
+   },
+   {
+    "string": "calcolo_intensita_corrente",
+    "titulo_es": "Cálculo de la corriente",
+    "titulo_en": "Calculation of current",
+    "fragment": "FragmentCalcoloIntensita",
+    "icono": "ico_intensita",
+    "pro": false,
+    "clave": "ActivityCalcoloIntensita",
+    "formula": "FragmentFormulaCorrente"
+   },
+   {
+    "string": "calcolo_tensione",
+    "titulo_es": "Cálculo de la tensión",
+    "titulo_en": "Calculation of voltage",
+    "fragment": "FragmentCalcoloTensione",
+    "icono": "ico_tensione",
+    "pro": false,
+    "clave": "ActivityCalcoloTensione",
+    "formula": "FragmentFormulaTensione"
+   },
+   {
+    "string": "calcolo_potenza",
+    "titulo_es": "Cálculo de la potencia activa",
+    "titulo_en": "Calculation of active power",
+    "fragment": "FragmentCalcoloPotenzaAttiva",
+    "icono": "ico_potenza",
+    "pro": false,
+    "clave": "ActivityCalcoloPotenza",
+    "formula": "FragmentFormulaPotenzaAttiva"
+   },
+   {
+    "string": "calcolo_va",
+    "titulo_es": "Cálculo de la potencia aparente",
+    "titulo_en": "Calculation of apparent power",
+    "fragment": "FragmentCalcoloPotenzaApparente",
+    "icono": "ico_va",
+    "pro": false,
+    "clave": "ActivityCalcoloVA",
+    "formula": "FragmentFormulaPotenzaApparente"
+   },
+   {
+    "string": "calcolo_potenza_reattiva",
+    "titulo_es": "Cálculo de la potencia reactiva",
+    "titulo_en": "Calculation of reactive power",
+    "fragment": "FragmentCalcoloPotenzaReattiva",
+    "icono": "ico_var",
+    "pro": false,
+    "clave": "ActivityCalcoloPotenzaReattiva",
+    "formula": "FragmentFormulaPotenzaReattiva"
+   },
+   {
+    "string": "calcolo_fattore_potenza",
+    "titulo_es": "Cálculo del factor de potencia",
+    "titulo_en": "Calculation of power factor",
+    "fragment": "FragmentCalcoloFattorePotenza",
+    "icono": "ico_fattore_potenza",
+    "pro": false,
+    "clave": "ActivityCalcoloFattorePotenza",
+    "formula": "FragmentFormulaFattorePotenza"
+   },
+   {
+    "string": "calcolo_resistenza",
+    "titulo_es": "Cálculo de la resistencia",
+    "titulo_en": "Calculation of resistance",
+    "fragment": "FragmentCalcoloResistenza",
+    "icono": "ico_resistenza",
+    "pro": false,
+    "clave": "ActivityCalcoloResistenza",
+    "formula": "FragmentFormulaResistenza"
+   },
+   {
+    "string": "calcolo_impedenza",
+    "titulo_es": "Cálculo de la impedancia",
+    "titulo_en": "Calculation of impedance",
+    "fragment": "FragmentCalcoloImpedenza",
+    "icono": "ico_impedenza",
+    "pro": false,
+    "clave": "ActivityCalcoloImpedenza",
+    "formula": "FragmentFormulaImpedenza"
+   },
+   {
+    "string": "lunghezza_massima_cavo_caduta",
+    "titulo_es": "Longitud máxima del cable (ΔV)",
+    "titulo_en": "Maximum wire length (ΔV)",
+    "fragment": "FragmentLunghezzaMassimaCavoCaduta",
+    "icono": "ico_lunghezza",
+    "pro": false,
+    "clave": "ActivityLunghezzaMassimaCavo",
+    "formula": "FragmentFormulaLunghezzaCavoCaduta"
+   },
+   {
+    "string": "lunghezza_massima_cavo_cortocircuito",
+    "titulo_es": "Longitud máxima del cable (Isc)",
+    "titulo_en": "Maximum wire length (Isc)",
+    "fragment": "FragmentLunghezzaMassimaCavoCortocircuito",
+    "icono": "ico_lunghezza_2",
+    "pro": false,
+    "clave": "lunghezza_massima_cavo_cortocircuito",
+    "formula": "FragmentFormulaLunghezzaCavoCortocircuito"
+   },
+   {
+    "string": "portata_conduttori_isolati",
+    "titulo_es": "Capacidad de corriente de conductores aislados",
+    "titulo_en": "Current carrying capacity of insulated conductors",
+    "fragment": "FragmentTabPortataConduttoriIsolati",
+    "icono": "ico_portata",
+    "pro": true,
+    "clave": "ActivityCalcoloPortata",
+    "formula": null
+   },
+   {
+    "string": "portata_conduttori_nudi",
+    "titulo_es": "Capacidad de corriente de conductores desnudos / con aislamiento mineral",
+    "titulo_en": "Current carrying capacity of bare / mineral-insulated conductors",
+    "fragment": "FragmentTabPortataConduttoriNudi",
+    "icono": "ico_conduttore_nudo",
+    "pro": true,
+    "clave": "ActivityPortataConduttoriNudiIEC",
+    "formula": null
+   },
+   {
+    "string": "portata_barre",
+    "titulo_es": "Capacidad de corriente de barras colectoras",
+    "titulo_en": "Current carrying capacity of busbar",
+    "fragment": "FragmentPortataBarre",
+    "icono": "ico_barre",
+    "pro": true,
+    "clave": "ActivityPortataBarre",
+    "formula": "FragmentFormulaPortataBarre"
+   },
+   {
+    "string": "dimensionamento_canali",
+    "titulo_es": "Dimensionamiento de conductos y bandejas de cables",
+    "titulo_en": "Conduit and cable tray sizing",
+    "fragment": "FragmentTabDimensionamentoCanali",
+    "icono": "ico_canaletta",
+    "pro": true,
+    "clave": "ActivityDimensionamentoCanaliIEC",
+    "formula": null
+   },
+   {
+    "string": "scelta_dispositivo_protezione",
+    "titulo_es": "Dimensionamiento de dispositivos de protección",
+    "titulo_en": "Protective device sizing",
+    "fragment": "FragmentTabDimensionamentoDispositivoProtezione",
+    "icono": "ico_disp_protezione",
+    "pro": true,
+    "clave": "ActivityDispositivoProtezioneIEC",
+    "formula": "FragmentFormulaDispositivoProtezione"
+   },
+   {
+    "string": "protezione_cavo_cortocircuito",
+    "titulo_es": "Protección de cables contra cortocircuitos",
+    "titulo_en": "Cable protection from short-circuit",
+    "fragment": "FragmentTabProtezioneCavoCortoCircuito",
+    "icono": "ico_protezione_cavo_cortocircuito",
+    "pro": true,
+    "clave": "protezione_cavo_cortocircuito",
+    "formula": "FragmentFormulaProtezioneCavoCortocircuito"
+   },
+   {
+    "string": "energia_specifica_passante",
+    "titulo_es": "Energía específica admisible del cable (K²S²)",
+    "titulo_en": "Admissible specific energy of the cable (K²S²)",
+    "fragment": "FragmentTabEnergiaSpecificaPassante",
+    "icono": "ico_k2s2",
+    "pro": true,
+    "clave": "ActivityEnergiaSpecificaPassante",
+    "formula": "FragmentFormulaTabEnergiaSpecifica"
+   },
+   {
+    "string": "corrente_impiego",
+    "titulo_es": "Corriente de empleo:",
+    "titulo_en": "Design current:",
+    "fragment": "FragmentCorrenteImpiego",
+    "icono": "ico_corrente_impiego",
+    "pro": false,
+    "clave": "ActivityCorrenteImpiego",
+    "formula": "FragmentFormulaCorrenteImpiego"
+   },
+   {
+    "string": "reattanza",
+    "titulo_es": "Reactancia",
+    "titulo_en": "Reactance",
+    "fragment": "FragmentReattanza",
+    "icono": "ico_reattanza",
+    "pro": true,
+    "clave": "ActivityReattanza",
+    "formula": "FragmentFormulaReattanza"
+   },
+   {
+    "string": "impedenza_da_resistenza_e_reattanza",
+    "titulo_es": "Impedancia a partir de resistencia y reactancia",
+    "titulo_en": "Impedance from resistance and reactance",
+    "fragment": "FragmentImpedenzaDaResistenzaEReattanza",
+    "icono": "ico_impedenza_da_resistenza_e_reattanza",
+    "pro": true,
+    "clave": "ActivityImpedenza",
+    "formula": "FragmentFormulaImpedenzaDaResistenzaEReattanza"
+   },
+   {
+    "string": "rifasamento",
+    "titulo_es": "Corrección del factor de potencia",
+    "titulo_en": "Power factor correction",
+    "fragment": "FragmentRifasamento",
+    "icono": "ico_rifasamento",
+    "pro": true,
+    "clave": "ActivityRifasamento",
+    "formula": "FragmentFormulaRifasamento"
+   },
+   {
+    "string": "rifasamento_trasformatore",
+    "titulo_es": "Corrección del factor de potencia de transformadores MT/BT",
+    "titulo_en": "Power factor correction of MV/LV transformers",
+    "fragment": "FragmentRifasamentoTrasformatore",
+    "icono": "ico_rifasamento_trasformatore",
+    "pro": true,
+    "clave": "ActivityRifasamentoTrasformatore",
+    "formula": "FragmentFormulaRifasamentoTrasformatore"
+   },
+   {
+    "string": "potenza_resa_condensatore",
+    "titulo_es": "Potencia del condensador a una tensión diferente",
+    "titulo_en": "Capacitor power at a different voltage",
+    "fragment": "FragmentPotenzaResaCondensatore",
+    "icono": "ico_potenza_resa_condensatore",
+    "pro": true,
+    "clave": "ActivityPotenzaResaCondensatore",
+    "formula": "FragmentFormulaPotenzaResaCondensatore"
+   },
+   {
+    "string": "coordinamento_differenziale_terra",
+    "titulo_es": "Sistema de puesta a tierra y coordinación con dispositivo diferencial",
+    "titulo_en": "Earthing system and coordination with residual current device",
+    "fragment": "FragmentImpiantoDiTerra",
+    "icono": "ico_terra",
+    "pro": false,
+    "clave": "ActivityImpiantoDiTerra",
+    "formula": "FragmentFormulaImpiantoDiTerra"
+   },
+   {
+    "string": "calcolo_icc_max",
+    "titulo_es": "Corriente de cortocircuito en un punto específico de la línea",
+    "titulo_en": "Short-circuit current at a specific point of the line",
+    "fragment": "FragmentCorrenteCortoCircuitoConoscendoQuellaAMonte",
+    "icono": "ico_icc",
+    "pro": true,
+    "clave": "ActivityIccInUnDatoPuntoDellaLinea",
+    "formula": "FragmentFormulaCorrenteCortoCircuito"
+   },
+   {
+    "string": "calcolo_icc_max_cabina_trasformazione",
+    "titulo_es": "Corriente de cortocircuito con subestación transformadora",
+    "titulo_en": "Short-circuit current with transformer substation",
+    "fragment": "FragmentCorrenteCortoCircuitoCabinaTrasformazione",
+    "icono": "ico_icct",
+    "pro": true,
+    "clave": "ActivityCorrenteCortoCircuitoTrasformatore",
+    "formula": "FragmentFormulaCorrenteCortoCircuitoTrasf"
+   },
+   {
+    "string": "calcolo_icc_min",
+    "titulo_es": "Corriente de cortocircuito mínima",
+    "titulo_en": "Minimum short-circuit current",
+    "fragment": "FragmentCorrenteCortoCircuitoMinima",
+    "icono": "ico_icc_approssimata",
+    "pro": false,
+    "clave": "ActivityIccMinApprossimato",
+    "formula": "FragmentFormulaCorrenteCortoCircuitoMin"
+   },
+   {
+    "string": "resistenza_reattanza_impedenza_cavo",
+    "titulo_es": "Resistencia, reactancia e impedancia del cable",
+    "titulo_en": "Cable resistance, reactance and impedance",
+    "fragment": "FragmentResistenzaConduttore",
+    "icono": "ico_resistenza_conduttore",
+    "pro": false,
+    "clave": "ActivityResistenzaCavo",
+    "formula": "FragmentFormulaResistenzaCavo"
+   },
+   {
+    "string": "calcolo_temperatura_cavo",
+    "titulo_es": "Cálculo de la temperatura del cable",
+    "titulo_en": "Calculation of the cable temperature",
+    "fragment": "FragmentTabTemperaturaCavo",
+    "icono": "ico_temperatura_cavo",
+    "pro": true,
+    "clave": "ActivityCalcoloTemperaturaCavoIEC",
+    "formula": "FragmentFormulaTemperaturaCavo"
+   },
+   {
+    "string": "perdite_potenza_cavi",
+    "titulo_es": "Pérdidas de potencia en cables",
+    "titulo_en": "Power losses in cables",
+    "fragment": "FragmentPerditePotenzaCavo",
+    "icono": "ico_perdite_potenza_cavo",
+    "pro": true,
+    "clave": "ActivityPerditePotenzaCavo",
+    "formula": "FragmentFormulaPerditaPotenzaCavo"
+   },
+   {
+    "string": "corrente_neutro",
+    "titulo_es": "Corriente del neutro",
+    "titulo_en": "Neutral current",
+    "fragment": "FragmentCorrenteNeutro",
+    "icono": "ico_corrente_neutro",
+    "pro": true,
+    "clave": "corrente_neutro",
+    "formula": "FragmentFormulaCorrenteNeutro"
+   },
+   {
+    "string": "calcolo_caduta_con_carichi_distributi",
+    "titulo_es": "Caída de tensión con cargas distribuidas",
+    "titulo_en": "Voltage drop with distributed loads",
+    "fragment": "FragmentCalcoloCadutaCarichiDistribuiti",
+    "icono": "ico_caduta_carichi_distribuiti",
+    "pro": true,
+    "clave": "calcolo_caduta_carichi_distribuiti",
+    "formula": "FragmentFormulaCadutaCarichiDistribuiti"
+   },
+   {
+    "string": "calcolo_sezione_con_carichi_distributi",
+    "titulo_es": "Dimensionamiento de conductores con cargas distribuidas",
+    "titulo_en": "Conductor sizing with distributed loads",
+    "fragment": "FragmentTabCalcoloSezioneCarichiDistribuiti",
+    "icono": "ico_sezione_carichi_distribuiti",
+    "pro": true,
+    "clave": "calcolo_sezione_carichi_distribuiti",
+    "formula": "FragmentFormulaTabCalcoloSezioneAvanzata"
+   },
+   {
+    "string": "codice_resistore",
+    "titulo_es": "Código de colores de resistencias",
+    "titulo_en": "Resistor color code",
+    "fragment": "FragmentCodiceColoreResistori",
+    "icono": "ico_retma",
+    "pro": false,
+    "clave": "ActivityCodiceResistore",
+    "formula": "FragmentFormulaCodiceResistori"
+   },
+   {
+    "string": "codice_colori_induttore",
+    "titulo_es": "Código de colores de inductores",
+    "titulo_en": "Inductor color code",
+    "fragment": "FragmentCodiceColoreInduttori",
+    "icono": "ico_induttore",
+    "pro": false,
+    "clave": "ActivityCodiceInduttore",
+    "formula": "FragmentFormulaCodiceInduttori"
+   },
+   {
+    "string": "colore_da_valore",
+    "titulo_es": "Colores de una resistencia según su valor",
+    "titulo_en": "Resistor colors from value",
+    "fragment": "FragmentColoreResistoreDaValore",
+    "icono": "ico_res_valore",
+    "pro": false,
+    "clave": "ActivityResColoreDaValore",
+    "formula": "FragmentFormulaCodiceResistori"
+   },
+   {
+    "string": "codice_resistori_smd",
+    "titulo_es": "Código de resistencias SMD",
+    "titulo_en": "SMD resistor code",
+    "fragment": "FragmentCodiceResistoriSMD",
+    "icono": "ico_res_smd",
+    "pro": false,
+    "clave": "ActivityCodiceResSMD",
+    "formula": null
+   },
+   {
+    "string": "codice_condensatore",
+    "titulo_es": "Código de condensadores",
+    "titulo_en": "Capacitor code",
+    "fragment": "FragmentCodiceCondensatori",
+    "icono": "ico_codice_condensatore",
+    "pro": false,
+    "clave": "ActivityCodiceCondensatori",
+    "formula": null
+   },
+   {
+    "string": "tabella_codici_condensatore",
+    "titulo_es": "Tabla de códigos de condensadores",
+    "titulo_en": "Table of capacitor codes",
+    "fragment": "FragmentTabellaCodiceCondensatori",
+    "icono": "ico_tabella_condensatori",
+    "pro": false,
+    "clave": "ActivityTabellaCodiceCondensatori",
+    "formula": null
+   },
+   {
+    "string": "codice_induttori",
+    "titulo_es": "Código alfanumérico de inductores",
+    "titulo_en": "Inductor alphanumeric code",
+    "fragment": "FragmentCodiceAlfanumericoInduttori",
+    "icono": "ico_codice_induttore",
+    "pro": false,
+    "clave": "ActivityTabellaCodiceInduttori",
+    "formula": null
+   },
+   {
+    "string": "fusibili",
+    "titulo_es": "Fusibles (Marcado, Cartucho, Tipos D, NH, Automoción)",
+    "titulo_en": "Fuses (Marking, Cartridge, D-Types, NH, Automotive)",
+    "fragment": "FragmentTabFusibili",
+    "icono": "ico_fusibile",
+    "pro": false,
+    "clave": "ActivityFusibili",
+    "formula": null
+   },
+   {
+    "string": "somma_resistori",
+    "titulo_es": "Suma de resistencias",
+    "titulo_en": "Sum of resistors",
+    "fragment": "FragmentTabSommaResistenze",
+    "icono": "ico_somma_res",
+    "pro": false,
+    "clave": "ActivitySommaResistori",
+    "formula": "FragmentFormulaSommaResistenze"
+   },
+   {
+    "string": "somma_condensatori",
+    "titulo_es": "Suma de condensadores",
+    "titulo_en": "Sum of capacitors",
+    "fragment": "FragmentTabSommaCondensatori",
+    "icono": "ico_somma_condensatori",
+    "pro": false,
+    "clave": "ActivitySommaCondensatori",
+    "formula": "FragmentFormulaSommaCondensatori"
+   },
+   {
+    "string": "frequenza_risonanza",
+    "titulo_es": "Frecuencia de resonancia",
+    "titulo_en": "Resonant frequency",
+    "fragment": "FragmentFrequenzaRisonanza",
+    "icono": "ico_frisonanza",
+    "pro": true,
+    "clave": "ActivityFrequenzaRisonanza",
+    "formula": "FragmentFormulaFrequenzaRisonanza"
+   },
+   {
+    "string": "partitore_tensione",
+    "titulo_es": "Divisor de tensión",
+    "titulo_en": "Voltage divider",
+    "fragment": "FragmentPartitoreTensione",
+    "icono": "ico_partitore",
+    "pro": true,
+    "clave": "ActivityPartitoreTensione",
+    "formula": "FragmentFormulaPartitoreTensione"
+   },
+   {
+    "string": "partitore_corrente",
+    "titulo_es": "Divisor de corriente",
+    "titulo_en": "Current divider",
+    "fragment": "FragmentPartitoreCorrente",
+    "icono": "ico_partitore_corrente",
+    "pro": true,
+    "clave": "ActivityPartitoreCorrente",
+    "formula": "FragmentFormulaPartitoreCorrente"
+   },
+   {
+    "string": "stabilizzatore_tensione",
+    "titulo_es": "Diodo Zener como estabilizador de tensión",
+    "titulo_en": "Zener diode as voltage stabilizer",
+    "fragment": "FragmentStabilizzatoreTensioneDiodoZener",
+    "icono": "ico_zener",
+    "pro": true,
+    "clave": "ActivityStabilizzatoreTensione",
+    "formula": "FragmentFormulaStabilizzatoreTensioneZener"
+   },
+   {
+    "string": "resistenza_ridurre_tensione",
+    "titulo_es": "Resistencia para reducir la tensión",
+    "titulo_en": "Resistor to reduce voltage",
+    "fragment": "FragmentResistenzaRidurreTensione",
+    "icono": "ico_res_ridurre",
+    "pro": false,
+    "clave": "ActivityResistenzaRidurreTensione",
+    "formula": "FragmentFormulaResistenzaRidurreTensione"
+   },
+   {
+    "string": "resistenza_per_led",
+    "titulo_es": "Resistencia para LED",
+    "titulo_en": "Resistor for LED",
+    "fragment": "FragmentResistenzaLed",
+    "icono": "ico_res_led",
+    "pro": false,
+    "clave": "ActivityResistenzaLed",
+    "formula": "FragmentFormulaResistenzaRidurreTensione"
+   },
+   {
+    "string": "durata_batteria",
+    "titulo_es": "Duración de la batería",
+    "titulo_en": "Battery life",
+    "fragment": "FragmentDurataBatteria",
+    "icono": "ico_batteria",
+    "pro": false,
+    "clave": "ActivityDurataBatteria",
+    "formula": "FragmentFormulaDurataBatteria"
+   },
+   {
+    "string": "trasformatore",
+    "titulo_es": "Devanado primario/secundario del transformador",
+    "titulo_en": "Primary/Secondary winding of transformer",
+    "fragment": "FragmentPrimarioSecondarioTrasformatore",
+    "icono": "ico_trasformatore",
+    "pro": false,
+    "clave": "ActivityTrasformatore",
+    "formula": "FragmentFormulaPrimarioSecondarioTrasformatore"
+   },
+   {
+    "string": "lunghezza_antenna",
+    "titulo_es": "Longitud de la antena",
+    "titulo_en": "Antenna length",
+    "fragment": "FragmentLunghezzaAntenna",
+    "icono": "ico_antenna",
+    "pro": false,
+    "clave": "ActivityLunghezzaAntenna",
+    "formula": "FragmentFormulaLunghezzaAntenna"
+   },
+   {
+    "string": "calcolo_dimensione_video",
+    "titulo_es": "CCTV: dimensionamiento de disco duro y ancho de banda",
+    "titulo_en": "CCTV: hard disk and bandwidth sizing",
+    "fragment": "FragmentDimensioneVideo",
+    "icono": "ico_dimensione_video",
+    "pro": false,
+    "clave": "ActivityDimensioneVideo",
+    "formula": null
+   },
+   {
+    "string": "sensori_temperatura",
+    "titulo_es": "Sensores de temperatura (PT/NI/CU, NTC, Termopares…)",
+    "titulo_en": "Temperature sensors (PT/NI/CU, NTC, Thermocouples…)",
+    "fragment": "FragmentTabTermistori",
+    "icono": "ico_sonde_temperatura",
+    "pro": true,
+    "clave": "ActivityTermistoriPT100",
+    "formula": "FragmentFormulaTermistori"
+   },
+   {
+    "string": "valori_segnali_analogici",
+    "titulo_es": "Valores de señal analógica (Conversión entre rangos)",
+    "titulo_en": "Analog signal values (Conversion between ranges)",
+    "fragment": "FragmentValoriSegnaliAnalogici",
+    "icono": "ico_valori_analogici",
+    "pro": true,
+    "clave": "ActivityValoriSegnaliAnalogici",
+    "formula": null
+   },
+   {
+    "string": "effetto_joule",
+    "titulo_es": "Efecto Joule",
+    "titulo_en": "Joule effect",
+    "fragment": "FragmentEffettoJoule",
+    "icono": "ico_joule",
+    "pro": false,
+    "clave": "ActivityEffettoJoule",
+    "formula": "FragmentFormulaEffettoJoule"
+   },
+   {
+    "string": "calcolo_crl",
+    "titulo_es": "Evaluación del riesgo de sobretensiones de origen atmosférico",
+    "titulo_en": "Risk assessment of overvoltages with atmospheric origin",
+    "fragment": "FragmentNecessitaSpd",
+    "icono": "ico_necessita_spd",
+    "pro": true,
+    "clave": "ActivityCRL",
+    "formula": "FragmentFormulaCrl"
+   },
+   {
+    "string": "protezione_linee_emergenza",
+    "titulo_es": "Protección para líneas de alumbrado de emergencia",
+    "titulo_en": "Protection for emergency lighting lines",
+    "fragment": "FragmentDispProtezioneEmergenza",
+    "icono": "ico_protezione_emergenza",
+    "pro": true,
+    "clave": "protezione_linee_emergenza",
+    "formula": "FragmentFormulaDispProtezioneEmergenza"
+   }
+  ]
+ },
+ {
+  "id": "motore",
+  "titulo_es": "Motor",
+  "titulo_en": "Motor",
+  "items": [
+   {
+    "string": "corrente_motore",
+    "titulo_es": "Corriente del motor",
+    "titulo_en": "Motor current",
+    "fragment": "FragmentCorrenteMotore",
+    "icono": "ico_intensita",
+    "pro": false,
+    "clave": "ActivityCorrenteMotore",
+    "formula": "FragmentFormulaCorrenteMotore"
+   },
+   {
+    "string": "potenza_motore",
+    "titulo_es": "Potencia del motor",
+    "titulo_en": "Motor power",
+    "fragment": "FragmentPotenzaMotore",
+    "icono": "ico_potenza",
+    "pro": false,
+    "clave": "ActivityPotenzaMotore",
+    "formula": "FragmentFormulaPotenzaMotore"
+   },
+   {
+    "string": "tensione_motore",
+    "titulo_es": "Tensión del motor",
+    "titulo_en": "Motor voltage",
+    "fragment": "FragmentTensioneMotore",
+    "icono": "ico_tensione",
+    "pro": false,
+    "clave": "ActivityTensioneMotore",
+    "formula": "FragmentFormulaTensioneMotore"
+   },
+   {
+    "string": "fattore_potenza_motore",
+    "titulo_es": "Factor de potencia del motor",
+    "titulo_en": "Motor power factor",
+    "fragment": "FragmentFattorePotenzaMotore",
+    "icono": "ico_fattore_potenza",
+    "pro": false,
+    "clave": "ActivityFattorePotenzaMotore",
+    "formula": "FragmentFormulaFattorePotenzaMotore"
+   },
+   {
+    "string": "rendimento_motore",
+    "titulo_es": "Rendimiento del motor",
+    "titulo_en": "Motor efficiency",
+    "fragment": "FragmentRendimentoMotore",
+    "icono": "ico_rendimento",
+    "pro": false,
+    "clave": "ActivityRendimentoMotore",
+    "formula": "FragmentFormulaRendimentoMotore"
+   },
+   {
+    "string": "da_trifase_a_monofase",
+    "titulo_es": "Motor trifásico a monofásico",
+    "titulo_en": "Motor from three-phase to single-phase",
+    "fragment": "FragmentMotoreDaTrifaseAMonofase",
+    "icono": "ico_motore_da_trifase_a_monofase",
+    "pro": false,
+    "clave": "ActivityCalcoloCondensatore",
+    "formula": "FragmentFormulaMotoreTrifaseMonofase"
+   },
+   {
+    "string": "condensatore_motore_monofase",
+    "titulo_es": "Condensador de marcha para motor monofásico",
+    "titulo_en": "Single-phase motor run capacitor",
+    "fragment": "FragmentCondensatoreAvviamentoMotore",
+    "icono": "ico_condensatore_avviamento",
+    "pro": false,
+    "clave": "ActivityCondensatoreMonofase",
+    "formula": "FragmentFormulaCondensatoreAvviamentoMotore"
+   },
+   {
+    "string": "velocita_motore",
+    "titulo_es": "Velocidad del motor",
+    "titulo_en": "Motor speed",
+    "fragment": "FragmentVelocitaMotore",
+    "icono": "ico_giri",
+    "pro": true,
+    "clave": "ActivityGiriMotore",
+    "formula": "FragmentFormulaVelocitaMotore"
+   },
+   {
+    "string": "scorrimento_motore",
+    "titulo_es": "Deslizamiento del motor",
+    "titulo_en": "Motor slip",
+    "fragment": "FragmentScorrimentoMotore",
+    "icono": "ico_scorrimento",
+    "pro": true,
+    "clave": "ActivityScorrimentoMotore",
+    "formula": "FragmentFormulaScorrimentoMotore"
+   },
+   {
+    "string": "coppia_massima",
+    "titulo_es": "Potencia / Par máximo",
+    "titulo_en": "Power / Maximum torque",
+    "fragment": "FragmentCoppiaMassima",
+    "icono": "ico_coppia",
+    "pro": true,
+    "clave": "ActivityCoppiaMassima",
+    "formula": "FragmentFormulaCoppiaMassima"
+   },
+   {
+    "string": "motor_full_load_current",
+    "titulo_es": "Corriente a plena carga del motor (NEC)",
+    "titulo_en": "Motor full-load current (NEC)",
+    "fragment": "FragmentFullLoadCurrent",
+    "icono": "ico_flc_motore",
+    "pro": true,
+    "clave": "ActivityFullLoadCurrent",
+    "formula": null
+   },
+   {
+    "string": "schema_mot_trifase_6",
+    "titulo_es": "Esquema de conexión de motor trifásico (6 bornes)",
+    "titulo_en": "3-phase motor wiring diagram (6 terminals)",
+    "fragment": "FragmentSchemaMotoreTrifase6Morsetti",
+    "icono": "ico_schema_mot_trif_6",
+    "pro": false,
+    "clave": "ActivitySchemaMotoreTrifase6Morsetti",
+    "formula": null
+   },
+   {
+    "string": "schema_mot_trifase_9",
+    "titulo_es": "Esquema de conexión de motor trifásico (9 bornes)",
+    "titulo_en": "3-phase motor wiring diagram (9 terminals)",
+    "fragment": "FragmentSchemaMotoreTrifase9Morsetti",
+    "icono": "ico_schema_mot_trif_9",
+    "pro": false,
+    "clave": "ActivitySchemaMotoreTrifase9Morsetti",
+    "formula": null
+   },
+   {
+    "string": "schema_mot_trifase_12",
+    "titulo_es": "Esquema de conexión de motor trifásico (12 bornes)",
+    "titulo_en": "3-phase motor wiring diagram (12 terminals)",
+    "fragment": "FragmentSchemaMotoreTrifase12Morsetti",
+    "icono": "ico_schema_mot_trif_12",
+    "pro": false,
+    "clave": "ActivitySchemaMotoreTrifase12Morsetti",
+    "formula": null
+   },
+   {
+    "string": "collegamenti_motore",
+    "titulo_es": "Conexiones del motor",
+    "titulo_en": "Motor connections",
+    "fragment": "FragmentTabConnessioniMotore",
+    "icono": "ico_connessioni_motore",
+    "pro": false,
+    "clave": "ActivityConnessioniMotore",
+    "formula": null
+   },
+   {
+    "string": "marcatura_terminali_del_motore",
+    "titulo_es": "Marcado de bornes del motor",
+    "titulo_en": "Motor terminals marking",
+    "fragment": "FragmentMotorTerminalMarking",
+    "icono": "ico_marcatura_terminali_motore",
+    "pro": false,
+    "clave": "ActivityMarcaturaTerminaliMotore",
+    "formula": null
+   },
+   {
+    "string": "classi_isolamento_motore",
+    "titulo_es": "Clase de aislamiento del motor",
+    "titulo_en": "Insulation class of the motor",
+    "fragment": "FragmentClassiIsolamentoMotore",
+    "icono": "ico_classe_isolamento_motore",
+    "pro": false,
+    "clave": "ActivityClassiIsolamentoMotore",
+    "formula": null
+   }
+  ]
+ },
+ {
+  "id": "conversioni",
+  "titulo_es": "Conversiones",
+  "titulo_en": "Conversions",
+  "items": [
+   {
+    "string": "conversione_triangolo_stella",
+    "titulo_es": "Conversión triángulo-estrella",
+    "titulo_en": "Delta-star conversion",
+    "fragment": "FragmentConversioneTriangoloStella",
+    "icono": "ico_triangolo_stella",
+    "pro": true,
+    "clave": "ActivityStellaTriangolo",
+    "formula": "FragmentFormulaTriangoloStella"
+   },
+   {
+    "string": "conversione_potenza",
+    "titulo_es": "Conversión de potencia",
+    "titulo_en": "Power conversion",
+    "fragment": "FragmentConversionePotenza",
+    "icono": "ico_motore",
+    "pro": false,
+    "clave": "ActivityConversionePotenza",
+    "formula": null
+   },
+   {
+    "string": "tabella_awg",
+    "titulo_es": "Tabla de conversión AWG",
+    "titulo_en": "AWG conversion table",
+    "fragment": "FragmentConversioneAWG",
+    "icono": "ico_awg_mm2",
+    "pro": false,
+    "clave": "ActivityConversioneAWG",
+    "formula": null
+   },
+   {
+    "string": "tabella_swg",
+    "titulo_es": "Tabla de conversión SWG",
+    "titulo_en": "SWG conversion table",
+    "fragment": "FragmentConversioneSWG",
+    "icono": "ico_swg",
+    "pro": false,
+    "clave": "ActivityConversioneSWG",
+    "formula": null
+   },
+   {
+    "string": "comparazione_imperiale_metrico",
+    "titulo_es": "Comparación de secciones de conductor imperial / métrico",
+    "titulo_en": "Imperial / metric conductor size comparison",
+    "fragment": "FragmentComparazioneImperialeMetrico",
+    "icono": "ico_imperiale_metrico",
+    "pro": false,
+    "clave": "ComparazioneImperialeMetrico",
+    "formula": null
+   },
+   {
+    "string": "conversione_sezione",
+    "titulo_es": "Conversión de sección de conductor",
+    "titulo_en": "Wire size conversion",
+    "fragment": "FragmentConversioneSezione",
+    "icono": "ico_conv_sezione",
+    "pro": false,
+    "clave": "ActivityConversioneSezione",
+    "formula": "FragmentFormulaConversioneSezione"
+   },
+   {
+    "string": "conversione_lunghezza",
+    "titulo_es": "Conversión de longitud",
+    "titulo_en": "Length conversion",
+    "fragment": "FragmentConversioneLunghezza",
+    "icono": "ico_righello",
+    "pro": false,
+    "clave": "fbuOcujj.ntKCkrzpduOhjgW",
+    "formula": null
+   },
+   {
+    "string": "conversione_tensione",
+    "titulo_es": "Conversión de tensión (Valores eficaces y de pico)",
+    "titulo_en": "Voltage conversion (RMS and peak values)",
+    "fragment": "FragmentConversioneTensione",
+    "icono": "ico_conv_tensione",
+    "pro": false,
+    "clave": "vhyxBup.WInJeQOrCYeae",
+    "formula": "FragmentFormulaAmplitude"
+   },
+   {
+    "string": "conversione_phi",
+    "titulo_es": "Conversión sin/cos/tan/φ",
+    "titulo_en": "sin/cos/tan/φ conversion",
+    "fragment": "FragmentConversionePhi",
+    "icono": "ico_phi",
+    "pro": true,
+    "clave": "ActivityConversionePhi",
+    "formula": "FragmentFormulaFunzioniTrigonometriche"
+   },
+   {
+    "string": "conversione_energia",
+    "titulo_es": "Conversión de energía",
+    "titulo_en": "Energy conversion",
+    "fragment": "FragmentConversioneEnergia",
+    "icono": "ico_energia",
+    "pro": false,
+    "clave": "ActivityConversioneEnergia",
+    "formula": null
+   },
+   {
+    "string": "conversione_temperatura",
+    "titulo_es": "Conversión de temperatura",
+    "titulo_en": "Temperature conversion",
+    "fragment": "FragmentConversioneTemperatura",
+    "icono": "ico_temperatura",
+    "pro": false,
+    "clave": "ActivityConversioneTemperatura",
+    "formula": "FragmentFormulaConversioneTemperatura"
+   },
+   {
+    "string": "conversione_pressione",
+    "titulo_es": "Conversión de presión",
+    "titulo_en": "Pressure conversion",
+    "fragment": "FragmentConversionePressione",
+    "icono": "ico_pressione",
+    "pro": false,
+    "clave": "ActivityConversionePressione",
+    "formula": null
+   },
+   {
+    "string": "conversione_ah_kwh",
+    "titulo_es": "Conversión Ah - kWh",
+    "titulo_en": "Ah - kWh conversion",
+    "fragment": "FragmentConversioneAhKwh",
+    "icono": "ico_ah_kwh",
+    "pro": false,
+    "clave": "ActivityConversioneAhKwh",
+    "formula": "FragmentFormulaConversioneAhKwh"
+   },
+   {
+    "string": "conversione_var_uf",
+    "titulo_es": "Conversión var / µF",
+    "titulo_en": "var / µF conversion",
+    "fragment": "FragmentConversioneVarUf",
+    "icono": "ico_var_uf",
+    "pro": true,
+    "clave": "ActivityConversioneVarUf",
+    "formula": "FragmentFormulaConversioneVarUf"
+   },
+   {
+    "string": "conversione_gauss_tesla",
+    "titulo_es": "Conversión Gauss - Tesla",
+    "titulo_en": "Gauss - Tesla conversion",
+    "fragment": "FragmentConversioneGaussTesla",
+    "icono": "ico_gauss_tesla",
+    "pro": false,
+    "clave": "ActivityConversioneGaussTesla",
+    "formula": null
+   },
+   {
+    "string": "conversione_rpm",
+    "titulo_es": "Conversión RPM - rad/s - m/s",
+    "titulo_en": "RPM - rad/s - m/s conversion",
+    "fragment": "FragmentConversioneRpm",
+    "icono": "ico_rpm",
+    "pro": false,
+    "clave": "ActivityConversioneRpm",
+    "formula": "FragmentFormulaConversioneRpm"
+   },
+   {
+    "string": "conversione_frequenza_velocita_angolare",
+    "titulo_es": "Conversión de frecuencia / velocidad angular",
+    "titulo_en": "Frequency / Angular speed conversion",
+    "fragment": "FragmentTabConversioneHzRads",
+    "icono": "ico_hz_rads",
+    "pro": false,
+    "clave": "ConversioneFrequenzaVelocitaAngolare",
+    "formula": "FragmentFormulaFrequenzaAngolare"
+   },
+   {
+    "string": "conversione_momento",
+    "titulo_es": "Conversión de par",
+    "titulo_en": "Torque conversion",
+    "fragment": "FragmentConversioneMomento",
+    "icono": "ico_momento",
+    "pro": false,
+    "clave": "ActivityConversioneMomento",
+    "formula": null
+   },
+   {
+    "string": "conversione_byte",
+    "titulo_es": "Conversión de bytes",
+    "titulo_en": "Byte conversion",
+    "fragment": "FragmentConversioneByte",
+    "icono": "ico_conversione_byte",
+    "pro": false,
+    "clave": "ActivityConversioneByte",
+    "formula": null
+   },
+   {
+    "string": "conversione_angolo",
+    "titulo_es": "Conversión de ángulo",
+    "titulo_en": "Angle conversion",
+    "fragment": "FragmentConversioneAngolo",
+    "icono": "ico_angolo",
+    "pro": false,
+    "clave": "ActivityConversioneAngolo",
+    "formula": "FragmentFormulaConversioneAngolo"
+   }
+  ]
+ },
+ {
+  "id": "risorse",
+  "titulo_es": "Recursos",
+  "titulo_en": "Resources",
+  "items": [
+   {
+    "string": "sigle_fusibili_iec",
+    "titulo_es": "Marcado de fusibles y categorías de aplicación",
+    "titulo_en": "Fuse markings and application categories",
+    "fragment": "FragmentSigleFusibiliIec",
+    "icono": "ico_sigle_fusibili",
+    "pro": false,
+    "clave": "ActivitySigleFusibiliIec",
+    "formula": null
+   },
+   {
+    "string": "classi_fusibili_ul_csa",
+    "titulo_es": "Clase de fusibles UL/CSA",
+    "titulo_en": "UL/CSA fuse class",
+    "fragment": "FragmentClassiFusibiliNec",
+    "icono": "ico_classi_fusibili_ul",
+    "pro": false,
+    "clave": "ActivityClassiFusibiliNec",
+    "formula": null
+   },
+   {
+    "string": "valori_standard_resistori",
+    "titulo_es": "Valores normalizados de resistencias",
+    "titulo_en": "Standard resistor values",
+    "fragment": "FragmentValoriStandardResistenze",
+    "icono": "ico_valori_standard_resistori",
+    "pro": false,
+    "clave": "ActivityValoriStandardResistenze",
+    "formula": null
+   },
+   {
+    "string": "curve_intervento",
+    "titulo_es": "Curvas de disparo",
+    "titulo_en": "Tripping curves",
+    "fragment": "FragmentCurveIntervento",
+    "icono": "ico_curve_intervento",
+    "pro": false,
+    "clave": "ActivityCurveIntervento",
+    "formula": null
+   },
+   {
+    "string": "tabella_reattanza_cavi",
+    "titulo_es": "Tabla de reactancia de cables",
+    "titulo_en": "Cable reactance table",
+    "fragment": "FragmentTabReattanzaCavi",
+    "icono": "ico_reattanza_cavi",
+    "pro": true,
+    "clave": "ActivityReattanzaCaviIEC",
+    "formula": null
+   },
+   {
+    "string": "tabella_resistivita",
+    "titulo_es": "Tabla de resistividad y conductividad",
+    "titulo_en": "Table of resistivity and conductivity",
+    "fragment": "FragmentResistivita",
+    "icono": "ico_resistivita",
+    "pro": false,
+    "clave": "ActivityResistivita",
+    "formula": "FragmentFormulaResistivita"
+   },
+   {
+    "string": "tabella_caduta_tensione_unitaria",
+    "titulo_es": "Tabla de caída de tensión unitaria",
+    "titulo_en": "Table of voltage drop per unit length",
+    "fragment": "FragmentCadutaTensioneUnitaria",
+    "icono": "ico_caduta_unitaria",
+    "pro": false,
+    "clave": "ActivityCadutaTensioneUnitaria",
+    "formula": null
+   },
+   {
+    "string": "dimensioni_peso_cavi",
+    "titulo_es": "Dimensiones y peso de los cables",
+    "titulo_en": "Dimensions and weight of cables",
+    "fragment": "FragmentTabDimensionePesoCavi",
+    "icono": "ico_dimensioni_peso",
+    "pro": false,
+    "clave": "ActivityDimensionePesoCaviIEC",
+    "formula": null
+   },
+   {
+    "string": "sistemi_distribuzione",
+    "titulo_es": "Sistemas de distribución de energía (TT, TN, IT)",
+    "titulo_en": "Power distribution systems (TT, TN, IT)",
+    "fragment": "FragmentSistemiDistribuzione",
+    "icono": "ico_sistemi_distribuzione",
+    "pro": false,
+    "clave": "sistemi_distribuzione",
+    "formula": null
+   },
+   {
+    "string": "protezione_ip",
+    "titulo_es": "Grados de protección IP/IK/NEMA",
+    "titulo_en": "IP/IK/NEMA degrees of protection",
+    "fragment": "FragmentGradoProtezione",
+    "icono": "ico_grado_protezione",
+    "pro": false,
+    "clave": "ActivityIP",
+    "formula": null
+   },
+   {
+    "string": "marcatura_atex",
+    "titulo_es": "Marcado ATEX",
+    "titulo_en": "Atex marking",
+    "fragment": "FragmentMarcaturaAtex",
+    "icono": "ico_atex",
+    "pro": true,
+    "clave": "ActivityMarcaturaAtex",
+    "formula": null
+   },
+   {
+    "string": "classi_isolamento",
+    "titulo_es": "Clases de protección de aparatos",
+    "titulo_en": "Appliance classes",
+    "fragment": "FragmentClassiIsolamento",
+    "icono": "ico_classi_isolamento",
+    "pro": false,
+    "clave": "ActivityClassiIsolamento",
+    "formula": null
+   },
+   {
+    "string": "risoluzioni_cctv",
+    "titulo_es": "Resoluciones CCTV",
+    "titulo_en": "CCTV resolutions",
+    "fragment": "FragmentRisoluzioniCCTV",
+    "icono": "ico_risoluzione",
+    "pro": false,
+    "clave": "ActivityRisoluzioniCCTV",
+    "formula": null
+   },
+   {
+    "string": "colori_dati_termocoppie",
+    "titulo_es": "Códigos de colores y datos de termopares",
+    "titulo_en": "Thermocouple color codes and data",
+    "fragment": "FragmentDatiTermocoppie",
+    "icono": "ico_termocoppie",
+    "pro": false,
+    "clave": "ActivityTermocoppie",
+    "formula": null
+   },
+   {
+    "string": "codici_dispositivi_ansi",
+    "titulo_es": "Números de dispositivo estándar ANSI",
+    "titulo_en": "ANSI standard device numbers",
+    "fragment": "FragmentTabAnsi",
+    "icono": "ico_dispositivi_ansi",
+    "pro": true,
+    "clave": "ActivityDispositiviAnsi",
+    "formula": null
+   },
+   {
+    "string": "acronimi_dispositivi",
+    "titulo_es": "Acrónimos de dispositivos",
+    "titulo_en": "Device acronyms",
+    "fragment": "FragmentAcronimiDispositivi",
+    "icono": "ico_acronimi_dispositivi",
+    "pro": false,
+    "clave": "acronimi_dispositivi",
+    "formula": null
+   },
+   {
+    "string": "simboli_elettrici",
+    "titulo_es": "Símbolos eléctricos",
+    "titulo_en": "Electrical symbols",
+    "fragment": "FragmentTabSimboli",
+    "icono": "ico_simboli",
+    "pro": false,
+    "clave": "ActivitySimboli",
+    "formula": null
+   },
+   {
+    "string": "elettricita_nel_mondo",
+    "titulo_es": "Electricidad alrededor del mundo",
+    "titulo_en": "Electricity around the world",
+    "fragment": "FragmentElettricitaMondo",
+    "icono": "ico_mondo",
+    "pro": false,
+    "clave": "ActivityElettricitaMondo",
+    "formula": null
+   },
+   {
+    "string": "socket_types",
+    "titulo_es": "Tipos de enchufes y tomas de corriente",
+    "titulo_en": "Plug and socket types",
+    "fragment": "FragmentSpineEPrese",
+    "icono": "ico_prese",
+    "pro": false,
+    "clave": "ActivityPrese",
+    "formula": null
+   },
+   {
+    "string": "connettori_iec",
+    "titulo_es": "Conectores IEC 60320",
+    "titulo_en": "IEC 60320 connectors",
+    "fragment": "FragmentConnettoriIec60320",
+    "icono": "ico_connettore_iec",
+    "pro": false,
+    "clave": "ActivityConnettoriIec",
+    "formula": null
+   },
+   {
+    "string": "prese_cform",
+    "titulo_es": "Tomas de corriente C-Form (IEC 60309)",
+    "titulo_en": "C-Form Sockets (IEC 60309)",
+    "fragment": "FragmentPreseCForm",
+    "icono": "ico_cform",
+    "pro": false,
+    "clave": "ActivityPreseCForm",
+    "formula": null
+   },
+   {
+    "string": "connettori_nema",
+    "titulo_es": "Conectores NEMA",
+    "titulo_en": "Nema connectors",
+    "fragment": "FragmentConnettoriNema",
+    "icono": "ico_connettore_nema",
+    "pro": false,
+    "clave": "ActivityConnettoriNema",
+    "formula": null
+   },
+   {
+    "string": "connettori_ricarica_ev",
+    "titulo_es": "Conectores de recarga para vehículos eléctricos",
+    "titulo_en": "EV charging plugs",
+    "fragment": "FragmentTabEvChargingPlugs",
+    "icono": "ico_ev_plugs",
+    "pro": false,
+    "clave": "ConnettoriRicaricaEV",
+    "formula": null
+   },
+   {
+    "string": "colori_fili",
+    "titulo_es": "Códigos de color de cableado",
+    "titulo_en": "Wiring color codes",
+    "fragment": "FragmentCodiceColoriCablaggio",
+    "icono": "ico_colori_fili",
+    "pro": false,
+    "clave": "ActivityColoriFili",
+    "formula": null
+   },
+   {
+    "string": "si_prefix",
+    "titulo_es": "Prefijos del SI",
+    "titulo_en": "SI Prefixes",
+    "fragment": "FragmentSiPrefix",
+    "icono": "ico_si",
+    "pro": false,
+    "clave": "ActivitySiPrefix",
+    "formula": null
+   },
+   {
+    "string": "unita_di_misura",
+    "titulo_es": "Unidades de medida",
+    "titulo_en": "Units of measurement",
+    "fragment": "FragmentUnitaMisura",
+    "icono": "ico_unita",
+    "pro": false,
+    "clave": "ActivityUnitaMisura",
+    "formula": null
+   },
+   {
+    "string": "pollice_idraulico",
+    "titulo_es": "Diámetros de tubería",
+    "titulo_en": "Pipe dimensions",
+    "fragment": "FragmentDiametriTubazioni",
+    "icono": "ico_tubo",
+    "pro": false,
+    "clave": "ActivityPolliceIdraulico",
+    "formula": null
+   }
+  ]
+ },
+ {
+  "id": "pinout",
+  "titulo_es": "Patillaje",
+  "titulo_en": "Pinout",
+  "items": [
+   {
+    "string": "cavi_ethernet",
+    "titulo_es": "Cables ethernet (RJ-45)",
+    "titulo_en": "Ethernet wiring (RJ-45)",
+    "fragment": "FragmentCablaggioEthernet",
+    "icono": "ico_ethernet",
+    "pro": false,
+    "clave": "ActivityCavoEthernet",
+    "formula": null
+   },
+   {
+    "string": "pinout_poe",
+    "titulo_es": "Patillaje Ethernet con PoE",
+    "titulo_en": "Pinout Ethernet with PoE",
+    "fragment": "FragmentPinoutEthernetPoe",
+    "icono": "ico_poe",
+    "pro": false,
+    "clave": "ActivityPinPoe",
+    "formula": null
+   },
+   {
+    "string": "pinout_rj",
+    "titulo_es": "RJ-9, 11, 14, 25, 48",
+    "titulo_en": "RJ-9,11,14,25,48",
+    "fragment": "FragmentPinoutRJ",
+    "icono": "ico_rj",
+    "pro": false,
+    "clave": "ActivityPinRJ",
+    "formula": null
+   },
+   {
+    "string": "pinout_scart",
+    "titulo_es": "Patillaje SCART",
+    "titulo_en": "Pinout Scart",
+    "fragment": "FragmentPinoutScart",
+    "icono": "ico_scart",
+    "pro": false,
+    "clave": "ActivityPinScart",
+    "formula": null
+   },
+   {
+    "string": "pinout_usb",
+    "titulo_es": "Patillaje USB",
+    "titulo_en": "Pinout USB",
+    "fragment": "FragmentPinoutUSB",
+    "icono": "ico_usb",
+    "pro": false,
+    "clave": "ActivityPinUsb",
+    "formula": null
+   },
+   {
+    "string": "pinout_hdmi",
+    "titulo_es": "Patillaje HDMI",
+    "titulo_en": "Pinout HDMI",
+    "fragment": "FragmentPinoutHdmi",
+    "icono": "ico_hdmi",
+    "pro": false,
+    "clave": "ActivityPinHdmi",
+    "formula": null
+   },
+   {
+    "string": "pinout_vga",
+    "titulo_es": "Patillaje VGA",
+    "titulo_en": "Pinout VGA",
+    "fragment": "FragmentPinoutVga",
+    "icono": "ico_vga",
+    "pro": false,
+    "clave": "ActivityPinVga",
+    "formula": null
+   },
+   {
+    "string": "pinout_dvi",
+    "titulo_es": "Patillaje DVI",
+    "titulo_en": "Pinout DVI",
+    "fragment": "FragmentPinoutDvi",
+    "icono": "ico_dvi",
+    "pro": false,
+    "clave": "ActivityPinDvi",
+    "formula": null
+   },
+   {
+    "string": "pinout_rs232",
+    "titulo_es": "Patillaje RS-232",
+    "titulo_en": "Pinout RS-232",
+    "fragment": "FragmentPinoutRS232",
+    "icono": "ico_seriale",
+    "pro": false,
+    "clave": "ActivityPinRS232",
+    "formula": null
+   },
+   {
+    "string": "pinout_firewire",
+    "titulo_es": "Patillaje FireWire (IEEE1394)",
+    "titulo_en": "Pinout FireWire (IEEE1394)",
+    "fragment": "FragmentPinoutFirewire",
+    "icono": "ico_firewire",
+    "pro": false,
+    "clave": "ActivityPinFirewire",
+    "formula": null
+   },
+   {
+    "string": "pinout_molex",
+    "titulo_es": "Patillaje Molex",
+    "titulo_en": "Pinout Molex",
+    "fragment": "FragmentPinoutMolex",
+    "icono": "ico_molex",
+    "pro": false,
+    "clave": "ActivityPinMolex",
+    "formula": null
+   },
+   {
+    "string": "pinout_sata",
+    "titulo_es": "Patillaje SATA",
+    "titulo_en": "Pinout SATA",
+    "fragment": "FragmentPinoutSata",
+    "icono": "ico_sata",
+    "pro": false,
+    "clave": "ActivityPinSata",
+    "formula": null
+   },
+   {
+    "string": "pinout_apple_lightning",
+    "titulo_es": "Patillaje Apple Lightning",
+    "titulo_en": "Pinout Apple Lightning",
+    "fragment": "FragmentPinoutAppleLightning",
+    "icono": "ico_lightning",
+    "pro": false,
+    "clave": "ActivityPinAppleLightning",
+    "formula": null
+   },
+   {
+    "string": "pinout_apple_dock_connector",
+    "titulo_es": "Patillaje Apple Dock Connector",
+    "titulo_en": "Pinout Apple Dock Connector",
+    "fragment": "FragmentPinoutAppleDockConnector",
+    "icono": "ico_apple_dock_connector",
+    "pro": false,
+    "clave": "ActivityPinAppleDockConnector",
+    "formula": null
+   },
+   {
+    "string": "pinout_displayport",
+    "titulo_es": "Patillaje DisplayPort",
+    "titulo_en": "Pinout DisplayPort",
+    "fragment": "FragmentPinoutDisplayPort",
+    "icono": "ico_displayport",
+    "pro": false,
+    "clave": "ActivityPinDisplayPort",
+    "formula": null
+   },
+   {
+    "string": "pinout_ps2",
+    "titulo_es": "Patillaje PS/2",
+    "titulo_en": "Pinout PS/2",
+    "fragment": "FragmentPinoutPs2",
+    "icono": "ico_ps2",
+    "pro": false,
+    "clave": "ActivityPinPs2",
+    "formula": null
+   },
+   {
+    "string": "pinout_fibra_ottica",
+    "titulo_es": "Código de colores de fibra óptica",
+    "titulo_en": "Fiber optic color code",
+    "fragment": "FragmentColoriFibraOttica",
+    "icono": "ico_fibra",
+    "pro": false,
+    "clave": "ActivityPinColoriFibraOttica",
+    "formula": null
+   },
+   {
+    "string": "pinout_led",
+    "titulo_es": "Patillaje LED",
+    "titulo_en": "Pinout LED",
+    "fragment": "FragmentPinoutLed",
+    "icono": "ico_pinout_led",
+    "pro": false,
+    "clave": "ActivityPinLed",
+    "formula": null
+   },
+   {
+    "string": "pinout_raspberry",
+    "titulo_es": "Patillaje Raspberry Pi",
+    "titulo_en": "Pinout Raspberry Pi",
+    "fragment": "FragmentPinoutRaspberryPi",
+    "icono": "ico_raspberry",
+    "pro": false,
+    "clave": "ActivityPinRaspberry",
+    "formula": null
+   },
+   {
+    "string": "pinout_iso10487",
+    "titulo_es": "Patillaje ISO 10487 (Audio autos)",
+    "titulo_en": "Pinout ISO 10487 (Car audio)",
+    "fragment": "FragmentPinoutIso10487",
+    "icono": "ico_iso10487",
+    "pro": false,
+    "clave": "ActivityPinIso10487",
+    "formula": null
+   },
+   {
+    "string": "pinout_obd2",
+    "titulo_es": "Patillaje OBD II",
+    "titulo_en": "Pinout OBD II",
+    "fragment": "FragmentPinoutObd2",
+    "icono": "ico_obd2",
+    "pro": false,
+    "clave": "ActivityPinObd2",
+    "formula": null
+   },
+   {
+    "string": "pinout_xlr",
+    "titulo_es": "Patillaje XLR (Audio/DMX)",
+    "titulo_en": "Pinout XLR (Audio/DMX)",
+    "fragment": "FragmentPinoutXlr",
+    "icono": "ico_xlr",
+    "pro": false,
+    "clave": "ActivityPinXlr",
+    "formula": null
+   },
+   {
+    "string": "pinout_midi",
+    "titulo_es": "Patillaje MIDI",
+    "titulo_en": "Pinout MIDI",
+    "fragment": "FragmentPinoutMidi",
+    "icono": "ico_midi",
+    "pro": false,
+    "clave": "ActivityPinMidi",
+    "formula": null
+   },
+   {
+    "string": "pinout_jack",
+    "titulo_es": "Patillaje Jack",
+    "titulo_en": "Pinout Jack",
+    "fragment": "FragmentPinoutJack",
+    "icono": "ico_jack",
+    "pro": false,
+    "clave": "ActivityPinJack",
+    "formula": null
+   },
+   {
+    "string": "codice_colore_rca",
+    "titulo_es": "Código de colores RCA",
+    "titulo_en": "RCA color coding",
+    "fragment": "FragmentCodiceColoreRca",
+    "icono": "ico_rca",
+    "pro": false,
+    "clave": "ActivityPinRca",
+    "formula": null
+   },
+   {
+    "string": "pinout_thunderbolt",
+    "titulo_es": "Patillaje Thunderbolt",
+    "titulo_en": "Pinout Thunderbolt",
+    "fragment": "FragmentPinoutThunderbolt",
+    "icono": "ico_thunderbolt",
+    "pro": false,
+    "clave": "ActivityPinThunderbolt",
+    "formula": null
+   },
+   {
+    "string": "pinout_sdcard",
+    "titulo_es": "Patillaje SD Card",
+    "titulo_en": "Pinout SD Card",
+    "fragment": "FragmentPinoutSdCard",
+    "icono": "ico_sdcard",
+    "pro": false,
+    "clave": "ActivityPinSdCard",
+    "formula": null
+   },
+   {
+    "string": "pinout_simcard",
+    "titulo_es": "Patillaje de tarjeta SIM",
+    "titulo_en": "Pinout Sim Card",
+    "fragment": "FragmentPinoutSimCard",
+    "icono": "ico_simcard",
+    "pro": false,
+    "clave": "ActivityPinSimCard",
+    "formula": null
+   },
+   {
+    "string": "pinout_display_16x2",
+    "titulo_es": "Patillaje pantalla LCD 16x2",
+    "titulo_en": "Pinout display LCD 16x2",
+    "fragment": "FragmentPinoutDisplay16x2",
+    "icono": "ico_display_16x2",
+    "pro": false,
+    "clave": "ActivityPinDisplay16x2",
+    "formula": null
+   },
+   {
+    "string": "pinout_iolink",
+    "titulo_es": "Patillaje IO-Link",
+    "titulo_en": "Pinout IO-Link",
+    "fragment": "FragmentPinoutIoLink",
+    "icono": "ico_io_link",
+    "pro": false,
+    "clave": "ActivityPinIoLink",
+    "formula": null
+   }
+  ]
+ },
+ {
+  "id": "formulario",
+  "titulo_es": "Formulario",
+  "titulo_en": "Formulas",
+  "items": [
+   {
+    "string": "prima_legge_ohm",
+    "titulo_es": "Primera Ley de Ohm",
+    "titulo_en": "\"First Ohm's Law\"",
+    "fragment": "FragmentFormulaLeggeOhmPrima",
+    "html": "legge_ohm1.html"
+   },
+   {
+    "string": "seconda_legge_ohm",
+    "titulo_es": "Segunda Ley de Ohm",
+    "titulo_en": "\"Second Ohm's Law\"",
+    "fragment": "FragmentFormulaLeggeOhmSeconda",
+    "html": "legge_ohm2.html"
+   },
+   {
+    "string": "corrente",
+    "titulo_es": "Corriente:",
+    "titulo_en": "Current:",
+    "fragment": "FragmentFormulaCorrente",
+    "html": "intensita.html"
+   },
+   {
+    "string": "potenza",
+    "titulo_es": "Potencia:",
+    "titulo_en": "Power:",
+    "fragment": "FragmentFormulaPotenza",
+    "html": "potenza.html"
+   },
+   {
+    "string": "tensione",
+    "titulo_es": "Tensión:",
+    "titulo_en": "Voltage:",
+    "fragment": "FragmentFormulaTensione",
+    "html": "tensione.html"
+   },
+   {
+    "string": "resistenza",
+    "titulo_es": "Resistencia:",
+    "titulo_en": "Resistance:",
+    "fragment": "FragmentFormulaResistenza",
+    "html": "resistenza.html"
+   },
+   {
+    "string": "impedenza",
+    "titulo_es": "Impedancia",
+    "titulo_en": "Impedance",
+    "fragment": "FragmentFormulaImpedenza",
+    "html": "formula_calcolo_impedenza"
+   },
+   {
+    "string": "potenza_attiva",
+    "titulo_es": "Potencia activa",
+    "titulo_en": "Active power",
+    "fragment": "FragmentFormulaPotenzaAttiva",
+    "html": "potenza_attiva.html"
+   },
+   {
+    "string": "potenza_reattiva",
+    "titulo_es": "Potencia reactiva",
+    "titulo_en": "Reactive power",
+    "fragment": "FragmentFormulaPotenzaReattiva",
+    "html": "potenza_reattiva.html"
+   },
+   {
+    "string": "potenza_apparente",
+    "titulo_es": "Potencia aparente",
+    "titulo_en": "Apparent power",
+    "fragment": "FragmentFormulaPotenzaApparente",
+    "html": "potenza_apparente.html"
+   },
+   {
+    "string": "fattore_potenza",
+    "titulo_es": "Factor de potencia:",
+    "titulo_en": "Power factor:",
+    "fragment": "FragmentFormulaFattorePotenza",
+    "html": "fattore_potenza.html"
+   },
+   {
+    "string": "calcolo_sezione",
+    "titulo_es": "Dimensionamiento de conductores",
+    "titulo_en": "Conductor sizing",
+    "fragment": "FragmentFormulaTabCalcoloSezione",
+    "html": "sezione.html"
+   },
+   {
+    "string": "calcolo_sezione_e_coordinamento_disp_protezione",
+    "titulo_es": "Dimensionamiento de conductores y coordinación del dispositivo de protección",
+    "titulo_en": "Conductor sizing and protective device coordination",
+    "fragment": "FragmentFormulaTabCalcoloSezioneAvanzata",
+    "html": "formula_sezione_avanzata"
+   },
+   {
+    "string": "caduta_tensione",
+    "titulo_es": "Caída de tensión:",
+    "titulo_en": "Voltage drop:",
+    "fragment": "FragmentFormulaCaduta",
+    "html": "caduta_tensione.html"
+   },
+   {
+    "string": "lunghezza_massima_cavo_caduta",
+    "titulo_es": "Longitud máxima del cable (ΔV)",
+    "titulo_en": "Maximum wire length (ΔV)",
+    "fragment": "FragmentFormulaLunghezzaCavoCaduta",
+    "html": "lunghezza_cavo.html"
+   },
+   {
+    "string": "lunghezza_massima_cavo_cortocircuito",
+    "titulo_es": "Longitud máxima del cable (Isc)",
+    "titulo_en": "Maximum wire length (Isc)",
+    "fragment": "FragmentFormulaLunghezzaCavoCortocircuito",
+    "html": "formula_lunghezza_massima_cavo_cortocircuito"
+   },
+   {
+    "string": "portata_barre",
+    "titulo_es": "Capacidad de corriente de barras colectoras",
+    "titulo_en": "Current carrying capacity of busbar",
+    "fragment": "FragmentFormulaPortataBarre",
+    "html": "portata_barre.html"
+   },
+   {
+    "string": "scelta_dispositivo_protezione",
+    "titulo_es": "Dimensionamiento de dispositivos de protección",
+    "titulo_en": "Protective device sizing",
+    "fragment": "FragmentFormulaDispositivoProtezione",
+    "html": "scelta_dispositivo_protezione.html"
+   },
+   {
+    "string": "protezione_cavo_cortocircuito",
+    "titulo_es": "Protección de cables contra cortocircuitos",
+    "titulo_en": "Cable protection from short-circuit",
+    "fragment": "FragmentFormulaProtezioneCavoCortocircuito",
+    "html": "formula_protezione_cavo_cortocircuito"
+   },
+   {
+    "string": "energia_specifica_passante",
+    "titulo_es": "Energía específica admisible del cable (K²S²)",
+    "titulo_en": "Admissible specific energy of the cable (K²S²)",
+    "fragment": "FragmentFormulaTabEnergiaSpecifica",
+    "html": "formula_energia_specifica_passante"
+   },
+   {
+    "string": "perdite_potenza_cavi",
+    "titulo_es": "Pérdidas de potencia en cables",
+    "titulo_en": "Power losses in cables",
+    "fragment": "FragmentFormulaPerditaPotenzaCavo",
+    "html": "formula_perdita_potenza_cavo"
+   },
+   {
+    "string": "calcolo_temperatura_cavo",
+    "titulo_es": "Cálculo de la temperatura del cable",
+    "titulo_en": "Calculation of the cable temperature",
+    "fragment": "FragmentFormulaTemperaturaCavo",
+    "html": "temperatura_cavo.html"
+   },
+   {
+    "string": "resistenza_reattanza_impedenza_cavo",
+    "titulo_es": "Resistencia, reactancia e impedancia del cable",
+    "titulo_en": "Cable resistance, reactance and impedance",
+    "fragment": "FragmentFormulaResistenzaCavo",
+    "html": "formula_resistenza_cavo"
+   },
+   {
+    "string": "corrente_neutro",
+    "titulo_es": "Corriente del neutro",
+    "titulo_en": "Neutral current",
+    "fragment": "FragmentFormulaCorrenteNeutro",
+    "html": "formula_corrente_neutro"
+   },
+   {
+    "string": "resistivita",
+    "titulo_es": "Resistividad",
+    "titulo_en": "Resistivity",
+    "fragment": "FragmentFormulaResistivita",
+    "html": "resistivita.html"
+   },
+   {
+    "string": "corrente_impiego",
+    "titulo_es": "Corriente de empleo:",
+    "titulo_en": "Design current:",
+    "fragment": "FragmentFormulaCorrenteImpiego",
+    "html": "corrente_impiego.html"
+   },
+   {
+    "string": "reattanza",
+    "titulo_es": "Reactancia",
+    "titulo_en": "Reactance",
+    "fragment": "FragmentFormulaReattanza",
+    "html": "reattanza.html"
+   },
+   {
+    "string": "impedenza_da_resistenza_e_reattanza",
+    "titulo_es": "Impedancia a partir de resistencia y reactancia",
+    "titulo_en": "Impedance from resistance and reactance",
+    "fragment": "FragmentFormulaImpedenzaDaResistenzaEReattanza",
+    "html": "impedenza.html"
+   },
+   {
+    "string": "rifasamento",
+    "titulo_es": "Corrección del factor de potencia",
+    "titulo_en": "Power factor correction",
+    "fragment": "FragmentFormulaRifasamento",
+    "html": "rifasamento.html"
+   },
+   {
+    "string": "rifasamento_trasformatore",
+    "titulo_es": "Corrección del factor de potencia de transformadores MT/BT",
+    "titulo_en": "Power factor correction of MV/LV transformers",
+    "fragment": "FragmentFormulaRifasamentoTrasformatore",
+    "html": "rifasamento_trasformatore.html"
+   },
+   {
+    "string": "potenza_resa_condensatore",
+    "titulo_es": "Potencia del condensador a una tensión diferente",
+    "titulo_en": "Capacitor power at a different voltage",
+    "fragment": "FragmentFormulaPotenzaResaCondensatore",
+    "html": "potenza_resa_condensatore.html"
+   },
+   {
+    "string": "coordinamento_differenziale_terra",
+    "titulo_es": "Sistema de puesta a tierra y coordinación con dispositivo diferencial",
+    "titulo_en": "Earthing system and coordination with residual current device",
+    "fragment": "FragmentFormulaImpiantoDiTerra",
+    "html": "impianto_di_terra.html"
+   },
+   {
+    "string": "calcolo_icc_max",
+    "titulo_es": "Corriente de cortocircuito en un punto específico de la línea",
+    "titulo_en": "Short-circuit current at a specific point of the line",
+    "fragment": "FragmentFormulaCorrenteCortoCircuito",
+    "html": "corrente_corto_circuito.html"
+   },
+   {
+    "string": "calcolo_icc_max_cabina_trasformazione",
+    "titulo_es": "Corriente de cortocircuito con subestación transformadora",
+    "titulo_en": "Short-circuit current with transformer substation",
+    "fragment": "FragmentFormulaCorrenteCortoCircuitoTrasf",
+    "html": "corrente_corto_circuito_trasf.html"
+   },
+   {
+    "string": "calcolo_icc_min",
+    "titulo_es": "Corriente de cortocircuito mínima",
+    "titulo_en": "Minimum short-circuit current",
+    "fragment": "FragmentFormulaCorrenteCortoCircuitoMin",
+    "html": "corrente_corto_circuito_approssimata.html"
+   },
+   {
+    "string": "calcolo_caduta_con_carichi_distributi",
+    "titulo_es": "Caída de tensión con cargas distribuidas",
+    "titulo_en": "Voltage drop with distributed loads",
+    "fragment": "FragmentFormulaCadutaCarichiDistribuiti",
+    "html": "formula_caduta_carichi_distribuiti"
+   },
+   {
+    "string": "somma_resistori",
+    "titulo_es": "Suma de resistencias",
+    "titulo_en": "Sum of resistors",
+    "fragment": "FragmentFormulaSommaResistenze",
+    "html": "somma_resistenze.html"
+   },
+   {
+    "string": "somma_condensatori",
+    "titulo_es": "Suma de condensadores",
+    "titulo_en": "Sum of capacitors",
+    "fragment": "FragmentFormulaSommaCondensatori",
+    "html": "somma_condensatori.html"
+   },
+   {
+    "string": "codice_resistore",
+    "titulo_es": "Código de colores de resistencias",
+    "titulo_en": "Resistor color code",
+    "fragment": "FragmentFormulaCodiceResistori",
+    "html": "codice_resistori.html"
+   },
+   {
+    "string": "codice_colori_induttore",
+    "titulo_es": "Código de colores de inductores",
+    "titulo_en": "Inductor color code",
+    "fragment": "FragmentFormulaCodiceInduttori",
+    "html": "induttore_4_colori.html"
+   },
+   {
+    "string": "frequenza_risonanza",
+    "titulo_es": "Frecuencia de resonancia",
+    "titulo_en": "Resonant frequency",
+    "fragment": "FragmentFormulaFrequenzaRisonanza",
+    "html": "frequenza_risonanza.html"
+   },
+   {
+    "string": "frequenza_angolare",
+    "titulo_es": "Frecuencia angular",
+    "titulo_en": "Angular frequency",
+    "fragment": "FragmentFormulaFrequenzaAngolare",
+    "html": "frequenza_angolare.html"
+   },
+   {
+    "string": "partitore_tensione",
+    "titulo_es": "Divisor de tensión",
+    "titulo_en": "Voltage divider",
+    "fragment": "FragmentFormulaPartitoreTensione",
+    "html": "partitore_tensione.html"
+   },
+   {
+    "string": "partitore_corrente",
+    "titulo_es": "Divisor de corriente",
+    "titulo_en": "Current divider",
+    "fragment": "FragmentFormulaPartitoreCorrente",
+    "html": "partitore_corrente.html"
+   },
+   {
+    "string": "stabilizzatore_tensione",
+    "titulo_es": "Diodo Zener como estabilizador de tensión",
+    "titulo_en": "Zener diode as voltage stabilizer",
+    "fragment": "FragmentFormulaStabilizzatoreTensioneZener",
+    "html": "stabilizzatore_tensione.html"
+   },
+   {
+    "string": "resistenza_ridurre_tensione",
+    "titulo_es": "Resistencia para reducir la tensión",
+    "titulo_en": "Resistor to reduce voltage",
+    "fragment": "FragmentFormulaResistenzaRidurreTensione",
+    "html": "resistenza_ridurre_tensione.html"
+   },
+   {
+    "string": "trasformatore",
+    "titulo_es": "Devanado primario/secundario del transformador",
+    "titulo_en": "Primary/Secondary winding of transformer",
+    "fragment": "FragmentFormulaPrimarioSecondarioTrasformatore",
+    "html": "primario_secondario_trasformatore.html"
+   },
+   {
+    "string": "lunghezza_antenna",
+    "titulo_es": "Longitud de la antena",
+    "titulo_en": "Antenna length",
+    "fragment": "FragmentFormulaLunghezzaAntenna",
+    "html": "lunghezza_antenna.html"
+   },
+   {
+    "string": "durata_batteria",
+    "titulo_es": "Duración de la batería",
+    "titulo_en": "Battery life",
+    "fragment": "FragmentFormulaDurataBatteria",
+    "html": "durata_batteria.html"
+   },
+   {
+    "string": "effetto_joule",
+    "titulo_es": "Efecto Joule",
+    "titulo_en": "Joule effect",
+    "fragment": "FragmentFormulaEffettoJoule",
+    "html": "effetto_joule.html"
+   },
+   {
+    "string": "sensori_temperatura",
+    "titulo_es": "Sensores de temperatura (PT/NI/CU, NTC, Termopares…)",
+    "titulo_en": "Temperature sensors (PT/NI/CU, NTC, Thermocouples…)",
+    "fragment": "FragmentFormulaTermistori",
+    "html": "termistori.html"
+   },
+   {
+    "string": "calcolo_crl",
+    "titulo_es": "Evaluación del riesgo de sobretensiones de origen atmosférico",
+    "titulo_en": "Risk assessment of overvoltages with atmospheric origin",
+    "fragment": "FragmentFormulaCrl",
+    "html": "crl.html"
+   },
+   {
+    "string": "da_trifase_a_monofase",
+    "titulo_es": "Motor trifásico a monofásico",
+    "titulo_en": "Motor from three-phase to single-phase",
+    "fragment": "FragmentFormulaMotoreTrifaseMonofase",
+    "html": "motore_trifase_monofase.html"
+   },
+   {
+    "string": "condensatore_motore_monofase",
+    "titulo_es": "Condensador de marcha para motor monofásico",
+    "titulo_en": "Single-phase motor run capacitor",
+    "fragment": "FragmentFormulaCondensatoreAvviamentoMotore",
+    "html": "condensatore_avviamento_motore.html"
+   },
+   {
+    "string": "rendimento_motore",
+    "titulo_es": "Rendimiento del motor",
+    "titulo_en": "Motor efficiency",
+    "fragment": "FragmentFormulaRendimentoMotore",
+    "html": "rendimento_motore.html"
+   },
+   {
+    "string": "velocita_motore",
+    "titulo_es": "Velocidad del motor",
+    "titulo_en": "Motor speed",
+    "fragment": "FragmentFormulaVelocitaMotore",
+    "html": "giri_motore.html"
+   },
+   {
+    "string": "scorrimento_motore",
+    "titulo_es": "Deslizamiento del motor",
+    "titulo_en": "Motor slip",
+    "fragment": "FragmentFormulaScorrimentoMotore",
+    "html": "scorrimento_motore.html"
+   },
+   {
+    "string": "coppia_massima",
+    "titulo_es": "Potencia / Par máximo",
+    "titulo_en": "Power / Maximum torque",
+    "fragment": "FragmentFormulaCoppiaMassima",
+    "html": "coppia_massima.html"
+   },
+   {
+    "string": "funzioni_trigonometriche",
+    "titulo_es": "Funciones trigonométricas",
+    "titulo_en": "Trigonometric functions",
+    "fragment": "FragmentFormulaFunzioniTrigonometriche",
+    "html": "funzioni_trigonometriche.html"
+   },
+   {
+    "string": "conversione_triangolo_stella",
+    "titulo_es": "Conversión triángulo-estrella",
+    "titulo_en": "Delta-star conversion",
+    "fragment": "FragmentFormulaTriangoloStella",
+    "html": "stella_triangolo.html"
+   },
+   {
+    "string": "conversione_tensione",
+    "titulo_es": "Conversión de tensión (Valores eficaces y de pico)",
+    "titulo_en": "Voltage conversion (RMS and peak values)",
+    "fragment": "FragmentFormulaAmplitude",
+    "html": "conversione_tensione.html"
+   },
+   {
+    "string": "conversione_temperatura",
+    "titulo_es": "Conversión de temperatura",
+    "titulo_en": "Temperature conversion",
+    "fragment": "FragmentFormulaConversioneTemperatura",
+    "html": "conversione_temperatura.html"
+   },
+   {
+    "string": "conversione_ah_kwh",
+    "titulo_es": "Conversión Ah - kWh",
+    "titulo_en": "Ah - kWh conversion",
+    "fragment": "FragmentFormulaConversioneAhKwh",
+    "html": "conversione_ah_kwh.html"
+   },
+   {
+    "string": "conversione_var_uf",
+    "titulo_es": "Conversión var / µF",
+    "titulo_en": "var / µF conversion",
+    "fragment": "FragmentFormulaConversioneVarUf",
+    "html": "conversione_var_uf.html"
+   },
+   {
+    "string": "conversione_rpm",
+    "titulo_es": "Conversión RPM - rad/s - m/s",
+    "titulo_en": "RPM - rad/s - m/s conversion",
+    "fragment": "FragmentFormulaConversioneRpm",
+    "html": "conversione_rpm.html"
+   },
+   {
+    "string": "conversione_angolo",
+    "titulo_es": "Conversión de ángulo",
+    "titulo_en": "Angle conversion",
+    "fragment": "FragmentFormulaConversioneAngolo",
+    "html": "conversione_angolo.html"
+   }
+  ]
+ }
+]
