@@ -198,6 +198,14 @@ Historial de cálculos, exportación de memorias de cálculo en PDF, normativa c
 - [x] Proyecto Gradle con `core-calc` (Kotlin JVM) y tests JUnit 5.
 - [x] Ola 1 (motor): `LeyOhm` cubre V, I, R, Z, P, Q, S y cosφ en CC, monofásica,
   bifásica y trifásica. Coincide con la app de referencia en 2.016 vectores dorados.
-- [ ] Módulo `app` (Compose). Necesita el SDK de Android, que no se puede descargar en el
-  entorno de nube actual (dl.google.com bloqueado); se compila en CI o en local.
+- [x] Ola 2 (parcial): `CaidaTension` y tablas de conductores (mm² y AWG), 1.500 vectores
+  dorados coinciden.
+- [x] **Oráculo directo**: el bytecode original corre en la JVM (dex2jar + stubs de Android
+  + org.json, con `-noverify`). Los vectores dorados se generan llamando a las clases
+  originales por reflexión, sin transcribir código. Ver `scripts/setup-oraculo.sh`.
+- [x] Módulo `app` (Compose) con la calculadora de ley de Ohm. Se compila en CI (GitHub
+  Actions genera el APK de debug como artefacto); en el entorno de nube no hay SDK de Android
+  porque dl.google.com está bloqueado.
+- [ ] Siguiente: dimensionamiento de conductores (IEC/CEI/NEC/CEC + RIC). Motor original en
+  `cn2` (modelo de instalación y tablas de capacidad) y `zu` (algoritmo de selección).
 - [ ] Olas 2 a 7.
