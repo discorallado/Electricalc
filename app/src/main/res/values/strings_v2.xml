@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Textos de la navegación v2 (docs/arquitectura-v2.md). -->
+<resources>
+    <!-- Destinos de la barra inferior -->
+    <string name="destino_inicio">Inicio</string>
+    <string name="destino_proyecto">Proyecto</string>
+    <string name="destino_calcular">Calcular</string>
+    <string name="destino_ric">RIC</string>
+    <string name="destino_referencias">Referencias</string>
+
+    <!-- Inicio -->
+    <string name="buscar_hint">Buscar: «caída», «diferencial», «RIC 4»…</string>
+    <string name="borrar_busqueda">Borrar búsqueda</string>
+    <string name="sin_resultados">No hay resultados para «%1$s»</string>
+    <string name="herramientas_n">Herramientas (%1$d)</string>
+    <string name="que_estas_haciendo">¿Qué estás haciendo?</string>
+    <string name="recientes">Recientes</string>
+    <string name="acceso_vivienda">Vivienda</string>
+    <string name="acceso_comercial">Local comercial</string>
+    <string name="acceso_fotovoltaico">Fotovoltaico</string>
+    <string name="acceso_ve">Carga de VE</string>
+    <string name="acceso_motor">Motor</string>
+    <string name="acceso_tierra">Puesta a tierra</string>
+
+    <!-- Proyecto -->
+    <string name="proyecto_titulo">Proyecto por etapas</string>
+    <string name="proyecto_intro">Las herramientas ordenadas como avanza un proyecto, desde las cargas hasta la documentación. Pronto podrás guardar proyectos y los resultados de cada etapa pasarán solos a la siguiente.</string>
+    <string name="etapa_cargas">Cargas y demanda</string>
+    <string name="etapa_empalme">Empalme</string>
+    <string name="etapa_tableros">Tableros</string>
+    <string name="etapa_alimentadores">Alimentadores y circuitos</string>
+    <string name="etapa_protecciones">Protecciones</string>
+    <string name="etapa_tierra">Puesta a tierra</string>
+    <string name="etapa_sistemas">Sistemas</string>
+    <string name="etapa_documentacion">Documentación</string>
+
+    <!-- Categorías -->
+    <string name="cat_fundamentos">Fundamentos eléctricos</string>
+    <string name="cat_conductores">Conductores y canalizaciones</string>
+    <string name="cat_protecciones">Protecciones y cortocircuito</string>
+    <string name="cat_tierra">Puesta a tierra y seguridad</string>
+    <string name="cat_energia">Energía, factor de potencia y eficiencia</string>
+    <string name="cat_motores">Motores y transformadores</string>
+    <string name="cat_sistemas">Sistemas: respaldo, FV y electromovilidad</string>
+    <string name="cat_electronica">Electrónica e instrumentación</string>
+    <string name="cat_ref_tablas">Tablas</string>
+    <string name="cat_ref_esquemas">Esquemas</string>
+    <string name="cat_ref_conectores">Conectores y pinouts</string>
+    <string name="cat_ref_unidades">Conversiones y unidades</string>
+    <string name="cat_ref_formulario">Formulario</string>
+    <plurals name="disponibles_de">
+        <item quantity="one">%1$d de %2$d herramienta disponible</item>
+        <item quantity="other">%1$d de %2$d herramientas disponibles</item>
+    </plurals>
+    <plurals name="herramientas">
+        <item quantity="one">%1$d herramienta</item>
+        <item quantity="other">%1$d herramientas</item>
+    </plurals>
+
+    <!-- Estado de las herramientas -->
+    <string name="nueva_proximamente">Nueva · %1$s · próximamente</string>
+    <string name="pendiente_nueva">%1$s en desarrollo (fase %2$s)</string>
+    <string name="tipo_calculadora">Calculadora</string>
+    <string name="tipo_verificacion">Verificación</string>
+    <string name="tipo_asistente">Asistente</string>
+    <string name="tipo_esquema">Esquema</string>
+    <string name="tipo_documento">Documento</string>
+    <string name="tipo_checklist">Checklist</string>
+    <string name="tipo_tabla">Tabla</string>
+    <string name="datos_ric_necesarios">Datos del RIC que necesita</string>
+    <string name="verificacion_ric_pendiente_texto">Verificación RIC pendiente: estas tablas todavía no están transcritas del PDF oficial. La app no muestra límites hasta tenerlas con su referencia.</string>
+    <string name="relacion_por_confirmar">relación por confirmar en el PDF</string>
+
+    <!-- RIC -->
+    <string name="ric_intro">Pliegos técnicos del Reglamento de Seguridad de las Instalaciones de Consumo de Energía Eléctrica (DS N°8/2019). Los títulos se deben confirmar contra el PDF oficial de cada pliego.</string>
+    <string name="pliego_sin_herramientas">Alcance por revisar</string>
+    <string name="pliego_sin_herramientas_texto">Todavía no hay herramientas asociadas a este pliego.</string>
+    <string name="pliego_de_que_trata">De qué trata</string>
+    <string name="borrador">Borrador</string>
+    <string name="borrador_nota">Resumen con redacción propia, por revisar contra el PDF oficial. No reemplaza al pliego.</string>
+    <string name="pliego_herramientas">Herramientas de este pliego</string>
+    <string name="pliego_tablas">Tablas y límites</string>
+    <string name="pliego_esquemas">Esquemas</string>
+    <string name="pliego_sin_esquemas">Aún no hay esquemas para este pliego.</string>
+    <string name="pliego_checklist">Checklist</string>
+    <string name="pliego_sin_checklist">Aún no hay checklist para este pliego.</string>
+    <string name="pliego_pdf">PDF oficial</string>
+    <string name="pliego_pdf_texto">Versión transcrita: ninguna todavía. El PDF vigente se descarga desde el sitio de la SEC.</string>
+    <string name="abrir_sitio_sec">Abrir sitio de la SEC</string>
+    <string-array name="ric_resumenes">
+        <item>Trata la conexión entre la red de la empresa distribuidora y la instalación del usuario: tipos de empalme, su ubicación, el equipo de medida y las condiciones para conectarse.</item>
+        <item>Requisitos de los tableros que distribuyen y protegen los circuitos: cómo se construyen, dónde se ubican, cómo se rotulan y cómo se accede a ellos.</item>
+        <item>Cómo dimensionar los alimentadores y estimar la demanda máxima de una instalación a partir de sus cargas, incluida la caída de tensión que se admite.</item>
+        <item>Conductores y materiales permitidos, su capacidad de corriente e identificación, y los sistemas de canalización: ductos, bandejas, escalerillas y similares.</item>
+        <item>Medidas para proteger a las personas contra contactos con partes energizadas, directos e indirectos, y a la instalación contra sobrecorrientes y sobretensiones.</item>
+        <item>Sistemas de puesta a tierra y conexiones equipotenciales: esquemas de conexión a tierra, electrodos y cómo se verifican.</item>
+        <item>Condiciones para alimentar y proteger equipos específicos, como motores, condensadores y transformadores.</item>
+        <item>Instalaciones que deben seguir funcionando cuando falla la alimentación normal: alumbrado de emergencia, fuentes de respaldo y su transferencia.</item>
+        <item>Generación propia, conectada o no a la red, como la fotovoltaica o los grupos generadores, y sus condiciones de conexión y protección.</item>
+        <item>Requisitos para viviendas, oficinas y locales: circuitos, puntos, protecciones y condiciones de los recintos.</item>
+        <item>Recintos y aplicaciones con exigencias propias, como baños, piscinas y otros lugares con riesgos particulares.</item>
+        <item>Instalaciones en lugares con gases, vapores o polvos inflamables: clasificación de áreas y equipos adecuados para ellas.</item>
+        <item>Subestaciones y salas eléctricas dentro de la instalación del usuario: disposición, espacios de trabajo, ventilación y seguridad.</item>
+        <item>Criterios para usar la energía de forma eficiente en las instalaciones.</item>
+        <item>Infraestructura para cargar vehículos eléctricos: puntos de carga, su alimentación y sus protecciones.</item>
+        <item>Alcance por definir: se completará al revisar el PDF oficial.</item>
+        <item>Operación y mantenimiento de las instalaciones durante su vida útil: inspecciones, registros y responsabilidades.</item>
+        <item>Cómo se presentan los proyectos de instalaciones ante la SEC: documentos, planos, memoria de cálculo y la declaración.</item>
+        <item>Inspecciones y pruebas que se hacen antes de energizar una instalación, y cómo se registran.</item>
+    </string-array>
+
+    <!-- Ajustes -->
+    <string name="ajustes_norma">Norma por defecto</string>
+    <string name="ajustes_norma_texto">Se propone primero en las calculadoras que dependen de una norma, como el dimensionamiento de conductores.</string>
+    <string name="ajustes_idioma">Idioma</string>
+    <string name="idioma_sistema">Sistema</string>
+    <string name="idioma_es">Español</string>
+    <string name="idioma_en">English</string>
+</resources>

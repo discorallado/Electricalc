@@ -206,6 +206,21 @@ Historial de cálculos, exportación de memorias de cálculo en PDF, normativa c
 - [x] Módulo `app` (Compose) con la calculadora de ley de Ohm. Se compila en CI (GitHub
   Actions genera el APK de debug como artefacto); en el entorno de nube no hay SDK de Android
   porque dl.google.com está bloqueado.
+- [x] UI rehecha según la sección 3 de `docs/HANDOFF.md`: pestañas del catálogo y Favoritos,
+  menú lateral (ajustes, guía de uso, acerca de), una pantalla por calculadora con tipo de
+  corriente, datos conocidos, filas con hint, unidad y ayuda ⓘ, guía, ficha de fórmulas,
+  tarjeta de resultados y exportación a PDF. Disponibles: las 8 de ley de Ohm y la caída de
+  tensión; el resto del catálogo muestra "Próximamente". `CalculadorasTest` (app) recorre
+  todas las combinaciones de tipo de corriente, variante y unidad. Probado en emulador.
+- [x] Navegación v2, fase A de `docs/arquitectura-v2.md`: barra inferior (Inicio, Proyecto,
+  Calcular, RIC, Referencias), buscador global (títulos, `spec/sinonimos.json`, "RIC 4"),
+  accesos por tipo de proyecto, las 8 etapas, categorías de `spec/catalogo-v2.json`, páginas de
+  los 19 pliegos con resumen propio en borrador y chips RIC en cada herramienta. Sin valores
+  normativos. `CatalogoTest` cubre carga, ids cruzados y buscador.
+- [ ] Fase B de la v2: transcribir las tablas de los RIC N°03 y N°04 desde los PDF oficiales
+  (`%USERPROFILE%\.cache\electricalc-ric\`) y la verificación con semáforo.
+- [ ] Pantallas rápidas sobre el motor existente: longitud máxima del cable (ΔV) y caída con
+  cargas distribuidas; fichas de primera y segunda ley de Ohm y potencia.
 - [ ] Siguiente: dimensionamiento de conductores (IEC/CEI/NEC/CEC + RIC). Motor original en
   `cn2` (modelo de instalación y tablas de capacidad) y `zu` (algoritmo de selección).
 - [ ] Olas 2 a 7.

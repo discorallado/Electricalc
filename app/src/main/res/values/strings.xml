@@ -1,30 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Electricalc</string>
-    <string name="seccion_principal">Cálculos</string>
-    <string name="calc_ley_ohm">Ley de Ohm y potencias</string>
-    <string name="calc_ley_ohm_desc">Tensión, corriente, resistencia, impedancia, potencias y cosφ</string>
-    <string name="sistema">Sistema</string>
+
+    <!-- Navegación y acciones -->
+    <string name="menu">Menú</string>
+    <string name="volver">Volver</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="favorito">Favorito</string>
+    <string name="agregar_favorito">Agregar a favoritos</string>
+    <string name="quitar_favorito">Quitar de favoritos</string>
+    <string name="favorito_agregado">«%1$s» agregado a favoritos</string>
+    <string name="favorito_quitado">«%1$s» quitado de favoritos</string>
+    <string name="sin_favoritos">Aún no tienes favoritos. Mantén pulsada una herramienta para agregarla aquí.</string>
+    <string name="proximamente">Próximamente</string>
+    <string name="proximamente_texto">Esta herramienta todavía no está disponible. Se irá agregando en las próximas versiones.</string>
+    <string name="formula">Fórmulas</string>
+    <string name="guia">Guía</string>
+    <string name="guia_de">Guía: %1$s</string>
+    <string name="mas_opciones">Más opciones</string>
+    <string name="exportar_pdf">Exportar a PDF</string>
+    <string name="compartir">Compartir</string>
+    <string name="calcula_primero">Primero haz un cálculo</string>
+    <string name="datos">Datos</string>
+    <string name="generado_con">Calculado con %1$s</string>
+    <string name="ayuda_de">Ayuda: %1$s</string>
+    <string name="entendido">Entendido</string>
+    <string name="leyenda">Leyenda</string>
+    <string name="ficha_comunes">Para todos los sistemas</string>
+
+    <!-- Formulario de cálculo -->
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado</string>
+    <string name="datos_conocidos">Datos conocidos</string>
+    <string name="variante_2">%1$s y %2$s</string>
+    <string name="variante_3">%1$s, %2$s y %3$s</string>
+
     <string name="sistema_continua">Continua</string>
     <string name="sistema_monofasica">Monofásica</string>
     <string name="sistema_bifasica">Bifásica</string>
     <string name="sistema_trifasica">Trifásica</string>
-    <string name="calcular">Calcular</string>
-    <string name="resultado">Resultado</string>
-    <string name="dato_a_calcular">Calcular</string>
-    <string name="datos_conocidos">Datos conocidos</string>
-    <string name="cos_phi">cosφ</string>
-    <string name="mag_tension">Tensión (V)</string>
-    <string name="mag_corriente">Corriente (A)</string>
-    <string name="mag_resistencia">Resistencia (Ω)</string>
-    <string name="mag_impedancia">Impedancia (Ω)</string>
-    <string name="mag_potencia_activa">Potencia activa (W)</string>
-    <string name="mag_potencia_reactiva">Potencia reactiva (var)</string>
-    <string name="mag_potencia_aparente">Potencia aparente (VA)</string>
-    <string name="mag_cos_phi">Factor de potencia (cosφ)</string>
-    <string name="err_datos_insuficientes">Faltan datos para este cálculo</string>
-    <string name="err_no_aplica_continua">No aplica en corriente continua</string>
-    <string name="err_valor_no_valido">Revisa los valores ingresados</string>
-    <string name="err_cos_phi">El cosφ debe estar entre 0 y 1</string>
-    <string name="volver">Volver</string>
+    <string name="sistema_mono_bifasica">Monofásica / bifásica</string>
+
+    <string name="campo_tipo_corriente">Tipo de corriente</string>
+    <string name="campo_tension">Tensión</string>
+    <string name="campo_corriente">Corriente</string>
+    <string name="campo_resistencia">Resistencia</string>
+    <string name="campo_impedancia">Impedancia</string>
+    <string name="campo_potencia">Potencia</string>
+    <string name="campo_potencia_activa">Potencia activa</string>
+    <string name="campo_potencia_aparente">Potencia aparente</string>
+    <string name="campo_potencia_reactiva">Potencia reactiva</string>
+    <string name="campo_factor_potencia">Factor de potencia</string>
+    <string name="campo_carga">Carga</string>
+    <string name="campo_seccion">Sección</string>
+    <string name="campo_paralelos">Conductores por fase</string>
+    <string name="campo_longitud">Longitud</string>
+    <string name="campo_material">Conductor</string>
+    <string name="campo_tipo_cable">Tipo de cable</string>
+    <string name="campo_temperatura">Temperatura de servicio</string>
+
+    <string name="material_cobre">Cobre</string>
+    <string name="material_aluminio">Aluminio</string>
+    <string name="cable_unipolar">Unipolar</string>
+    <string name="cable_multipolar">Multipolar</string>
+
+    <!-- Resultados -->
+    <string name="res_corriente">Corriente</string>
+    <string name="res_tension">Tensión</string>
+    <string name="res_potencia_activa">Potencia activa</string>
+    <string name="res_potencia_aparente">Potencia aparente</string>
+    <string name="res_potencia_reactiva">Potencia reactiva</string>
+    <string name="res_factor_potencia">Factor de potencia</string>
+    <string name="res_angulo_desfase">Ángulo de desfase φ</string>
+    <string name="res_resistencia">Resistencia</string>
+    <string name="res_impedancia">Impedancia</string>
+    <string name="res_caida">Caída de tensión</string>
+    <string name="res_caida_porcentaje">Caída porcentual</string>
+    <string name="res_tension_carga">Tensión en la carga</string>
+    <string name="res_corriente_linea">Corriente de la línea</string>
+
+    <!-- Errores -->
+    <string name="err_faltan_datos">Completa todos los datos</string>
+    <string name="err_datos_insuficientes">Con estos datos no se puede calcular el resultado</string>
+    <string name="err_no_aplica_continua">No se aplica en corriente continua</string>
+    <string name="err_tension">La tensión debe ser mayor que cero</string>
+    <string name="err_corriente">La corriente debe ser mayor que cero</string>
+    <string name="err_resistencia">La resistencia debe ser mayor que cero</string>
+    <string name="err_impedancia">La impedancia debe ser mayor que cero</string>
+    <string name="err_potencia">Las potencias ingresadas no son válidas o no son coherentes entre sí</string>
+    <string name="err_cos_phi">El factor de potencia debe estar entre 0 y 1 (φ entre 0° y 90°)</string>
+    <string name="err_valor_fuera">Hay un valor fuera de rango</string>
+
+    <!-- Introducción de cada pantalla (guía) -->
+    <string name="intro_corriente">Obtiene la corriente que circula por una carga a partir de dos datos conocidos del circuito: tensión, potencia, resistencia o impedancia. En alterna, cuando el resultado depende del desfase, se pide también el factor de potencia.</string>
+    <string name="intro_tension">Obtiene la tensión de alimentación de una carga a partir de dos datos del circuito. En trifásica el resultado es la tensión entre fases.</string>
+    <string name="intro_potencia_activa">Calcula la potencia activa, la que la carga transforma de verdad en trabajo, calor o luz. Se mide en watts.</string>
+    <string name="intro_potencia_aparente">Calcula la potencia aparente, el producto de tensión por corriente sin considerar el desfase. Es la que dimensiona transformadores, generadores y conductores.</string>
+    <string name="intro_potencia_reactiva">Calcula la potencia reactiva, la que va y vuelve entre la fuente y los campos magnéticos o eléctricos de la carga sin consumirse. Sólo existe en corriente alterna.</string>
+    <string name="intro_factor_potencia">Calcula el factor de potencia (cos φ) y el ángulo de desfase entre tensión y corriente a partir de los datos conocidos de la carga.</string>
+    <string name="intro_resistencia">Calcula la resistencia de una carga, es decir, la parte de su oposición a la corriente que disipa energía como calor.</string>
+    <string name="intro_impedancia">Calcula la impedancia de una carga en corriente alterna: su oposición total a la corriente, que suma la resistencia y la reactancia.</string>
+    <string name="intro_caida">Calcula cuánto baja la tensión a lo largo de una línea por la resistencia y la reactancia de sus conductores, con la carga concentrada al final. También entrega la tensión que efectivamente llega a la carga.</string>
+    <string name="intro_caida_norma">El método sigue el Anexo G de la IEC 60364-5-52. Compara el resultado con la caída máxima que fija la normativa de tu instalación (en Chile, los pliegos técnicos RIC de la SEC).</string>
+
+    <!-- Ayuda de cada campo -->
+    <string name="ayuda_tipo_corriente">Continua: la corriente circula siempre en el mismo sentido (baterías, paneles solares, fuentes de CC).\n\nMonofásica: una fase y neutro; es la alimentación típica de una vivienda.\n\nBifásica: dos fases, con o sin neutro.\n\nTrifásica: tres fases, con o sin neutro; es la alimentación habitual de motores e instalaciones industriales.</string>
+    <string name="ayuda_tension">Diferencia de potencial que impulsa la corriente por el circuito.</string>
+    <string name="ayuda_tension_sistema">En monofásica ingresa la tensión entre fase y neutro (en Chile, 220 V). En bifásica y trifásica ingresa la tensión entre fases (en Chile, 380 V).</string>
+    <string name="ayuda_corriente">Cantidad de carga eléctrica que circula por el conductor en cada segundo. Se mide en amperes.</string>
+    <string name="ayuda_resistencia">Oposición de un material al paso de la corriente; la energía que absorbe se transforma en calor. En alterna es la parte real de la impedancia.</string>
+    <string name="ayuda_impedancia">Oposición total de un circuito a la corriente alterna. Combina la resistencia con la reactancia de bobinas y condensadores.</string>
+    <string name="ayuda_potencia">Potencia de la carga. Puedes ingresarla como potencia activa, aparente o reactiva.</string>
+    <string name="ayuda_potencia_unidades">La unidad elegida indica de qué potencia se trata: W, kW, MW, HP o CV para la activa; VA, kVA o MVA para la aparente; var, kvar o Mvar para la reactiva.</string>
+    <string name="ayuda_potencia_activa">Potencia que la carga convierte en trabajo útil, calor o luz. Es la que registra el medidor de energía.</string>
+    <string name="ayuda_potencia_aparente">Producto de la tensión por la corriente, sin tener en cuenta el desfase. Indica cuánta capacidad ocupa la carga en la red.</string>
+    <string name="ayuda_potencia_reactiva">Potencia que se intercambia con los campos magnéticos (motores, transformadores) o eléctricos (condensadores) sin consumirse. No produce trabajo, pero sí carga los conductores.</string>
+    <string name="ayuda_factor_potencia">Relación entre la potencia activa y la aparente; equivale al coseno del ángulo φ entre tensión y corriente. Va de 0 a 1.</string>
+    <string name="ayuda_factor_potencia_valores">Valores orientativos si no tienes el dato de placa: 1 en cargas resistivas (estufas, calefactores, hervidores); 0,95 a 0,99 en equipos electrónicos con corrección activa (computadores, drivers LED de calidad); 0,75 a 0,85 en aparatos con motores pequeños (refrigeradores, ventiladores). Con 0,9 se cubre la mayoría de los casos.</string>
+    <string name="ayuda_factor_potencia_formas">Con el selector de la derecha puedes ingresarlo también como sen φ, tan φ o como el ángulo φ en grados o radianes.</string>
+    <string name="ayuda_carga">Consumo que alimenta la línea al final de su recorrido.</string>
+    <string name="ayuda_carga_unidades">Puedes ingresarla como corriente (A) o como potencia activa, aparente o reactiva; en ese caso la corriente se obtiene con la tensión y el factor de potencia.</string>
+    <string name="ayuda_seccion">Área de la sección transversal del conductor, en mm² o en calibre AWG/kcmil.</string>
+    <string name="ayuda_paralelos">Número de conductores iguales (misma sección, largo y material) conectados en paralelo en cada fase. La corriente se reparte entre ellos.</string>
+    <string name="ayuda_longitud">Distancia entre el punto de alimentación y la carga, medida en un solo sentido.</string>
+    <string name="ayuda_material">Metal del conductor. El aluminio tiene mayor resistividad que el cobre, por lo que necesita más sección para la misma caída.</string>
+    <string name="ayuda_tipo_cable">Unipolar: cada conductor va en su propio cable. Multipolar: varios conductores aislados dentro de una misma cubierta; quedan más juntos y la reactancia es algo menor.</string>
+    <string name="ayuda_temperatura">Temperatura que alcanza el conductor en servicio. A mayor temperatura, mayor resistencia y mayor caída.</string>
+    <string name="ayuda_temperatura_valores">Valores habituales según el aislamiento: 70 °C para PVC; 90 °C para XLPE o EPR; 60, 75 o 90 °C para los tipos NEC según su designación (por ejemplo, THHN admite 90 °C).</string>
+
+    <!-- Leyenda de fórmulas -->
+    <string name="sim_corriente">Corriente</string>
+    <string name="sim_tension_fn">Tensión fase-neutro</string>
+    <string name="sim_tension_ff">Tensión (entre fases en bifásica y trifásica)</string>
+    <string name="sim_potencia_activa">Potencia activa</string>
+    <string name="sim_potencia_aparente">Potencia aparente</string>
+    <string name="sim_potencia_reactiva">Potencia reactiva</string>
+    <string name="sim_resistencia">Resistencia</string>
+    <string name="sim_impedancia">Impedancia</string>
+    <string name="sim_factor_potencia">Factor de potencia</string>
+    <string name="sim_desfase">Desfase entre tensión y corriente</string>
+    <string name="sim_caida">Caída de tensión</string>
+    <string name="sim_tension_alimentacion">Tensión de alimentación</string>
+    <string name="sim_resistencia_linea">Resistencia del conductor a la temperatura de servicio</string>
+    <string name="sim_reactancia_linea">Reactancia del conductor</string>
+    <string name="sim_longitud">Longitud de la línea</string>
+    <string name="sim_paralelos">Conductores en paralelo por fase</string>
+    <string name="sim_alfa">Coeficiente de temperatura del material</string>
+    <string name="sim_temperatura">Temperatura de servicio</string>
+    <string name="nota_caida_tablas">Secciones en mm²: resistencia de tabla a 20 °C y reactancia a 50 Hz. Calibres AWG/kcmil: resistencia de tabla a 75 °C y reactancia a 60 Hz (NEC, capítulo 9).</string>
+
+    <!-- Cajón lateral -->
+    <string name="ajustes">Ajustes</string>
+    <string name="guia_uso">Cómo usar la app</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="ajustes_valores">Valores iniciales</string>
+    <string name="ajustes_valores_texto">Se escriben en los formularios al abrirlos o al cambiar el tipo de corriente. Déjalos en blanco para no rellenar nada.</string>
+    <string name="ajustes_tension">Tensión en %1$s</string>
+    <string name="ajustes_cos_phi">Factor de potencia</string>
+    <string name="ajustes_unidades">Unidades preferidas</string>
+    <string name="ajustes_pies">Longitudes en pies</string>
+    <string name="ajustes_awg">Secciones en AWG</string>
+    <string name="ajustes_fahrenheit">Temperaturas en °F</string>
+    <string name="acerca_texto">Electricalc reúne calculadoras y tablas para instalaciones eléctricas. Todas las herramientas son gratuitas.</string>
+    <string name="acerca_aviso">Los resultados son orientativos. Verifica siempre el diseño con la normativa vigente y con un profesional autorizado.</string>
+    <string name="guia_uso_1">La barra inferior tiene cinco destinos: Inicio (buscador, recientes y favoritos), Proyecto (herramientas por etapa), Calcular (por tipo de problema), RIC (los 19 pliegos) y Referencias (tablas, esquemas, conectores, conversiones y formulario).</string>
+    <string name="guia_uso_2">Mantén pulsada una herramienta para agregarla a Favoritos o quitarla. También puedes usar la estrella dentro de cada calculadora. El buscador entiende «RIC 4» y no distingue tildes.</string>
+    <string name="guia_uso_3">En cada calculadora elige el tipo de corriente y, si corresponde, qué datos conoces. Toca ⓘ junto a un campo para ver qué significa y qué valor ingresar.</string>
+    <string name="guia_uso_4">Desde la barra superior abres las fórmulas y la guía de la pantalla. Los chips «RIC N°xx» llevan al pliego relacionado. En el menú ⋮ puedes exportar el resultado a PDF o compartirlo.</string>
 </resources>

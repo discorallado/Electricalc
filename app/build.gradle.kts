@@ -31,7 +31,21 @@ android {
     buildFeatures {
         compose = true
     }
+
+    sourceSets {
+        getByName("main") {
+            assets.srcDir(layout.buildDirectory.dir("generated/catalogo/assets"))
+        }
+    }
 }
+
+// El menú sale de spec/: catalogo-v2.json (estructura y RIC), catalogo.json (títulos en inglés e
+// íconos) y sinonimos.json (buscador). Se copian a los assets en cada compilación para no duplicarlos.
+val copiarCatalogo by tasks.registering(Copy::class) {
+    from(rootProject.files("spec/catalogo.json", "spec/catalogo-v2.json", "spec/sinonimos.json"))
+    into(layout.buildDirectory.dir("generated/catalogo/assets"))
+}
+tasks.named("preBuild") { dependsOn(copiarCatalogo) }
 
 kotlin {
     compilerOptions {
@@ -51,4 +65,13 @@ dependencies {
     implementation(libs.compose.material.icons)
     implementation(libs.compose.ui.tooling.preview)
     debugImplementation(libs.compose.ui.tooling)
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
+    testRuntimeOnly(libs.junit.platform.launcher)
+    // org.json real: el de android.jar en los tests unitarios es solo un stub.
+    testImplementation(libs.org.json)
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }

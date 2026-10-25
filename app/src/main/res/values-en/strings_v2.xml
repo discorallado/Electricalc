@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="destino_inicio">Home</string>
+    <string name="destino_proyecto">Project</string>
+    <string name="destino_calcular">Calculate</string>
+    <string name="destino_ric">RIC</string>
+    <string name="destino_referencias">References</string>
+
+    <string name="buscar_hint">Search: “drop”, “RCD”, “RIC 4”…</string>
+    <string name="borrar_busqueda">Clear search</string>
+    <string name="sin_resultados">No results for “%1$s”</string>
+    <string name="herramientas_n">Tools (%1$d)</string>
+    <string name="que_estas_haciendo">What are you working on?</string>
+    <string name="recientes">Recent</string>
+    <string name="acceso_vivienda">Home</string>
+    <string name="acceso_comercial">Shop</string>
+    <string name="acceso_fotovoltaico">Solar PV</string>
+    <string name="acceso_ve">EV charging</string>
+    <string name="acceso_motor">Motor</string>
+    <string name="acceso_tierra">Earthing</string>
+
+    <string name="proyecto_titulo">Project by stages</string>
+    <string name="proyecto_intro">Tools in the order a project moves forward, from loads to documentation. Soon you will be able to save projects, and each stage will feed its results into the next.</string>
+    <string name="etapa_cargas">Loads and demand</string>
+    <string name="etapa_empalme">Service connection</string>
+    <string name="etapa_tableros">Panels</string>
+    <string name="etapa_alimentadores">Feeders and circuits</string>
+    <string name="etapa_protecciones">Protection</string>
+    <string name="etapa_tierra">Earthing</string>
+    <string name="etapa_sistemas">Systems</string>
+    <string name="etapa_documentacion">Documentation</string>
+
+    <string name="cat_fundamentos">Electrical fundamentals</string>
+    <string name="cat_conductores">Conductors and raceways</string>
+    <string name="cat_protecciones">Protection and short circuit</string>
+    <string name="cat_tierra">Earthing and safety</string>
+    <string name="cat_energia">Energy, power factor and efficiency</string>
+    <string name="cat_motores">Motors and transformers</string>
+    <string name="cat_sistemas">Systems: backup, PV and e-mobility</string>
+    <string name="cat_electronica">Electronics and instrumentation</string>
+    <string name="cat_ref_tablas">Tables</string>
+    <string name="cat_ref_esquemas">Diagrams</string>
+    <string name="cat_ref_conectores">Connectors and pinouts</string>
+    <string name="cat_ref_unidades">Conversions and units</string>
+    <string name="cat_ref_formulario">Formulas</string>
+    <plurals name="disponibles_de">
+        <item quantity="one">%1$d of %2$d tool available</item>
+        <item quantity="other">%1$d of %2$d tools available</item>
+    </plurals>
+    <plurals name="herramientas">
+        <item quantity="one">%1$d tool</item>
+        <item quantity="other">%1$d tools</item>
+    </plurals>
+
+    <string name="nueva_proximamente">New · %1$s · coming soon</string>
+    <string name="pendiente_nueva">%1$s in development (phase %2$s)</string>
+    <string name="tipo_calculadora">Calculator</string>
+    <string name="tipo_verificacion">Check</string>
+    <string name="tipo_asistente">Assistant</string>
+    <string name="tipo_esquema">Diagram</string>
+    <string name="tipo_documento">Document</string>
+    <string name="tipo_checklist">Checklist</string>
+    <string name="tipo_tabla">Table</string>
+    <string name="datos_ric_necesarios">RIC data it needs</string>
+    <string name="verificacion_ric_pendiente_texto">RIC check pending: these tables have not been transcribed from the official PDF yet. The app shows no limits until they are, with their reference.</string>
+    <string name="relacion_por_confirmar">link to be confirmed in the PDF</string>
+
+    <string name="ric_intro">Technical standards of Chile’s safety regulation for electrical installations (DS N°8/2019). Titles must be checked against each official PDF.</string>
+    <string name="pliego_sin_herramientas">Scope to be reviewed</string>
+    <string name="pliego_sin_herramientas_texto">No tools are linked to this standard yet.</string>
+    <string name="pliego_de_que_trata">What it covers</string>
+    <string name="borrador">Draft</string>
+    <string name="borrador_nota">Summary in our own words, to be checked against the official PDF. It does not replace the standard.</string>
+    <string name="pliego_herramientas">Tools for this standard</string>
+    <string name="pliego_tablas">Tables and limits</string>
+    <string name="pliego_esquemas">Diagrams</string>
+    <string name="pliego_sin_esquemas">No diagrams for this standard yet.</string>
+    <string name="pliego_checklist">Checklist</string>
+    <string name="pliego_sin_checklist">No checklist for this standard yet.</string>
+    <string name="pliego_pdf">Official PDF</string>
+    <string name="pliego_pdf_texto">Transcribed version: none yet. The current PDF is available from the SEC website.</string>
+    <string name="abrir_sitio_sec">Open SEC website</string>
+    <string-array name="ric_resumenes">
+        <item>Covers the connection between the distribution company’s grid and the customer installation: service types, their location, metering and connection conditions.</item>
+        <item>Requirements for the panels that distribute and protect circuits: how they are built, where they go, how they are labelled and accessed.</item>
+        <item>How to size feeders and estimate an installation’s maximum demand from its loads, including the allowed voltage drop.</item>
+        <item>Permitted conductors and materials, their current capacity and identification, and raceway systems: conduits, trays, ladders and similar.</item>
+        <item>Measures that protect people from direct and indirect contact with live parts, and the installation from overcurrents and overvoltages.</item>
+        <item>Earthing systems and equipotential bonding: earthing arrangements, electrodes and how they are verified.</item>
+        <item>Conditions for supplying and protecting specific equipment such as motors, capacitors and transformers.</item>
+        <item>Installations that must keep working when the normal supply fails: emergency lighting, backup sources and their transfer.</item>
+        <item>On-site generation, grid-connected or not, such as solar PV or generator sets, and its connection and protection conditions.</item>
+        <item>Requirements for homes, offices and shops: circuits, outlets, protection and room conditions.</item>
+        <item>Rooms and applications with their own requirements, such as bathrooms, pools and other places with particular risks.</item>
+        <item>Installations in places with flammable gases, vapours or dusts: area classification and suitable equipment.</item>
+        <item>Substations and electrical rooms inside the customer installation: layout, working space, ventilation and safety.</item>
+        <item>Criteria for using energy efficiently in installations.</item>
+        <item>Infrastructure for charging electric vehicles: charging points, their supply and protection.</item>
+        <item>Scope to be defined after reviewing the official PDF.</item>
+        <item>Operation and maintenance of installations over their service life: inspections, records and responsibilities.</item>
+        <item>How installation projects are submitted to the SEC: documents, drawings, design calculations and the declaration.</item>
+        <item>Inspections and tests carried out before energizing an installation, and how they are recorded.</item>
+    </string-array>
+
+    <string name="ajustes_norma">Default standard</string>
+    <string name="ajustes_norma_texto">Offered first in calculators that depend on a standard, such as conductor sizing.</string>
+    <string name="ajustes_idioma">Language</string>
+    <string name="idioma_sistema">System</string>
+    <string name="idioma_es">Español</string>
+    <string name="idioma_en">English</string>
+</resources>

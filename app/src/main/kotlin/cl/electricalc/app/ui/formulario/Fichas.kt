@@ -1,0 +1,207 @@
+package cl.electricalc.app.ui.formulario
+
+import cl.electricalc.app.R
+import java.util.Locale
+
+/**
+ * Fichas del formulario, por id del catálogo. Las de ley de Ohm comparten la convención del motor:
+ * U es la tensión entre fases (bifásica y trifásica, con factor √3 en trifásica) y U₀ la tensión
+ * fase-neutro en monofásica.
+ */
+object Fichas {
+    private val sen get() = if (Locale.getDefault().language == "es") "sen" else "sin"
+
+    /** Antepone √3 × en trifásica. */
+    private fun k(tri: Boolean, resto: String): Expr = if (tri) e(raiz("3"), " × $resto") else e(resto)
+
+    private fun ohm(cc: ((String) -> List<Expr>)?, ca: (u: String, tri: Boolean) -> List<Expr>): Ficha {
+        val tarjetas = buildList {
+            if (cc != null) add(TarjetaFicha(R.string.sistema_continua, cc("U")))
+            add(TarjetaFicha(R.string.sistema_monofasica, ca("U_0", false)))
+            add(TarjetaFicha(R.string.sistema_bifasica, ca("U", false)))
+            add(TarjetaFicha(R.string.sistema_trifasica, ca("U", true)))
+        }
+        return Ficha(tarjetas, leyendaOhm)
+    }
+
+    private val leyendaOhm = listOf(
+        Simbolo("I", R.string.sim_corriente, "A"),
+        Simbolo("U_0", R.string.sim_tension_fn, "V"),
+        Simbolo("U", R.string.sim_tension_ff, "V"),
+        Simbolo("P", R.string.sim_potencia_activa, "W"),
+        Simbolo("S", R.string.sim_potencia_aparente, "VA"),
+        Simbolo("Q", R.string.sim_potencia_reactiva, "var"),
+        Simbolo("R", R.string.sim_resistencia, "Ω"),
+        Simbolo("Z", R.string.sim_impedancia, "Ω"),
+        Simbolo("cos φ", R.string.sim_factor_potencia),
+        Simbolo("φ", R.string.sim_desfase, "°"),
+    )
+
+    private fun corriente() = ohm(
+        cc = { u -> listOf(e("I = ", frac("P", u)), e("I = ", raiz(frac("P", "R"))), e("I = ", frac(u, "R"))) },
+    ) { u, t ->
+        listOf(
+            e("I = ", frac("P", k(t, "$u × cos φ"))),
+            e("I = ", raiz(frac("P", k(t, "Z × cos φ")))),
+            e("I = ", raiz(frac("P", k(t, "R")))),
+            e("I = ", frac(u, "Z")),
+            e("I = ", frac("$u × cos φ", "R")),
+            e("I = ", frac("S", k(t, u))),
+            e("I = ", raiz(frac("S", k(t, "Z")))),
+            e("I = ", raiz(frac("S × cos φ", k(t, "R")))),
+            e("I = ", frac("Q", k(t, "$u × $sen φ"))),
+            e("I = ", raiz(frac("Q", k(t, "Z × $sen φ")))),
+            e("I = ", raiz(frac("Q × cos φ", k(t, "R × $sen φ")))),
+        )
+    }
+
+    private fun tension() = ohm(
+        cc = { u -> listOf(e("$u = ", frac("P", "I")), e("$u = R × I"), e("$u = ", raiz("P × R"))) },
+    ) { u, t ->
+        listOf(
+            e("$u = ", frac("P", k(t, "I × cos φ"))),
+            e("$u = Z × I"),
+            e("$u = ", frac("R × I", "cos φ")),
+            e("$u = ", raiz(frac("P × Z", k(t, "cos φ")))),
+            e("$u = ", raiz(frac("P × R", k(t, "cos^2 φ")))),
+            e("$u = ", frac("S", k(t, "I"))),
+            e("$u = ", raiz(if (t) frac("S × Z", raiz("3")) else e("S × Z"))),
+            e("$u = ", raiz(frac("S × R", k(t, "cos φ")))),
+            e("$u = ", frac("Q", k(t, "I × $sen φ"))),
+            e("$u = ", raiz(frac("Q × Z", k(t, "$sen φ")))),
+            e("$u = ", raiz(frac("Q × R", k(t, "$sen φ × cos φ")))),
+        )
+    }
+
+    private fun potenciaActiva() = ohm(
+        cc = { u -> listOf(e("P = $u × I"), e("P = R × I^2"), e("P = ", frac("${u}^2", "R"))) },
+    ) { u, t ->
+        listOf(
+            e("P = ", k(t, "$u × I × cos φ")),
+            e("P = ", k(t, "Z × I^2 × cos φ")),
+            e("P = ", k(t, "R × I^2")),
+            e("P = ", frac(k(t, "${u}^2 × cos φ"), "Z")),
+            e("P = ", frac(k(t, "${u}^2 × cos^2 φ"), "R")),
+            e("P = S × cos φ"),
+            e("P = ", frac("Q", "tan φ")),
+            e("P = ", raiz("S^2 − Q^2")),
+        )
+    }
+
+    private fun potenciaAparente() = ohm(
+        cc = { u -> listOf(e("S = $u × I")) },
+    ) { u, t ->
+        listOf(
+            e("S = ", k(t, "$u × I")),
+            e("S = ", k(t, "Z × I^2")),
+            e("S = ", frac(k(t, "R × I^2"), "cos φ")),
+            e("S = ", frac(k(t, "${u}^2"), "Z")),
+            e("S = ", frac(k(t, "${u}^2 × cos φ"), "R")),
+            e("S = ", frac("P", "cos φ")),
+            e("S = ", frac("Q", "$sen φ")),
+            e("S = ", raiz("P^2 + Q^2")),
+        )
+    }
+
+    private fun potenciaReactiva() = ohm(cc = null) { u, t ->
+        listOf(
+            e("Q = ", k(t, "$u × I × $sen φ")),
+            e("Q = ", k(t, "Z × I^2 × $sen φ")),
+            e("Q = ", k(t, "R × I^2 × tan φ")),
+            e("Q = ", frac(k(t, "${u}^2 × $sen φ"), "Z")),
+            e("Q = ", frac(k(t, "${u}^2 × $sen φ × cos φ"), "R")),
+            e("Q = S × $sen φ"),
+            e("Q = P × tan φ"),
+            e("Q = ", raiz("S^2 − P^2")),
+        )
+    }
+
+    private fun factorPotencia() = ohm(cc = null) { u, t ->
+        listOf(
+            e("cos φ = ", frac("P", k(t, "$u × I"))),
+            e("cos φ = ", frac("P", "S")),
+            e("cos φ = ", frac("R", "Z")),
+            e("cos φ = ", frac("P", raiz("P^2 + Q^2"))),
+            e("cos φ = ", frac(raiz("S^2 − Q^2"), "S")),
+            e("cos φ = ", frac("P × Z", k(t, "${u}^2"))),
+            e("cos φ = ", frac("P", k(t, "Z × I^2"))),
+        )
+    }
+
+    private fun resistencia() = ohm(
+        cc = { u -> listOf(e("R = ", frac(u, "I")), e("R = ", frac("P", "I^2")), e("R = ", frac("${u}^2", "P"))) },
+    ) { u, t ->
+        listOf(
+            e("R = ", frac("$u × cos φ", "I")),
+            e("R = ", frac("P", k(t, "I^2"))),
+            e("R = ", frac(k(t, "${u}^2 × cos^2 φ"), "P")),
+            e("R = ", frac("S × cos φ", k(t, "I^2"))),
+            e("R = ", frac(k(t, "${u}^2 × cos φ"), "S")),
+            e("R = ", frac("Q × cos φ", k(t, "I^2 × $sen φ"))),
+            e("R = ", frac(k(t, "${u}^2 × $sen φ × cos φ"), "Q")),
+            e("R = Z × cos φ"),
+        )
+    }
+
+    private fun impedancia() = ohm(cc = null) { u, t ->
+        listOf(
+            e("Z = ", frac(u, "I")),
+            e("Z = ", frac(k(t, "${u}^2 × cos φ"), "P")),
+            e("Z = ", frac("P", k(t, "I^2 × cos φ"))),
+            e("Z = ", frac(k(t, "${u}^2"), "S")),
+            e("Z = ", frac("S", k(t, "I^2"))),
+            e("Z = ", frac(k(t, "${u}^2 × $sen φ"), "Q")),
+            e("Z = ", frac("Q", k(t, "I^2 × $sen φ"))),
+            e("Z = ", frac("R", "cos φ")),
+        )
+    }
+
+    private fun caida(): Ficha {
+        val porcentaje = e("ΔU% = ", frac("ΔU", "U"), " × 100")
+        val temperatura = e("R_T = R_ref × (1 + α × (T − T_ref))")
+        return Ficha(
+            tarjetas = listOf(
+                TarjetaFicha(R.string.sistema_continua, listOf(e("ΔU = ", frac("2 × I × R × L", "n")))),
+                TarjetaFicha(
+                    R.string.sistema_mono_bifasica,
+                    listOf(e("ΔU = ", frac("2 × I × (R × cos φ + X × $sen φ) × L", "n"))),
+                ),
+                TarjetaFicha(
+                    R.string.sistema_trifasica,
+                    listOf(e("ΔU = ", frac(e(raiz("3"), " × I × (R × cos φ + X × $sen φ) × L"), "n"))),
+                ),
+                TarjetaFicha(R.string.ficha_comunes, listOf(porcentaje, e("U_carga = U − ΔU"), temperatura)),
+            ),
+            leyenda = listOf(
+                Simbolo("ΔU", R.string.sim_caida, "V"),
+                Simbolo("U", R.string.sim_tension_alimentacion, "V"),
+                Simbolo("I", R.string.sim_corriente, "A"),
+                Simbolo("R", R.string.sim_resistencia_linea, "Ω/km"),
+                Simbolo("X", R.string.sim_reactancia_linea, "Ω/km"),
+                Simbolo("L", R.string.sim_longitud, "km"),
+                Simbolo("n", R.string.sim_paralelos),
+                Simbolo("φ", R.string.sim_desfase, "°"),
+                Simbolo("α", R.string.sim_alfa, "1/°C"),
+                Simbolo("T", R.string.sim_temperatura, "°C"),
+            ),
+            notas = listOf(R.string.nota_caida_tablas),
+        )
+    }
+
+    private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaCorrente" to ::corriente,
+        "FormulaTensione" to ::tension,
+        "FormulaPotenzaAttiva" to ::potenciaActiva,
+        "FormulaPotenzaApparente" to ::potenciaAparente,
+        "FormulaPotenzaReattiva" to ::potenciaReactiva,
+        "FormulaFattorePotenza" to ::factorPotencia,
+        "FormulaResistenza" to ::resistencia,
+        "FormulaImpedenza" to ::impedancia,
+        "FormulaCaduta" to ::caida,
+    )
+
+    fun existe(id: String?) = id != null && id in constructores
+
+    /** Se arma al pedirla para que los textos (sen/sin) sigan el idioma actual. */
+    fun ficha(id: String): Ficha? = constructores[id]?.invoke()
+}
