@@ -3,35 +3,40 @@
 Estado al cierre del trabajo en la nube y cómo continuar en tu máquina con Android Studio
 y Claude Code.
 
-## 1. Preparar el entorno local
+## 1. Preparar el entorno local (Windows)
 
 1. Clonar la rama de trabajo:
-   ```bash
+   ```powershell
    git clone -b ccr-a5593e17-q4r0gz https://github.com/discorallado/Electricalc.git
    cd Electricalc
    ```
 2. Abrir la carpeta en **Android Studio Narwhal 3 (2025.1.3) o más nuevo**. Instalar el SDK 36
    si lo pide y sincronizar. Si el módulo `app` no aparece en el primer sync, sincronizar de
    nuevo: se incluye solo cuando existe `local.properties` con `sdk.dir`.
-3. Verificar el motor: `./gradlew :core-calc:test` (Windows: `gradlew.bat :core-calc:test`).
+3. Verificar el motor y la app:
+   ```powershell
+   .\gradlew.bat :core-calc:test :app:assembleDebug
+   ```
 4. Copiar el `.xapk` de la app de referencia **fuera del repo** (está en `.gitignore`) y
    preparar el oráculo:
-   ```bash
-   ./scripts/setup-oraculo.sh /ruta/electrical-calculations-11-2-1.xapk
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\scripts\setup-oraculo.ps1 -Xapk C:\ruta\electrical-calculations-11-2-1.xapk
    ```
-   Deja en `~/.cache/electricalc-oraculo/`: código descompilado (`src/`), recursos
-   decodificados (`res/`) y el bytecode original como JAR (`jar/app.jar`). En Windows,
-   ejecútalo desde Git Bash o WSL.
-5. REA queda disponible como servidor MCP para Claude Code mediante `.mcp.json`
-   (`npx -y rea-agents@6.7.0 mcp`). Para el análisis Android, instalar JADX headless con
-   `./scripts/setup-rea.sh` y exportar `REA_JADX_MCP_JAR`.
+   Deja en `%USERPROFILE%\.cache\electricalc-oraculo\`: código descompilado (`src\`), recursos
+   decodificados (`res\`) y el bytecode original como JAR (`jar\app.jar`). En Windows el
+   classpath de Java se separa con `;`.
+5. Instalar REA y JADX headless para Claude Code:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\scripts\setup-rea.ps1
+   ```
+   `.mcp.json` registra REA como servidor MCP (`cmd /c npx -y rea-agents@6.7.0 mcp`).
 6. Plugins recomendados para Claude Code (directorio de Anthropic):
    - **Android CLI**: compilar, instalar y ejecutar en emulador o dispositivo.
    - **KotlinSense** o **kotlin-lsp**: diagnósticos de tipos e imports en Kotlin.
    - **Android Emulator QA**: capturas, árbol de UI y logcat para validar pantallas.
    - **Design** (Anthropic): revisión de diseño, UX copy y accesibilidad.
 
-Commits y PR se hacen desde tu consola local.
+Commits y PR se hacen desde la consola local.
 
 ## 2. Qué hay hecho
 
@@ -40,7 +45,7 @@ Commits y PR se hacen desde tu consola local.
 | `spec/catalogo.json` | Menú completo del APK: 6 pestañas, 155 herramientas, 66 fichas de formulario |
 | `core-calc` · `LeyOhm` | V, I, R, Z, P, Q, S, cosφ; CC/mono/bi/trifásica; 2.016 vectores dorados OK |
 | `core-calc` · `CaidaTension` + tablas de conductores | mm² y AWG, Cu/Al, temperatura, cargas distribuidas; 1.500 vectores OK |
-| `app` | Esqueleto Compose. **La UI actual no sirve como modelo y se rehace (sección 3)** |
+| `app` | UI según la sección 3: 8 calculadoras de ley de Ohm y caída de tensión, fichas, guías, favoritos, PDF. `CalculadorasTest` cubre todas las combinaciones |
 | CI | GitHub Actions corre los tests y genera el APK de debug |
 | Oráculo | El bytecode original corre en la JVM (`java -noverify -cp app.jar:android-stub.jar:json.jar`) |
 
@@ -125,9 +130,10 @@ duplicar código.
 
 ## 4. Siguientes pasos, en orden
 
-1. Rediseño de la UI (sección 3) con las calculadoras ya listas en el motor: corriente,
-   tensión, potencia activa/aparente/reactiva, factor de potencia, resistencia, impedancia
-   (todas sobre `LeyOhm`) y caída de tensión (sobre `CaidaTension`).
+1. ~~Rediseño de la UI (sección 3)~~ Hecho. Para agregar una calculadora: una definición en
+   `app/.../ui/calculadoras/` registrada en `Registro.kt`, su ficha en `Fichas.kt` y sus
+   textos en `strings.xml` (es y en). Pendientes rápidos: longitud máxima del cable (ΔV) y
+   caída con cargas distribuidas, que ya están en el motor.
 2. Dimensionamiento de conductores IEC/CEI/NEC/CEC + RIC: motor original en `cn2`
    (instalación y tablas de capacidad, ver `in2` y `jn2`) y `zu` (algoritmo de selección).
    Validar con el oráculo, llamando a esas clases por reflexión.
@@ -140,5 +146,5 @@ duplicar código.
 > con tipo de corriente, variantes de datos conocidos, filas con hint y unidad, ayuda ⓘ por
 > campo, guía, ficha de fórmula y tarjeta de resultados. Empieza por las 8 calculadoras de la
 > ley de Ohm y la de caída de tensión. Para contenido y comportamiento consulta el APK
-> descompilado en `~/.cache/electricalc-oraculo/` (o usa REA). Compila y prueba en el emulador
+> descompilado en `%USERPROFILE%\.cache\electricalc-oraculo\` (o usa REA). Compila y prueba en el emulador
 > antes de darlo por terminado. No hagas commits; yo los hago.
