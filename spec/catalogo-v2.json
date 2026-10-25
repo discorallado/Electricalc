@@ -1,0 +1,3216 @@
+{
+ "version": 2,
+ "nota": "Títulos de pliegos según el listado SEC (DS N°8/2019); confirmar título y versión vigente contra el PDF oficial. ric_confianza 'media' = confirmar el numeral exacto en el PDF antes de citarlo en la app.",
+ "categorias": {
+  "fundamentos": "Fundamentos eléctricos",
+  "conductores": "Conductores y canalizaciones",
+  "protecciones": "Protecciones y cortocircuito",
+  "tierra": "Puesta a tierra y seguridad",
+  "energia": "Energía, factor de potencia y eficiencia",
+  "motores": "Motores y transformadores",
+  "sistemas": "Sistemas: respaldo, FV y electromovilidad",
+  "electronica": "Electrónica e instrumentación",
+  "ref_tablas": "Referencias · Tablas",
+  "ref_esquemas": "Referencias · Esquemas",
+  "ref_conectores": "Referencias · Conectores y pinouts",
+  "ref_unidades": "Referencias · Conversiones y unidades",
+  "ref_formulario": "Referencias · Formulario"
+ },
+ "pliegos": [
+  {
+   "numero": 1,
+   "titulo": "Empalmes",
+   "herramientas_existentes": [],
+   "herramientas_nuevas": [
+    "seleccion_empalme",
+    "carga_ve",
+    "esq_unilineal_vivienda",
+    "esq_empalmes"
+   ]
+  },
+  {
+   "numero": 2,
+   "titulo": "Tableros eléctricos",
+   "herramientas_existentes": [
+    "PortataBarre",
+    "TabFusibili",
+    "GradoProtezione"
+   ],
+   "herramientas_nuevas": [
+    "tablero",
+    "esq_unilineal_vivienda"
+   ]
+  },
+  {
+   "numero": 3,
+   "titulo": "Alimentadores y demanda de una instalación",
+   "herramientas_existentes": [
+    "TabCalcoloSezione",
+    "TabCalcoloSezioneAvanzata",
+    "CalcoloCaduta",
+    "LunghezzaMassimaCavoCaduta",
+    "CorrenteImpiego",
+    "CalcoloCadutaCarichiDistribuiti",
+    "TabCalcoloSezioneCarichiDistribuiti"
+   ],
+   "herramientas_nuevas": [
+    "cuadro_cargas",
+    "seleccion_empalme",
+    "verificacion_caida_ric",
+    "carga_ve",
+    "tabla_caidas_admisibles"
+   ]
+  },
+  {
+   "numero": 4,
+   "titulo": "Conductores, materiales y sistemas de canalización",
+   "herramientas_existentes": [
+    "TabCalcoloSezione",
+    "TabCalcoloSezioneAvanzata",
+    "LunghezzaMassimaCavoCortocircuito",
+    "TabPortataConduttoriIsolati",
+    "TabPortataConduttoriNudi",
+    "TabDimensionamentoCanali",
+    "TabDimensionamentoDispositivoProtezione",
+    "TabProtezioneCavoCortoCircuito",
+    "TabEnergiaSpecificaPassante",
+    "CorrenteCortoCircuitoConoscendoQuellaAMonte",
+    "CorrenteCortoCircuitoMinima",
+    "ResistenzaConduttore",
+    "TabTemperaturaCavo",
+    "PerditePotenzaCavo",
+    "CorrenteNeutro",
+    "TabCalcoloSezioneCarichiDistribuiti",
+    "TabFusibili",
+    "ConversioneAWG",
+    "ConversioneSWG",
+    "ComparazioneImperialeMetrico",
+    "SigleFusibiliIec",
+    "ClassiFusibiliNec",
+    "CurveIntervento",
+    "TabReattanzaCavi",
+    "Resistivita",
+    "CadutaTensioneUnitaria",
+    "TabDimensionePesoCavi",
+    "CodiceColoriCablaggio",
+    "DiametriTubazioni"
+   ],
+   "herramientas_nuevas": [
+    "circuitos_vivienda",
+    "capacidad_ric",
+    "ocupacion_ductos",
+    "tabla_colores_ric",
+    "tabla_secciones_minimas"
+   ]
+  },
+  {
+   "numero": 5,
+   "titulo": "Medidas de protección contra tensiones peligrosas y descargas eléctricas",
+   "herramientas_existentes": [
+    "TabCalcoloSezioneAvanzata",
+    "LunghezzaMassimaCavoCortocircuito",
+    "TabDimensionamentoDispositivoProtezione",
+    "TabProtezioneCavoCortoCircuito",
+    "TabEnergiaSpecificaPassante",
+    "ImpiantoDiTerra",
+    "CorrenteCortoCircuitoConoscendoQuellaAMonte",
+    "CorrenteCortoCircuitoMinima",
+    "NecessitaSpd",
+    "SigleFusibiliIec",
+    "ClassiFusibiliNec",
+    "CurveIntervento",
+    "SistemiDistribuzione",
+    "ClassiIsolamento"
+   ],
+   "herramientas_nuevas": [
+    "circuitos_vivienda",
+    "selector_diferencial",
+    "verificacion_tt"
+   ]
+  },
+  {
+   "numero": 6,
+   "titulo": "Puesta a tierra y enlace equipotencial",
+   "herramientas_existentes": [
+    "ImpiantoDiTerra",
+    "SistemiDistribuzione"
+   ],
+   "herramientas_nuevas": [
+    "verificacion_tt",
+    "wenner",
+    "electrodos_tierra",
+    "esq_sistemas_tierra",
+    "esq_puesta_tierra"
+   ]
+  },
+  {
+   "numero": 7,
+   "titulo": "Instalaciones de equipos",
+   "herramientas_existentes": [
+    "Rifasamento",
+    "PotenzaResaCondensatore",
+    "PrimarioSecondarioTrasformatore",
+    "CorrenteMotore",
+    "PotenzaMotore",
+    "TensioneMotore",
+    "FattorePotenzaMotore",
+    "RendimentoMotore",
+    "MotoreDaTrifaseAMonofase",
+    "CondensatoreAvviamentoMotore",
+    "VelocitaMotore",
+    "ScorrimentoMotore",
+    "CoppiaMassima",
+    "FullLoadCurrent",
+    "SchemaMotoreTrifase6Morsetti",
+    "SchemaMotoreTrifase9Morsetti",
+    "SchemaMotoreTrifase12Morsetti",
+    "TabConnessioniMotore",
+    "MotorTerminalMarking",
+    "ClassiIsolamentoMotore"
+   ],
+   "herramientas_nuevas": [
+    "fp_recargo"
+   ]
+  },
+  {
+   "numero": 8,
+   "titulo": "Sistemas de emergencia",
+   "herramientas_existentes": [
+    "DurataBatteria",
+    "DispProtezioneEmergenza"
+   ],
+   "herramientas_nuevas": [
+    "respaldo",
+    "esq_transferencia"
+   ]
+  },
+  {
+   "numero": 9,
+   "titulo": "Sistemas de autogeneración",
+   "herramientas_existentes": [
+    "DurataBatteria"
+   ],
+   "herramientas_nuevas": [
+    "fv_netbilling",
+    "esq_fv"
+   ]
+  },
+  {
+   "numero": 10,
+   "titulo": "Instalaciones de uso general",
+   "herramientas_existentes": [
+    "CalcoloCaduta",
+    "LunghezzaMassimaCavoCaduta",
+    "CalcoloCadutaCarichiDistribuiti",
+    "SpineEPrese"
+   ],
+   "herramientas_nuevas": [
+    "circuitos_vivienda",
+    "selector_diferencial",
+    "tabla_secciones_minimas",
+    "tabla_enchufes_cl",
+    "esq_unilineal_vivienda"
+   ]
+  },
+  {
+   "numero": 11,
+   "titulo": "Instalaciones especiales",
+   "herramientas_existentes": [
+    "GradoProtezione",
+    "PreseCForm"
+   ],
+   "herramientas_nuevas": [
+    "volumenes_bano"
+   ]
+  },
+  {
+   "numero": 12,
+   "titulo": "Instalaciones en ambientes explosivos",
+   "herramientas_existentes": [
+    "MarcaturaAtex"
+   ],
+   "herramientas_nuevas": [
+    "areas_peligrosas"
+   ]
+  },
+  {
+   "numero": 13,
+   "titulo": "Subestaciones y salas eléctricas",
+   "herramientas_existentes": [
+    "RifasamentoTrasformatore",
+    "CorrenteCortoCircuitoCabinaTrasformazione",
+    "PrimarioSecondarioTrasformatore",
+    "TabAnsi"
+   ],
+   "herramientas_nuevas": [
+    "transformador_se"
+   ]
+  },
+  {
+   "numero": 14,
+   "titulo": "Eficiencia energética",
+   "herramientas_existentes": [
+    "Rifasamento",
+    "RifasamentoTrasformatore",
+    "PotenzaResaCondensatore",
+    "PerditePotenzaCavo"
+   ],
+   "herramientas_nuevas": [
+    "iluminacion"
+   ]
+  },
+  {
+   "numero": 15,
+   "titulo": "Infraestructura para la recarga de vehículos eléctricos",
+   "herramientas_existentes": [
+    "TabEvChargingPlugs"
+   ],
+   "herramientas_nuevas": [
+    "selector_diferencial",
+    "carga_ve",
+    "esq_ve"
+   ]
+  },
+  {
+   "numero": 16,
+   "titulo": "Subsistemas de distribución",
+   "herramientas_existentes": [],
+   "herramientas_nuevas": []
+  },
+  {
+   "numero": 17,
+   "titulo": "Operación y mantenimiento",
+   "herramientas_existentes": [],
+   "herramientas_nuevas": [
+    "plan_mantenimiento"
+   ]
+  },
+  {
+   "numero": 18,
+   "titulo": "Presentación de proyectos",
+   "herramientas_existentes": [
+    "TabSimboli"
+   ],
+   "herramientas_nuevas": [
+    "cuadro_cargas",
+    "memoria_calculo"
+   ]
+  },
+  {
+   "numero": 19,
+   "titulo": "Puesta en servicio",
+   "herramientas_existentes": [],
+   "herramientas_nuevas": [
+    "protocolo_puesta_servicio",
+    "tabla_aislamiento_minimo"
+   ]
+  }
+ ],
+ "existentes": [
+  {
+   "id": "TabCalcoloSezione",
+   "origen": "principale",
+   "titulo": "Dimensionamiento de conductores",
+   "categoria": "conductores",
+   "ric": [
+    4,
+    3
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": "FormulaTabCalcoloSezione"
+  },
+  {
+   "id": "TabCalcoloSezioneAvanzata",
+   "origen": "principale",
+   "titulo": "Dimensionamiento de conductores y coordinación del dispositivo de protección",
+   "categoria": "conductores",
+   "ric": [
+    4,
+    3,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "alimentadores",
+   "formula": "FormulaTabCalcoloSezioneAvanzata"
+  },
+  {
+   "id": "CalcoloCaduta",
+   "origen": "principale",
+   "titulo": "Cálculo de caída de tensión",
+   "categoria": "conductores",
+   "ric": [
+    3,
+    10
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": "FormulaCaduta"
+  },
+  {
+   "id": "CalcoloIntensita",
+   "origen": "principale",
+   "titulo": "Cálculo de la corriente",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaCorrente"
+  },
+  {
+   "id": "CalcoloTensione",
+   "origen": "principale",
+   "titulo": "Cálculo de la tensión",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaTensione"
+  },
+  {
+   "id": "CalcoloPotenzaAttiva",
+   "origen": "principale",
+   "titulo": "Cálculo de la potencia activa",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaPotenzaAttiva"
+  },
+  {
+   "id": "CalcoloPotenzaApparente",
+   "origen": "principale",
+   "titulo": "Cálculo de la potencia aparente",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaPotenzaApparente"
+  },
+  {
+   "id": "CalcoloPotenzaReattiva",
+   "origen": "principale",
+   "titulo": "Cálculo de la potencia reactiva",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaPotenzaReattiva"
+  },
+  {
+   "id": "CalcoloFattorePotenza",
+   "origen": "principale",
+   "titulo": "Cálculo del factor de potencia",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaFattorePotenza"
+  },
+  {
+   "id": "CalcoloResistenza",
+   "origen": "principale",
+   "titulo": "Cálculo de la resistencia",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaResistenza"
+  },
+  {
+   "id": "CalcoloImpedenza",
+   "origen": "principale",
+   "titulo": "Cálculo de la impedancia",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaImpedenza"
+  },
+  {
+   "id": "LunghezzaMassimaCavoCaduta",
+   "origen": "principale",
+   "titulo": "Longitud máxima del cable (ΔV)",
+   "categoria": "conductores",
+   "ric": [
+    3,
+    10
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": "FormulaLunghezzaCavoCaduta"
+  },
+  {
+   "id": "LunghezzaMassimaCavoCortocircuito",
+   "origen": "principale",
+   "titulo": "Longitud máxima del cable (Isc)",
+   "categoria": "protecciones",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaLunghezzaCavoCortocircuito"
+  },
+  {
+   "id": "TabPortataConduttoriIsolati",
+   "origen": "principale",
+   "titulo": "Capacidad de corriente de conductores aislados",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": null
+  },
+  {
+   "id": "TabPortataConduttoriNudi",
+   "origen": "principale",
+   "titulo": "Capacidad de corriente de conductores desnudos / con aislamiento mineral",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": null
+  },
+  {
+   "id": "PortataBarre",
+   "origen": "principale",
+   "titulo": "Capacidad de corriente de barras colectoras",
+   "categoria": "conductores",
+   "ric": [
+    2
+   ],
+   "ric_confianza": "media",
+   "etapa": "tableros",
+   "formula": "FormulaPortataBarre"
+  },
+  {
+   "id": "TabDimensionamentoCanali",
+   "origen": "principale",
+   "titulo": "Dimensionamiento de conductos y bandejas de cables",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": null
+  },
+  {
+   "id": "TabDimensionamentoDispositivoProtezione",
+   "origen": "principale",
+   "titulo": "Dimensionamiento de dispositivos de protección",
+   "categoria": "protecciones",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaDispositivoProtezione"
+  },
+  {
+   "id": "TabProtezioneCavoCortoCircuito",
+   "origen": "principale",
+   "titulo": "Protección de cables contra cortocircuitos",
+   "categoria": "protecciones",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaProtezioneCavoCortocircuito"
+  },
+  {
+   "id": "TabEnergiaSpecificaPassante",
+   "origen": "principale",
+   "titulo": "Energía específica admisible del cable (K²S²)",
+   "categoria": "protecciones",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaTabEnergiaSpecifica"
+  },
+  {
+   "id": "CorrenteImpiego",
+   "origen": "principale",
+   "titulo": "Corriente de empleo:",
+   "categoria": "conductores",
+   "ric": [
+    3
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaCorrenteImpiego"
+  },
+  {
+   "id": "Reattanza",
+   "origen": "principale",
+   "titulo": "Reactancia",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaReattanza"
+  },
+  {
+   "id": "ImpedenzaDaResistenzaEReattanza",
+   "origen": "principale",
+   "titulo": "Impedancia a partir de resistencia y reactancia",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaImpedenzaDaResistenzaEReattanza"
+  },
+  {
+   "id": "Rifasamento",
+   "origen": "principale",
+   "titulo": "Corrección del factor de potencia",
+   "categoria": "energia",
+   "ric": [
+    7,
+    14
+   ],
+   "ric_confianza": "media",
+   "etapa": "cargas",
+   "formula": "FormulaRifasamento"
+  },
+  {
+   "id": "RifasamentoTrasformatore",
+   "origen": "principale",
+   "titulo": "Corrección del factor de potencia de transformadores MT/BT",
+   "categoria": "energia",
+   "ric": [
+    13,
+    14
+   ],
+   "ric_confianza": "media",
+   "etapa": "cargas",
+   "formula": "FormulaRifasamentoTrasformatore"
+  },
+  {
+   "id": "PotenzaResaCondensatore",
+   "origen": "principale",
+   "titulo": "Potencia del condensador a una tensión diferente",
+   "categoria": "energia",
+   "ric": [
+    7,
+    14
+   ],
+   "ric_confianza": "media",
+   "etapa": "cargas",
+   "formula": "FormulaPotenzaResaCondensatore"
+  },
+  {
+   "id": "ImpiantoDiTerra",
+   "origen": "principale",
+   "titulo": "Sistema de puesta a tierra y coordinación con dispositivo diferencial",
+   "categoria": "tierra",
+   "ric": [
+    6,
+    5
+   ],
+   "ric_confianza": "alta",
+   "etapa": "tierra",
+   "formula": "FormulaImpiantoDiTerra"
+  },
+  {
+   "id": "CorrenteCortoCircuitoConoscendoQuellaAMonte",
+   "origen": "principale",
+   "titulo": "Corriente de cortocircuito en un punto específico de la línea",
+   "categoria": "protecciones",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaCorrenteCortoCircuito"
+  },
+  {
+   "id": "CorrenteCortoCircuitoCabinaTrasformazione",
+   "origen": "principale",
+   "titulo": "Corriente de cortocircuito con subestación transformadora",
+   "categoria": "protecciones",
+   "ric": [
+    13
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaCorrenteCortoCircuitoTrasf"
+  },
+  {
+   "id": "CorrenteCortoCircuitoMinima",
+   "origen": "principale",
+   "titulo": "Corriente de cortocircuito mínima",
+   "categoria": "protecciones",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaCorrenteCortoCircuitoMin"
+  },
+  {
+   "id": "ResistenzaConduttore",
+   "origen": "principale",
+   "titulo": "Resistencia, reactancia e impedancia del cable",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": "alimentadores",
+   "formula": "FormulaResistenzaCavo"
+  },
+  {
+   "id": "TabTemperaturaCavo",
+   "origen": "principale",
+   "titulo": "Cálculo de la temperatura del cable",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": "alimentadores",
+   "formula": "FormulaTemperaturaCavo"
+  },
+  {
+   "id": "PerditePotenzaCavo",
+   "origen": "principale",
+   "titulo": "Pérdidas de potencia en cables",
+   "categoria": "conductores",
+   "ric": [
+    4,
+    14
+   ],
+   "ric_confianza": "media",
+   "etapa": "alimentadores",
+   "formula": "FormulaPerditaPotenzaCavo"
+  },
+  {
+   "id": "CorrenteNeutro",
+   "origen": "principale",
+   "titulo": "Corriente del neutro",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": "FormulaCorrenteNeutro"
+  },
+  {
+   "id": "CalcoloCadutaCarichiDistribuiti",
+   "origen": "principale",
+   "titulo": "Caída de tensión con cargas distribuidas",
+   "categoria": "conductores",
+   "ric": [
+    3,
+    10
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": "FormulaCadutaCarichiDistribuiti"
+  },
+  {
+   "id": "TabCalcoloSezioneCarichiDistribuiti",
+   "origen": "principale",
+   "titulo": "Dimensionamiento de conductores con cargas distribuidas",
+   "categoria": "conductores",
+   "ric": [
+    4,
+    3
+   ],
+   "ric_confianza": "alta",
+   "etapa": "alimentadores",
+   "formula": "FormulaTabCalcoloSezioneAvanzata"
+  },
+  {
+   "id": "CodiceColoreResistori",
+   "origen": "principale",
+   "titulo": "Código de colores de resistencias",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaCodiceResistori"
+  },
+  {
+   "id": "CodiceColoreInduttori",
+   "origen": "principale",
+   "titulo": "Código de colores de inductores",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaCodiceInduttori"
+  },
+  {
+   "id": "ColoreResistoreDaValore",
+   "origen": "principale",
+   "titulo": "Colores de una resistencia según su valor",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaCodiceResistori"
+  },
+  {
+   "id": "CodiceResistoriSMD",
+   "origen": "principale",
+   "titulo": "Código de resistencias SMD",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "CodiceCondensatori",
+   "origen": "principale",
+   "titulo": "Código de condensadores",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabellaCodiceCondensatori",
+   "origen": "principale",
+   "titulo": "Tabla de códigos de condensadores",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "CodiceAlfanumericoInduttori",
+   "origen": "principale",
+   "titulo": "Código alfanumérico de inductores",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabFusibili",
+   "origen": "principale",
+   "titulo": "Fusibles (Marcado, Cartucho, Tipos D, NH, Automoción)",
+   "categoria": "protecciones",
+   "ric": [
+    2,
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": null
+  },
+  {
+   "id": "TabSommaResistenze",
+   "origen": "principale",
+   "titulo": "Suma de resistencias",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaSommaResistenze"
+  },
+  {
+   "id": "TabSommaCondensatori",
+   "origen": "principale",
+   "titulo": "Suma de condensadores",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaSommaCondensatori"
+  },
+  {
+   "id": "FrequenzaRisonanza",
+   "origen": "principale",
+   "titulo": "Frecuencia de resonancia",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaFrequenzaRisonanza"
+  },
+  {
+   "id": "PartitoreTensione",
+   "origen": "principale",
+   "titulo": "Divisor de tensión",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaPartitoreTensione"
+  },
+  {
+   "id": "PartitoreCorrente",
+   "origen": "principale",
+   "titulo": "Divisor de corriente",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaPartitoreCorrente"
+  },
+  {
+   "id": "StabilizzatoreTensioneDiodoZener",
+   "origen": "principale",
+   "titulo": "Diodo Zener como estabilizador de tensión",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaStabilizzatoreTensioneZener"
+  },
+  {
+   "id": "ResistenzaRidurreTensione",
+   "origen": "principale",
+   "titulo": "Resistencia para reducir la tensión",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaResistenzaRidurreTensione"
+  },
+  {
+   "id": "ResistenzaLed",
+   "origen": "principale",
+   "titulo": "Resistencia para LED",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaResistenzaRidurreTensione"
+  },
+  {
+   "id": "DurataBatteria",
+   "origen": "principale",
+   "titulo": "Duración de la batería",
+   "categoria": "sistemas",
+   "ric": [
+    8,
+    9
+   ],
+   "ric_confianza": "media",
+   "etapa": "sistemas",
+   "formula": "FormulaDurataBatteria"
+  },
+  {
+   "id": "PrimarioSecondarioTrasformatore",
+   "origen": "principale",
+   "titulo": "Devanado primario/secundario del transformador",
+   "categoria": "motores",
+   "ric": [
+    7,
+    13
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": "FormulaPrimarioSecondarioTrasformatore"
+  },
+  {
+   "id": "LunghezzaAntenna",
+   "origen": "principale",
+   "titulo": "Longitud de la antena",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaLunghezzaAntenna"
+  },
+  {
+   "id": "DimensioneVideo",
+   "origen": "principale",
+   "titulo": "CCTV: dimensionamiento de disco duro y ancho de banda",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabTermistori",
+   "origen": "principale",
+   "titulo": "Sensores de temperatura (PT/NI/CU, NTC, Termopares…)",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaTermistori"
+  },
+  {
+   "id": "ValoriSegnaliAnalogici",
+   "origen": "principale",
+   "titulo": "Valores de señal analógica (Conversión entre rangos)",
+   "categoria": "electronica",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "EffettoJoule",
+   "origen": "principale",
+   "titulo": "Efecto Joule",
+   "categoria": "fundamentos",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaEffettoJoule"
+  },
+  {
+   "id": "NecessitaSpd",
+   "origen": "principale",
+   "titulo": "Evaluación del riesgo de sobretensiones de origen atmosférico",
+   "categoria": "protecciones",
+   "ric": [
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": "protecciones",
+   "formula": "FormulaCrl"
+  },
+  {
+   "id": "DispProtezioneEmergenza",
+   "origen": "principale",
+   "titulo": "Protección para líneas de alumbrado de emergencia",
+   "categoria": "sistemas",
+   "ric": [
+    8
+   ],
+   "ric_confianza": "alta",
+   "etapa": "sistemas",
+   "formula": "FormulaDispProtezioneEmergenza"
+  },
+  {
+   "id": "CorrenteMotore",
+   "origen": "motore",
+   "titulo": "Corriente del motor",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaCorrenteMotore"
+  },
+  {
+   "id": "PotenzaMotore",
+   "origen": "motore",
+   "titulo": "Potencia del motor",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaPotenzaMotore"
+  },
+  {
+   "id": "TensioneMotore",
+   "origen": "motore",
+   "titulo": "Tensión del motor",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaTensioneMotore"
+  },
+  {
+   "id": "FattorePotenzaMotore",
+   "origen": "motore",
+   "titulo": "Factor de potencia del motor",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaFattorePotenzaMotore"
+  },
+  {
+   "id": "RendimentoMotore",
+   "origen": "motore",
+   "titulo": "Rendimiento del motor",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaRendimentoMotore"
+  },
+  {
+   "id": "MotoreDaTrifaseAMonofase",
+   "origen": "motore",
+   "titulo": "Motor trifásico a monofásico",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaMotoreTrifaseMonofase"
+  },
+  {
+   "id": "CondensatoreAvviamentoMotore",
+   "origen": "motore",
+   "titulo": "Condensador de marcha para motor monofásico",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaCondensatoreAvviamentoMotore"
+  },
+  {
+   "id": "VelocitaMotore",
+   "origen": "motore",
+   "titulo": "Velocidad del motor",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaVelocitaMotore"
+  },
+  {
+   "id": "ScorrimentoMotore",
+   "origen": "motore",
+   "titulo": "Deslizamiento del motor",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaScorrimentoMotore"
+  },
+  {
+   "id": "CoppiaMassima",
+   "origen": "motore",
+   "titulo": "Potencia / Par máximo",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": "FormulaCoppiaMassima"
+  },
+  {
+   "id": "FullLoadCurrent",
+   "origen": "motore",
+   "titulo": "Corriente a plena carga del motor (NEC)",
+   "categoria": "motores",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": "cargas",
+   "formula": null
+  },
+  {
+   "id": "SchemaMotoreTrifase6Morsetti",
+   "origen": "motore",
+   "titulo": "Esquema de conexión de motor trifásico (6 bornes)",
+   "categoria": "ref_esquemas",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "SchemaMotoreTrifase9Morsetti",
+   "origen": "motore",
+   "titulo": "Esquema de conexión de motor trifásico (9 bornes)",
+   "categoria": "ref_esquemas",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "SchemaMotoreTrifase12Morsetti",
+   "origen": "motore",
+   "titulo": "Esquema de conexión de motor trifásico (12 bornes)",
+   "categoria": "ref_esquemas",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabConnessioniMotore",
+   "origen": "motore",
+   "titulo": "Conexiones del motor",
+   "categoria": "ref_esquemas",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "MotorTerminalMarking",
+   "origen": "motore",
+   "titulo": "Marcado de bornes del motor",
+   "categoria": "ref_esquemas",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ClassiIsolamentoMotore",
+   "origen": "motore",
+   "titulo": "Clase de aislamiento del motor",
+   "categoria": "ref_tablas",
+   "ric": [
+    7
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneTriangoloStella",
+   "origen": "conversioni",
+   "titulo": "Conversión triángulo-estrella",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaTriangoloStella"
+  },
+  {
+   "id": "ConversionePotenza",
+   "origen": "conversioni",
+   "titulo": "Conversión de potencia",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneAWG",
+   "origen": "conversioni",
+   "titulo": "Tabla de conversión AWG",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneSWG",
+   "origen": "conversioni",
+   "titulo": "Tabla de conversión SWG",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ComparazioneImperialeMetrico",
+   "origen": "conversioni",
+   "titulo": "Comparación de secciones de conductor imperial / métrico",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneSezione",
+   "origen": "conversioni",
+   "titulo": "Conversión de sección de conductor",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaConversioneSezione"
+  },
+  {
+   "id": "ConversioneLunghezza",
+   "origen": "conversioni",
+   "titulo": "Conversión de longitud",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneTensione",
+   "origen": "conversioni",
+   "titulo": "Conversión de tensión (Valores eficaces y de pico)",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaAmplitude"
+  },
+  {
+   "id": "ConversionePhi",
+   "origen": "conversioni",
+   "titulo": "Conversión sin/cos/tan/φ",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaFunzioniTrigonometriche"
+  },
+  {
+   "id": "ConversioneEnergia",
+   "origen": "conversioni",
+   "titulo": "Conversión de energía",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneTemperatura",
+   "origen": "conversioni",
+   "titulo": "Conversión de temperatura",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaConversioneTemperatura"
+  },
+  {
+   "id": "ConversionePressione",
+   "origen": "conversioni",
+   "titulo": "Conversión de presión",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneAhKwh",
+   "origen": "conversioni",
+   "titulo": "Conversión Ah - kWh",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaConversioneAhKwh"
+  },
+  {
+   "id": "ConversioneVarUf",
+   "origen": "conversioni",
+   "titulo": "Conversión var / µF",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaConversioneVarUf"
+  },
+  {
+   "id": "ConversioneGaussTesla",
+   "origen": "conversioni",
+   "titulo": "Conversión Gauss - Tesla",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneRpm",
+   "origen": "conversioni",
+   "titulo": "Conversión RPM - rad/s - m/s",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaConversioneRpm"
+  },
+  {
+   "id": "TabConversioneHzRads",
+   "origen": "conversioni",
+   "titulo": "Conversión de frecuencia / velocidad angular",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaFrequenzaAngolare"
+  },
+  {
+   "id": "ConversioneMomento",
+   "origen": "conversioni",
+   "titulo": "Conversión de par",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneByte",
+   "origen": "conversioni",
+   "titulo": "Conversión de bytes",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConversioneAngolo",
+   "origen": "conversioni",
+   "titulo": "Conversión de ángulo",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": "FormulaConversioneAngolo"
+  },
+  {
+   "id": "SigleFusibiliIec",
+   "origen": "risorse",
+   "titulo": "Marcado de fusibles y categorías de aplicación",
+   "categoria": "ref_tablas",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ClassiFusibiliNec",
+   "origen": "risorse",
+   "titulo": "Clase de fusibles UL/CSA",
+   "categoria": "ref_tablas",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ValoriStandardResistenze",
+   "origen": "risorse",
+   "titulo": "Valores normalizados de resistencias",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "CurveIntervento",
+   "origen": "risorse",
+   "titulo": "Curvas de disparo",
+   "categoria": "ref_tablas",
+   "ric": [
+    4,
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabReattanzaCavi",
+   "origen": "risorse",
+   "titulo": "Tabla de reactancia de cables",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "Resistivita",
+   "origen": "risorse",
+   "titulo": "Tabla de resistividad y conductividad",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": "FormulaResistivita"
+  },
+  {
+   "id": "CadutaTensioneUnitaria",
+   "origen": "risorse",
+   "titulo": "Tabla de caída de tensión unitaria",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabDimensionePesoCavi",
+   "origen": "risorse",
+   "titulo": "Dimensiones y peso de los cables",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "SistemiDistribuzione",
+   "origen": "risorse",
+   "titulo": "Sistemas de distribución de energía (TT, TN, IT)",
+   "categoria": "ref_esquemas",
+   "ric": [
+    6,
+    5
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "GradoProtezione",
+   "origen": "risorse",
+   "titulo": "Grados de protección IP/IK/NEMA",
+   "categoria": "ref_tablas",
+   "ric": [
+    2,
+    11
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "MarcaturaAtex",
+   "origen": "risorse",
+   "titulo": "Marcado ATEX",
+   "categoria": "ref_tablas",
+   "ric": [
+    12
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ClassiIsolamento",
+   "origen": "risorse",
+   "titulo": "Clases de protección de aparatos",
+   "categoria": "ref_tablas",
+   "ric": [
+    5
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "RisoluzioniCCTV",
+   "origen": "risorse",
+   "titulo": "Resoluciones CCTV",
+   "categoria": "ref_tablas",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "DatiTermocoppie",
+   "origen": "risorse",
+   "titulo": "Códigos de colores y datos de termopares",
+   "categoria": "ref_tablas",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabAnsi",
+   "origen": "risorse",
+   "titulo": "Números de dispositivo estándar ANSI",
+   "categoria": "ref_tablas",
+   "ric": [
+    13
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "AcronimiDispositivi",
+   "origen": "risorse",
+   "titulo": "Acrónimos de dispositivos",
+   "categoria": "ref_tablas",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabSimboli",
+   "origen": "risorse",
+   "titulo": "Símbolos eléctricos",
+   "categoria": "ref_esquemas",
+   "ric": [
+    18
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ElettricitaMondo",
+   "origen": "risorse",
+   "titulo": "Electricidad alrededor del mundo",
+   "categoria": "ref_tablas",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "SpineEPrese",
+   "origen": "risorse",
+   "titulo": "Tipos de enchufes y tomas de corriente",
+   "categoria": "ref_conectores",
+   "ric": [
+    10
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConnettoriIec60320",
+   "origen": "risorse",
+   "titulo": "Conectores IEC 60320",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PreseCForm",
+   "origen": "risorse",
+   "titulo": "Tomas de corriente C-Form (IEC 60309)",
+   "categoria": "ref_conectores",
+   "ric": [
+    11
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ConnettoriNema",
+   "origen": "risorse",
+   "titulo": "Conectores NEMA",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "TabEvChargingPlugs",
+   "origen": "risorse",
+   "titulo": "Conectores de recarga para vehículos eléctricos",
+   "categoria": "ref_conectores",
+   "ric": [
+    15
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "CodiceColoriCablaggio",
+   "origen": "risorse",
+   "titulo": "Códigos de color de cableado",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "alta",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "SiPrefix",
+   "origen": "risorse",
+   "titulo": "Prefijos del SI",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "UnitaMisura",
+   "origen": "risorse",
+   "titulo": "Unidades de medida",
+   "categoria": "ref_unidades",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "DiametriTubazioni",
+   "origen": "risorse",
+   "titulo": "Diámetros de tubería",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "ric_confianza": "media",
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "CablaggioEthernet",
+   "origen": "pinout",
+   "titulo": "Cables ethernet (RJ-45)",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutEthernetPoe",
+   "origen": "pinout",
+   "titulo": "Patillaje Ethernet con PoE",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutRJ",
+   "origen": "pinout",
+   "titulo": "RJ-9, 11, 14, 25, 48",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutScart",
+   "origen": "pinout",
+   "titulo": "Patillaje SCART",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutUSB",
+   "origen": "pinout",
+   "titulo": "Patillaje USB",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutHdmi",
+   "origen": "pinout",
+   "titulo": "Patillaje HDMI",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutVga",
+   "origen": "pinout",
+   "titulo": "Patillaje VGA",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutDvi",
+   "origen": "pinout",
+   "titulo": "Patillaje DVI",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutRS232",
+   "origen": "pinout",
+   "titulo": "Patillaje RS-232",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutFirewire",
+   "origen": "pinout",
+   "titulo": "Patillaje FireWire (IEEE1394)",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutMolex",
+   "origen": "pinout",
+   "titulo": "Patillaje Molex",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutSata",
+   "origen": "pinout",
+   "titulo": "Patillaje SATA",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutAppleLightning",
+   "origen": "pinout",
+   "titulo": "Patillaje Apple Lightning",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutAppleDockConnector",
+   "origen": "pinout",
+   "titulo": "Patillaje Apple Dock Connector",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutDisplayPort",
+   "origen": "pinout",
+   "titulo": "Patillaje DisplayPort",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutPs2",
+   "origen": "pinout",
+   "titulo": "Patillaje PS/2",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "ColoriFibraOttica",
+   "origen": "pinout",
+   "titulo": "Código de colores de fibra óptica",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutLed",
+   "origen": "pinout",
+   "titulo": "Patillaje LED",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutRaspberryPi",
+   "origen": "pinout",
+   "titulo": "Patillaje Raspberry Pi",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutIso10487",
+   "origen": "pinout",
+   "titulo": "Patillaje ISO 10487 (Audio autos)",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutObd2",
+   "origen": "pinout",
+   "titulo": "Patillaje OBD II",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutXlr",
+   "origen": "pinout",
+   "titulo": "Patillaje XLR (Audio/DMX)",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutMidi",
+   "origen": "pinout",
+   "titulo": "Patillaje MIDI",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutJack",
+   "origen": "pinout",
+   "titulo": "Patillaje Jack",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "CodiceColoreRca",
+   "origen": "pinout",
+   "titulo": "Código de colores RCA",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutThunderbolt",
+   "origen": "pinout",
+   "titulo": "Patillaje Thunderbolt",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutSdCard",
+   "origen": "pinout",
+   "titulo": "Patillaje SD Card",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutSimCard",
+   "origen": "pinout",
+   "titulo": "Patillaje de tarjeta SIM",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutDisplay16x2",
+   "origen": "pinout",
+   "titulo": "Patillaje pantalla LCD 16x2",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "PinoutIoLink",
+   "origen": "pinout",
+   "titulo": "Patillaje IO-Link",
+   "categoria": "ref_conectores",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaLeggeOhmPrima",
+   "origen": "formulario",
+   "titulo": "Primera Ley de Ohm",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaLeggeOhmSeconda",
+   "origen": "formulario",
+   "titulo": "Segunda Ley de Ohm",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCorrente",
+   "origen": "formulario",
+   "titulo": "Corriente:",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPotenza",
+   "origen": "formulario",
+   "titulo": "Potencia:",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaTensione",
+   "origen": "formulario",
+   "titulo": "Tensión:",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaResistenza",
+   "origen": "formulario",
+   "titulo": "Resistencia:",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaImpedenza",
+   "origen": "formulario",
+   "titulo": "Impedancia",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPotenzaAttiva",
+   "origen": "formulario",
+   "titulo": "Potencia activa",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPotenzaReattiva",
+   "origen": "formulario",
+   "titulo": "Potencia reactiva",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPotenzaApparente",
+   "origen": "formulario",
+   "titulo": "Potencia aparente",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaFattorePotenza",
+   "origen": "formulario",
+   "titulo": "Factor de potencia:",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaTabCalcoloSezione",
+   "origen": "formulario",
+   "titulo": "Dimensionamiento de conductores",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaTabCalcoloSezioneAvanzata",
+   "origen": "formulario",
+   "titulo": "Dimensionamiento de conductores y coordinación del dispositivo de protección",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCaduta",
+   "origen": "formulario",
+   "titulo": "Caída de tensión:",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaLunghezzaCavoCaduta",
+   "origen": "formulario",
+   "titulo": "Longitud máxima del cable (ΔV)",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaLunghezzaCavoCortocircuito",
+   "origen": "formulario",
+   "titulo": "Longitud máxima del cable (Isc)",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPortataBarre",
+   "origen": "formulario",
+   "titulo": "Capacidad de corriente de barras colectoras",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaDispositivoProtezione",
+   "origen": "formulario",
+   "titulo": "Dimensionamiento de dispositivos de protección",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaProtezioneCavoCortocircuito",
+   "origen": "formulario",
+   "titulo": "Protección de cables contra cortocircuitos",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaTabEnergiaSpecifica",
+   "origen": "formulario",
+   "titulo": "Energía específica admisible del cable (K²S²)",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPerditaPotenzaCavo",
+   "origen": "formulario",
+   "titulo": "Pérdidas de potencia en cables",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaTemperaturaCavo",
+   "origen": "formulario",
+   "titulo": "Cálculo de la temperatura del cable",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaResistenzaCavo",
+   "origen": "formulario",
+   "titulo": "Resistencia, reactancia e impedancia del cable",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCorrenteNeutro",
+   "origen": "formulario",
+   "titulo": "Corriente del neutro",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaResistivita",
+   "origen": "formulario",
+   "titulo": "Resistividad",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCorrenteImpiego",
+   "origen": "formulario",
+   "titulo": "Corriente de empleo:",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaReattanza",
+   "origen": "formulario",
+   "titulo": "Reactancia",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaImpedenzaDaResistenzaEReattanza",
+   "origen": "formulario",
+   "titulo": "Impedancia a partir de resistencia y reactancia",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaRifasamento",
+   "origen": "formulario",
+   "titulo": "Corrección del factor de potencia",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaRifasamentoTrasformatore",
+   "origen": "formulario",
+   "titulo": "Corrección del factor de potencia de transformadores MT/BT",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPotenzaResaCondensatore",
+   "origen": "formulario",
+   "titulo": "Potencia del condensador a una tensión diferente",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaImpiantoDiTerra",
+   "origen": "formulario",
+   "titulo": "Sistema de puesta a tierra y coordinación con dispositivo diferencial",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCorrenteCortoCircuito",
+   "origen": "formulario",
+   "titulo": "Corriente de cortocircuito en un punto específico de la línea",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCorrenteCortoCircuitoTrasf",
+   "origen": "formulario",
+   "titulo": "Corriente de cortocircuito con subestación transformadora",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCorrenteCortoCircuitoMin",
+   "origen": "formulario",
+   "titulo": "Corriente de cortocircuito mínima",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCadutaCarichiDistribuiti",
+   "origen": "formulario",
+   "titulo": "Caída de tensión con cargas distribuidas",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaSommaResistenze",
+   "origen": "formulario",
+   "titulo": "Suma de resistencias",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaSommaCondensatori",
+   "origen": "formulario",
+   "titulo": "Suma de condensadores",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCodiceResistori",
+   "origen": "formulario",
+   "titulo": "Código de colores de resistencias",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCodiceInduttori",
+   "origen": "formulario",
+   "titulo": "Código de colores de inductores",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaFrequenzaRisonanza",
+   "origen": "formulario",
+   "titulo": "Frecuencia de resonancia",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaFrequenzaAngolare",
+   "origen": "formulario",
+   "titulo": "Frecuencia angular",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPartitoreTensione",
+   "origen": "formulario",
+   "titulo": "Divisor de tensión",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPartitoreCorrente",
+   "origen": "formulario",
+   "titulo": "Divisor de corriente",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaStabilizzatoreTensioneZener",
+   "origen": "formulario",
+   "titulo": "Diodo Zener como estabilizador de tensión",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaResistenzaRidurreTensione",
+   "origen": "formulario",
+   "titulo": "Resistencia para reducir la tensión",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaPrimarioSecondarioTrasformatore",
+   "origen": "formulario",
+   "titulo": "Devanado primario/secundario del transformador",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaLunghezzaAntenna",
+   "origen": "formulario",
+   "titulo": "Longitud de la antena",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaDurataBatteria",
+   "origen": "formulario",
+   "titulo": "Duración de la batería",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaEffettoJoule",
+   "origen": "formulario",
+   "titulo": "Efecto Joule",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaTermistori",
+   "origen": "formulario",
+   "titulo": "Sensores de temperatura (PT/NI/CU, NTC, Termopares…)",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCrl",
+   "origen": "formulario",
+   "titulo": "Evaluación del riesgo de sobretensiones de origen atmosférico",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaMotoreTrifaseMonofase",
+   "origen": "formulario",
+   "titulo": "Motor trifásico a monofásico",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCondensatoreAvviamentoMotore",
+   "origen": "formulario",
+   "titulo": "Condensador de marcha para motor monofásico",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaRendimentoMotore",
+   "origen": "formulario",
+   "titulo": "Rendimiento del motor",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaVelocitaMotore",
+   "origen": "formulario",
+   "titulo": "Velocidad del motor",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaScorrimentoMotore",
+   "origen": "formulario",
+   "titulo": "Deslizamiento del motor",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaCoppiaMassima",
+   "origen": "formulario",
+   "titulo": "Potencia / Par máximo",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaFunzioniTrigonometriche",
+   "origen": "formulario",
+   "titulo": "Funciones trigonométricas",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaTriangoloStella",
+   "origen": "formulario",
+   "titulo": "Conversión triángulo-estrella",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaAmplitude",
+   "origen": "formulario",
+   "titulo": "Conversión de tensión (Valores eficaces y de pico)",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaConversioneTemperatura",
+   "origen": "formulario",
+   "titulo": "Conversión de temperatura",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaConversioneAhKwh",
+   "origen": "formulario",
+   "titulo": "Conversión Ah - kWh",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaConversioneVarUf",
+   "origen": "formulario",
+   "titulo": "Conversión var / µF",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaConversioneRpm",
+   "origen": "formulario",
+   "titulo": "Conversión RPM - rad/s - m/s",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  },
+  {
+   "id": "FormulaConversioneAngolo",
+   "origen": "formulario",
+   "titulo": "Conversión de ángulo",
+   "categoria": "ref_formulario",
+   "ric": [],
+   "ric_confianza": null,
+   "etapa": null,
+   "formula": null
+  }
+ ],
+ "nuevas": [
+  {
+   "id": "cuadro_cargas",
+   "titulo": "Cuadro de cargas y demanda máxima",
+   "tipo": "calculadora",
+   "categoria": "conductores",
+   "ric": [
+    3,
+    18
+   ],
+   "etapa": "cargas",
+   "prioridad": 1,
+   "descripcion": "Lista de circuitos (alumbrado, enchufes, fuerza, climatización) con potencia, fases y cantidad. Calcula potencia instalada, demanda máxima con factores de demanda y corriente por fase. Es la entrada de empalme, alimentadores y la memoria de cálculo.",
+   "datos_ric": [
+    "Factores de demanda por tipo de instalación y carga (RIC N°03)"
+   ]
+  },
+  {
+   "id": "seleccion_empalme",
+   "titulo": "Selección de empalme",
+   "tipo": "calculadora",
+   "categoria": "conductores",
+   "ric": [
+    1,
+    3
+   ],
+   "etapa": "empalme",
+   "prioridad": 1,
+   "descripcion": "A partir de la demanda máxima sugiere empalme monofásico o trifásico, capacidad de la protección del empalme y sección de la acometida.",
+   "datos_ric": [
+    "Empalmes normalizados y capacidades (RIC N°01 y normas de la distribuidora)"
+   ]
+  },
+  {
+   "id": "circuitos_vivienda",
+   "titulo": "Circuitos de vivienda",
+   "tipo": "calculadora",
+   "categoria": "conductores",
+   "ric": [
+    10,
+    4,
+    5
+   ],
+   "etapa": "alimentadores",
+   "prioridad": 1,
+   "descripcion": "Para cada tipo de circuito de uso general entrega sección mínima, protección, número máximo de puntos y si requiere diferencial.",
+   "datos_ric": [
+    "Secciones mínimas por tipo de circuito (RIC N°10/N°04)",
+    "Puntos máximos por circuito (RIC N°10)",
+    "Circuitos que exigen diferencial (RIC N°05/N°10)"
+   ]
+  },
+  {
+   "id": "verificacion_caida_ric",
+   "titulo": "Verificación de caída de tensión RIC",
+   "tipo": "verificacion",
+   "categoria": "conductores",
+   "ric": [
+    3
+   ],
+   "etapa": "alimentadores",
+   "prioridad": 1,
+   "descripcion": "Semáforo de cumplimiento integrado en caída de tensión, longitud máxima y dimensionamiento: compara con los límites admisibles por tramo.",
+   "datos_ric": [
+    "Caídas de tensión máximas admisibles en alimentadores y circuitos (RIC N°03)"
+   ]
+  },
+  {
+   "id": "capacidad_ric",
+   "titulo": "Capacidad de corriente según RIC",
+   "tipo": "calculadora",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "etapa": "alimentadores",
+   "prioridad": 1,
+   "descripcion": "Corriente admisible por sección, aislamiento y método de instalación, con factores de corrección por temperatura y agrupamiento.",
+   "datos_ric": [
+    "Tablas de capacidad de corriente y factores de corrección (RIC N°04)"
+   ]
+  },
+  {
+   "id": "ocupacion_ductos",
+   "titulo": "Ocupación de ductos y bandejas",
+   "tipo": "calculadora",
+   "categoria": "conductores",
+   "ric": [
+    4
+   ],
+   "etapa": "alimentadores",
+   "prioridad": 1,
+   "descripcion": "Número máximo de conductores por ducto (conduit PVC, EMT, HDPE) en medidas comerciales en Chile, y porcentaje de llenado de bandejas.",
+   "datos_ric": [
+    "Porcentajes máximos de ocupación (RIC N°04)"
+   ]
+  },
+  {
+   "id": "selector_diferencial",
+   "titulo": "Selección de protección diferencial",
+   "tipo": "calculadora",
+   "categoria": "protecciones",
+   "ric": [
+    5,
+    10,
+    15
+   ],
+   "etapa": "protecciones",
+   "prioridad": 1,
+   "descripcion": "Sensibilidad (30/300 mA) y tipo (AC, A, F, B) según el uso del circuito y la carga (enchufes, baños, VE, variadores).",
+   "datos_ric": [
+    "Exigencias de protección diferencial (RIC N°05, N°10 y N°15)"
+   ]
+  },
+  {
+   "id": "verificacion_tt",
+   "titulo": "Coordinación diferencial y puesta a tierra (TT)",
+   "tipo": "verificacion",
+   "categoria": "tierra",
+   "ric": [
+    6,
+    5
+   ],
+   "etapa": "tierra",
+   "prioridad": 1,
+   "descripcion": "Verifica Ra · IΔn ≤ UL y entrega la resistencia de tierra máxima para la sensibilidad del diferencial.",
+   "datos_ric": [
+    "Tensión de contacto límite y condiciones (RIC N°05/N°06)"
+   ]
+  },
+  {
+   "id": "wenner",
+   "titulo": "Resistividad del terreno (método de Wenner)",
+   "tipo": "calculadora",
+   "categoria": "tierra",
+   "ric": [
+    6
+   ],
+   "etapa": "tierra",
+   "prioridad": 1,
+   "descripcion": "Ingreso de mediciones de Wenner por espaciamiento; calcula la resistividad aparente y un modelo de dos capas simplificado.",
+   "datos_ric": []
+  },
+  {
+   "id": "electrodos_tierra",
+   "titulo": "Resistencia de electrodos y mallas",
+   "tipo": "calculadora",
+   "categoria": "tierra",
+   "ric": [
+    6
+   ],
+   "etapa": "tierra",
+   "prioridad": 2,
+   "descripcion": "Barra vertical, barras en paralelo, conductor horizontal y malla (Schwarz/IEEE 80), con la resistividad del terreno.",
+   "datos_ric": [
+    "Valores máximos de resistencia de puesta a tierra y electrodos aceptados (RIC N°06)"
+   ]
+  },
+  {
+   "id": "carga_ve",
+   "titulo": "Carga de vehículo eléctrico",
+   "tipo": "calculadora",
+   "categoria": "sistemas",
+   "ric": [
+    15,
+    3,
+    1
+   ],
+   "etapa": "sistemas",
+   "prioridad": 1,
+   "descripcion": "Potencia del cargador frente a la demanda disponible del empalme, circuito dedicado, protecciones y tiempo de carga (kWh/kW).",
+   "datos_ric": [
+    "Requisitos de circuito, protección y diferencial para recarga (RIC N°15)"
+   ]
+  },
+  {
+   "id": "fv_netbilling",
+   "titulo": "Fotovoltaico on-grid (Netbilling)",
+   "tipo": "calculadora",
+   "categoria": "sistemas",
+   "ric": [
+    9
+   ],
+   "etapa": "sistemas",
+   "prioridad": 2,
+   "descripcion": "kWp según consumo anual y región, número de módulos por string con Voc a temperatura mínima, sección y caída en CC, y compatibilidad con la capacidad del empalme.",
+   "datos_ric": [
+    "Requisitos de autogeneración y conexión (RIC N°09)",
+    "Radiación por región: fuente pública (p. ej. Explorador Solar)"
+   ]
+  },
+  {
+   "id": "respaldo",
+   "titulo": "Respaldo: UPS y grupo electrógeno",
+   "tipo": "calculadora",
+   "categoria": "sistemas",
+   "ric": [
+    8
+   ],
+   "etapa": "sistemas",
+   "prioridad": 2,
+   "descripcion": "Potencia del grupo o UPS según cargas críticas y arranque de motores, y autonomía de baterías.",
+   "datos_ric": [
+    "Clasificación y exigencias de sistemas de emergencia (RIC N°08)"
+   ]
+  },
+  {
+   "id": "tablero",
+   "titulo": "Dimensionamiento de tablero",
+   "tipo": "calculadora",
+   "categoria": "protecciones",
+   "ric": [
+    2
+   ],
+   "etapa": "tableros",
+   "prioridad": 2,
+   "descripcion": "Corriente de barras, número de posiciones con reserva, grado IP según el recinto y lista de protecciones.",
+   "datos_ric": [
+    "Exigencias de tableros: reservas, IP, rotulado (RIC N°02)"
+   ]
+  },
+  {
+   "id": "iluminacion",
+   "titulo": "Iluminación por método de lúmenes",
+   "tipo": "calculadora",
+   "categoria": "energia",
+   "ric": [
+    14
+   ],
+   "etapa": "cargas",
+   "prioridad": 2,
+   "descripcion": "Número de luminarias para el nivel de iluminancia objetivo y densidad de potencia de iluminación (W/m²).",
+   "datos_ric": [
+    "Exigencias de eficiencia energética aplicables (RIC N°14)"
+   ]
+  },
+  {
+   "id": "consumo_costo",
+   "titulo": "Consumo y costo de energía",
+   "tipo": "calculadora",
+   "categoria": "energia",
+   "ric": [],
+   "etapa": "cargas",
+   "prioridad": 2,
+   "descripcion": "kWh mensuales por equipo o por cuadro de cargas y costo con un precio de kWh editable (tarifa BT1 u otra).",
+   "datos_ric": []
+  },
+  {
+   "id": "fp_recargo",
+   "titulo": "Compensación para evitar recargo por factor de potencia",
+   "tipo": "calculadora",
+   "categoria": "energia",
+   "ric": [
+    7
+   ],
+   "etapa": "cargas",
+   "prioridad": 2,
+   "descripcion": "kvar necesarios para llevar el factor de potencia al umbral tarifario y escalón de banco de condensadores comercial.",
+   "datos_ric": [
+    "Umbral de factor de potencia del decreto tarifario vigente (no es RIC: citar la fuente)"
+   ]
+  },
+  {
+   "id": "transformador_se",
+   "titulo": "Transformador y sala eléctrica",
+   "tipo": "calculadora",
+   "categoria": "motores",
+   "ric": [
+    13
+   ],
+   "etapa": "sistemas",
+   "prioridad": 3,
+   "descripcion": "kVA según demanda y reserva, corriente nominal y de cortocircuito en BT, y dimensiones mínimas de la sala.",
+   "datos_ric": [
+    "Exigencias de subestaciones y salas eléctricas (RIC N°13)"
+   ]
+  },
+  {
+   "id": "areas_peligrosas",
+   "titulo": "Clasificación de áreas peligrosas",
+   "tipo": "asistente",
+   "categoria": "sistemas",
+   "ric": [
+    12
+   ],
+   "etapa": "sistemas",
+   "prioridad": 3,
+   "descripcion": "Asistente para definir zona (0/1/2, 20/21/22) y el marcado mínimo del equipo, enlazado con la tabla ATEX.",
+   "datos_ric": [
+    "Criterios de clasificación (RIC N°12)"
+   ]
+  },
+  {
+   "id": "volumenes_bano",
+   "titulo": "Volúmenes de baños y piscinas",
+   "tipo": "esquema",
+   "categoria": "tierra",
+   "ric": [
+    11
+   ],
+   "etapa": "alimentadores",
+   "prioridad": 2,
+   "descripcion": "Esquema interactivo de volúmenes 0/1/2 con lo permitido en cada uno (IP, tipo de equipo, protección).",
+   "datos_ric": [
+    "Volúmenes y exigencias (RIC N°11)"
+   ]
+  },
+  {
+   "id": "memoria_calculo",
+   "titulo": "Memoria de cálculo y documentos TE1",
+   "tipo": "documento",
+   "categoria": "ref_tablas",
+   "ric": [
+    18
+   ],
+   "etapa": "documentacion",
+   "prioridad": 1,
+   "descripcion": "Reúne los cálculos guardados de un proyecto (cuadro de cargas, empalme, alimentadores, protecciones, tierra) en un PDF con las verificaciones RIC y sus referencias. Incluye checklist de documentos para la declaración.",
+   "datos_ric": [
+    "Contenido exigido de memoria, planos y cuadros (RIC N°18)"
+   ]
+  },
+  {
+   "id": "protocolo_puesta_servicio",
+   "titulo": "Protocolo de puesta en servicio",
+   "tipo": "checklist",
+   "categoria": "tierra",
+   "ric": [
+    19
+   ],
+   "etapa": "documentacion",
+   "prioridad": 2,
+   "descripcion": "Registro de pruebas: continuidad, resistencia de aislamiento, resistencia de tierra, disparo de diferenciales; genera un PDF.",
+   "datos_ric": [
+    "Pruebas y valores mínimos (RIC N°19)"
+   ]
+  },
+  {
+   "id": "plan_mantenimiento",
+   "titulo": "Plan de mantenimiento",
+   "tipo": "checklist",
+   "categoria": "sistemas",
+   "ric": [
+    17
+   ],
+   "etapa": "documentacion",
+   "prioridad": 3,
+   "descripcion": "Calendario de inspecciones y tareas por tipo de instalación, con recordatorios.",
+   "datos_ric": [
+    "Periodicidad y alcance de mantenimiento (RIC N°17)"
+   ]
+  },
+  {
+   "id": "tabla_tensiones_cl",
+   "titulo": "Tensiones y frecuencia normalizadas en Chile",
+   "tipo": "tabla",
+   "categoria": "ref_tablas",
+   "ric": [],
+   "etapa": null,
+   "prioridad": 1,
+   "descripcion": "BT 220/380 V 50 Hz y niveles de MT de distribución habituales, con fuente.",
+   "datos_ric": []
+  },
+  {
+   "id": "tabla_colores_ric",
+   "titulo": "Colores de conductores según RIC",
+   "tipo": "tabla",
+   "categoria": "ref_tablas",
+   "ric": [
+    4
+   ],
+   "etapa": null,
+   "prioridad": 1,
+   "descripcion": "Identificación de fases, neutro y protección.",
+   "datos_ric": [
+    "Código de colores (RIC N°04)"
+   ]
+  },
+  {
+   "id": "tabla_secciones_minimas",
+   "titulo": "Secciones mínimas por uso",
+   "tipo": "tabla",
+   "categoria": "ref_tablas",
+   "ric": [
+    4,
+    10
+   ],
+   "etapa": null,
+   "prioridad": 1,
+   "descripcion": "Sección mínima por tipo de circuito y material.",
+   "datos_ric": [
+    "RIC N°04/N°10"
+   ]
+  },
+  {
+   "id": "tabla_caidas_admisibles",
+   "titulo": "Caídas de tensión admisibles",
+   "tipo": "tabla",
+   "categoria": "ref_tablas",
+   "ric": [
+    3
+   ],
+   "etapa": null,
+   "prioridad": 1,
+   "descripcion": "Límites por tramo con su numeral.",
+   "datos_ric": [
+    "RIC N°03"
+   ]
+  },
+  {
+   "id": "tabla_aislamiento_minimo",
+   "titulo": "Resistencia de aislamiento mínima",
+   "tipo": "tabla",
+   "categoria": "ref_tablas",
+   "ric": [
+    19
+   ],
+   "etapa": null,
+   "prioridad": 2,
+   "descripcion": "Valores por tensión de prueba.",
+   "datos_ric": [
+    "RIC N°19"
+   ]
+  },
+  {
+   "id": "tabla_enchufes_cl",
+   "titulo": "Enchufes y tomas usados en Chile",
+   "tipo": "tabla",
+   "categoria": "ref_conectores",
+   "ric": [
+    10
+   ],
+   "etapa": null,
+   "prioridad": 2,
+   "descripcion": "Tipos L y C, capacidades y usos.",
+   "datos_ric": []
+  },
+  {
+   "id": "esq_unilineal_vivienda",
+   "titulo": "Unilineal tipo de vivienda",
+   "tipo": "esquema",
+   "categoria": "ref_esquemas",
+   "ric": [
+    1,
+    2,
+    10
+   ],
+   "etapa": null,
+   "prioridad": 1,
+   "descripcion": "Empalme → medidor → tablero → circuitos con diferenciales.",
+   "datos_ric": []
+  },
+  {
+   "id": "esq_empalmes",
+   "titulo": "Empalme monofásico aéreo y subterráneo",
+   "tipo": "esquema",
+   "categoria": "ref_esquemas",
+   "ric": [
+    1
+   ],
+   "etapa": null,
+   "prioridad": 1,
+   "descripcion": "Partes y conexiones.",
+   "datos_ric": []
+  },
+  {
+   "id": "esq_sistemas_tierra",
+   "titulo": "Esquemas TT, TN-S, TN-C-S e IT",
+   "tipo": "esquema",
+   "categoria": "ref_esquemas",
+   "ric": [
+    6
+   ],
+   "etapa": null,
+   "prioridad": 1,
+   "descripcion": "Animados, mostrando el camino de la corriente de falla.",
+   "datos_ric": []
+  },
+  {
+   "id": "esq_puesta_tierra",
+   "titulo": "Barra, malla y cámara de inspección",
+   "tipo": "esquema",
+   "categoria": "ref_esquemas",
+   "ric": [
+    6
+   ],
+   "etapa": null,
+   "prioridad": 2,
+   "descripcion": "Montaje típico.",
+   "datos_ric": []
+  },
+  {
+   "id": "esq_fv",
+   "titulo": "Fotovoltaico on-grid con medidor bidireccional",
+   "tipo": "esquema",
+   "categoria": "ref_esquemas",
+   "ric": [
+    9
+   ],
+   "etapa": null,
+   "prioridad": 2,
+   "descripcion": "Paneles → inversor → tablero → medidor.",
+   "datos_ric": []
+  },
+  {
+   "id": "esq_ve",
+   "titulo": "Cargador de VE modo 3",
+   "tipo": "esquema",
+   "categoria": "ref_esquemas",
+   "ric": [
+    15
+   ],
+   "etapa": null,
+   "prioridad": 2,
+   "descripcion": "Circuito dedicado y protecciones.",
+   "datos_ric": []
+  },
+  {
+   "id": "esq_transferencia",
+   "titulo": "Transferencia red / grupo electrógeno",
+   "tipo": "esquema",
+   "categoria": "ref_esquemas",
+   "ric": [
+    8
+   ],
+   "etapa": null,
+   "prioridad": 2,
+   "descripcion": "Manual y automática.",
+   "datos_ric": []
+  }
+ ]
+}
