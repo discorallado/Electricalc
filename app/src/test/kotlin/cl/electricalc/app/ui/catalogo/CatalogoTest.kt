@@ -1,7 +1,6 @@
 package cl.electricalc.app.ui.catalogo
 
-import cl.electricalc.app.ui.calculadoras.CalculadoraCaida
-import cl.electricalc.app.ui.calculadoras.CalculadorasOhm
+import cl.electricalc.app.ui.calculadoras.Registro
 import cl.electricalc.app.ui.destinos.Accesos
 import cl.electricalc.app.ui.formulario.Fichas
 import org.json.JSONObject
@@ -51,11 +50,12 @@ class CatalogoTest {
 
     @Test
     fun `calculadoras fichas accesos y sinonimos apuntan a ids que existen`() {
-        val calculadoras = CalculadorasOhm.todas + CalculadoraCaida.caida
+        val calculadoras = Registro.todas
         calculadoras.forEach { assertNotNull(catalogo.item(it.id), "Calculadora sin entrada en el catálogo: ${it.id}") }
         listOf(
             "FormulaCorrente", "FormulaTensione", "FormulaPotenzaAttiva", "FormulaPotenzaApparente",
             "FormulaPotenzaReattiva", "FormulaFattorePotenza", "FormulaResistenza", "FormulaImpedenza", "FormulaCaduta",
+            "FormulaCadutaCarichiDistribuiti", "FormulaLunghezzaCavoCaduta",
         ).forEach {
             assertTrue(Fichas.existe(it), "Ficha no registrada: $it")
             assertNotNull(catalogo.item(it), "Ficha sin entrada en el catálogo: $it")

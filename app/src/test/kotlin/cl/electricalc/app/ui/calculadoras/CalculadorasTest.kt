@@ -1,5 +1,7 @@
 package cl.electricalc.app.ui.calculadoras
 
+import cl.electricalc.calc.comun.ErrorCalculo
+import cl.electricalc.calc.comun.MotivoError
 import cl.electricalc.calc.comun.SistemaElectrico
 import cl.electricalc.calc.ohm.Magnitud
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -155,6 +157,76 @@ class CalculadorasTest {
         val opciones = mapOf(Ids.SECCION to 4, Ids.PARALELOS to 0, Ids.MATERIAL to 0, Ids.TIPO_CABLE to 1)
         val r = calc.calcular(Entrada(SistemaElectrico.CONTINUA, null, valores, unidades, opciones))
         assertEquals("1.596 V", r[0].valor)
+    }
+
+    /** Datos de conductor comunes: 2,5 mm² Cu unipolar, un conductor por fase, 70 °C. */
+    private val conductor = mapOf(Ids.SECCION to 4, Ids.PARALELOS to 0, Ids.MATERIAL to 0, Ids.TIPO_CABLE to 0)
+    private val unidadesLinea = mapOf(
+        Ids.TENSION to Unidades.V, Ids.CARGA to Unidades.W, Ids.FASE to Unidades.cosPhi,
+        Ids.SECCION to Unidad(CalculadoraCaida.MM2), Ids.LONGITUD to Unidades.m, Ids.TEMPERATURA to Unidades.celsius,
+        Ids.NUMERO_CARGAS to Unidad(""), Ids.CAIDA_MAXIMA to Unidad(CalculadoraCaida.PORCENTAJE),
+    )
+
+    @Test
+    fun `cargas distribuidas coincide con el calculo a mano`() {
+        // 10 luminarias de 100 W en monofásica 220 V, cosφ 1, 100 m de 2,5 mm² Cu a 70 °C:
+        // I = 100/220 = 0,4545 A; R = 7,98·(1 + 0,00393·50) = 9,548 Ω/km
+        // ΔV = 2·I·0,1 km·R·(10 + 1)/2 = 4,774 V
+        val valores = mapOf(
+            Ids.TENSION to 220.0, Ids.CARGA to 100.0, Ids.NUMERO_CARGAS to 10.0, Ids.FASE to 1.0,
+            Ids.LONGITUD to 100.0, Ids.TEMPERATURA to 70.0,
+        )
+        val r = CalculadoraCaida.cargasDistribuidas.calcular(
+            Entrada(SistemaElectrico.MONOFASICA, null, valores, unidadesLinea, conductor),
+        )
+        assertEquals(listOf("4.774 V", "2.17 %", "215.226 V", "10 m", "454.545 mA", "4.545 A"), r.map { it.valor })
+    }
+
+    @Test
+    fun `con una sola carga distribuida es la caida con la carga al final`() {
+        val valores = mapOf(
+            Ids.TENSION to 380.0, Ids.CARGA to 3000.0, Ids.NUMERO_CARGAS to 1.0, Ids.FASE to 0.9,
+            Ids.LONGITUD to 50.0, Ids.TEMPERATURA to 70.0,
+        )
+        val s = SistemaElectrico.TRIFASICA
+        val una = CalculadoraCaida.cargasDistribuidas.calcular(Entrada(s, null, valores, unidadesLinea, conductor))
+        val alFinal = CalculadoraCaida.caida.calcular(Entrada(s, null, valores, unidadesLinea, conductor))
+        assertEquals(alFinal.take(3).map { it.valor }, una.take(3).map { it.valor })
+    }
+
+    @Test
+    fun `el numero de cargas debe ser entero y positivo`() {
+        for (n in listOf(0.0, 2.5, -3.0)) {
+            val valores = mapOf(
+                Ids.TENSION to 220.0, Ids.CARGA to 100.0, Ids.NUMERO_CARGAS to n, Ids.FASE to 1.0,
+                Ids.LONGITUD to 100.0, Ids.TEMPERATURA to 70.0,
+            )
+            val error = runCatching {
+                CalculadoraCaida.cargasDistribuidas.calcular(Entrada(SistemaElectrico.MONOFASICA, null, valores, unidadesLinea, conductor))
+            }.exceptionOrNull()
+            assertTrue(error is ErrorCalculo && error.motivo == MotivoError.VALOR_FUERA_DE_RANGO, "n = $n")
+        }
+    }
+
+    @Test
+    fun `la longitud maxima produce exactamente la caida pedida`() {
+        for (s in SistemaElectrico.entries) {
+            val base = mapOf(Ids.TENSION to 380.0, Ids.CARGA to 3000.0, Ids.FASE to 0.9, Ids.TEMPERATURA to 70.0)
+            val enPorcentaje = CalculadoraCaida.longitudMaxima.calcular(
+                Entrada(s, null, base + (Ids.CAIDA_MAXIMA to 3.0), unidadesLinea, conductor),
+            )
+            // 3 % de 380 V = 11,4 V: ingresarlo en volts da la misma longitud.
+            val enVolts = CalculadoraCaida.longitudMaxima.calcular(
+                Entrada(s, null, base + (Ids.CAIDA_MAXIMA to 11.4), unidadesLinea + (Ids.CAIDA_MAXIMA to Unidades.V), conductor),
+            )
+            assertEquals(enPorcentaje.map { it.valor }, enVolts.map { it.valor }, "$s")
+
+            val metros = Formato.leer(enPorcentaje[0].valor.removeSuffix(" m").replace(",", ""))!!
+            val caida = CalculadoraCaida.caida.calcular(
+                Entrada(s, null, base + (Ids.LONGITUD to metros), unidadesLinea, conductor),
+            )
+            assertEquals("3.00 %", caida[1].valor, "$s: la caída con la longitud máxima debe ser la pedida")
+        }
     }
 
     @Test

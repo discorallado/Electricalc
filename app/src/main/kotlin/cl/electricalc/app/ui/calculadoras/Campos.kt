@@ -22,6 +22,8 @@ object Ids {
     const val MATERIAL = "material"
     const val TIPO_CABLE = "tipo_cable"
     const val TEMPERATURA = "temperatura"
+    const val NUMERO_CARGAS = "numero_cargas"
+    const val CAIDA_MAXIMA = "caida_maxima"
 }
 
 /** Campos comunes. Las pantallas los combinan; cada una decide cuáles muestra. */

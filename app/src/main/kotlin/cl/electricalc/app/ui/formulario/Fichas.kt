@@ -188,6 +188,63 @@ object Fichas {
         )
     }
 
+    /** Factor de la línea según el sistema: 2 (ida y vuelta) o √3 en trifásica. */
+    private fun factorLinea(tri: Boolean, resto: String): Expr = if (tri) e(raiz("3"), " × $resto") else e("2 × $resto")
+
+    private val leyendaLinea = listOf(
+        Simbolo("I", R.string.sim_corriente, "A"),
+        Simbolo("R", R.string.sim_resistencia_linea, "Ω/km"),
+        Simbolo("X", R.string.sim_reactancia_linea, "Ω/km"),
+        Simbolo("n", R.string.sim_paralelos),
+        Simbolo("φ", R.string.sim_desfase, "°"),
+    )
+
+    /** N cargas iguales a la misma distancia: equivale a la carga total a (N + 1)/(2N) del largo. */
+    private fun caidaDistribuida(): Ficha {
+        val reparto = frac("N + 1", "2")
+        return Ficha(
+            tarjetas = listOf(
+                TarjetaFicha(R.string.sistema_continua, listOf(e("ΔU = ", frac("2 × I × R × L", "n"), " × ", reparto))),
+                TarjetaFicha(
+                    R.string.sistema_mono_bifasica,
+                    listOf(e("ΔU = ", frac("2 × I × (R × cos φ + X × $sen φ) × L", "n"), " × ", reparto)),
+                ),
+                TarjetaFicha(
+                    R.string.sistema_trifasica,
+                    listOf(e("ΔU = ", frac(e(raiz("3"), " × I × (R × cos φ + X × $sen φ) × L"), "n"), " × ", reparto)),
+                ),
+                TarjetaFicha(R.string.ficha_comunes, listOf(e("d = ", frac("L", "N")), e("I_inicio = N × I"))),
+            ),
+            leyenda = listOf(Simbolo("ΔU", R.string.sim_caida, "V")) + leyendaLinea + listOf(
+                Simbolo("L", R.string.sim_longitud_total, "km"),
+                Simbolo("N", R.string.sim_numero_cargas),
+                Simbolo("d", R.string.sim_distancia_cargas, "km"),
+            ),
+            notas = listOf(R.string.nota_caida_distribuidas, R.string.nota_caida_tablas),
+        )
+    }
+
+    private fun longitudMaxima(): Ficha {
+        fun formula(tri: Boolean, alterna: Boolean): Expr {
+            val impedancia = if (alterna) "I × (R × cos φ + X × $sen φ)" else "I × R"
+            return e("L_max = ", frac("ΔU_max × n", factorLinea(tri, impedancia)))
+        }
+        return Ficha(
+            tarjetas = listOf(
+                TarjetaFicha(R.string.sistema_continua, listOf(formula(tri = false, alterna = false))),
+                TarjetaFicha(R.string.sistema_mono_bifasica, listOf(formula(tri = false, alterna = true))),
+                TarjetaFicha(R.string.sistema_trifasica, listOf(formula(tri = true, alterna = true))),
+                TarjetaFicha(R.string.ficha_comunes, listOf(e("ΔU_max = ", frac("ΔU% × U", "100")))),
+            ),
+            leyenda = listOf(
+                Simbolo("L_max", R.string.sim_longitud_maxima, "km"),
+                Simbolo("ΔU_max", R.string.sim_caida_maxima, "V"),
+                Simbolo("U", R.string.sim_tension_alimentacion, "V"),
+            ) + leyendaLinea,
+            notas = listOf(R.string.nota_caida_tablas),
+        )
+    }
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
         "FormulaCorrente" to ::corriente,
         "FormulaTensione" to ::tension,
@@ -198,6 +255,8 @@ object Fichas {
         "FormulaResistenza" to ::resistencia,
         "FormulaImpedenza" to ::impedancia,
         "FormulaCaduta" to ::caida,
+        "FormulaCadutaCarichiDistribuiti" to ::caidaDistribuida,
+        "FormulaLunghezzaCavoCaduta" to ::longitudMaxima,
     )
 
     fun existe(id: String?) = id != null && id in constructores
