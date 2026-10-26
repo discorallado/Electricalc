@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_circuitos_tablero">Cantidad de circuitos</string>
+    <string name="ayuda_circuitos_tablero">Circuitos que alimenta el tablero. Desde 8 circuitos el cableado interno va en bandejas.</string>
+    <string name="campo_modulos_din">Módulos DIN ocupados</string>
+    <string name="ayuda_modulos_din">Suma de los anchos de las protecciones y dispositivos (1 módulo = 18 mm). Una termomagnética bipolar ocupa 2.</string>
+    <string name="campo_condicion_trabajo">Condición del espacio de trabajo</string>
+    <string name="ayuda_condicion_trabajo">Tabla N°2.1 del RIC N°02: depende de qué hay frente al tablero.</string>
+    <string name="condicion_1">1: lado opuesto no conductor</string>
+    <string name="condicion_2">2: lado opuesto conductor puesto a tierra</string>
+    <string name="condicion_3">3: partes energizadas a ambos lados</string>
+    <string name="res_modulos_gabinete">Capacidad mínima del gabinete</string>
+    <string name="res_espacio_trabajo">Espacio libre de trabajo</string>
+    <string name="res_bandeja_interna">Bandeja interna</string>
+    <string name="intro_tablero">Dimensiona un tablero según el RIC N°02: capacidad del gabinete con la ampliación del 25 % que exige una instalación nueva, bandejas internas y espacio libre de trabajo frente al tablero.</string>
+</resources>

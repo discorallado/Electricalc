@@ -144,3 +144,40 @@ object CalculadoraPuestaEnServicio {
         },
     )
 }
+
+/** Dimensionamiento de tablero (RIC N°02): módulos con ampliación, bandeja interna y espacio de trabajo. */
+object CalculadoraTablero {
+    private val t by lazy { cl.electricalc.datos.ric.Ric.tableros }
+
+    private val condicion = CampoOpciones(
+        "condicion", R.string.campo_condicion_trabajo, listOf(R.string.ayuda_condicion_trabajo),
+        opciones = listOf(R.string.condicion_1, R.string.condicion_2, R.string.condicion_3).map { TextoOpcion.Recurso(it) },
+    )
+
+    val tablero = Calculadora(
+        id = "tablero",
+        sistemas = listOf(SistemaElectrico.MONOFASICA),
+        campos = listOf(
+            campo("circuitos", R.string.campo_circuitos_tablero, R.string.ayuda_circuitos_tablero, hint = "10"),
+            campo("modulos", R.string.campo_modulos_din, R.string.ayuda_modulos_din, listOf(Unidad("mód.")), "24"),
+            condicion,
+        ),
+        visible = { _, _, _, _ -> true },
+        guia = Guia(listOf(R.string.intro_tablero)),
+        calcular = { e ->
+            val circuitos = e.valor("circuitos").toInt()
+            val modulos = e.valor("modulos").toInt()
+            if (circuitos < 1 || modulos < 1) throw cl.electricalc.calc.comun.ErrorCalculo(cl.electricalc.calc.comun.MotivoError.VALOR_FUERA_DE_RANGO)
+            val espacio = t.espaciosTrabajo[e.opcion("condicion")]
+            listOf(
+                LineaResultado(R.string.res_modulos_gabinete, "${t.modulosConReserva(modulos)} mód."),
+                LineaResultado(R.string.res_espacio_trabajo, "${Formato.numero(espacio.m, 2)} m"),
+                LineaResultado(
+                    R.string.res_bandeja_interna,
+                    if (t.requiereBandeja(circuitos)) "Sí, ocupación ≤ ${Formato.numero(t.bandejaOcupacionMax * 100, 0)} %" else "No exigida (< ${t.bandejaDesdeCircuitos} circuitos)",
+                ),
+                LineaResultado(R.string.res_referencia, "RIC N°02, numeral 6.1.16 y tabla N°2.1", principal = false),
+            )
+        },
+    )
+}

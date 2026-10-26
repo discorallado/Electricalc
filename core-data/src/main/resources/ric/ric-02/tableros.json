@@ -1,0 +1,22 @@
+{
+  "pliego": 2,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.1.16",
+  "tabla": "2.1",
+  "titulo": "Tamaño de tableros y espacios de trabajo",
+  "paginas": [6, 9],
+  "ampliacion": 0.25,
+  "bandeja_ocupacion_max": 0.5,
+  "bandeja_desde_circuitos": 8,
+  "espacios_trabajo": [
+    { "condicion": 1, "descripcion": "Partes energizadas descubiertas a un lado y el lado opuesto no conductor, o a ambos lados protegidas con cubiertas aislantes removibles", "m": 0.90 },
+    { "condicion": 2, "descripcion": "Partes energizadas descubiertas a un lado y el lado opuesto conductor puesto a tierra (hormigón, ladrillo, cerámica)", "m": 1.20 },
+    { "condicion": 3, "descripcion": "Partes energizadas descubiertas a ambos lados con el operario trabajando entre ellas", "m": 1.50 }
+  ],
+  "notas": [
+    "Numeral 6.1.16.1: el cableado interno va en bandejas no metálicas ocupadas como máximo al 50 %; no se exige en tableros de menos de 8 circuitos.",
+    "Numeral 6.1.16.3: en una instalación nueva, el tamaño inicial del gabinete prevé una ampliación de un 25 % de la capacidad total por cada tipo de servicio, con espacio en barras y riel DIN.",
+    "Tabla N°2.1: espacio libre de trabajo frente a tableros de 0 a 1.000 V respecto a tierra. No se exige detrás de tableros con acceso total por el frente."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

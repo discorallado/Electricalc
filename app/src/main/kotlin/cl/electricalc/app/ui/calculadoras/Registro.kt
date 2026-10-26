@@ -6,7 +6,7 @@ object Registro {
         listOf(CalculadoraCaida.caida, CalculadoraCaida.cargasDistribuidas, CalculadoraCaida.longitudMaxima) +
         CalculadorasTierra.todas + CalculadorasRic.todas + CalculadorasProteccion.todas +
         CalculadorasEmpalme.todas + CalculadoraDuctos.ductos +
-        CalculadorasEnergia.todas + CalculadoraPuestaEnServicio.protocolo
+        CalculadorasEnergia.todas + CalculadoraPuestaEnServicio.protocolo + CalculadoraTablero.tablero
 
     private val porId = todas.associateBy { it.id }
 
