@@ -27,4 +27,21 @@
     <string name="res_registrador">Registrador de energía exclusivo</string>
     <string name="res_responsable_tecnico">Responsable técnico designado</string>
     <string name="intro_autogeneracion">Indica qué protecciones exige el RIC N°09 a un sistema de autogeneración (por ejemplo, fotovoltaico con net billing) según su potencia y la del empalme. La sobrecorriente y la falla a tierra se exigen siempre.</string>
+    <string name="campo_tipo_ducha">Tipo de bañera o ducha</string>
+    <string name="ayuda_tipo_ducha">Sin receptáculo, los volúmenes 0 y 1 se miden como un radio desde la toma de agua (difusor móvil) o desde el difusor fijo.</string>
+    <string name="ducha_receptaculo">Bañera o ducha con receptáculo</string>
+    <string name="ducha_difusor_fijo">Ducha sin receptáculo, difusor fijo</string>
+    <string name="ducha_difusor_movil">Ducha sin receptáculo, difusor móvil</string>
+    <string name="campo_distancia_ducha">Distancia horizontal</string>
+    <string name="ayuda_distancia_ducha">Desde el borde de la bañera o del receptáculo (0 = sobre ella), o desde la toma o el difusor si no hay receptáculo.</string>
+    <string name="campo_altura_punto">Altura sobre el suelo</string>
+    <string name="ayuda_altura_punto">Altura del aparato, enchufe o interruptor.</string>
+    <string name="campo_altura_techo">Altura del techo</string>
+    <string name="ayuda_altura_techo">Opcional. Sobre 2,25 m los volúmenes 2 y 3 siguen hasta el techo o hasta 3 m.</string>
+    <string name="res_volumen">Volumen</string>
+    <string name="res_grado_ip">Grado de protección mínimo</string>
+    <string name="res_mecanismos">Interruptores y enchufes</string>
+    <string name="res_aparatos">Aparatos fijos</string>
+    <string name="res_cableado">Cableado</string>
+    <string name="intro_volumenes_bano">Indica en qué volumen del RIC N°11 queda un punto de un baño o ducha y qué grado de protección, mecanismos y aparatos admite. Los lavamanos se tratan como volumen 2 hasta 0,3 m alrededor y por encima.</string>
 </resources>

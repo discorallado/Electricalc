@@ -1,0 +1,53 @@
+{
+  "pliego": 11,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.4",
+  "titulo": "Volúmenes en locales con bañera o ducha",
+  "paginas": [24, 25, 26],
+  "altura_volumenes_m": 2.25,
+  "altura_max_techo_m": 3.0,
+  "altura_volumen0_sin_receptaculo_m": 0.05,
+  "radio_difusor_movil_m": 1.2,
+  "radio_difusor_fijo_m": 0.6,
+  "ancho_volumen2_m": 0.6,
+  "ancho_volumen3_m": 2.4,
+  "lavamanos_m": 0.3,
+  "volumenes": [
+    {
+      "volumen": 0,
+      "ip": "IPX7",
+      "cableado": "Solo el necesario para los aparatos fijos de este volumen.",
+      "mecanismos": "No se permiten.",
+      "aparatos": "Solo aparatos aptos para instalarse en el volumen 0."
+    },
+    {
+      "volumen": 1,
+      "ip": "IPX4 (IPX2 sobre el difusor fijo más alto; IPX5 en hidromasaje y baños comunes que se limpian con chorro)",
+      "cableado": "Solo el necesario para los aparatos fijos de los volúmenes 0 y 1.",
+      "mecanismos": "No se permiten, salvo interruptores de tensión extra baja (12 V CA o 30 V CC) con la fuente fuera de los volúmenes 0, 1 y 2.",
+      "aparatos": "Tensión extra baja hasta 12 V CA o 30 V CC; calentadores de agua, bombas de ducha e hidromasaje con diferencial adicional de 10 mA como máximo."
+    },
+    {
+      "volumen": 2,
+      "ip": "IPX4 (IPX2 sobre el difusor fijo más alto; IPX5 en baños comunes que se limpian con chorro)",
+      "cableado": "Solo el necesario para los aparatos fijos de los volúmenes 0, 1 y 2 y la parte del volumen 3 bajo la bañera o ducha.",
+      "mecanismos": "No se permiten, salvo interruptores o enchufes de tensión extra baja con la fuente fuera de los volúmenes 0, 1 y 2, y bloques de alimentación para afeitadoras según UNE-EN 61558-2-5.",
+      "aparatos": "Los del volumen 1, y luminarias, ventiladores, calefactores y unidades de hidromasaje con diferencial adicional de 30 mA como máximo."
+    },
+    {
+      "volumen": 3,
+      "ip": "Sin mínimo general (IPX5 en baños comunes que se limpian con chorro)",
+      "cableado": "Solo el necesario para los aparatos fijos de los volúmenes 0 a 3.",
+      "mecanismos": "Interruptores y aparatos protegidos por transformador de aislamiento, tensión extra baja o interruptor bipolar con diferencial de 30 mA como máximo.",
+      "aparatos": "Luces y enchufes protegidos por transformador de aislamiento, tensión extra baja o diferencial adicional de 30 mA como máximo."
+    }
+  ],
+  "notas": [
+    "Numeral 6.4.1: volumen 0 es el interior de la bañera o ducha; sin receptáculo, llega a 0,05 m del suelo dentro de un radio de 1,2 m desde la toma (difusor móvil) o 0,6 m desde el difusor fijo.",
+    "Volumen 1 sube hasta 2,25 m sobre el suelo en la proyección del volumen 0; volumen 2 se extiende 0,6 m más allá; volumen 3, 2,4 m más allá del volumen 2, ambos hasta 2,25 m.",
+    "Sobre 2,25 m, hasta el techo o 3 m (lo menor), el espacio sobre el volumen 1 es volumen 2 y el espacio sobre el volumen 2 es volumen 3.",
+    "Los lavamanos se tratan como volumen 2 hasta 0,3 m alrededor y 0,3 m por encima. Falsos techos y mamparas no separan volúmenes.",
+    "Numeral 6.4.2.2: conexión equipotencial suplementaria de las partes conductoras de los volúmenes 0 a 3."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

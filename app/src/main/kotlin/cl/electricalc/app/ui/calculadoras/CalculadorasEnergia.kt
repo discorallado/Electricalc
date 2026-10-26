@@ -219,3 +219,41 @@ object CalculadoraAutogeneracion {
         },
     )
 }
+
+/** Volumen de un punto en un baño o ducha y lo que admite (RIC N°11, numeral 6.4). */
+object CalculadoraVolumenesBano {
+    private val v by lazy { cl.electricalc.datos.ric.Ric.volumenesBano }
+
+    private val tipo = CampoOpciones(
+        "tipo", R.string.campo_tipo_ducha, listOf(R.string.ayuda_tipo_ducha),
+        listOf(R.string.ducha_receptaculo, R.string.ducha_difusor_fijo, R.string.ducha_difusor_movil).map { TextoOpcion.Recurso(it) },
+    )
+
+    val volumenes = calculadoraSimple(
+        "volumenes_bano",
+        listOf(
+            tipo,
+            campo("d", R.string.campo_distancia_ducha, R.string.ayuda_distancia_ducha, listOf(Unidades.m), "0,5"),
+            campo("h", R.string.campo_altura_punto, R.string.ayuda_altura_punto, listOf(Unidades.m), "1,2"),
+            campo("techo", R.string.campo_altura_techo, R.string.ayuda_altura_techo, listOf(Unidades.m), "2,4", opcional = true),
+        ),
+        listOf(R.string.intro_volumenes_bano),
+    ) { e ->
+        val t = cl.electricalc.datos.ric.TipoDucha.entries[e.opcion("tipo")]
+        val techo = if (e.tiene("techo")) e.valor("techo") else null
+        val n = v.volumen(t, e.valor("d"), e.valor("h"), techo)
+            ?: return@calculadoraSimple listOf(
+                LineaResultado(R.string.res_volumen, "Fuera de los volúmenes"),
+                LineaResultado(R.string.res_referencia, "RIC N°11, numeral 6.4.1", principal = false),
+            )
+        val r = v.requisitos(n)
+        listOf(
+            LineaResultado(R.string.res_volumen, "Volumen $n"),
+            LineaResultado(R.string.res_grado_ip, r.ip),
+            LineaResultado(R.string.res_mecanismos, r.mecanismos, principal = false),
+            LineaResultado(R.string.res_aparatos, r.aparatos, principal = false),
+            LineaResultado(R.string.res_cableado, r.cableado, principal = false),
+            LineaResultado(R.string.res_referencia, "RIC N°11, numerales 6.4.1 y 6.4.3", principal = false),
+        )
+    }
+}

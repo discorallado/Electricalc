@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(25, Ric.todas.size)
+        assertEquals(26, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -22,7 +22,7 @@ class RicTest {
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 9, 10, 15, 18, 19), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 15, 18, 19), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -245,5 +245,18 @@ class RicTest {
         assertEquals(300, grande.diferencialMa)
         assertEquals(30, Ric.tableros.modulosConReserva(24))
         assertEquals(1.2, Ric.tableros.espaciosTrabajo[1].m)
+    }
+
+    @Test
+    fun `volumenes de bano`() {
+        val v = Ric.volumenesBano
+        assertEquals(1, v.volumen(TipoDucha.CON_RECEPTACULO, 0.0, 1.5))
+        assertEquals(2, v.volumen(TipoDucha.CON_RECEPTACULO, 0.5, 1.0))
+        assertEquals(3, v.volumen(TipoDucha.CON_RECEPTACULO, 2.0, 1.0))
+        assertEquals(null, v.volumen(TipoDucha.CON_RECEPTACULO, 3.5, 1.0))
+        assertEquals(0, v.volumen(TipoDucha.DIFUSOR_MOVIL, 1.0, 0.03))
+        assertEquals(2, v.volumen(TipoDucha.DIFUSOR_FIJO, 0.5, 2.5, techo = 2.6))
+        assertEquals(null, v.volumen(TipoDucha.DIFUSOR_FIJO, 0.5, 2.7, techo = 2.6))
+        assertEquals("IPX7", v.requisitos(0).ip)
     }
 }
