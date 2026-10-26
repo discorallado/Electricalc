@@ -165,7 +165,7 @@
     <string name="ayuda_numero_cargas">How many loads are on the line. They are assumed evenly spaced, with the last one at the end.</string>
     <string name="ayuda_longitud_total">Distance from the supply point to the last load, one way.</string>
     <string name="ayuda_caida_maxima">Voltage drop not to be exceeded, as a percentage of the supply voltage or in volts.</string>
-    <string name="ayuda_caida_maxima_norma">Use the limit required by the code for your installation. The app does not suggest one yet.</string>
+    <string name="ayuda_caida_maxima_norma">The 3 % per run from RIC N°03 (clause 5.1.3) is suggested. The total drop to the worst point must not exceed 5 %. Enter another value if your case requires it.</string>
     <string name="intro_caida_distribuidas">Calculates the voltage drop at the end of a line feeding several equal loads spread along its length, such as a row of luminaires or outlets.</string>
     <string name="intro_longitud_maxima">Calculates the maximum length a line can have so the voltage drop stays within the given value, with the load at the end. Check separately that the conductor has enough current capacity for the load.</string>
     <string name="res_tension_ultima_carga">Voltage at the last load</string>

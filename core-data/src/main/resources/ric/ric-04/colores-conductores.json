@@ -1,0 +1,22 @@
+{
+  "pliego": 4,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "5.32",
+  "tabla": null,
+  "titulo": "Código de colores de los conductores",
+  "paginas": [9],
+  "unidades": {},
+  "notas": [
+    "Numeral 5.33: sobre 21 mm², si solo hay aislaciones monocolores, se marcan los extremos y cada 5 m respetando este código.",
+    "Las cubiertas o aislaciones verde o verde/amarillo solo se usan para conductores de protección (puesta a tierra).",
+    "Numeral 5.30: no se pueden usar los colores rojo, amarillo o azul en las canalizaciones eléctricas."
+  ],
+  "conductores": [
+    { "conductor": "fase_1", "nombre": "Conductor de la fase 1", "color": "azul" },
+    { "conductor": "fase_2", "nombre": "Conductor de la fase 2", "color": "negro" },
+    { "conductor": "fase_3", "nombre": "Conductor de la fase 3", "color": "rojo" },
+    { "conductor": "neutro", "nombre": "Conductor de neutro y tierra de servicio", "color": "blanco" },
+    { "conductor": "proteccion", "nombre": "Conductor de protección", "color": "verde o verde/amarillo" }
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

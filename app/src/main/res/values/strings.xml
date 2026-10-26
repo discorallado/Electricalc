@@ -176,7 +176,7 @@
     <string name="ayuda_numero_cargas">Cuántas cargas hay en la línea. Se suponen repartidas a la misma distancia entre sí, con la última al final.</string>
     <string name="ayuda_longitud_total">Distancia entre el punto de alimentación y la última carga, en un solo sentido.</string>
     <string name="ayuda_caida_maxima">Caída de tensión que no se quiere superar, en porcentaje de la tensión de alimentación o en volts.</string>
-    <string name="ayuda_caida_maxima_norma">Usa el límite que exige la normativa de tu instalación. La app todavía no lo propone: lo hará cuando la tabla del RIC N°03 esté transcrita con su referencia.</string>
+    <string name="ayuda_caida_maxima_norma">Se propone el 3 % por tramo del RIC N°03 (numeral 5.1.3). La caída total hasta el punto más desfavorable no debe superar el 5 %. Puedes ingresar otro valor si tu caso lo exige.</string>
     <string name="intro_caida_distribuidas">Calcula la caída de tensión al final de una línea que alimenta varias cargas iguales repartidas a lo largo de su recorrido, como una fila de luminarias o de enchufes.</string>
     <string name="intro_longitud_maxima">Calcula la longitud máxima que puede tener una línea para que la caída de tensión no supere el valor indicado, con la carga al final. Verifica aparte que el conductor tenga capacidad de corriente suficiente para la carga.</string>
     <string name="res_tension_ultima_carga">Tensión en la última carga</string>

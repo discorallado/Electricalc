@@ -55,6 +55,7 @@ kotlin {
 
 dependencies {
     implementation(project(":core-calc"))
+    implementation(project(":core-data"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)

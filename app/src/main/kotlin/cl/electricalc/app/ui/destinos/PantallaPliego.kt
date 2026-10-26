@@ -2,6 +2,7 @@ package cl.electricalc.app.ui.destinos
 
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,9 +12,11 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
+import androidx.compose.material.icons.filled.TableChart
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SuggestionChip
@@ -33,6 +36,9 @@ import cl.electricalc.app.ui.catalogo.Pliego
 import cl.electricalc.app.ui.componentes.FilaHerramienta
 import cl.electricalc.app.ui.componentes.PantallaConBarra
 import cl.electricalc.app.ui.componentes.Titular
+import cl.electricalc.app.ui.componentes.citaRic
+import cl.electricalc.app.ui.ric.TablasRic
+import cl.electricalc.datos.ric.Ric
 
 /** Sitio de la SEC. Se enlaza la portada: la ruta exacta de cada PDF se fija al descargarlos. */
 private const val URL_SEC = "https://www.sec.cl"
@@ -73,6 +79,7 @@ fun PantallaPliego(
     alVolver: () -> Unit,
     alAbrir: (Herramienta) -> Unit,
     alMantener: (Herramienta) -> Unit,
+    alAbrirTabla: (String) -> Unit,
 ) {
     val preferencias = LocalPreferencias.current
     val contexto = LocalContext.current
@@ -83,6 +90,7 @@ fun PantallaPliego(
     val (checklists, herramientasNuevas) = otrasNuevas.partition { it.tipo == "checklist" }
     val herramientas = herramientasNuevas + existentes
     val porConfirmar = stringResource(R.string.relacion_por_confirmar)
+    val transcritas = Ric.delPliego(pliego.numero)
 
     PantallaConBarra(pliego.codigo, alVolver) { modificador ->
         LazyColumn(modificador) {
@@ -119,11 +127,25 @@ fun PantallaPliego(
                 )
             }
 
-            item {
-                Titular(stringResource(R.string.pliego_tablas))
-                AvisoPendiente(stringResource(R.string.verificacion_ric_pendiente_texto))
+            item { Titular(stringResource(R.string.pliego_tablas)) }
+            if (transcritas.isEmpty()) {
+                item { AvisoPendiente(stringResource(R.string.verificacion_ric_pendiente_texto)) }
+                items(tablasPendientes(pliego, herramientas + checklists)) { dato -> AvisoPendiente("• $dato") }
+            } else {
+                items(transcritas, key = { "t" + it.titulo }) { f ->
+                    ListItem(
+                        headlineContent = { Text(f.titulo) },
+                        supportingContent = {
+                            Text(
+                                if (f.revision.pendiente) stringResource(R.string.cita_en_revision, citaRic(f)) else citaRic(f),
+                            )
+                        },
+                        leadingContent = { Icon(Icons.Filled.TableChart, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
+                        modifier = Modifier.clickable { alAbrirTabla(TablasRic.clave(f)) },
+                    )
+                }
+                item { AvisoPendiente(stringResource(R.string.pliego_otras_tablas)) }
             }
-            items(tablasPendientes(pliego, herramientas + checklists)) { dato -> AvisoPendiente("• $dato") }
 
             item { Titular(stringResource(R.string.pliego_esquemas)) }
             if (esquemas.isEmpty()) item { AvisoPendiente(stringResource(R.string.pliego_sin_esquemas)) }

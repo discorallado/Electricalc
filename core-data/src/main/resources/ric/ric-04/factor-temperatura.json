@@ -1,0 +1,38 @@
+{
+  "pliego": 4,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.2.5",
+  "tabla": "4.7",
+  "titulo": "Factores de corrección de capacidad de transporte de corriente por variación de temperatura ambiente (ft)",
+  "paginas": [23],
+  "unidades": { "temperatura": "°C" },
+  "notas": [
+    "Se aplica si la temperatura ambiente excede 30 °C o si la del suelo, en instalaciones subterráneas, excede 20 °C.",
+    "Para métodos de instalación subterránea se considera la temperatura del suelo como temperatura ambiente."
+  ],
+  "columnas": [
+    { "id": "70C", "temperatura_servicio": 70, "metodos": ["A1", "B1", "E"],
+      "cables": ["H07V", "H07Z1", "THWN", "NYIFY", "ACOMETIDA", "H03VV", "H05VV", "H05RR", "H05RN", "H07RN", "SPT"] },
+    { "id": "90C", "temperatura_servicio": 90, "metodos": ["A1", "A2", "B1", "B2", "E"],
+      "cables": ["RV", "RV-K", "RZ1", "RZ1-K", "THHN"] },
+    { "id": "90C_D", "temperatura_servicio": 90, "metodos": ["D1", "D2"],
+      "cables": ["RV", "RV-K", "RZ1", "RZ1-K", "THHN"] }
+  ],
+  "filas": [
+    { "desde": 5, "hasta": 10, "factores": { "70C": 1.22, "90C": 1.15, "90C_D": 1.07 } },
+    { "desde": 11, "hasta": 15, "factores": { "70C": 1.17, "90C": 1.12, "90C_D": 1.04 } },
+    { "desde": 16, "hasta": 20, "factores": { "70C": 1.12, "90C": 1.08, "90C_D": 1.00 } },
+    { "desde": 21, "hasta": 25, "factores": { "70C": 1.06, "90C": 1.04, "90C_D": 0.96 } },
+    { "desde": 26, "hasta": 30, "factores": { "70C": 1.00, "90C": 1.00, "90C_D": 0.93 } },
+    { "desde": 31, "hasta": 35, "factores": { "70C": 0.94, "90C": 0.96, "90C_D": 0.89 } },
+    { "desde": 36, "hasta": 40, "factores": { "70C": 0.87, "90C": 0.91, "90C_D": 0.85 } },
+    { "desde": 41, "hasta": 45, "factores": { "70C": 0.79, "90C": 0.87, "90C_D": 0.80 } },
+    { "desde": 46, "hasta": 50, "factores": { "70C": 0.71, "90C": 0.82, "90C_D": 0.76 } },
+    { "desde": 51, "hasta": 55, "factores": { "70C": 0.61, "90C": 0.76, "90C_D": 0.71 } },
+    { "desde": 56, "hasta": 60, "factores": { "70C": 0.50, "90C": 0.71, "90C_D": 0.65 } }
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "La columna D1/D2 lleva un asterisco («D2*») cuya nota no aparece en el texto extraído. Revisarla en el PDF.",
+    "Los rangos son enteros (5-10, 11-15…); una temperatura con decimales entre dos rangos (p. ej. 10,5 °C) no está definida en la tabla."
+  ] }
+}

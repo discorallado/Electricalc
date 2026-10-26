@@ -8,9 +8,15 @@ import cl.electricalc.calc.comun.SistemaElectrico
 import cl.electricalc.calc.conductores.Cable
 import cl.electricalc.calc.conductores.Material
 import cl.electricalc.calc.conductores.Seccion
+import cl.electricalc.calc.conductores.TablasConductores
 import cl.electricalc.calc.conductores.TipoCable
 import cl.electricalc.calc.ohm.LeyOhm
 import cl.electricalc.calc.ohm.Magnitud
+import cl.electricalc.datos.ric.Ric
+import cl.electricalc.datos.ric.Verificacion
+import cl.electricalc.datos.ric.VerificacionRic
+import kotlin.math.PI
+import kotlin.math.pow
 
 /**
  * Las tres pantallas sobre [CaidaTension]: caída con la carga al final, caída con cargas iguales
@@ -43,6 +49,19 @@ object CalculadoraCaida {
     private val caidaMaxima = CampoNumerico(
         Ids.CAIDA_MAXIMA, R.string.campo_caida_maxima, listOf(R.string.ayuda_caida_maxima, R.string.ayuda_caida_maxima_norma),
         unidades = { listOf(Unidad(PORCENTAJE), Unidades.V) }, porDefecto = { PORCENTAJE },
+        // El límite por tramo del RIC N°03 (numeral 5.1.3), con el separador decimal del idioma.
+        inicial = { _, _ -> Formato.numero(Ric.caidas.porTramo) },
+    )
+
+    /** Uso de la línea, para verificar la sección mínima del RIC N°04 (numeral 5.4). La opción 0 es "sin indicar". */
+    private val usos = listOf(null, "iluminacion", "enchufes", "mixto", "subalimentador", "alimentador")
+
+    private val uso = CampoOpciones(
+        Ids.USO, R.string.campo_uso_linea, listOf(R.string.ayuda_uso_linea),
+        opciones = listOf(
+            R.string.uso_sin_indicar, R.string.uso_iluminacion, R.string.uso_enchufes, R.string.uso_mixto,
+            R.string.uso_subalimentador, R.string.uso_alimentador,
+        ).map { TextoOpcion.Recurso(it) },
     )
 
     private val seccion = CampoSeccion(Ids.SECCION, R.string.campo_seccion, listOf(R.string.ayuda_seccion))
@@ -115,24 +134,47 @@ object CalculadoraCaida {
         return "${Formato.numero(metros / unidad.aBase(1.0), 2)} ${unidad.simbolo}"
     }
 
+    /** Área de la sección elegida en mm²; los calibres AWG y kcmil se convierten por su definición. */
+    private fun areaMm2(e: Entrada): Double {
+        val indice = e.opcion(Ids.SECCION)
+        if (e.unidad(Ids.SECCION).simbolo != AWG) return TablasConductores.SECCIONES_MM2[indice]
+        val nombre = TablasConductores.CALIBRES_AWG[indice]
+        if (nombre.endsWith(" kcmil")) return nombre.removeSuffix(" kcmil").toDouble() * 0.506707479
+        val calibre = nombre.removeSuffix(" AWG").let { if (it.endsWith("/0")) 1 - it.removeSuffix("/0").toInt() else it.toInt() }
+        val diametro = 0.127 * 92.0.pow((36 - calibre) / 39.0)
+        return PI / 4 * diametro * diametro
+    }
+
+    private fun verificarSeccion(e: Entrada): Verificacion = VerificacionRic.seccion(areaMm2(e), usos[e.opcion(Ids.USO)])
+
+    private fun caidaDe(e: Entrada, cargas: Int = 1) =
+        CaidaTension.calcular(e.sistema, e.valor(Ids.TENSION), corriente(e), cosPhi(e), cable(e, e.valor(Ids.LONGITUD)), cargas)
+
+    /** Número de cargas: entero y al menos uno. */
+    private fun cantidadCargas(e: Entrada): Int {
+        val n = e.valor(Ids.NUMERO_CARGAS)
+        if (n < 1 || n % 1.0 != 0.0) throw ErrorCalculo(MotivoError.VALOR_FUERA_DE_RANGO)
+        return n.toInt()
+    }
+
     val caida = Calculadora(
         id = "CalcoloCaduta",
         sistemas = SistemaElectrico.entries,
         campos = listOf(
-            Campos.tension, carga, Campos.cosPhi, seccion, paralelos, longitud, material, tipoCable, temperatura,
+            Campos.tension, carga, Campos.cosPhi, seccion, paralelos, longitud, material, tipoCable, temperatura, uso,
         ),
         visible = soloEnAlterna,
         guia = Guia(listOf(R.string.intro_caida, R.string.intro_caida_norma)),
         calcular = { e ->
-            val i = corriente(e)
-            val r = CaidaTension.calcular(e.sistema, e.valor(Ids.TENSION), i, cosPhi(e), cable(e, e.valor(Ids.LONGITUD)))
+            val r = caidaDe(e)
             listOf(
                 LineaResultado(R.string.res_caida, Formato.conPrefijo(r.caidaV, "V")),
                 LineaResultado(R.string.res_caida_porcentaje, "${Formato.fijo(r.porcentaje)} %"),
                 LineaResultado(R.string.res_tension_carga, Formato.conPrefijo(r.tensionFinal, "V")),
-                LineaResultado(R.string.res_corriente_linea, Formato.conPrefijo(i, "A"), principal = false),
+                LineaResultado(R.string.res_corriente_linea, Formato.conPrefijo(corriente(e), "A"), principal = false),
             )
         },
+        verificar = { e -> VerificacionRic.caida(caidaDe(e).porcentaje) + verificarSeccion(e) },
     )
 
     /** n cargas iguales repartidas a la misma distancia; la última está al final de la línea. */
@@ -141,50 +183,56 @@ object CalculadoraCaida {
         sistemas = SistemaElectrico.entries,
         campos = listOf(
             Campos.tension, cargaUnitaria, numeroCargas, Campos.cosPhi, seccion, paralelos, longitudTotal, material,
-            tipoCable, temperatura,
+            tipoCable, temperatura, uso,
         ),
         visible = soloEnAlterna,
         guia = Guia(listOf(R.string.intro_caida_distribuidas, R.string.intro_caida_norma)),
         calcular = { e ->
-            val n = e.valor(Ids.NUMERO_CARGAS)
-            if (n < 1 || n % 1.0 != 0.0) throw ErrorCalculo(MotivoError.VALOR_FUERA_DE_RANGO)
-            val cargas = n.toInt()
+            val cargas = cantidadCargas(e)
             val i = corriente(e)
-            val largo = e.valor(Ids.LONGITUD)
-            val r = CaidaTension.calcular(e.sistema, e.valor(Ids.TENSION), i, cosPhi(e), cable(e, largo), cargas)
+            val r = caidaDe(e, cargas)
             listOf(
                 LineaResultado(R.string.res_caida, Formato.conPrefijo(r.caidaV, "V")),
                 LineaResultado(R.string.res_caida_porcentaje, "${Formato.fijo(r.porcentaje)} %"),
                 LineaResultado(R.string.res_tension_ultima_carga, Formato.conPrefijo(r.tensionFinal, "V")),
-                LineaResultado(R.string.res_distancia_cargas, enUnidadElegida(e, largo / cargas), principal = false),
+                LineaResultado(R.string.res_distancia_cargas, enUnidadElegida(e, e.valor(Ids.LONGITUD) / cargas), principal = false),
                 LineaResultado(R.string.res_corriente_cada_carga, Formato.conPrefijo(i, "A"), principal = false),
                 LineaResultado(R.string.res_corriente_inicio, Formato.conPrefijo(i * cargas, "A"), principal = false),
             )
         },
+        verificar = { e -> VerificacionRic.caida(caidaDe(e, cantidadCargas(e)).porcentaje) + verificarSeccion(e) },
     )
+
+    /** Caída máxima ingresada, en V (se acepta en % de la tensión o directamente en volts). */
+    private fun caidaMaximaV(e: Entrada): Double {
+        val maxima = e.valor(Ids.CAIDA_MAXIMA)
+        return if (e.unidad(Ids.CAIDA_MAXIMA).simbolo == PORCENTAJE) e.valor(Ids.TENSION) * maxima / 100.0 else maxima
+    }
 
     /** Longitud para no superar la caída máxima, con la carga al final de la línea. */
     val longitudMaxima = Calculadora(
         id = "LunghezzaMassimaCavoCaduta",
         sistemas = SistemaElectrico.entries,
         campos = listOf(
-            Campos.tension, carga, Campos.cosPhi, seccion, paralelos, caidaMaxima, material, tipoCable, temperatura,
+            Campos.tension, carga, Campos.cosPhi, seccion, paralelos, caidaMaxima, material, tipoCable, temperatura, uso,
         ),
         visible = soloEnAlterna,
         guia = Guia(listOf(R.string.intro_longitud_maxima, R.string.intro_caida_norma)),
         calcular = { e ->
-            val tension = e.valor(Ids.TENSION)
-            val maxima = e.valor(Ids.CAIDA_MAXIMA)
-            val caidaMaxV = if (e.unidad(Ids.CAIDA_MAXIMA).simbolo == PORCENTAJE) tension * maxima / 100.0 else maxima
+            val caidaMaxV = caidaMaximaV(e)
             val i = corriente(e)
             // La longitud del cable no interviene: se despeja de la caída admitida.
-            val metros = CaidaTension.longitudMaxima(e.sistema, tension, i, cosPhi(e), cable(e, 1.0), caidaMaxV)
+            val metros = CaidaTension.longitudMaxima(e.sistema, e.valor(Ids.TENSION), i, cosPhi(e), cable(e, 1.0), caidaMaxV)
             listOf(
                 LineaResultado(R.string.res_longitud_maxima, "${Formato.numero(metros, 2)} m"),
                 LineaResultado(R.string.res_longitud_maxima_pies, "${Formato.numero(metros / 0.3048, 2)} ft", principal = false),
                 LineaResultado(R.string.res_caida_admitida, Formato.conPrefijo(caidaMaxV, "V"), principal = false),
                 LineaResultado(R.string.res_corriente_linea, Formato.conPrefijo(i, "A"), principal = false),
             )
+        },
+        // Se verifica la caída que el usuario está admitiendo, no un resultado.
+        verificar = { e ->
+            VerificacionRic.caida(caidaMaximaV(e) * 100.0 / e.valor(Ids.TENSION)) + verificarSeccion(e)
         },
     )
 }

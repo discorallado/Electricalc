@@ -1,0 +1,41 @@
+{
+  "pliego": 3,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.3",
+  "tabla": "3.1",
+  "titulo": "Factores de demanda para cálculo de alimentadores de alumbrado",
+  "paginas": [5],
+  "unidades": { "potencia": "kW" },
+  "notas": [
+    "Se aplican a la potencia instalada de alimentadores que sirven exclusivamente consumos de alumbrado.",
+    "No se aplican sobre subalimentadores ni sobre los conductores de los circuitos finales, en los que puede estar presente la totalidad de la carga en forma permanente o esporádica por períodos superiores a 15 minutos.",
+    "Los factores para alimentadores de ascensores son los del punto 8.6 del RIC N°11.",
+    "Se aceptan factores distintos si se justifican con un estudio fundamentado en antecedentes demostrables."
+  ],
+  "consumidores": [
+    { "tipo": "Casa habitación", "tramos": [
+      { "hasta_kw": 3, "factor": 1 },
+      { "hasta_kw": 120, "factor": 0.35 },
+      { "hasta_kw": null, "factor": 0.25 } ] },
+    { "tipo": "Hospitales", "tramos": [
+      { "hasta_kw": 50, "factor": 0.4 },
+      { "hasta_kw": null, "factor": 0.2 } ] },
+    { "tipo": "Hoteles y moteles", "tramos": [
+      { "hasta_kw": 20, "factor": 0.5 },
+      { "hasta_kw": 100, "factor": 0.4 },
+      { "hasta_kw": null, "factor": 0.3 } ] },
+    { "tipo": "Bodegas", "tramos": [
+      { "hasta_kw": 12.5, "factor": 1 },
+      { "hasta_kw": null, "factor": 0.5 } ] },
+    { "tipo": "Servicios comunes", "tramos": [
+      { "hasta_kw": null, "factor": 1 } ] },
+    { "tipo": "Locales comerciales y oficinas", "tramos": [
+      { "hasta_kw": 50, "factor": 1 },
+      { "hasta_kw": null, "factor": 0.8 } ] },
+    { "tipo": "Todo otro tipo", "tramos": [
+      { "hasta_kw": null, "factor": 1 } ] }
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "Tramos expresados como límite superior acumulado: «Primeros 3 kW» = hasta 3; «Desde 3 a 120» = hasta 120; «Sobre 120» = sin límite. En hoteles el PDF dice «Desde 20,1 a 100»."
+  ] }
+}

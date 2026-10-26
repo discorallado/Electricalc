@@ -29,6 +29,7 @@ dependencyResolutionManagement {
 rootProject.name = "electricalc"
 
 include(":core-calc")
+include(":core-data")
 
 // El módulo Android requiere el SDK; se omite donde no está instalado (p. ej. entornos sin red a dl.google.com).
 val sdkDisponible = System.getenv("ANDROID_HOME") != null ||

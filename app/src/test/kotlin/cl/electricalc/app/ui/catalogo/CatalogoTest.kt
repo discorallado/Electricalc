@@ -3,6 +3,7 @@ package cl.electricalc.app.ui.catalogo
 import cl.electricalc.app.ui.calculadoras.Registro
 import cl.electricalc.app.ui.destinos.Accesos
 import cl.electricalc.app.ui.formulario.Fichas
+import cl.electricalc.app.ui.ric.TablasRic
 import org.json.JSONObject
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -63,6 +64,10 @@ class CatalogoTest {
         calculadoras.forEach { c ->
             val formula = catalogo.item(c.id)!!.formula
             assertTrue(Fichas.existe(formula), "La calculadora ${c.id} apunta a una ficha sin implementar: $formula")
+        }
+        listOf("tabla_caidas_admisibles", "tabla_secciones_minimas", "tabla_colores_ric").forEach {
+            assertNotNull(catalogo.item(it), "Tabla RIC sin entrada en el catálogo: $it")
+            assertNotNull(TablasRic.claveDeHerramienta(it), it)
         }
         Accesos.todos.flatMap { it.ids }.forEach { assertNotNull(catalogo.item(it), "Acceso con id inexistente: $it") }
         JSONObject(spec("sinonimos.json")).keys().asSequence().filterNot { it.startsWith("_") }.forEach {

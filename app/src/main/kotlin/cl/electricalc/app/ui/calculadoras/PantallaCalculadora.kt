@@ -49,6 +49,7 @@ import cl.electricalc.app.ui.componentes.SelectorTipoCorriente
 import cl.electricalc.app.ui.componentes.SelectorUnidad
 import cl.electricalc.app.ui.componentes.SelectorVariante
 import cl.electricalc.app.ui.componentes.TarjetaResultado
+import cl.electricalc.app.ui.componentes.TarjetaVerificacion
 import cl.electricalc.app.ui.componentes.UnidadFija
 import cl.electricalc.app.ui.componentes.nombreSistema
 import cl.electricalc.app.ui.formulario.Fichas
@@ -262,6 +263,7 @@ fun PantallaCalculadora(
             }
 
             TarjetaResultado(estado.resultado)
+            if (estado.resultado != null) TarjetaVerificacion(estado.verificaciones, alAbrirPliego)
             Spacer(Modifier.height(24.dp))
         }
     }

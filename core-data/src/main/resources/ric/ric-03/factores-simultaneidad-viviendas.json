@@ -1,0 +1,17 @@
+{
+  "pliego": 3,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.5",
+  "tabla": "3.2",
+  "titulo": "Factores de simultaneidad para cálculo de alimentadores de alumbrado de conjuntos de viviendas",
+  "paginas": [6],
+  "unidades": {},
+  "notas": [
+    "Para alimentadores de alumbrado de conjuntos de viviendas suministradas por un único empalme (condominios, parcelaciones o similares)."
+  ],
+  "por_cantidad": [1, 1, 1, 0.95, 0.92, 0.90, 0.89, 0.88, 0.87, 0.85, 0.84, 0.83, 0.82, 0.81, 0.79, 0.78, 0.77, 0.76, 0.75, 0.74, 0.73],
+  "sobre_21": "(15,3 + (n - 21) × 0,5) / n",
+  "revision": { "estado": "pendiente", "observaciones": [
+    "por_cantidad[i] corresponde a n = i + 1 (de 1 a 21 viviendas). La extracción simple del PDF desordena esta tabla; el orden se confirmó con pdftotext -table."
+  ] }
+}

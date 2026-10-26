@@ -1,6 +1,7 @@
 package cl.electricalc.app.ui.calculadoras
 
 import androidx.annotation.StringRes
+import cl.electricalc.datos.ric.Verificacion
 import cl.electricalc.app.datos.Preferencias
 import cl.electricalc.calc.comun.SistemaElectrico
 import cl.electricalc.calc.ohm.Magnitud
@@ -101,4 +102,6 @@ class Calculadora(
     val visible: (campo: Campo, sistema: SistemaElectrico, variante: Variante?, unidades: Map<String, Unidad>) -> Boolean,
     val guia: Guia,
     val calcular: (Entrada) -> List<LineaResultado>,
+    /** Verificaciones contra el RIC que se muestran bajo el resultado (semáforo). */
+    val verificar: (Entrada) -> List<Verificacion> = { emptyList() },
 )

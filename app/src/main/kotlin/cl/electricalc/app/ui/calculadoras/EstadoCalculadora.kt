@@ -13,6 +13,7 @@ import cl.electricalc.calc.comun.ErrorCalculo
 import cl.electricalc.calc.comun.MotivoError
 import cl.electricalc.calc.comun.SistemaElectrico
 import cl.electricalc.calc.conductores.TablasConductores
+import cl.electricalc.datos.ric.Verificacion
 
 /** Estado de una pantalla de cálculo. Vive en un ViewModel para sobrevivir a la rotación. */
 class EstadoCalculadora(val definicion: Calculadora, private val preferencias: Preferencias) : ViewModel() {
@@ -31,6 +32,10 @@ class EstadoCalculadora(val definicion: Calculadora, private val preferencias: P
     private val opciones = mutableStateMapOf<String, Int>()
 
     var resultado by mutableStateOf<List<LineaResultado>?>(null)
+        private set
+
+    /** Verificaciones RIC del último cálculo; solo valen mientras haya [resultado]. */
+    var verificaciones by mutableStateOf<List<Verificacion>>(emptyList())
         private set
 
     init {
@@ -144,7 +149,9 @@ class EstadoCalculadora(val definicion: Calculadora, private val preferencias: P
             valores[campo.id] = base
         }
         return try {
-            resultado = definicion.calcular(Entrada(sistema, variante, valores, unidades, opciones.toMap()))
+            val entrada = Entrada(sistema, variante, valores, unidades, opciones.toMap())
+            resultado = definicion.calcular(entrada)
+            verificaciones = definicion.verificar(entrada)
             null
         } catch (e: ErrorCalculo) {
             resultado = null

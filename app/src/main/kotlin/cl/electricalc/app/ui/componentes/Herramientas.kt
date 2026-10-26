@@ -30,6 +30,7 @@ import cl.electricalc.app.ui.calculadoras.Registro
 import cl.electricalc.app.ui.catalogo.Herramienta
 import cl.electricalc.app.ui.catalogo.IconoItem
 import cl.electricalc.app.ui.formulario.Fichas
+import cl.electricalc.app.ui.ric.TablasRic
 
 @StringRes
 fun nombreCategoria(id: String): Int = when (id) {
@@ -72,7 +73,8 @@ fun nombreTipo(tipo: String?): Int = when (tipo) {
 }
 
 /** Si la herramienta ya se puede abrir (calculadora o ficha implementada). */
-fun disponible(h: Herramienta) = Registro.implementada(h.id) || Fichas.existe(h.id)
+fun disponible(h: Herramienta) =
+    Registro.implementada(h.id) || Fichas.existe(h.id) || TablasRic.claveDeHerramienta(h.id) != null
 
 /**
  * Fila de una herramienta: ícono, título, estado y estrella si es favorita. Tocar la abre y

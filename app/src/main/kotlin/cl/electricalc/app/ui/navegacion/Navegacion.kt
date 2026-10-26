@@ -20,6 +20,8 @@ import cl.electricalc.app.ui.destinos.PantallaPliego
 import cl.electricalc.app.ui.formulario.Fichas
 import cl.electricalc.app.ui.formulario.PantallaFicha
 import cl.electricalc.app.ui.guia.PantallaGuia
+import cl.electricalc.app.ui.ric.PantallaTablaRic
+import cl.electricalc.app.ui.ric.TablasRic
 
 /** Rutas: cada herramienta del catálogo se abre por su id del catálogo v2. */
 object Rutas {
@@ -33,6 +35,7 @@ object Rutas {
     fun pliego(n: Int) = "pliego/$n"
     fun categoria(id: String) = "categoria/$id"
     fun acceso(id: String) = "acceso/$id"
+    fun tablaRic(clave: String) = "tabla_ric/$clave"
 }
 
 private fun NavHostController.volver() {
@@ -68,6 +71,9 @@ fun NavegacionApp(catalogo: Catalogo) {
             val item = catalogo.item(id)
             val calculadora = Registro.calculadora(id)
             when {
+                item != null && TablasRic.claveDeHerramienta(id) != null -> PantallaTablaRic(
+                    TablasRic.porClave.getValue(TablasRic.claveDeHerramienta(id)!!), nav::volver,
+                )
                 item != null && calculadora != null -> PantallaCalculadora(
                     calculadora = calculadora,
                     item = item,
@@ -95,7 +101,9 @@ fun NavegacionApp(catalogo: Catalogo) {
         }
         composable("pliego/{n}") { entrada ->
             val pliego = entrada.arguments?.getString("n")?.toIntOrNull()?.let(catalogo::pliego)
-            if (pliego != null) PantallaPliego(catalogo, pliego, nav::volver, abrir, alMantener)
+            if (pliego != null) {
+                PantallaPliego(catalogo, pliego, nav::volver, abrir, alMantener) { nav.navigate(Rutas.tablaRic(it)) }
+            }
         }
         composable("categoria/{id}") { entrada ->
             val id = entrada.arguments?.getString("id").orEmpty()
@@ -110,6 +118,9 @@ fun NavegacionApp(catalogo: Catalogo) {
                     ListaHerramientas(catalogo.ids(acceso.ids), m, abrir, alMantener)
                 }
             }
+        }
+        composable("tabla_ric/{clave}") { entrada ->
+            TablasRic.porClave[entrada.arguments?.getString("clave")]?.let { PantallaTablaRic(it, nav::volver) }
         }
         composable(Rutas.AJUSTES) { PantallaAjustes(nav::volver) }
         composable(Rutas.ACERCA) { PantallaAcerca(nav::volver) }

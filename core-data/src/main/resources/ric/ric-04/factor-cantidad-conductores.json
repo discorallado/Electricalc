@@ -1,0 +1,22 @@
+{
+  "pliego": 4,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.2.4",
+  "tabla": "4.6",
+  "titulo": "Factor de corrección de capacidad de transporte de corriente por cantidad de conductores en ductos (fn)",
+  "paginas": [23],
+  "unidades": {},
+  "notas": [
+    "Se aplica cuando hay más de tres conductores activos en un mismo ducto o cable.",
+    "En circuitos trifásicos el neutro no se cuenta como cuarto conductor; el conductor de protección nunca se considera activo."
+  ],
+  "rangos": [
+    { "desde": 4, "hasta": 6, "factor": 0.8 },
+    { "desde": 7, "hasta": 24, "factor": 0.7 },
+    { "desde": 25, "hasta": 42, "factor": 0.6 },
+    { "desde": 43, "hasta": null, "factor": 0.5 }
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "El PDF dice «sobre 42»; se expresa como desde 43."
+  ] }
+}

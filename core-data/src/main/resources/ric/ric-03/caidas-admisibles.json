@@ -1,0 +1,17 @@
+{
+  "pliego": 3,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "5.1.3",
+  "tabla": null,
+  "titulo": "Caída de tensión admisible",
+  "paginas": [3],
+  "unidades": { "caida": "% de la tensión nominal" },
+  "por_tramo": 3,
+  "total": 5,
+  "notas": [
+    "Por tramo: la caída provocada por la corriente máxima (punto 6.1) en alimentadores, subalimentadores y conductores no debe exceder del 3 % de la tensión nominal de la alimentación.",
+    "Total: la caída en el punto más desfavorable de la instalación no debe exceder del 5 % de dicha tensión.",
+    "El PDF indica que este texto se agregó en la versión publicada el 12.01.2021."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

@@ -1,0 +1,221 @@
+{
+  "pliego": 4,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.2.2",
+  "tabla": "4.5",
+  "titulo": "Intensidades de corriente admisible para conductores aislados de uso móvil, cables planos y similares",
+  "paginas": [
+    21,
+    22
+  ],
+  "unidades": {
+    "seccion": "mm²",
+    "corriente": "A"
+  },
+  "cables": [
+    "H03VV",
+    "H05VV",
+    "H05RR",
+    "H05RN",
+    "H07RN",
+    "SPT"
+  ],
+  "metodo": "E",
+  "temperatura_ambiente": 30,
+  "notas": [
+    "Aplican a cables aislados sin armadura, para tensiones que no excedan 1 kV CA o 1,5 kV CC, sin exposición directa a radiación solar."
+  ],
+  "filas": [
+    {
+      "mm2": 0.5,
+      "awg": null,
+      "amperes": 3
+    },
+    {
+      "mm2": 0.75,
+      "awg": null,
+      "amperes": 6
+    },
+    {
+      "mm2": 1,
+      "awg": null,
+      "amperes": 10
+    },
+    {
+      "mm2": 1.5,
+      "awg": null,
+      "amperes": 18.5
+    },
+    {
+      "mm2": 2.08,
+      "awg": "14",
+      "amperes": 22
+    },
+    {
+      "mm2": 2.5,
+      "awg": null,
+      "amperes": 25
+    },
+    {
+      "mm2": 3.31,
+      "awg": "12",
+      "amperes": 30
+    },
+    {
+      "mm2": 4,
+      "awg": null,
+      "amperes": 34
+    },
+    {
+      "mm2": 5.26,
+      "awg": "10",
+      "amperes": 40
+    },
+    {
+      "mm2": 6,
+      "awg": null,
+      "amperes": 43
+    },
+    {
+      "mm2": 8.37,
+      "awg": "8",
+      "amperes": 53
+    },
+    {
+      "mm2": 10,
+      "awg": null,
+      "amperes": 60
+    },
+    {
+      "mm2": 13.3,
+      "awg": "6",
+      "amperes": 71
+    },
+    {
+      "mm2": 16,
+      "awg": null,
+      "amperes": 80
+    },
+    {
+      "mm2": 21.1,
+      "awg": "4",
+      "amperes": 91
+    },
+    {
+      "mm2": 25,
+      "awg": null,
+      "amperes": 101
+    },
+    {
+      "mm2": 26.7,
+      "awg": "3",
+      "amperes": 106
+    },
+    {
+      "mm2": 33.6,
+      "awg": "2",
+      "amperes": 122
+    },
+    {
+      "mm2": 35,
+      "awg": null,
+      "amperes": 126
+    },
+    {
+      "mm2": 42.4,
+      "awg": "1",
+      "amperes": 142
+    },
+    {
+      "mm2": 50,
+      "awg": null,
+      "amperes": 153
+    },
+    {
+      "mm2": 53.5,
+      "awg": "1/0",
+      "amperes": 165
+    },
+    {
+      "mm2": 67.4,
+      "awg": "2/0",
+      "amperes": 191
+    },
+    {
+      "mm2": 70,
+      "awg": null,
+      "amperes": 196
+    },
+    {
+      "mm2": 85,
+      "awg": "3/0",
+      "amperes": 222
+    },
+    {
+      "mm2": 95,
+      "awg": null,
+      "amperes": 238
+    },
+    {
+      "mm2": 107.2,
+      "awg": "4/0",
+      "amperes": 257
+    },
+    {
+      "mm2": 120,
+      "awg": null,
+      "amperes": 276
+    },
+    {
+      "mm2": 126.7,
+      "awg": "250",
+      "amperes": 286
+    },
+    {
+      "mm2": 150,
+      "awg": null,
+      "amperes": 319
+    },
+    {
+      "mm2": 152,
+      "awg": "300",
+      "amperes": 321
+    },
+    {
+      "mm2": 177.3,
+      "awg": "350",
+      "amperes": 355
+    },
+    {
+      "mm2": 185,
+      "awg": null,
+      "amperes": 364
+    },
+    {
+      "mm2": 202.7,
+      "awg": "400",
+      "amperes": 386
+    },
+    {
+      "mm2": 240,
+      "awg": null,
+      "amperes": 430
+    },
+    {
+      "mm2": 253.3,
+      "awg": "500",
+      "amperes": 446
+    },
+    {
+      "mm2": 300,
+      "awg": null,
+      "amperes": 497
+    }
+  ],
+  "revision": {
+    "estado": "pendiente",
+    "observaciones": [
+      "Extraído con pdftotext -table; falta la revisión de una persona contra el PDF."
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "pliego": 4,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "5.4",
+  "tabla": null,
+  "titulo": "Sección mínima de los conductores",
+  "paginas": [6],
+  "unidades": { "seccion": "mm²" },
+  "notas": [
+    "El dimensionamiento de alimentadores y subalimentadores se efectúa según el RIC N°03, que fija los mismos mínimos en su numeral 5.1.2."
+  ],
+  "usos": [
+    { "uso": "iluminacion", "nombre": "Circuitos de iluminación", "mm2": 1.5 },
+    { "uso": "enchufes", "nombre": "Circuitos de enchufes", "mm2": 2.5 },
+    { "uso": "mixto", "nombre": "Circuitos mixtos", "mm2": 2.5 },
+    { "uso": "subalimentador", "nombre": "Subalimentadores", "mm2": 2.5 },
+    { "uso": "alimentador", "nombre": "Alimentadores", "mm2": 4.0 }
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

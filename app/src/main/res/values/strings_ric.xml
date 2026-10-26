@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Verificación y tablas RIC (fase B de docs/arquitectura-v2.md). -->
+<resources>
+    <string name="campo_uso_linea">Uso de la línea</string>
+    <string name="ayuda_uso_linea">Qué alimenta la línea. Con este dato se verifica la sección mínima que exige el RIC N°04 (numeral 5.4); si no lo indicas, esa verificación queda en «Revisar».</string>
+    <string name="uso_sin_indicar">Sin indicar</string>
+    <string name="uso_iluminacion">Circuito de iluminación</string>
+    <string name="uso_enchufes">Circuito de enchufes</string>
+    <string name="uso_mixto">Circuito mixto</string>
+    <string name="uso_subalimentador">Subalimentador</string>
+    <string name="uso_alimentador">Alimentador</string>
+
+    <string name="verificacion_ric">Verificación RIC</string>
+    <string name="estado_cumple">Cumple</string>
+    <string name="estado_no_cumple">No cumple</string>
+    <string name="estado_revisar">Revisar</string>
+    <string name="ver_caida_tramo">Caída de tensión del tramo</string>
+    <string name="ver_caida_total">Caída total hasta el punto más desfavorable</string>
+    <string name="ver_caida_total_nota">Suma la caída de los tramos anteriores (alimentador y subalimentadores) para verificar el total.</string>
+    <string name="ver_seccion">Sección mínima</string>
+    <string name="ver_seccion_uso">Sección mínima (%1$s)</string>
+    <string name="ver_seccion_sin_uso">Indica el uso de la línea para verificar la sección mínima.</string>
+    <string name="ver_en_revision">Los valores del RIC están transcritos del PDF oficial y todavía en revisión.</string>
+    <string name="cita_ric">RIC N°%1$02d, numeral %2$s</string>
+    <string name="cita_ric_tabla">RIC N°%1$02d, tabla N°%2$s (numeral %3$s)</string>
+    <string name="cita_en_revision">%1$s · en revisión</string>
+
+    <string name="fuente_paginas">%1$s · página(s) %2$s</string>
+    <string name="fuente_en_revision">Transcrito, pendiente de revisión contra el PDF</string>
+    <string name="pliego_otras_tablas">Las demás tablas de este pliego se irán transcribiendo a medida que las necesiten las herramientas.</string>
+    <string name="notas_pliego">Notas del pliego</string>
+    <string name="col_requisito">Requisito</string>
+    <string name="col_limite">Límite</string>
+    <string name="col_uso">Uso</string>
+    <string name="col_seccion_minima">Sección mínima</string>
+    <string name="col_conductor">Conductor</string>
+    <string name="col_color">Color</string>
+    <string name="col_conductores">Conductores activos en el ducto</string>
+    <string name="col_consumidor">Tipo de consumidor</string>
+    <string name="col_tramo_kw">Tramo [kW]</string>
+    <string name="toda_la_potencia">Toda la potencia</string>
+    <string name="col_viviendas">Viviendas (n)</string>
+    <string name="servicio_a">Servicio %1$d °C</string>
+    <string name="aplica_a">Aplica a: %1$s</string>
+</resources>

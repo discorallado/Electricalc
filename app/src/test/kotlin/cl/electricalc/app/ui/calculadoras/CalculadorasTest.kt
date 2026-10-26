@@ -3,8 +3,12 @@ package cl.electricalc.app.ui.calculadoras
 import cl.electricalc.calc.comun.ErrorCalculo
 import cl.electricalc.calc.comun.MotivoError
 import cl.electricalc.calc.comun.SistemaElectrico
+import cl.electricalc.calc.conductores.TablasConductores
+import cl.electricalc.datos.ric.EstadoVerificacion
+import cl.electricalc.datos.ric.TipoVerificacion
 import cl.electricalc.calc.ohm.Magnitud
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
@@ -227,6 +231,69 @@ class CalculadorasTest {
             )
             assertEquals("3.00 %", caida[1].valor, "$s: la caída con la longitud máxima debe ser la pedida")
         }
+    }
+
+    /** Uso de la línea: índice de la opción en el campo (0 = sin indicar). */
+    private val usoEnchufes = 2
+    private val usoAlimentador = 5
+
+    private fun verificarCaida(
+        seccion: Int,
+        uso: Int,
+        unidadSeccion: String = CalculadoraCaida.MM2,
+        longitud: Double = 50.0,
+    ): Map<TipoVerificacion, EstadoVerificacion> {
+        val valores = mapOf(
+            Ids.TENSION to 380.0, Ids.CARGA to 3000.0, Ids.FASE to 0.9, Ids.LONGITUD to longitud, Ids.TEMPERATURA to 70.0,
+        )
+        val unidades = unidadesLinea + (Ids.SECCION to Unidad(unidadSeccion))
+        val opciones = conductor + (Ids.SECCION to seccion) + (Ids.USO to uso)
+        return CalculadoraCaida.caida.verificar(Entrada(SistemaElectrico.TRIFASICA, null, valores, unidades, opciones))
+            .associate { it.tipo to it.estado }
+    }
+
+    @Test
+    fun `la caida de tension se verifica contra el RIC`() {
+        // 3000 W a 380 V, 50 m de 2,5 mm²: 1,00 % (ver la prueba a mano de la caída trifásica).
+        val ok = verificarCaida(seccion = 4, uso = usoEnchufes)
+        assertEquals(EstadoVerificacion.CUMPLE, ok[TipoVerificacion.CAIDA_TRAMO])
+        assertEquals(EstadoVerificacion.CUMPLE, ok[TipoVerificacion.CAIDA_TOTAL])
+        assertEquals(EstadoVerificacion.CUMPLE, ok[TipoVerificacion.SECCION_MINIMA])
+        // 2,5 mm² no alcanza para un alimentador (4 mm²).
+        assertEquals(EstadoVerificacion.NO_CUMPLE, verificarCaida(seccion = 4, uso = usoAlimentador)[TipoVerificacion.SECCION_MINIMA])
+        // Sin uso indicado la sección queda en «revisar».
+        assertEquals(EstadoVerificacion.REVISAR, verificarCaida(seccion = 4, uso = 0)[TipoVerificacion.SECCION_MINIMA])
+        // 200 m: 4,0 % → no cumple por tramo (3 %) pero sí el total (5 %).
+        val largo = verificarCaida(seccion = 4, uso = usoEnchufes, longitud = 200.0)
+        assertEquals(EstadoVerificacion.NO_CUMPLE, largo[TipoVerificacion.CAIDA_TRAMO])
+        assertEquals(EstadoVerificacion.CUMPLE, largo[TipoVerificacion.CAIDA_TOTAL])
+    }
+
+    @Test
+    fun `los calibres AWG se comparan por su area`() {
+        val awg = { nombre: String -> TablasConductores.CALIBRES_AWG.indexOf(nombre) }
+        // 12 AWG = 3,31 mm²: cumple para enchufes (2,5) y no para alimentador (4).
+        assertEquals(EstadoVerificacion.CUMPLE, verificarCaida(awg("12 AWG"), usoEnchufes, CalculadoraCaida.AWG)[TipoVerificacion.SECCION_MINIMA])
+        assertEquals(EstadoVerificacion.NO_CUMPLE, verificarCaida(awg("12 AWG"), usoAlimentador, CalculadoraCaida.AWG)[TipoVerificacion.SECCION_MINIMA])
+        // 10 AWG = 5,26 mm² y 1/0 AWG = 53,5 mm² cumplen para alimentador.
+        assertEquals(EstadoVerificacion.CUMPLE, verificarCaida(awg("10 AWG"), usoAlimentador, CalculadoraCaida.AWG)[TipoVerificacion.SECCION_MINIMA])
+        assertEquals(EstadoVerificacion.CUMPLE, verificarCaida(awg("1/0 AWG"), usoAlimentador, CalculadoraCaida.AWG)[TipoVerificacion.SECCION_MINIMA])
+        // 14 AWG = 2,08 mm²: no alcanza para enchufes.
+        assertEquals(EstadoVerificacion.NO_CUMPLE, verificarCaida(awg("14 AWG"), usoEnchufes, CalculadoraCaida.AWG)[TipoVerificacion.SECCION_MINIMA])
+    }
+
+    @Test
+    fun `la longitud maxima propone el limite del RIC y lo verifica`() {
+        val campo = CalculadoraCaida.longitudMaxima.campos.first { it.id == Ids.CAIDA_MAXIMA } as CampoNumerico
+        assertNotNull(campo.inicial)
+        val base = mapOf(Ids.TENSION to 380.0, Ids.CARGA to 3000.0, Ids.FASE to 0.9, Ids.TEMPERATURA to 70.0)
+        val opciones = conductor + (Ids.USO to usoEnchufes)
+        fun estados(maxima: Double) = CalculadoraCaida.longitudMaxima.verificar(
+            Entrada(SistemaElectrico.TRIFASICA, null, base + (Ids.CAIDA_MAXIMA to maxima), unidadesLinea, opciones),
+        ).associate { it.tipo to it.estado }
+        assertEquals(EstadoVerificacion.CUMPLE, estados(3.0)[TipoVerificacion.CAIDA_TRAMO])
+        assertEquals(EstadoVerificacion.NO_CUMPLE, estados(5.0)[TipoVerificacion.CAIDA_TRAMO])
+        assertEquals(EstadoVerificacion.CUMPLE, estados(5.0)[TipoVerificacion.CAIDA_TOTAL])
     }
 
     @Test

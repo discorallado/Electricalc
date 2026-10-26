@@ -24,6 +24,7 @@ object Ids {
     const val TEMPERATURA = "temperatura"
     const val NUMERO_CARGAS = "numero_cargas"
     const val CAIDA_MAXIMA = "caida_maxima"
+    const val USO = "uso"
 }
 
 /** Campos comunes. Las pantallas los combinan; cada una decide cuáles muestra. */

@@ -1,0 +1,872 @@
+{
+  "pliego": 4,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6.2.2",
+  "tabla": "4.4",
+  "titulo": "Capacidad de transporte de corriente de conductores de cobre aislados",
+  "paginas": [
+    18,
+    19,
+    20
+  ],
+  "unidades": {
+    "seccion": "mm²",
+    "corriente": "A"
+  },
+  "notas": [
+    "Valores máximos de operación; se corrigen con los factores de las tablas N°4.6 y N°4.7 (numeral 6.2.6: Ic = It × fn × ft).",
+    "Aplican a cables aislados sin armadura, para tensiones que no excedan 1 kV CA o 1,5 kV CC, sin exposición directa a radiación solar.",
+    "Aplicables a conductores monopolares o multipolares en ductos (numeral 6.2.3). El conductor de protección no se considera activo."
+  ],
+  "metodos": {
+    "A1": "Hasta tres conductores monopolares con carga, instalados en ductos embutidos en paredes.",
+    "A2": "Cables multiconductores (3 conductores con carga) instalados en ductos embutidos en paredes.",
+    "B1": "Hasta tres conductores monopolares instalados en ductos o en bandejas adosadas a paredes.",
+    "B2": "Cables multiconductores (3 conductores con carga) instalados en ductos o en bandejas adosadas a paredes.",
+    "D1": "Cables monoconductores o multiconductores (3 conductores con carga) instalados en ductos enterrados.",
+    "D2": "Cables con cubierta, monoconductores o multiconductores (3 conductores con carga) instalados directamente enterrados.",
+    "E": "Cables multiconductores (3 conductores con carga) instalados libremente al aire, en escalerillas, canastillos o bandejas perforadas.",
+    "F": "Cables monoconductores (3 conductores con carga), en contacto y en disposición plana, instalados libremente al aire, en escalerillas, canastillos o bandejas perforadas."
+  },
+  "nota_enterrados": "Para instalaciones enterradas se considera una profundidad de 0,7 m y una resistividad térmica del suelo de 1 K·m/W.",
+  "bloques": [
+    {
+      "temperatura_servicio": 70,
+      "cables": [
+        "H07V",
+        "H07Z1",
+        "THWN",
+        "NYIFY",
+        "ACOMETIDA"
+      ],
+      "paginas": [
+        18
+      ],
+      "temperatura_ambiente": {
+        "A1": 30,
+        "B1": 30,
+        "E": 30
+      },
+      "filas": [
+        {
+          "mm2": 1.5,
+          "awg": null,
+          "amperes": {
+            "A1": 14,
+            "B1": 16,
+            "E": 19
+          }
+        },
+        {
+          "mm2": 2.08,
+          "awg": "14",
+          "amperes": {
+            "A1": 16,
+            "B1": 19,
+            "E": 22
+          }
+        },
+        {
+          "mm2": 2.5,
+          "awg": null,
+          "amperes": {
+            "A1": 18,
+            "B1": 21,
+            "E": 24
+          }
+        },
+        {
+          "mm2": 3.31,
+          "awg": "12",
+          "amperes": {
+            "A1": 21,
+            "B1": 25,
+            "E": 30
+          }
+        },
+        {
+          "mm2": 4,
+          "awg": null,
+          "amperes": {
+            "A1": 24,
+            "B1": 28,
+            "E": 31
+          }
+        },
+        {
+          "mm2": 5.26,
+          "awg": "10",
+          "amperes": {
+            "A1": 28,
+            "B1": 34,
+            "E": 38
+          }
+        },
+        {
+          "mm2": 6,
+          "awg": null,
+          "amperes": {
+            "A1": 31,
+            "B1": 36,
+            "E": 43
+          }
+        },
+        {
+          "mm2": 8.37,
+          "awg": "8",
+          "amperes": {
+            "A1": 38,
+            "B1": 45,
+            "E": 53
+          }
+        },
+        {
+          "mm2": 10,
+          "awg": null,
+          "amperes": {
+            "A1": 42,
+            "B1": 50,
+            "E": 60
+          }
+        },
+        {
+          "mm2": 13.3,
+          "awg": "6",
+          "amperes": {
+            "A1": 50,
+            "B1": 60,
+            "E": 71
+          }
+        },
+        {
+          "mm2": 16,
+          "awg": null,
+          "amperes": {
+            "A1": 56,
+            "B1": 68,
+            "E": 80
+          }
+        },
+        {
+          "mm2": 21.1,
+          "awg": "4",
+          "amperes": {
+            "A1": 66,
+            "B1": 80,
+            "E": 91
+          }
+        },
+        {
+          "mm2": 25,
+          "awg": null,
+          "amperes": {
+            "A1": 73,
+            "B1": 89,
+            "E": 101
+          }
+        },
+        {
+          "mm2": 26.7,
+          "awg": "3",
+          "amperes": {
+            "A1": 76,
+            "B1": 93,
+            "E": 106
+          }
+        },
+        {
+          "mm2": 33.6,
+          "awg": "2",
+          "amperes": {
+            "A1": 87,
+            "B1": 108,
+            "E": 122
+          }
+        },
+        {
+          "mm2": 35,
+          "awg": null,
+          "amperes": {
+            "A1": 89,
+            "B1": 110,
+            "E": 126
+          }
+        },
+        {
+          "mm2": 42.4,
+          "awg": "1",
+          "amperes": {
+            "A1": 100,
+            "B1": 125,
+            "E": 142
+          }
+        },
+        {
+          "mm2": 50,
+          "awg": null,
+          "amperes": {
+            "A1": 108,
+            "B1": 134,
+            "E": 153
+          }
+        },
+        {
+          "mm2": 53.5,
+          "awg": "1/0",
+          "amperes": {
+            "A1": 116,
+            "B1": 144,
+            "E": 165
+          }
+        },
+        {
+          "mm2": 67.4,
+          "awg": "2/0",
+          "amperes": {
+            "A1": 133,
+            "B1": 167,
+            "E": 191
+          }
+        },
+        {
+          "mm2": 70,
+          "awg": null,
+          "amperes": {
+            "A1": 136,
+            "B1": 171,
+            "E": 196
+          }
+        },
+        {
+          "mm2": 85,
+          "awg": "3/0",
+          "amperes": {
+            "A1": 153,
+            "B1": 193,
+            "E": 222
+          }
+        },
+        {
+          "mm2": 95,
+          "awg": null,
+          "amperes": {
+            "A1": 164,
+            "B1": 207,
+            "E": 238
+          }
+        },
+        {
+          "mm2": 107.2,
+          "awg": "4/0",
+          "amperes": {
+            "A1": 176,
+            "B1": 223,
+            "E": 257
+          }
+        },
+        {
+          "mm2": 120,
+          "awg": null,
+          "amperes": {
+            "A1": 188,
+            "B1": 239,
+            "E": 276
+          }
+        },
+        {
+          "mm2": 126.7,
+          "awg": "250",
+          "amperes": {
+            "A1": 195,
+            "B1": 248,
+            "E": 286
+          }
+        },
+        {
+          "mm2": 150,
+          "awg": null,
+          "amperes": {
+            "A1": 216,
+            "B1": 262,
+            "E": 319
+          }
+        },
+        {
+          "mm2": 152,
+          "awg": "300",
+          "amperes": {
+            "A1": 217,
+            "B1": 264,
+            "E": 321
+          }
+        },
+        {
+          "mm2": 177.3,
+          "awg": "350",
+          "amperes": {
+            "A1": 239,
+            "B1": 289,
+            "E": 355
+          }
+        },
+        {
+          "mm2": 185,
+          "awg": null,
+          "amperes": {
+            "A1": 245,
+            "B1": 296,
+            "E": 364
+          }
+        },
+        {
+          "mm2": 202.7,
+          "awg": "400",
+          "amperes": {
+            "A1": 259,
+            "B1": 315,
+            "E": 386
+          }
+        },
+        {
+          "mm2": 240,
+          "awg": null,
+          "amperes": {
+            "A1": 286,
+            "B1": 346,
+            "E": 430
+          }
+        },
+        {
+          "mm2": 253.3,
+          "awg": "500",
+          "amperes": {
+            "A1": 296,
+            "B1": 356,
+            "E": 446
+          }
+        },
+        {
+          "mm2": 300,
+          "awg": null,
+          "amperes": {
+            "A1": 328,
+            "B1": 394,
+            "E": 497
+          }
+        }
+      ]
+    },
+    {
+      "temperatura_servicio": 90,
+      "cables": [
+        "THHN",
+        "RV",
+        "RV-K",
+        "RZ1",
+        "RZ1-K"
+      ],
+      "paginas": [
+        19,
+        20
+      ],
+      "temperatura_ambiente": {
+        "A1": 30,
+        "A2": 30,
+        "B1": 30,
+        "B2": 30,
+        "D1": 20,
+        "D2": 20,
+        "E": 30,
+        "F": 30
+      },
+      "filas": [
+        {
+          "mm2": 1.5,
+          "awg": null,
+          "amperes": {
+            "A1": 17,
+            "A2": 17,
+            "B1": 18,
+            "B2": 19,
+            "D1": 19,
+            "D2": 23,
+            "E": 19,
+            "F": null
+          }
+        },
+        {
+          "mm2": 2.08,
+          "awg": "14",
+          "amperes": {
+            "A1": 21,
+            "A2": 20,
+            "B1": 24,
+            "B2": 24,
+            "D1": 30,
+            "D2": 31,
+            "E": 28,
+            "F": null
+          }
+        },
+        {
+          "mm2": 2.5,
+          "awg": null,
+          "amperes": {
+            "A1": 23,
+            "A2": 22,
+            "B1": 24,
+            "B2": 24,
+            "D1": 33,
+            "D2": 38,
+            "E": 32,
+            "F": null
+          }
+        },
+        {
+          "mm2": 3.31,
+          "awg": "12",
+          "amperes": {
+            "A1": 28,
+            "A2": 26,
+            "B1": 31,
+            "B2": 31,
+            "D1": 38,
+            "D2": 39,
+            "E": 38,
+            "F": null
+          }
+        },
+        {
+          "mm2": 4,
+          "awg": null,
+          "amperes": {
+            "A1": 31,
+            "A2": 30,
+            "B1": 37,
+            "B2": 35,
+            "D1": 42,
+            "D2": 59,
+            "E": 42,
+            "F": 42
+          }
+        },
+        {
+          "mm2": 5.26,
+          "awg": "10",
+          "amperes": {
+            "A1": 37,
+            "A2": 35,
+            "B1": 39,
+            "B2": 38,
+            "D1": 48,
+            "D2": 69,
+            "E": 50,
+            "F": 50
+          }
+        },
+        {
+          "mm2": 6,
+          "awg": null,
+          "amperes": {
+            "A1": 40,
+            "A2": 38,
+            "B1": 48,
+            "B2": 44,
+            "D1": 52,
+            "D2": 74,
+            "E": 54,
+            "F": 55
+          }
+        },
+        {
+          "mm2": 8.37,
+          "awg": "8",
+          "amperes": {
+            "A1": 49,
+            "A2": 46,
+            "B1": 59,
+            "B2": 54,
+            "D1": 63,
+            "D2": 89,
+            "E": 67,
+            "F": 68
+          }
+        },
+        {
+          "mm2": 10,
+          "awg": null,
+          "amperes": {
+            "A1": 54,
+            "A2": 51,
+            "B1": 66,
+            "B2": 60,
+            "D1": 68,
+            "D2": 98,
+            "E": 75,
+            "F": 77
+          }
+        },
+        {
+          "mm2": 13.3,
+          "awg": "6",
+          "amperes": {
+            "A1": 65,
+            "A2": 61,
+            "B1": 79,
+            "B2": 72,
+            "D1": 80,
+            "D2": 114,
+            "E": 89,
+            "F": 93
+          }
+        },
+        {
+          "mm2": 16,
+          "awg": null,
+          "amperes": {
+            "A1": 73,
+            "A2": 68,
+            "B1": 88,
+            "B2": 80,
+            "D1": 89,
+            "D2": 126,
+            "E": 100,
+            "F": 105
+          }
+        },
+        {
+          "mm2": 21.1,
+          "awg": "4",
+          "amperes": {
+            "A1": 86,
+            "A2": 80,
+            "B1": 105,
+            "B2": 95,
+            "D1": 103,
+            "D2": 147,
+            "E": 114,
+            "F": 126
+          }
+        },
+        {
+          "mm2": 25,
+          "awg": null,
+          "amperes": {
+            "A1": 95,
+            "A2": 89,
+            "B1": 117,
+            "B2": 105,
+            "D1": 113,
+            "D2": 161,
+            "E": 127,
+            "F": 141
+          }
+        },
+        {
+          "mm2": 26.7,
+          "awg": "3",
+          "amperes": {
+            "A1": 99,
+            "A2": 92,
+            "B1": 122,
+            "B2": 109,
+            "D1": 117,
+            "D2": 167,
+            "E": 133,
+            "F": 147
+          }
+        },
+        {
+          "mm2": 33.6,
+          "awg": "2",
+          "amperes": {
+            "A1": 114,
+            "A2": 106,
+            "B1": 141,
+            "B2": 125,
+            "D1": 132,
+            "D2": 189,
+            "E": 154,
+            "F": 172
+          }
+        },
+        {
+          "mm2": 35,
+          "awg": null,
+          "amperes": {
+            "A1": 117,
+            "A2": 109,
+            "B1": 144,
+            "B2": 128,
+            "D1": 136,
+            "D2": 194,
+            "E": 158,
+            "F": 176
+          }
+        },
+        {
+          "mm2": 42.4,
+          "awg": "1",
+          "amperes": {
+            "A1": 132,
+            "A2": 122,
+            "B1": 163,
+            "B2": 144,
+            "D1": 150,
+            "D2": 216,
+            "E": 178,
+            "F": 200
+          }
+        },
+        {
+          "mm2": 50,
+          "awg": null,
+          "amperes": {
+            "A1": 141,
+            "A2": 130,
+            "B1": 175,
+            "B2": 154,
+            "D1": 159,
+            "D2": 230,
+            "E": 192,
+            "F": 216
+          }
+        },
+        {
+          "mm2": 53.5,
+          "awg": "1/0",
+          "amperes": {
+            "A1": 152,
+            "A2": 140,
+            "B1": 188,
+            "B2": 165,
+            "D1": 170,
+            "D2": 245,
+            "E": 207,
+            "F": 234
+          }
+        },
+        {
+          "mm2": 67.4,
+          "awg": "2/0",
+          "amperes": {
+            "A1": 175,
+            "A2": 161,
+            "B1": 217,
+            "B2": 190,
+            "D1": 192,
+            "D2": 278,
+            "E": 240,
+            "F": 273
+          }
+        },
+        {
+          "mm2": 70,
+          "awg": null,
+          "amperes": {
+            "A1": 179,
+            "A2": 164,
+            "B1": 222,
+            "B2": 194,
+            "D1": 197,
+            "D2": 282,
+            "E": 246,
+            "F": 279
+          }
+        },
+        {
+          "mm2": 85,
+          "awg": "3/0",
+          "amperes": {
+            "A1": 201,
+            "A2": 185,
+            "B1": 251,
+            "B2": 218,
+            "D1": 218,
+            "D2": 315,
+            "E": 278,
+            "F": 318
+          }
+        },
+        {
+          "mm2": 95,
+          "awg": null,
+          "amperes": {
+            "A1": 216,
+            "A2": 197,
+            "B1": 269,
+            "B2": 233,
+            "D1": 232,
+            "D2": 339,
+            "E": 298,
+            "F": 342
+          }
+        },
+        {
+          "mm2": 107.2,
+          "awg": "4/0",
+          "amperes": {
+            "A1": 232,
+            "A2": 212,
+            "B1": 290,
+            "B2": 251,
+            "D1": 248,
+            "D2": 362,
+            "E": 322,
+            "F": 371
+          }
+        },
+        {
+          "mm2": 120,
+          "awg": null,
+          "amperes": {
+            "A1": 249,
+            "A2": 227,
+            "B1": 312,
+            "B2": 268,
+            "D1": 263,
+            "D2": 386,
+            "E": 346,
+            "F": 400
+          }
+        },
+        {
+          "mm2": 126.7,
+          "awg": "250",
+          "amperes": {
+            "A1": 257,
+            "A2": 234,
+            "B1": 322,
+            "B2": 277,
+            "D1": 270,
+            "D2": 396,
+            "E": 358,
+            "F": 415
+          }
+        },
+        {
+          "mm2": 150,
+          "awg": null,
+          "amperes": {
+            "A1": 285,
+            "A2": 259,
+            "B1": 342,
+            "B2": 300,
+            "D1": 296,
+            "D2": 431,
+            "E": 399,
+            "F": 464
+          }
+        },
+        {
+          "mm2": 152,
+          "awg": "300",
+          "amperes": {
+            "A1": 287,
+            "A2": 261,
+            "B1": 344,
+            "B2": 302,
+            "D1": 299,
+            "D2": 437,
+            "E": 402,
+            "F": 468
+          }
+        },
+        {
+          "mm2": 177.3,
+          "awg": "350",
+          "amperes": {
+            "A1": 316,
+            "A2": 287,
+            "B1": 374,
+            "B2": 331,
+            "D1": 325,
+            "D2": 474,
+            "E": 444,
+            "F": 518
+          }
+        },
+        {
+          "mm2": 185,
+          "awg": null,
+          "amperes": {
+            "A1": 324,
+            "A2": 295,
+            "B1": 384,
+            "B2": 340,
+            "D1": 332,
+            "D2": 486,
+            "E": 456,
+            "F": 533
+          }
+        },
+        {
+          "mm2": 202.7,
+          "awg": "400",
+          "amperes": {
+            "A1": 342,
+            "A2": 312,
+            "B1": 405,
+            "B2": 358,
+            "D1": 349,
+            "D2": 510,
+            "E": 483,
+            "F": 567
+          }
+        },
+        {
+          "mm2": 240,
+          "awg": null,
+          "amperes": {
+            "A1": 380,
+            "A2": 346,
+            "B1": 450,
+            "B2": 398,
+            "D1": 382,
+            "D2": 563,
+            "E": 538,
+            "F": 634
+          }
+        },
+        {
+          "mm2": 253.3,
+          "awg": "500",
+          "amperes": {
+            "A1": 392,
+            "A2": 357,
+            "B1": 464,
+            "B2": 410,
+            "D1": 393,
+            "D2": 576,
+            "E": 557,
+            "F": 657
+          }
+        },
+        {
+          "mm2": 300,
+          "awg": null,
+          "amperes": {
+            "A1": 435,
+            "A2": 396,
+            "B1": 514,
+            "B2": 455,
+            "D1": 431,
+            "D2": 629,
+            "E": 621,
+            "F": 736
+          }
+        }
+      ]
+    }
+  ],
+  "revision": {
+    "estado": "pendiente",
+    "observaciones": [
+      "Extraído con pdftotext -table y cruzado con la lectura de la tabla; falta la revisión de una persona contra el PDF.",
+      "90 °C, método D2: salto de 39 A (3,31 mm²) a 59 A (4 mm²). Confirmar en el PDF.",
+      "90 °C, métodos B1 y B2: 2,08 mm² y 2,5 mm² tienen el mismo valor (24 A). Confirmar en el PDF.",
+      "90 °C, método E: 1,5 mm² = 19 A y 2,08 mm² = 28 A. Confirmar en el PDF.",
+      "90 °C, método F: sin valor para secciones bajo 4 mm² (guion en el PDF)."
+    ]
+  }
+}
