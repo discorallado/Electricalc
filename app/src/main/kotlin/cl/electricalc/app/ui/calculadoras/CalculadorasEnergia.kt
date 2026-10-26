@@ -385,3 +385,24 @@ object CalculadoraAreasPeligrosas {
             LineaResultado(R.string.res_referencia, "RIC N°12, numerales 5, 7.5 y 11.1.5", principal = false)
     }
 }
+
+/** Plan de mantenimiento: programa de seguridad eléctrica y trabajo sin tensión (RIC N°17). */
+object CalculadoraMantenimiento {
+    private val m by lazy { cl.electricalc.datos.ric.Ric.mantenimiento }
+
+    val plan = calculadoraSimple(
+        "plan_mantenimiento",
+        listOf(
+            campo("p", R.string.campo_potencia_instalada_mant, R.string.ayuda_potencia_instalada_mant, listOf(Unidades.kW), "150"),
+            CampoOpciones("mt", R.string.campo_empalme_mt, listOf(R.string.ayuda_empalme_mt), listOf(R.string.si, R.string.no).map { TextoOpcion.Recurso(it) }, 1),
+            CampoOpciones("uso", R.string.campo_uso_instalacion, listOf(R.string.ayuda_uso_instalacion), listOf(R.string.uso_no_residencial, R.string.uso_vivienda).map { TextoOpcion.Recurso(it) }),
+        ),
+        listOf(R.string.intro_mantenimiento),
+    ) { e ->
+        val exige = m.exigePrograma(e.valor("p") / 1000, e.opcion("mt") == 0, e.opcion("uso") == 0)
+        listOf(LineaResultado(R.string.res_programa_seguridad, if (exige) "Obligatorio (numeral 5.3)" else "No obligatorio; se recomienda")) +
+            m.componentes.mapIndexed { i, c -> LineaResultado(R.string.res_componente, "${i + 1}. $c", principal = false) } +
+            m.reglasOro.mapIndexed { i, r -> LineaResultado(R.string.res_regla_oro, "${i + 1}. $r", principal = false) } +
+            LineaResultado(R.string.res_referencia, "RIC N°17, numerales 5.3, 6.1 y 6.3.2", principal = false)
+    }
+}

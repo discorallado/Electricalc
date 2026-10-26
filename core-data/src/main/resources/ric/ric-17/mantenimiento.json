@@ -1,0 +1,31 @@
+{
+  "pliego": 17,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6",
+  "titulo": "Programa de seguridad eléctrica y mantenimiento",
+  "paginas": [3, 4, 5],
+  "programa_sobre_kw": 300,
+  "usos_programa": ["Industrial", "Comercial", "Educacional", "Asistencial", "Local de reunión de personas"],
+  "componentes": [
+    "Mantenimiento según especificaciones del fabricante, condiciones de operación, clima y ambiente.",
+    "Evaluación y tratamiento preventivo de los riesgos eléctricos.",
+    "Inspección con rutinas y frecuencia programadas, registro de mantenimientos, control de fallas e investigación de accidentes con análisis de causa raíz.",
+    "Procedimientos de trabajo planificados según la actividad y la instalación.",
+    "Capacitación técnica y de seguridad según la calificación del personal.",
+    "Procedimientos de emergencia eléctrica y operacional.",
+    "Auditorías de seguridad eléctrica para controlar la eficacia del programa."
+  ],
+  "reglas_oro": [
+    "Abrir todas las fuentes de alimentación y comprobar visualmente la apertura.",
+    "Bloquear con candado y etiqueta.",
+    "Verificar ausencia de tensión con un detector adecuado, fase-fase y fase-tierra, probándolo antes y después.",
+    "Poner a tierra y en cortocircuito los conductores antes de tocarlos.",
+    "Delimitar la zona de trabajo y señalizar las partes energizadas cercanas."
+  ],
+  "notas": [
+    "Numeral 5.3: instalaciones de más de 300 kW o con empalme en media tensión, de uso industrial, comercial, educacional, asistencial o de reunión de personas, deben implementar un programa de seguridad eléctrica con profesionales competentes.",
+    "El pliego no fija periodicidades; la frecuencia de inspección la define el programa según el fabricante y las condiciones de operación.",
+    "Numeral 6.4: las tierras temporales deben soportar la corriente de falla máxima, cumplir ASTM F855 y tener impedancia baja para hacer operar las protecciones."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

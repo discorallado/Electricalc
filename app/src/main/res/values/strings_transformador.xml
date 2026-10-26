@@ -38,4 +38,16 @@
     <string name="res_iz_reducida">Corriente admisible en zona clasificada</string>
     <string name="res_modo_admitido">Modo admitido</string>
     <string name="intro_areas">Clasifica un lugar con riesgo de explosión según el RIC N°12 y entrega los modos de protección admitidos para los equipos. La clasificación formal requiere un plano de áreas con la extensión de cada zona.</string>
+    <string name="campo_potencia_instalada_mant">Potencia instalada</string>
+    <string name="ayuda_potencia_instalada_mant">Sobre 300 kW el programa de seguridad eléctrica es obligatorio en usos no residenciales.</string>
+    <string name="campo_empalme_mt">¿Empalme en media tensión?</string>
+    <string name="ayuda_empalme_mt">Con empalme en MT el programa es obligatorio sin importar la potencia (usos no residenciales).</string>
+    <string name="campo_uso_instalacion">Uso de la instalación</string>
+    <string name="ayuda_uso_instalacion">Industrial, comercial, educacional, asistencial o de reunión de personas.</string>
+    <string name="uso_no_residencial">Industrial, comercial, educacional, asistencial o reunión</string>
+    <string name="uso_vivienda">Vivienda u otro</string>
+    <string name="res_programa_seguridad">Programa de seguridad eléctrica</string>
+    <string name="res_componente">Componente del programa</string>
+    <string name="res_regla_oro">Regla de oro</string>
+    <string name="intro_mantenimiento">Indica si la instalación debe tener un programa de seguridad eléctrica según el RIC N°17 y lista sus componentes y las cinco reglas de oro para trabajar sin tensión. El pliego no fija frecuencias: las define el programa según el fabricante y las condiciones de operación.</string>
 </resources>

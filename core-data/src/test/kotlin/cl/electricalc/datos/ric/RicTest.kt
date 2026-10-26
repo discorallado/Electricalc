@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(29, Ric.todas.size)
+        assertEquals(30, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -22,7 +22,7 @@ class RicTest {
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 18, 19), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 17, 18, 19), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -288,5 +288,14 @@ class RicTest {
         assertEquals(true, "Antideflagrante 'd'" in a.modos(2, polvo = false))
         assertEquals(false, "Antideflagrante 'd'" in a.modos(1, polvo = true))
         assertEquals(85.0, a.corrienteAdmisible(100.0), 1e-9)
+    }
+
+    @Test
+    fun mantenimiento() {
+        val m = Ric.mantenimiento
+        assertEquals(true, m.exigePrograma(100.0, empalmeMt = true, usoNoResidencial = true))
+        assertEquals(false, m.exigePrograma(300.0, empalmeMt = false, usoNoResidencial = true))
+        assertEquals(false, m.exigePrograma(500.0, empalmeMt = true, usoNoResidencial = false))
+        assertEquals(5, m.reglasOro.size)
     }
 }
