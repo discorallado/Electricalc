@@ -43,6 +43,7 @@ import cl.electricalc.datos.ric.FactoresDemanda
 import cl.electricalc.datos.ric.FactoresSimultaneidad
 import cl.electricalc.datos.ric.FuenteRic
 import cl.electricalc.datos.ric.MedicionResistividad
+import cl.electricalc.datos.ric.PuestaEnServicio
 import cl.electricalc.datos.ric.ResistenciaElectrodos
 import cl.electricalc.datos.ric.ResistividadTerrenos
 import cl.electricalc.datos.ric.SeccionProteccion
@@ -58,6 +59,7 @@ object TablasRic {
             "capacidad_movil" to Ric.capacidadMovil, "fn" to Ric.fn, "ft" to Ric.ft,
             "resistividad" to Ric.resistividad, "electrodos" to Ric.electrodos,
             "seccion_proteccion" to Ric.seccionProteccion, "medicion_resistividad" to Ric.medicionResistividad,
+            "aislamiento" to Ric.puestaEnServicio,
         )
     }
 
@@ -66,6 +68,7 @@ object TablasRic {
         "tabla_caidas_admisibles" to "caidas",
         "tabla_secciones_minimas" to "secciones",
         "tabla_colores_ric" to "colores",
+        "tabla_aislamiento_minimo" to "aislamiento",
     )
 
     fun claveDeHerramienta(id: String): String? = herramientas[id]
@@ -216,6 +219,11 @@ fun ContenidoFuente(f: FuenteRic) {
             }.second,
             listOf(160.dp, 120.dp),
         )
+        is PuestaEnServicio -> Tabla(
+            listOf(stringResource(R.string.col_circuito), stringResource(R.string.col_ensayo), "MΩ"),
+            f.aislamiento.map { listOf(it.nombre, "${it.ensayoV} V", "≥ ${n(it.minimoMohm)}") },
+            listOf(220.dp, 80.dp, 72.dp),
+        )
         is MedicionResistividad -> Tabla(
             listOf(stringResource(R.string.col_requisito), stringResource(R.string.col_limite)),
             listOf(
@@ -288,5 +296,6 @@ private fun notasDe(f: FuenteRic): List<String> = when (f) {
     is ResistenciaElectrodos -> f.notas
     is SeccionProteccion -> f.notas
     is MedicionResistividad -> f.notas
+    is PuestaEnServicio -> f.notas
     else -> emptyList()
 }

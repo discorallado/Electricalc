@@ -64,12 +64,14 @@ private fun FilaVerificacion(v: Verificacion, alAbrirPliego: (Int) -> Unit) {
         TipoVerificacion.CAIDA_TRAMO -> stringResource(R.string.ver_caida_tramo)
         TipoVerificacion.CAIDA_TOTAL -> stringResource(R.string.ver_caida_total)
         TipoVerificacion.TENSION_CONTACTO -> stringResource(R.string.ver_tension_contacto)
+        TipoVerificacion.AISLAMIENTO -> stringResource(R.string.ver_aislamiento)
         TipoVerificacion.SECCION_MINIMA -> v.uso?.let { stringResource(R.string.ver_seccion_uso, nombreUso(it.uso)) }
             ?: stringResource(R.string.ver_seccion)
     }
     val unidad = when (v.tipo) {
         TipoVerificacion.SECCION_MINIMA -> "mm²"
         TipoVerificacion.TENSION_CONTACTO -> "V"
+        TipoVerificacion.AISLAMIENTO -> "MΩ"
         else -> "%"
     }
     val decimales = 2
@@ -79,7 +81,7 @@ private fun FilaVerificacion(v: Verificacion, alAbrirPliego: (Int) -> Unit) {
             val cumple = v.estado == EstadoVerificacion.CUMPLE
             // Caída: el valor debe quedar bajo el límite; sección: sobre la mínima.
             val signo = when (v.tipo) {
-                TipoVerificacion.SECCION_MINIMA -> if (cumple) "≥" else "<"
+                TipoVerificacion.SECCION_MINIMA, TipoVerificacion.AISLAMIENTO -> if (cumple) "≥" else "<"
                 else -> if (cumple) "≤" else ">"
             }
             "${Formato.fijo(v.calculado!!, decimales)} $unidad $signo ${Formato.numero(v.limite!!, 2)} $unidad"

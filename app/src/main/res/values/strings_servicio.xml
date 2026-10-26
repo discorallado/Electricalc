@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_circuito_ensayo">Tensión nominal del circuito</string>
+    <string name="ayuda_circuito_ensayo">Define la tensión de ensayo y la resistencia mínima de la tabla N°19.1 del RIC N°19.</string>
+    <string name="circuito_mbts">Muy baja tensión de seguridad (MBTS, MBTP)</string>
+    <string name="circuito_hasta_500">Hasta 500 V</string>
+    <string name="circuito_sobre_500">Sobre 500 V</string>
+    <string name="campo_aislamiento_medido">Resistencia de aislamiento medida</string>
+    <string name="ayuda_aislamiento_medido">Lectura del megóhmetro, con los aparatos desconectados y la tensión de ensayo aplicada un minuto.</string>
+    <string name="res_tension_ensayo">Tensión de ensayo</string>
+    <string name="res_aislamiento_minimo">Resistencia mínima</string>
+    <string name="res_ensayo">Ensayo</string>
+    <string name="res_medir">Medir aislamiento</string>
+    <string name="ver_aislamiento">Resistencia de aislamiento</string>
+    <string name="col_circuito">Circuito</string>
+    <string name="col_ensayo">Ensayo CC</string>
+    <string name="intro_protocolo">Protocolo de puesta en servicio según el RIC N°19: los ensayos en el orden que exige el pliego y la verificación de la resistencia de aislamiento contra la tabla N°19.1.</string>
+</resources>

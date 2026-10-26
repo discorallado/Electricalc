@@ -1,0 +1,32 @@
+{
+  "pliego": 19,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "7.3",
+  "tabla": "19.1",
+  "titulo": "Ensayos de puesta en servicio y resistencia mínima de aislamiento",
+  "paginas": [5, 6],
+  "ensayos": [
+    "Continuidad de los conductores de protección y de las uniones equipotenciales principales y suplementarias",
+    "Resistencia de aislamiento de la instalación eléctrica",
+    "Protección por separación de circuitos (MBTS, MBTP) y separación eléctrica",
+    "Resistencia o impedancia de suelos y paredes",
+    "Protección por desconexión automática de la alimentación"
+  ],
+  "mediciones_aislamiento": [
+    "Entre los conductores de fase",
+    "Entre los conductores de fase y el neutro, si lo hubiera",
+    "Entre los conductores de fase y el conductor de protección",
+    "Entre el conductor neutro, si lo hubiera, y el conductor de protección"
+  ],
+  "aislamiento": [
+    { "circuito": "mbts", "nombre": "Muy baja tensión de seguridad (MBTS y MBTP)", "ensayo_v": 250, "minimo_mohm": 0.25 },
+    { "circuito": "hasta_500", "nombre": "Hasta 500 V, excepto muy bajas tensiones de seguridad", "ensayo_v": 500, "minimo_mohm": 0.5 },
+    { "circuito": "sobre_500", "nombre": "Superior a 500 V", "ensayo_v": 1000, "minimo_mohm": 1.0 }
+  ],
+  "notas": [
+    "Numeral 7.1.3: los ensayos se hacen, donde corresponda, en el orden indicado.",
+    "Numeral 7.3.2: la resistencia de aislamiento, medida con la tensión de ensayo de la tabla aplicada durante un minuto, es satisfactoria si cada circuito, con los aparatos desconectados, alcanza al menos el valor de la tabla N°19.1.",
+    "Numeral 7.3.3: las mediciones se hacen en corriente continua."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

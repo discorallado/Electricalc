@@ -114,3 +114,33 @@ object CalculadorasEnergia {
 
     val todas = listOf(consumo, iluminacion, factorPotencia, respaldo)
 }
+
+/** Ensayos de puesta en servicio y aislamiento mínimo (RIC N°19). */
+object CalculadoraPuestaEnServicio {
+    private val ps by lazy { cl.electricalc.datos.ric.Ric.puestaEnServicio }
+
+    private val circuito = CampoOpciones(
+        "circuito", R.string.campo_circuito_ensayo, listOf(R.string.ayuda_circuito_ensayo),
+        opciones = listOf(R.string.circuito_mbts, R.string.circuito_hasta_500, R.string.circuito_sobre_500).map { TextoOpcion.Recurso(it) },
+        porDefecto = 1,
+    )
+
+    val protocolo = Calculadora(
+        id = "protocolo_puesta_servicio",
+        sistemas = listOf(SistemaElectrico.MONOFASICA),
+        campos = listOf(circuito, campo("r", R.string.campo_aislamiento_medido, R.string.ayuda_aislamiento_medido, listOf(Unidad("MΩ")), "500")),
+        visible = { _, _, _, _ -> true },
+        guia = Guia(listOf(R.string.intro_protocolo)),
+        calcular = { e ->
+            val fila = ps.aislamiento[e.opcion("circuito")]
+            listOf(
+                LineaResultado(R.string.res_tension_ensayo, "${fila.ensayoV} V CC · 1 min"),
+                LineaResultado(R.string.res_aislamiento_minimo, "≥ ${Formato.numero(fila.minimoMohm, 2)} MΩ"),
+            ) + ps.ensayos.mapIndexed { i, t -> LineaResultado(R.string.res_ensayo, "${i + 1}. $t", principal = false) } +
+                ps.medicionesAislamiento.map { LineaResultado(R.string.res_medir, it, principal = false) }
+        },
+        verificar = { e ->
+            listOf(cl.electricalc.datos.ric.VerificacionRic.aislamiento(e.valor("r"), ps.aislamiento[e.opcion("circuito")].circuito))
+        },
+    )
+}
