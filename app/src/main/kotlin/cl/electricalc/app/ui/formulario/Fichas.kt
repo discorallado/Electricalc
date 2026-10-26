@@ -522,7 +522,28 @@ object Fichas {
         Simbolo("I_a", R.string.sim_corriente_disparo, "A"), Simbolo("r, x", R.string.sim_resistencia_linea, "Ω/km"), Simbolo("L", R.string.sim_longitud, "km"),
     )
 
+    private fun duracionBateriaF() = simple(
+        listOf(e("t = ", frac("C × U × η × DoD", "P"))),
+        Simbolo("t", R.string.sim_autonomia, "h"), Simbolo("C", R.string.sim_capacidad_banco, "Ah"),
+        Simbolo("U", R.string.sim_tension_banco, "V"), Simbolo("η", R.string.sim_rendimiento), Simbolo("DoD", R.string.sim_descarga),
+        Simbolo("P", R.string.sim_potencia_activa, "W"),
+    )
+
+    private fun compensacionF() = simple(
+        listOf(e("Q_c = P × (tan φ_1 − tan φ_2)"), e("C = ", frac("Q_c", "2π × f × U^2"))),
+        Simbolo("P", R.string.sim_potencia_activa, "W"), Simbolo("cos φ_1", R.string.sim_cos_actual), Simbolo("cos φ_2", R.string.sim_cos_objetivo),
+        Simbolo("C", R.string.sim_capacidad, "F"), Simbolo("U", R.string.sim_tension_ff, "V"),
+    )
+
+    private fun puestaTierraF() = simple(
+        listOf(e("R_A × I_Δn ≤ U_L"), e("R_A,max = ", frac("U_L", "I_Δn"))),
+        Simbolo("R_A", R.string.sim_ra, "Ω"), Simbolo("U_L", R.string.sim_ul, "V"), Simbolo("I_Δn", R.string.sim_idn, "A"),
+    )
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaDurataBatteria" to ::duracionBateriaF,
+        "FormulaRifasamento" to ::compensacionF,
+        "FormulaImpiantoDiTerra" to ::puestaTierraF,
         "FormulaTabEnergiaSpecifica" to ::energiaEspecificaF,
         "FormulaProtezioneCavoCortocircuito" to ::proteccionCableF,
         "FormulaDispositivoProtezione" to ::dispositivoF,

@@ -38,4 +38,18 @@
     <string name="sim_corrientes_fase">Corrientes de fase</string>
     <string name="sim_perdidas">Pérdidas</string>
     <string name="sim_conductores_activos">Conductores activos (2 o 3)</string>
+    <string name="ayuda_capacidad_banco">Capacidad nominal del banco en Ah, a su tensión.</string>
+    <string name="res_autonomia">Autonomía</string>
+    <string name="res_autonomia_min">En minutos</string>
+    <string name="res_energia_util">Energía utilizable</string>
+    <string name="intro_duracion_bateria">Calcula cuánto dura un banco de baterías alimentando una carga a través de un inversor, con la profundidad de descarga admitida.</string>
+    <string name="sim_capacidad_banco">Capacidad del banco</string>
+    <string name="sim_tension_banco">Tensión del banco</string>
+    <string name="sim_descarga">Profundidad de descarga</string>
+    <string name="sim_autonomia">Autonomía</string>
+    <string name="sim_cos_actual">Factor de potencia actual</string>
+    <string name="sim_cos_objetivo">Factor de potencia deseado</string>
+    <string name="sim_ra">Resistencia de puesta a tierra de las masas</string>
+    <string name="sim_ul">Tensión de contacto límite (RIC N°05)</string>
+    <string name="sim_idn">Sensibilidad del diferencial</string>
 </resources>

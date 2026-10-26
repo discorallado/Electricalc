@@ -80,4 +80,11 @@ object Respaldo {
         if (rendimiento > 1 || descarga > 1) throw ErrorCalculo(MotivoError.VALOR_FUERA_DE_RANGO)
         return potenciaW * autonomiaH / (tensionBanco * rendimiento * descarga)
     }
+
+    /** Autonomía en horas de un banco de [capacidadAh] a [tensionBanco]: C·U·η·DoD / P. */
+    fun autonomia(capacidadAh: Double, tensionBanco: Double, potenciaW: Double, rendimiento: Double, descarga: Double): Double {
+        positivo(capacidadAh, tensionBanco, potenciaW, rendimiento, descarga)
+        if (rendimiento > 1 || descarga > 1) throw ErrorCalculo(MotivoError.VALOR_FUERA_DE_RANGO)
+        return capacidadAh * tensionBanco * rendimiento * descarga / potenciaW
+    }
 }

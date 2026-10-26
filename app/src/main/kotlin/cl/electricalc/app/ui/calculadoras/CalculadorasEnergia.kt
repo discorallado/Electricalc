@@ -406,3 +406,39 @@ object CalculadoraMantenimiento {
             LineaResultado(R.string.res_referencia, "RIC N°17, numerales 5.3, 6.1 y 6.3.2", principal = false)
     }
 }
+
+/** Misma pantalla con otro id del catálogo (herramientas del APK que ya cubre una calculadora). */
+fun alias(id: String, base: Calculadora) = Calculadora(
+    id = id, sistemas = base.sistemas, campos = base.campos, variantes = base.variantes, visible = base.visible,
+    guia = base.guia, calcular = base.calcular, verificar = base.verificar,
+)
+
+/** Autonomía de un banco de baterías y herramientas del APK cubiertas por otras pantallas. */
+object CalculadorasRespaldo {
+    private val porciento = Unidad("%") { it / 100 }
+
+    val duracion = calculadoraSimple(
+        "DurataBatteria",
+        listOf(
+            campo("c", R.string.campo_capacidad_ah, R.string.ayuda_capacidad_banco, listOf(Unidad("Ah")), "200"),
+            campo("vb", R.string.campo_tension_banco, R.string.ayuda_tension_banco, listOf(Unidades.V), "24"),
+            campo("p", R.string.campo_carga_respaldada, R.string.ayuda_carga_respaldada, listOf(Unidades.W, Unidades.kW), "500"),
+            campo("eta", R.string.campo_rendimiento_inversor, R.string.ayuda_rendimiento_inversor, listOf(porciento), "90", inicial = "90"),
+            campo("dod", R.string.campo_descarga, R.string.ayuda_descarga, listOf(porciento), "50", inicial = "50"),
+        ),
+        listOf(R.string.intro_duracion_bateria),
+    ) { e ->
+        val h = cl.electricalc.calc.energia.Respaldo.autonomia(e.valor("c"), e.valor("vb"), e.valor("p"), e.valor("eta"), e.valor("dod"))
+        listOf(
+            LineaResultado(R.string.res_autonomia, "${Formato.numero(h, 2)} h"),
+            LineaResultado(R.string.res_autonomia_min, "${Formato.numero(h * 60, 0)} min", principal = false),
+            LineaResultado(R.string.res_energia_util, "${Formato.numero(e.valor("c") * e.valor("vb") * e.valor("dod") / 1000, 2)} kWh", principal = false),
+        )
+    }
+
+    val todas = listOf(
+        duracion,
+        alias("Rifasamento", CalculadorasEnergia.factorPotencia),
+        alias("ImpiantoDiTerra", CalculadorasProteccion.tt),
+    )
+}
