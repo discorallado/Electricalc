@@ -217,10 +217,25 @@ Historial de cálculos, exportación de memorias de cálculo en PDF, normativa c
   accesos por tipo de proyecto, las 8 etapas, categorías de `spec/catalogo-v2.json`, páginas de
   los 19 pliegos con resumen propio en borrador y chips RIC en cada herramienta. Sin valores
   normativos. `CatalogoTest` cubre carga, ids cruzados y buscador.
-- [ ] Fase B de la v2: transcribir las tablas de los RIC N°03 y N°04 desde los PDF oficiales
-  (`%USERPROFILE%\.cache\electricalc-ric\`) y la verificación con semáforo.
-- [ ] Pantallas rápidas sobre el motor existente: longitud máxima del cable (ΔV) y caída con
-  cargas distribuidas; fichas de primera y segunda ley de Ohm y potencia.
-- [ ] Siguiente: dimensionamiento de conductores (IEC/CEI/NEC/CEC + RIC). Motor original en
-  `cn2` (modelo de instalación y tablas de capacidad) y `zu` (algoritmo de selección).
-- [ ] Olas 2 a 7.
+- [x] Fase B de la v2: tablas de los RIC N°03 y N°04 transcritas desde los PDF oficiales y
+  verificación con semáforo.
+- [x] Pantallas rápidas: longitud máxima del cable y caída con cargas distribuidas.
+- [x] Fase C: cuadro de cargas, proyectos guardados, memoria de cálculo PDF; RIC N°01, 05, 06,
+  10, 15 y 19 transcritos (empalme, circuitos de vivienda, diferencial, TT, carga VE, ductos,
+  puesta en servicio).
+- [x] Fase D: consumo y costo, iluminación, compensación de FP, respaldo, tablero (RIC N°02),
+  protecciones de autogeneración (RIC N°09), volúmenes de baño (RIC N°11), impedancia de
+  bucle (RIC N°19).
+- [x] Fase E: transformador de subestación (RIC N°13), áreas peligrosas (RIC N°12) y programa
+  de mantenimiento (RIC N°17). Todo dato RIC queda con `revision: pendiente`.
+- [x] Catálogo del APK, cálculo puro: motores (9), fundamentos y electrónica (14), conversiones
+  (17), conductores (5), cortocircuito y protecciones (7), duración de batería y alias
+  (compensación, puesta a tierra), con sus fichas de fórmulas.
+- [ ] Pendiente sin fuente oficial en los PDF: tablas de enchufes y tensiones de Chile, coeficiente
+  k de cables (hoy lo ingresa el usuario), PT100, riesgo de rayo (NecessitaSpd), motor
+  trifásico a monofásico y condensador de arranque.
+- [ ] Pendiente: esquemas (empalmes, transferencia y los de motores), tablas de referencia y
+  pinouts del APK (extraer los datos del oráculo), códigos de colores, dimensionamiento de
+  conductores IEC/NEC (`cn2`, `zu`).
+- [ ] Pendiente: textos en inglés de energía, servicio, tablero, transformador, motores,
+  electrónica, conversiones, conductores y cortocircuito.
