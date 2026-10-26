@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_temperatura_ambiente">Temperatura ambiente</string>
+    <string name="ayuda_temperatura_ambiente">Temperatura del aire o del terreno alrededor del cable.</string>
+    <string name="campo_temperatura_maxima">Temperatura máxima del aislamiento</string>
+    <string name="ayuda_temperatura_maxima">Temperatura de servicio a la que corresponde la corriente admisible: 70 °C en PVC, 90 °C en XLPE.</string>
+    <string name="ayuda_corriente_servicio">Corriente que circula por el conductor.</string>
+    <string name="campo_corriente_admisible">Corriente admisible</string>
+    <string name="ayuda_corriente_admisible">Corriente admisible del conductor en sus condiciones de instalación (Iz).</string>
+    <string name="campo_factor_utilizacion">Factor de utilización</string>
+    <string name="ayuda_factor_utilizacion">Fracción de la potencia nominal que la carga usa realmente (ku).</string>
+    <string name="campo_factor_simultaneidad">Factor de simultaneidad</string>
+    <string name="ayuda_factor_simultaneidad">Fracción de las cargas que funcionan a la vez (kc).</string>
+    <string name="campo_corriente_l1">Corriente L1</string>
+    <string name="campo_corriente_l2">Corriente L2</string>
+    <string name="campo_corriente_l3">Corriente L3</string>
+    <string name="ayuda_corriente_fase">Corriente de la fase, con cargas lineales del mismo factor de potencia.</string>
+    <string name="res_resistencia_conductor">Resistencia de un conductor</string>
+    <string name="res_resistencia_bucle">Resistencia de ida y vuelta</string>
+    <string name="res_perdidas_cable">Pérdidas en la línea</string>
+    <string name="res_perdidas_anuales">Energía perdida en un año continuo</string>
+    <string name="res_temperatura_conductor">Temperatura del conductor</string>
+    <string name="res_carga_relativa">Carga respecto a la admisible</string>
+    <string name="res_corriente_empleo">Corriente de empleo (Ib)</string>
+    <string name="res_corriente_neutro">Corriente del neutro</string>
+    <string name="intro_resistencia_conductor">Calcula la resistencia de un conductor según su sección, material, longitud y temperatura de servicio, con los conductores en paralelo.</string>
+    <string name="intro_perdidas_cable">Calcula la potencia que se pierde por efecto Joule en una línea: 2 conductores activos en continua y monofásica, 3 en trifásica equilibrada.</string>
+    <string name="intro_temperatura_cable">Estima la temperatura de un conductor con carga parcial: el calentamiento sobre el ambiente crece con el cuadrado de la corriente.</string>
+    <string name="intro_corriente_empleo">Calcula la corriente de empleo de un circuito con los factores de utilización y simultaneidad.</string>
+    <string name="intro_corriente_neutro">Calcula la corriente del neutro en un sistema trifásico desequilibrado. No considera armónicos: con cargas no lineales el neutro puede llevar más corriente.</string>
+    <string name="sim_temperatura_ambiente">Temperatura ambiente</string>
+    <string name="sim_temperatura_maxima">Temperatura máxima del aislamiento</string>
+    <string name="sim_corriente_admisible">Corriente admisible</string>
+    <string name="sim_factor_utilizacion">Factor de utilización</string>
+    <string name="sim_factor_simultaneidad">Factor de simultaneidad</string>
+    <string name="sim_seccion">Sección del conductor</string>
+    <string name="sim_resistividad">Resistividad a 20 °C</string>
+    <string name="sim_corrientes_fase">Corrientes de fase</string>
+    <string name="sim_perdidas">Pérdidas</string>
+    <string name="sim_conductores_activos">Conductores activos (2 o 3)</string>
+</resources>

@@ -448,7 +448,50 @@ object Fichas {
         Simbolo("°", R.string.sim_angulo_grados), Simbolo("rad", R.string.sim_angulo_rad),
     )
 
+    private fun resistenciaCableF() = simple(
+        listOf(e("R_20 = ", frac("ρ × L", "S × n")), temperaturaR()),
+        Simbolo("ρ", R.string.sim_resistividad, "Ω·mm²/m"), Simbolo("L", R.string.sim_longitud, "m"),
+        Simbolo("S", R.string.sim_seccion, "mm²"), Simbolo("n", R.string.sim_paralelos),
+        Simbolo("α", R.string.sim_alfa, "1/°C"), Simbolo("T", R.string.sim_temperatura, "°C"),
+    )
+
+    private fun temperaturaR() = e("R_T = R_20 × (1 + α × (T − 20))")
+
+    private fun perdidasCableF() = simple(
+        listOf(e("P = k × I^2 × R")),
+        Simbolo("P", R.string.sim_perdidas, "W"), Simbolo("k", R.string.sim_conductores_activos),
+        Simbolo("I", R.string.sim_corriente, "A"), Simbolo("R", R.string.sim_resistencia, "Ω"),
+    )
+
+    private fun temperaturaCableF() = simple(
+        listOf(e("T = T_a + (T_max − T_a) × ", e("(", frac("I", "I_z"), ")^2"))),
+        Simbolo("T_a", R.string.sim_temperatura_ambiente, "°C"), Simbolo("T_max", R.string.sim_temperatura_maxima, "°C"),
+        Simbolo("I", R.string.sim_corriente, "A"), Simbolo("I_z", R.string.sim_corriente_admisible, "A"),
+    )
+
+    private fun corrienteEmpleoF() = Ficha(
+        listOf(
+            TarjetaFicha(R.string.sistema_continua, listOf(e("I_b = ", frac("P × k_u × k_c", "U")))),
+            TarjetaFicha(R.string.sistema_monofasica, listOf(e("I_b = ", frac("P × k_u × k_c", "U × cos φ")))),
+            TarjetaFicha(R.string.sistema_trifasica, listOf(e("I_b = ", frac("P × k_u × k_c", k(true, "U × cos φ"))))),
+        ),
+        listOf(
+            Simbolo("P", R.string.sim_potencia_activa, "W"), Simbolo("k_u", R.string.sim_factor_utilizacion),
+            Simbolo("k_c", R.string.sim_factor_simultaneidad), Simbolo("U", R.string.sim_tension_ff, "V"),
+        ),
+    )
+
+    private fun neutroF() = simple(
+        listOf(e("I_N = ", raiz("I_1^2 + I_2^2 + I_3^2 − I_1 I_2 − I_2 I_3 − I_3 I_1"))),
+        Simbolo("I_1, I_2, I_3", R.string.sim_corrientes_fase, "A"),
+    )
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaResistenzaCavo" to ::resistenciaCableF,
+        "FormulaPerditaPotenzaCavo" to ::perdidasCableF,
+        "FormulaTemperaturaCavo" to ::temperaturaCableF,
+        "FormulaCorrenteImpiego" to ::corrienteEmpleoF,
+        "FormulaCorrenteNeutro" to ::neutroF,
         "FormulaConversioneTemperatura" to ::temperaturaF,
         "FormulaAmplitude" to ::amplitudF,
         "FormulaFunzioniTrigonometriche" to ::trigonometricaF,

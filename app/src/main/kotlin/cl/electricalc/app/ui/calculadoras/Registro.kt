@@ -7,7 +7,8 @@ object Registro {
         CalculadorasTierra.todas + CalculadorasRic.todas + CalculadorasProteccion.todas +
         CalculadorasEmpalme.todas + CalculadoraDuctos.ductos +
         CalculadorasEnergia.todas + CalculadoraPuestaEnServicio.protocolo + CalculadoraTablero.tablero + CalculadoraAutogeneracion.fv + CalculadoraVolumenesBano.volumenes + CalculadoraImpedanciaBucle.bucle + CalculadoraTransformador.transformador + CalculadoraAreasPeligrosas.areas + CalculadoraMantenimiento.plan +
-        CalculadorasMotor.todas + CalculadorasElectronica.todas + CalculadorasConversion.todas
+        CalculadorasMotor.todas + CalculadorasElectronica.todas + CalculadorasConversion.todas +
+        CalculadorasConductor.todas
 
     private val porId = todas.associateBy { it.id }
 

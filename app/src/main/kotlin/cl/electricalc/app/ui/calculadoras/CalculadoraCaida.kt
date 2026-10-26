@@ -64,14 +64,14 @@ object CalculadoraCaida {
         ).map { TextoOpcion.Recurso(it) },
     )
 
-    private val seccion = CampoSeccion(Ids.SECCION, R.string.campo_seccion, listOf(R.string.ayuda_seccion))
+    internal val seccion = CampoSeccion(Ids.SECCION, R.string.campo_seccion, listOf(R.string.ayuda_seccion))
 
-    private val paralelos = CampoOpciones(
+    internal val paralelos = CampoOpciones(
         Ids.PARALELOS, R.string.campo_paralelos, listOf(R.string.ayuda_paralelos),
         opciones = (1..8).map { TextoOpcion.Literal(it.toString()) },
     )
 
-    private val longitud = CampoNumerico(
+    internal val longitud = CampoNumerico(
         Ids.LONGITUD, R.string.campo_longitud, listOf(R.string.ayuda_longitud),
         unidades = { Unidades.longitud }, porDefecto = { if (it.longitudEnPies) "ft" else "m" }, hint = { "50" },
     )
@@ -81,17 +81,17 @@ object CalculadoraCaida {
         unidades = { Unidades.longitud }, porDefecto = { if (it.longitudEnPies) "ft" else "m" }, hint = { "100" },
     )
 
-    private val material = CampoOpciones(
+    internal val material = CampoOpciones(
         Ids.MATERIAL, R.string.campo_material, listOf(R.string.ayuda_material),
         opciones = listOf(TextoOpcion.Recurso(R.string.material_cobre), TextoOpcion.Recurso(R.string.material_aluminio)),
     )
 
-    private val tipoCable = CampoOpciones(
+    internal val tipoCable = CampoOpciones(
         Ids.TIPO_CABLE, R.string.campo_tipo_cable, listOf(R.string.ayuda_tipo_cable),
         opciones = listOf(TextoOpcion.Recurso(R.string.cable_unipolar), TextoOpcion.Recurso(R.string.cable_multipolar)),
     )
 
-    private val temperatura = CampoNumerico(
+    internal val temperatura = CampoNumerico(
         Ids.TEMPERATURA, R.string.campo_temperatura,
         listOf(R.string.ayuda_temperatura, R.string.ayuda_temperatura_valores),
         unidades = { Unidades.temperatura }, porDefecto = { if (it.temperaturaEnFahrenheit) "°F" else "°C" },
@@ -103,7 +103,7 @@ object CalculadoraCaida {
     private val soloEnAlterna: (Campo, SistemaElectrico, Variante?, Map<String, Unidad>) -> Boolean =
         { campo, sistema, _, _ -> campo.id != Ids.FASE || sistema.esAlterna }
 
-    private fun cosPhi(e: Entrada) = if (e.sistema.esAlterna) e.valor(Ids.FASE) else 1.0
+    internal fun cosPhi(e: Entrada) = if (e.sistema.esAlterna) e.valor(Ids.FASE) else 1.0
 
     /** Corriente de la carga: directa si viene en amperes, o desde la potencia con la tensión y el cosφ. */
     private fun corriente(e: Entrada): Double {
@@ -116,7 +116,7 @@ object CalculadoraCaida {
         )
     }
 
-    private fun cable(e: Entrada, longitudM: Double): Cable {
+    internal fun cable(e: Entrada, longitudM: Double): Cable {
         val indice = e.opcion(Ids.SECCION)
         return Cable(
             seccion = if (e.unidad(Ids.SECCION).simbolo == AWG) Seccion.Awg(indice) else Seccion.Metrica(indice),
