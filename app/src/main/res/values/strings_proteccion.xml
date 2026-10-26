@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_aplicacion_diferencial">Qué protege</string>
+    <string name="ayuda_aplicacion_diferencial">El tipo de carga o de instalación define la clase del diferencial (AC, A o B) y su sensibilidad máxima.</string>
+    <string name="dif_alumbrado">Circuito de alumbrado (iluminación o enchufes)</string>
+    <string name="dif_no_lineal">Cargas no lineales (electrónica, computación)</string>
+    <string name="dif_sin_cero">Cargas que pueden no tener paso por cero (corriente continua)</string>
+    <string name="dif_tt">Instalación en esquema TT</string>
+    <string name="dif_ve1">Vehículo eléctrico, modo de carga 1</string>
+    <string name="dif_ve2">Vehículo eléctrico, modo de carga 2</string>
+    <string name="dif_ve3">Vehículo eléctrico, modo de carga 3 (SAVE)</string>
+    <string name="dif_ve4">Vehículo eléctrico, modo de carga 4</string>
+    <string name="res_tipo_diferencial">Tipo</string>
+    <string name="res_sensibilidad_max">Sensibilidad</string>
+    <string name="res_referencia">Referencia</string>
+    <string name="res_alternativa">Alternativa</string>
+    <string name="intro_selector_diferencial">Indica el tipo y la sensibilidad máxima del protector diferencial según la carga, con la referencia del RIC. La clase A cubre corrientes alternas y continuas pulsantes; la B, también corriente continua.</string>
+    <string name="campo_ra">Resistencia de tierra RA</string>
+    <string name="ayuda_ra">Suma de la resistencia de la toma de tierra y de los conductores de protección de las masas (medida o estimada con la calculadora de electrodos).</string>
+    <string name="campo_sensibilidad">Sensibilidad del diferencial IΔn</string>
+    <string name="ayuda_sensibilidad">Corriente diferencial asignada. En TT el RIC N°05 exige diferenciales de hasta 30 mA.</string>
+    <string name="campo_lugar">Lugar</string>
+    <string name="ayuda_lugar">Define la tensión de contacto límite (numeral 5.8): 50 V CA en lugares secos y 24 V CA en lugares húmedos o mojados.</string>
+    <string name="lugar_seco">Seco</string>
+    <string name="lugar_humedo">Húmedo o mojado</string>
+    <string name="corriente_alterna">Alterna</string>
+    <string name="res_tension_contacto">Tensión de contacto RA × IΔn</string>
+    <string name="res_ra_maxima">RA máxima admisible</string>
+    <string name="res_ul">Tensión límite UL</string>
+    <string name="ver_tension_contacto">Tensión de contacto en TT</string>
+    <string name="intro_verificacion_tt">Verifica la coordinación entre el diferencial y la puesta a tierra en un esquema TT: la tensión de contacto RA × IΔn no debe superar la tensión límite UL (RIC N°05, numeral 8.7.7.3).</string>
+</resources>

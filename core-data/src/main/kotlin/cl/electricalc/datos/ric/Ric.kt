@@ -266,6 +266,8 @@ object Ric {
     val motores: AlimentacionMotores by lazy { leer("ric-07/alimentacion-motores.json") }
     val circuitosAlumbrado: CircuitosAlumbrado by lazy { leer("ric-10/circuitos-alumbrado.json") }
     val vivienda: RequisitosVivienda by lazy { leer("ric-10/requisitos-vivienda.json") }
+    val contactos: ProteccionContactos by lazy { leer("ric-05/proteccion-contactos.json") }
+    val diferencialesVe: DiferencialesVe by lazy { leer("ric-15/diferenciales-ve.json") }
 
     /** Todas las fuentes transcritas, para listarlas en la página de cada pliego. */
     val todas: List<FuenteRic>
@@ -273,6 +275,7 @@ object Ric {
             caidas, factoresDemanda, simultaneidad, seccionesMinimas, colores, capacidad, capacidadMovil, fn, ft,
             resistividad, electrodos, seccionProteccion, medicionResistividad,
             motores, circuitosAlumbrado, vivienda,
+            contactos, diferencialesVe,
         )
 
     fun delPliego(numero: Int): List<FuenteRic> = todas.filter { it.pliego == numero }

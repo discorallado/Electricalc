@@ -4,7 +4,7 @@ package cl.electricalc.datos.ric
 enum class EstadoVerificacion { CUMPLE, NO_CUMPLE, REVISAR }
 
 /** Qué se verificó; la app lo usa para elegir el texto. */
-enum class TipoVerificacion { CAIDA_TRAMO, CAIDA_TOTAL, SECCION_MINIMA }
+enum class TipoVerificacion { CAIDA_TRAMO, CAIDA_TOTAL, SECCION_MINIMA, TENSION_CONTACTO }
 
 /**
  * Resultado de comparar un valor calculado con un límite del RIC. [limite] y [calculado] van en la
@@ -42,6 +42,14 @@ object VerificacionRic {
         return Verificacion(
             TipoVerificacion.SECCION_MINIMA, estado(mm2 >= minima.mm2 - 0.005), mm2, minima.mm2, tabla, minima,
         )
+    }
+
+    /** Esquema TT: RA × Ia ≤ UL (RIC N°05, numeral 8.7.7.3). */
+    fun tt(resistenciaOhm: Double, sensibilidadA: Double, humedo: Boolean, continua: Boolean = false): Verificacion {
+        val c = Ric.contactos
+        val ul = c.tensionLimite.valor(humedo, continua)
+        val contacto = resistenciaOhm * sensibilidadA
+        return Verificacion(TipoVerificacion.TENSION_CONTACTO, estado(contacto <= ul), contacto, ul, c)
     }
 
     private fun estado(cumple: Boolean) = if (cumple) EstadoVerificacion.CUMPLE else EstadoVerificacion.NO_CUMPLE

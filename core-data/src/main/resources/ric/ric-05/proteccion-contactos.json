@@ -1,0 +1,23 @@
+{
+  "pliego": 5,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "8.7.7",
+  "tabla": null,
+  "titulo": "Protección contra contactos indirectos: tensión límite, esquema TT y diferenciales",
+  "paginas": [3, 9, 13, 15, 17],
+  "tension_limite": { "numeral": "5.8", "seco_ca": 50, "seco_cc": 120, "humedo_ca": 24, "humedo_cc": 60 },
+  "tt": { "numeral": "8.7.7.3", "diferencial_max_ma": 30 },
+  "tn": { "numeral": "8.7.6", "tabla": "5.1", "diferencial_max_ma": 30,
+    "tiempos": [ { "u0": "220", "ca_s": 0.4, "cc_s": 5 }, { "u0": "380", "ca_s": 0.2, "cc_s": 0.4 }, { "u0": "> 380", "ca_s": 0.1, "cc_s": 0.1 } ] },
+  "it": { "tabla": "5.2",
+    "tiempos": [ { "u0_u": "230/400", "sin_neutro_s": 0.4, "con_neutro_s": 0.8 }, { "u0_u": "400/690", "sin_neutro_s": 0.2, "con_neutro_s": 0.4 }, { "u0_u": "580/1000", "sin_neutro_s": 0.1, "con_neutro_s": 0.2 } ] },
+  "clases": { "numeral": "7.8.3", "no_senoidal": "A", "sin_paso_por_cero": "B" },
+  "notas": [
+    "Numeral 5.8: tensión de seguridad máxima de 50 V CA y 120 V CC en lugares secos, y 24 V CA y 60 V CC en lugares húmedos o mojados y salas de operaciones quirúrgicas.",
+    "Numeral 8.7.7.3 (TT): RA × Ia ≤ UL, con RA la suma de la resistencia de la toma de tierra y de los conductores de protección, e Ia la sensibilidad asignada del diferencial.",
+    "Numeral 8.7.7.4 (TT): diferenciales de sensibilidad no superior a 30 mA; las protecciones de máxima corriente solo si RA es muy baja.",
+    "Numeral 8.7.6.3 (TN): protecciones de máxima corriente o diferenciales de hasta 30 mA; en TN-C no se pueden usar diferenciales (8.7.6.4).",
+    "Numeral 7.8.3: con corrientes diferenciales no senoidales (cargas no lineales, computación, radiología) los diferenciales serán de clase A; si las cargas pueden no tener paso por cero, de clase B."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

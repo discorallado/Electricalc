@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_aplicacion_diferencial">What it protects</string>
+    <string name="ayuda_aplicacion_diferencial">The type of load or installation sets the RCD class (AC, A or B) and its maximum sensitivity.</string>
+    <string name="dif_alumbrado">Lighting or outlet circuit</string>
+    <string name="dif_no_lineal">Non-linear loads (electronics, computers)</string>
+    <string name="dif_sin_cero">Loads that may not cross zero (DC)</string>
+    <string name="dif_tt">TT earthing installation</string>
+    <string name="dif_ve1">EV, charging mode 1</string>
+    <string name="dif_ve2">EV, charging mode 2</string>
+    <string name="dif_ve3">EV, charging mode 3 (EVSE)</string>
+    <string name="dif_ve4">EV, charging mode 4</string>
+    <string name="res_tipo_diferencial">Type</string>
+    <string name="res_sensibilidad_max">Sensitivity</string>
+    <string name="res_referencia">Reference</string>
+    <string name="res_alternativa">Alternative</string>
+    <string name="intro_selector_diferencial">Gives the RCD type and maximum sensitivity for the load, with the RIC reference. Class A covers AC and pulsating DC; class B also smooth DC.</string>
+    <string name="campo_ra">Earth resistance RA</string>
+    <string name="ayuda_ra">Sum of the earth electrode resistance and the protective conductors of the exposed parts.</string>
+    <string name="campo_sensibilidad">RCD sensitivity IΔn</string>
+    <string name="ayuda_sensibilidad">Rated residual current. In TT, RIC N°05 requires RCDs of at most 30 mA.</string>
+    <string name="campo_lugar">Location</string>
+    <string name="ayuda_lugar">Sets the limit touch voltage (clause 5.8): 50 V AC in dry places and 24 V AC in damp or wet places.</string>
+    <string name="lugar_seco">Dry</string>
+    <string name="lugar_humedo">Damp or wet</string>
+    <string name="corriente_alterna">AC</string>
+    <string name="res_tension_contacto">Touch voltage RA × IΔn</string>
+    <string name="res_ra_maxima">Maximum RA</string>
+    <string name="res_ul">Limit voltage UL</string>
+    <string name="ver_tension_contacto">Touch voltage in TT</string>
+    <string name="intro_verificacion_tt">Checks RCD and earthing coordination in a TT system: the touch voltage RA × IΔn must not exceed the limit voltage UL (RIC N°05, clause 8.7.7.3).</string>
+</resources>

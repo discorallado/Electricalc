@@ -1,0 +1,18 @@
+{
+  "pliego": 15,
+  "version": "Resolución Exenta N°33.374 del 30/09/2020",
+  "numeral": "12.5",
+  "tabla": null,
+  "titulo": "Protección diferencial de la infraestructura de recarga de vehículos eléctricos",
+  "paginas": [14],
+  "modos": [
+    { "modo": 1, "tipo": "A", "sensibilidad_ma": 30, "numeral": "12.5.2" },
+    { "modo": 2, "tipo": "A", "sensibilidad_ma": 30, "numeral": "12.5.3" },
+    { "modo": 3, "tipo": "B", "sensibilidad_ma": 30, "alternativa": "Tipo A de hasta 30 mA más un dispositivo que desconecte ante una fuga de corriente continua mayor a 6 mA; si el SAVE ya lo incluye, tipo A de hasta 300 mA por conector.", "numeral": "12.5.4" },
+    { "modo": 4, "tipo": "A", "sensibilidad_ma": 30, "alternativa": "SAVE de más de 100 kW: hasta 300 mA.", "numeral": "12.5.5" }
+  ],
+  "notas": [ "Las medidas generales contra contactos directos e indirectos son las del RIC N°05 (numeral 12.5.1). Ver anexo 15.4." ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "En el modo 3 el pliego exige «tipo B» o la alternativa tipo A + detección de CC de 6 mA; se guarda B como opción principal."
+  ] }
+}

@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(16, Ric.todas.size)
+        assertEquals(18, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -22,7 +22,7 @@ class RicTest {
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(3, 4, 6, 7, 10), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(3, 4, 5, 6, 7, 10, 15), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -182,5 +182,16 @@ class RicTest {
         assertEquals(2, v.centrosIluminacionMinimos(12.0))
         assertEquals(2, v.enchufesMinimos(14.0))
         assertEquals(1, v.enchufesMinimos(8.0))
+    }
+
+    @Test
+    fun `diferenciales RIC 05 y 15`() {
+        val c = Ric.contactos
+        assertEquals(1666.67, c.resistenciaMaximaTt(0.03, humedo = false), 0.01)
+        assertEquals(800.0, c.resistenciaMaximaTt(0.03, humedo = true), 1e-9)
+        assertEquals(30, c.tt.diferencialMaxMa)
+        assertEquals("B", c.clases.sinPasoPorCero)
+        assertEquals("B", Ric.diferencialesVe.modo(3).tipo)
+        assertEquals(30, Ric.diferencialesVe.modo(1).sensibilidadMa)
     }
 }

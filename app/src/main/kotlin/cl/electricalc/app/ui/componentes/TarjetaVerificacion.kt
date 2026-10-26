@@ -63,10 +63,15 @@ private fun FilaVerificacion(v: Verificacion, alAbrirPliego: (Int) -> Unit) {
     val titulo = when (v.tipo) {
         TipoVerificacion.CAIDA_TRAMO -> stringResource(R.string.ver_caida_tramo)
         TipoVerificacion.CAIDA_TOTAL -> stringResource(R.string.ver_caida_total)
+        TipoVerificacion.TENSION_CONTACTO -> stringResource(R.string.ver_tension_contacto)
         TipoVerificacion.SECCION_MINIMA -> v.uso?.let { stringResource(R.string.ver_seccion_uso, nombreUso(it.uso)) }
             ?: stringResource(R.string.ver_seccion)
     }
-    val unidad = if (v.tipo == TipoVerificacion.SECCION_MINIMA) "mm²" else "%"
+    val unidad = when (v.tipo) {
+        TipoVerificacion.SECCION_MINIMA -> "mm²"
+        TipoVerificacion.TENSION_CONTACTO -> "V"
+        else -> "%"
+    }
     val decimales = 2
     val detalle = when {
         v.limite == null || v.calculado == null -> stringResource(R.string.ver_seccion_sin_uso)
