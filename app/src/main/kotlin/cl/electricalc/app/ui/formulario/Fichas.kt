@@ -388,7 +388,77 @@ object Fichas {
         Simbolo("k", R.string.sim_factor_velocidad), Simbolo("f", R.string.sim_frecuencia, "Hz"),
     )
 
+    private fun temperaturaF() = simple(
+        listOf(e("°F = °C × ", frac("9", "5"), " + 32"), e("K = °C + 273,15")),
+        Simbolo("°C", R.string.sim_temperatura_c), Simbolo("°F", R.string.sim_temperatura_f), Simbolo("K", R.string.sim_temperatura_k),
+    )
+
+    private fun amplitudF() = simple(
+        listOf(e("U_p = ", raiz("2"), " × U_ef"), e("U_pp = 2 × U_p"), e("U_med = ", frac("2 × U_p", "π"))),
+        Simbolo("U_p", R.string.sim_pico, "V"), Simbolo("U_ef", R.string.sim_eficaz, "V"),
+    )
+
+    private fun trigonometricaF() = simple(
+        listOf(e("tan φ = ", frac("$sen φ", "cos φ")), e("$sen φ = ", raiz("1 − cos^2 φ")), e("φ = arccos(cos φ)")),
+        Simbolo("φ", R.string.sim_desfase, "°"),
+    )
+
+    private fun ahKwhF() = simple(
+        listOf(e("E = ", frac("C × U", "1000")), e("C = ", frac("1000 × E", "U"))),
+        Simbolo("E", R.string.sim_energia, "kWh"), Simbolo("C", R.string.sim_capacidad_ah, "Ah"), Simbolo("U", R.string.sim_tension_alimentacion, "V"),
+    )
+
+    private fun varUfF() = Ficha(
+        listOf(
+            TarjetaFicha(R.string.conexion_estrella, listOf(e("C = ", frac("Q", "2π × f × U^2")))),
+            TarjetaFicha(R.string.conexion_triangulo, listOf(e("C = ", frac("Q", "3 × 2π × f × U^2")))),
+        ),
+        listOf(
+            Simbolo("C", R.string.sim_capacidad, "F"), Simbolo("Q", R.string.sim_potencia_reactiva, "var"),
+            Simbolo("U", R.string.sim_tension_ff, "V"), Simbolo("f", R.string.sim_frecuencia, "Hz"),
+        ),
+    )
+
+    private fun rpmF() = simple(
+        listOf(e("ω = ", frac("2π × n", "60")), e("v = ω × ", frac("D", "2"))),
+        Simbolo("ω", R.string.sim_velocidad_angular, "rad/s"), Simbolo("n", R.string.sim_velocidad_rotor, "rpm"),
+        Simbolo("D", R.string.sim_diametro, "m"), Simbolo("v", R.string.sim_velocidad_tangencial, "m/s"),
+    )
+
+    private fun frecuenciaAngularF() = simple(
+        listOf(e("ω = 2π × f"), e("T = ", frac("1", "f"))),
+        Simbolo("ω", R.string.sim_velocidad_angular, "rad/s"), Simbolo("f", R.string.sim_frecuencia, "Hz"),
+    )
+
+    private fun trianguloEstrellaF() = Ficha(
+        listOf(
+            TarjetaFicha(R.string.triangulo_a_estrella, listOf(e("R_a = ", frac("R_ab × R_ca", "R_ab + R_bc + R_ca")))),
+            TarjetaFicha(R.string.estrella_a_triangulo, listOf(e("R_ab = ", frac("R_a R_b + R_b R_c + R_c R_a", "R_c")))),
+        ),
+        listOf(Simbolo("R", R.string.sim_resistencia, "Ω")),
+    )
+
+    private fun seccionF() = simple(
+        listOf(e("d = 0,127 × 92^((36 − n) / 39)"), e("S = ", frac("π × d^2", "4")), e("1 kcmil = 0,5067 mm²")),
+        Simbolo("n", R.string.sim_calibre_awg), Simbolo("d", R.string.sim_diametro, "mm"),
+    )
+
+    private fun anguloF() = simple(
+        listOf(e("rad = ° × ", frac("π", "180")), e("grad = ° × ", frac("10", "9"))),
+        Simbolo("°", R.string.sim_angulo_grados), Simbolo("rad", R.string.sim_angulo_rad),
+    )
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaConversioneTemperatura" to ::temperaturaF,
+        "FormulaAmplitude" to ::amplitudF,
+        "FormulaFunzioniTrigonometriche" to ::trigonometricaF,
+        "FormulaConversioneAhKwh" to ::ahKwhF,
+        "FormulaConversioneVarUf" to ::varUfF,
+        "FormulaConversioneRpm" to ::rpmF,
+        "FormulaFrequenzaAngolare" to ::frecuenciaAngularF,
+        "FormulaTriangoloStella" to ::trianguloEstrellaF,
+        "FormulaConversioneSezione" to ::seccionF,
+        "FormulaConversioneAngolo" to ::anguloF,
         "FormulaReattanza" to ::reactanciaF,
         "FormulaImpedenzaDaResistenzaEReattanza" to ::impedanciaRx,
         "FormulaEffettoJoule" to ::jouleF,
