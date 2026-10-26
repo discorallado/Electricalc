@@ -245,7 +245,83 @@ object Fichas {
         )
     }
 
+    private val leyendaMotor = listOf(
+        Simbolo("P", R.string.sim_potencia_eje, "W"),
+        Simbolo("U", R.string.sim_tension_alimentacion, "V"),
+        Simbolo("I", R.string.sim_corriente, "A"),
+        Simbolo("cos φ", R.string.sim_factor_potencia),
+        Simbolo("η", R.string.sim_rendimiento),
+    )
+
+    /** Fórmula de motor por sistema: en continua sin cos φ, en trifásica con √3. */
+    private fun motor(cc: String, ca: (tri: Boolean) -> Expr): Ficha = Ficha(
+        listOf(
+            TarjetaFicha(R.string.sistema_continua, listOf(e(cc))),
+            TarjetaFicha(R.string.sistema_monofasica, listOf(ca(false))),
+            TarjetaFicha(R.string.sistema_trifasica, listOf(ca(true))),
+        ),
+        leyendaMotor,
+    )
+
+    private fun corrienteMotor() = motor("I = P / (U × η)") { t -> e("I = ", frac("P", k(t, "U × cos φ × η"))) }
+    private fun potenciaMotor() = motor("P = U × I × η") { t -> e("P = ", k(t, "U × I × cos φ × η")) }
+    private fun tensionMotor() = motor("U = P / (I × η)") { t -> e("U = ", frac("P", k(t, "I × cos φ × η"))) }
+    private fun rendimientoMotor() = motor("η = P / (U × I)") { t -> e("η = ", frac("P", k(t, "U × I × cos φ"))) }
+    private fun fpMotor() = Ficha(
+        listOf(
+            TarjetaFicha(R.string.sistema_monofasica, listOf(e("cos φ = ", frac("P", "U × I × η")))),
+            TarjetaFicha(R.string.sistema_trifasica, listOf(e("cos φ = ", frac("P", k(true, "U × I × η"))))),
+        ),
+        leyendaMotor,
+    )
+
+    private val leyendaVelocidad = listOf(
+        Simbolo("n_s", R.string.sim_velocidad_sincrona, "rpm"),
+        Simbolo("n", R.string.sim_velocidad_rotor, "rpm"),
+        Simbolo("f", R.string.sim_frecuencia, "Hz"),
+        Simbolo("p", R.string.sim_polos),
+        Simbolo("s", R.string.sim_deslizamiento),
+    )
+
+    private fun velocidadMotor() = Ficha(
+        listOf(TarjetaFicha(R.string.ficha_comunes, listOf(e("n_s = ", frac("120 × f", "p")), e("n = n_s × (1 − s)")))),
+        leyendaVelocidad,
+    )
+
+    private fun deslizamientoMotor() = Ficha(
+        listOf(TarjetaFicha(R.string.ficha_comunes, listOf(e("n_s = ", frac("120 × f", "p")), e("s = ", frac("n_s − n", "n_s"), " × 100")))),
+        leyendaVelocidad,
+    )
+
+    private fun parMotor() = Ficha(
+        listOf(TarjetaFicha(R.string.ficha_comunes, listOf(e("T = ", frac("60 × P", "2π × n")), e("P = ", frac("2π × n × T", "60"))))),
+        listOf(
+            Simbolo("T", R.string.sim_par, "N·m"),
+            Simbolo("P", R.string.sim_potencia_eje, "W"),
+            Simbolo("n", R.string.sim_velocidad_rotor, "rpm"),
+        ),
+    )
+
+    private fun relacionTransformador() = Ficha(
+        listOf(TarjetaFicha(R.string.ficha_comunes, listOf(e("a = ", frac("U_1", "U_2"), " = ", frac("N_1", "N_2"), " = ", frac("I_2", "I_1"))))),
+        listOf(
+            Simbolo("a", R.string.sim_relacion),
+            Simbolo("U_1, U_2", R.string.sim_tensiones_devanados, "V"),
+            Simbolo("N_1, N_2", R.string.sim_espiras),
+            Simbolo("I_1, I_2", R.string.sim_corrientes_devanados, "A"),
+        ),
+    )
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaCorrenteMotore" to ::corrienteMotor,
+        "FormulaPotenzaMotore" to ::potenciaMotor,
+        "FormulaTensioneMotore" to ::tensionMotor,
+        "FormulaFattorePotenzaMotore" to ::fpMotor,
+        "FormulaRendimentoMotore" to ::rendimientoMotor,
+        "FormulaVelocitaMotore" to ::velocidadMotor,
+        "FormulaScorrimentoMotore" to ::deslizamientoMotor,
+        "FormulaCoppiaMassima" to ::parMotor,
+        "FormulaPrimarioSecondarioTrasformatore" to ::relacionTransformador,
         "FormulaCorrente" to ::corriente,
         "FormulaTensione" to ::tension,
         "FormulaPotenzaAttiva" to ::potenciaActiva,
