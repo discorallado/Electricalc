@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_cable">Cable y sección</string>
+    <string name="ayuda_cable">Tipo de cable y sección de las tablas N°4.17 a N°4.20 del RIC N°04, con su diámetro exterior y área.</string>
+    <string name="campo_cantidad_conductores">Conductores en el ducto</string>
+    <string name="ayuda_cantidad_conductores">De 1 a 5, incluido el de tierra si va en el haz.</string>
+    <string name="campo_diametro_interior">Diámetro interior de la tubería</string>
+    <string name="ayuda_diametro_interior">Diámetro interior útil del tubo (no el nominal). La ocupación admitida es 50 % con 1 conductor y 33 % con 2 o más.</string>
+    <string name="campo_area_bandeja">Área útil de la bandeja o moldura</string>
+    <string name="ayuda_area_bandeja">Ancho por alto útil. Los conductores no deben ocupar más del 40 %.</string>
+    <string name="variante_ducto_recomendado">Ducto recomendado</string>
+    <string name="variante_cantidad_tuberia">Cuántos caben en una tubería</string>
+    <string name="variante_cantidad_bandeja">Cuántos caben en una bandeja</string>
+    <string name="res_ducto_nominal">Diámetro nominal del ducto</string>
+    <string name="res_cantidad_maxima">Cantidad máxima de conductores</string>
+    <string name="res_cable">Cable</string>
+    <string name="intro_ductos">Dimensiona tuberías y bandejas según el RIC N°04: diámetro nominal del ducto para 1 a 5 conductores (tablas N°4.17 a N°4.20), cantidad máxima en una tubería (tabla N°4.21) o en una bandeja (40 %). Las tablas valen para tramos de hasta 20 m con no más de dos curvas que sumen 180°.</string>
+</resources>

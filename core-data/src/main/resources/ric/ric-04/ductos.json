@@ -1,0 +1,927 @@
+{
+  "pliego": 4,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "7.16.1.14",
+  "tabla": "4.21",
+  "titulo": "Ocupación de tuberías y dimensiones de cables",
+  "paginas": [
+    34,
+    41,
+    51,
+    52,
+    53,
+    54
+  ],
+  "ocupacion": {
+    "uno": 50,
+    "dos": 33,
+    "tres_o_mas": 33,
+    "union_gabinetes": 60,
+    "union_largo_max_m": 1,
+    "redondeo_decimal": 0.8
+  },
+  "bandejas": {
+    "numeral": "7.10.19",
+    "porcentaje": 40
+  },
+  "largo_max_m": 20,
+  "tablas": [
+    {
+      "tabla": "4.17",
+      "titulo": "Cables de uso interior domiciliarios, sección milimétrica",
+      "unidad": "mm2",
+      "cables": [
+        "H07V-U",
+        "H07V-R",
+        "H07V-K",
+        "H07Z1-U",
+        "H07Z1-R",
+        "H07Z1-K"
+      ],
+      "filas": [
+        {
+          "seccion": "1,5",
+          "diametro_mm": 3,
+          "area_mm2": 7,
+          "ductos_mm": [
+            16,
+            16,
+            16,
+            20,
+            20
+          ]
+        },
+        {
+          "seccion": "2,5",
+          "diametro_mm": 3.7,
+          "area_mm2": 11,
+          "ductos_mm": [
+            16,
+            16,
+            20,
+            20,
+            20
+          ]
+        },
+        {
+          "seccion": "4",
+          "diametro_mm": 4.2,
+          "area_mm2": 14,
+          "ductos_mm": [
+            16,
+            16,
+            20,
+            20,
+            25
+          ]
+        },
+        {
+          "seccion": "6",
+          "diametro_mm": 4.7,
+          "area_mm2": 18,
+          "ductos_mm": [
+            16,
+            16,
+            20,
+            25,
+            25
+          ]
+        },
+        {
+          "seccion": "10",
+          "diametro_mm": 6.2,
+          "area_mm2": 30,
+          "ductos_mm": [
+            16,
+            20,
+            25,
+            32,
+            32
+          ]
+        },
+        {
+          "seccion": "16",
+          "diametro_mm": 7.3,
+          "area_mm2": 41,
+          "ductos_mm": [
+            20,
+            25,
+            32,
+            40,
+            40
+          ]
+        },
+        {
+          "seccion": "25",
+          "diametro_mm": 9,
+          "area_mm2": 64,
+          "ductos_mm": [
+            20,
+            32,
+            40,
+            40,
+            50
+          ]
+        },
+        {
+          "seccion": "35",
+          "diametro_mm": 10.1,
+          "area_mm2": 80,
+          "ductos_mm": [
+            25,
+            32,
+            40,
+            50,
+            50
+          ]
+        },
+        {
+          "seccion": "50",
+          "diametro_mm": 11.9,
+          "area_mm2": 112,
+          "ductos_mm": [
+            32,
+            40,
+            50,
+            63,
+            63
+          ]
+        },
+        {
+          "seccion": "70",
+          "diametro_mm": 13.9,
+          "area_mm2": 151,
+          "ductos_mm": [
+            32,
+            50,
+            63,
+            63,
+            75
+          ]
+        },
+        {
+          "seccion": "95",
+          "diametro_mm": 15.9,
+          "area_mm2": 198,
+          "ductos_mm": [
+            40,
+            50,
+            63,
+            75,
+            100
+          ]
+        },
+        {
+          "seccion": "120",
+          "diametro_mm": 17.6,
+          "area_mm2": 243,
+          "ductos_mm": [
+            40,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "150",
+          "diametro_mm": 19.6,
+          "area_mm2": 301,
+          "ductos_mm": [
+            50,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "185",
+          "diametro_mm": 22,
+          "area_mm2": 380,
+          "ductos_mm": [
+            50,
+            75,
+            100,
+            100,
+            125
+          ]
+        },
+        {
+          "seccion": "240",
+          "diametro_mm": 24.7,
+          "area_mm2": 478,
+          "ductos_mm": [
+            63,
+            100,
+            100,
+            125,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "tabla": "4.18",
+      "titulo": "Cables de uso interior domiciliarios, sección AWG / kcmil",
+      "unidad": "awg",
+      "cables": [
+        "THHN",
+        "THWN",
+        "THWN-2"
+      ],
+      "filas": [
+        {
+          "seccion": "14",
+          "diametro_mm": 3,
+          "area_mm2": 6.9,
+          "ductos_mm": [
+            16,
+            16,
+            16,
+            20,
+            20
+          ]
+        },
+        {
+          "seccion": "12",
+          "diametro_mm": 3.5,
+          "area_mm2": 9.4,
+          "ductos_mm": [
+            16,
+            16,
+            20,
+            20,
+            20
+          ]
+        },
+        {
+          "seccion": "10",
+          "diametro_mm": 4.3,
+          "area_mm2": 14.8,
+          "ductos_mm": [
+            16,
+            16,
+            20,
+            20,
+            25
+          ]
+        },
+        {
+          "seccion": "8",
+          "diametro_mm": 5.5,
+          "area_mm2": 23.9,
+          "ductos_mm": [
+            16,
+            25,
+            25,
+            25,
+            32
+          ]
+        },
+        {
+          "seccion": "6",
+          "diametro_mm": 6.4,
+          "area_mm2": 32.4,
+          "ductos_mm": [
+            16,
+            25,
+            25,
+            32,
+            32
+          ]
+        },
+        {
+          "seccion": "4",
+          "diametro_mm": 8.3,
+          "area_mm2": 53.7,
+          "ductos_mm": [
+            20,
+            32,
+            32,
+            40,
+            50
+          ]
+        },
+        {
+          "seccion": "2",
+          "diametro_mm": 9.7,
+          "area_mm2": 73.9,
+          "ductos_mm": [
+            25,
+            32,
+            40,
+            50,
+            50
+          ]
+        },
+        {
+          "seccion": "1",
+          "diametro_mm": 11.1,
+          "area_mm2": 96.8,
+          "ductos_mm": [
+            25,
+            40,
+            50,
+            50,
+            63
+          ]
+        },
+        {
+          "seccion": "1/0",
+          "diametro_mm": 12.1,
+          "area_mm2": 114.4,
+          "ductos_mm": [
+            32,
+            40,
+            50,
+            63,
+            63
+          ]
+        },
+        {
+          "seccion": "2/0",
+          "diametro_mm": 13.1,
+          "area_mm2": 135.6,
+          "ductos_mm": [
+            32,
+            50,
+            63,
+            63,
+            75
+          ]
+        },
+        {
+          "seccion": "3/0",
+          "diametro_mm": 14.3,
+          "area_mm2": 161.2,
+          "ductos_mm": [
+            32,
+            50,
+            63,
+            75,
+            75
+          ]
+        },
+        {
+          "seccion": "4/0",
+          "diametro_mm": 15.7,
+          "area_mm2": 193.5,
+          "ductos_mm": [
+            40,
+            50,
+            63,
+            75,
+            100
+          ]
+        },
+        {
+          "seccion": "250",
+          "diametro_mm": 17.4,
+          "area_mm2": 237.6,
+          "ductos_mm": [
+            40,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "300",
+          "diametro_mm": 18.6,
+          "area_mm2": 271.1,
+          "ductos_mm": [
+            50,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "350",
+          "diametro_mm": 19.8,
+          "area_mm2": 308.4,
+          "ductos_mm": [
+            50,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "400",
+          "diametro_mm": 20.9,
+          "area_mm2": 343.3,
+          "ductos_mm": [
+            50,
+            75,
+            100,
+            100,
+            125
+          ]
+        },
+        {
+          "seccion": "500",
+          "diametro_mm": 23.1,
+          "area_mm2": 418.4,
+          "ductos_mm": [
+            63,
+            75,
+            100,
+            125,
+            125
+          ]
+        },
+        {
+          "seccion": "600",
+          "diametro_mm": 27.1,
+          "area_mm2": 575.9,
+          "ductos_mm": [
+            63,
+            100,
+            125,
+            125,
+            150
+          ]
+        },
+        {
+          "seccion": "750",
+          "diametro_mm": 29.4,
+          "area_mm2": 677.4,
+          "ductos_mm": [
+            75,
+            100,
+            125,
+            150,
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "tabla": "4.19",
+      "titulo": "Cables de uso interior/exterior de fuerza, sección milimétrica",
+      "unidad": "mm2",
+      "cables": [
+        "RV",
+        "RV-K",
+        "RZ1",
+        "RZ1-K",
+        "PV1-F",
+        "ZZ-F"
+      ],
+      "filas": [
+        {
+          "seccion": "1,5",
+          "diametro_mm": 5.7,
+          "area_mm2": 26,
+          "ductos_mm": [
+            16,
+            16,
+            16,
+            20,
+            25
+          ]
+        },
+        {
+          "seccion": "2,5",
+          "diametro_mm": 6.2,
+          "area_mm2": 30,
+          "ductos_mm": [
+            16,
+            20,
+            20,
+            32,
+            32
+          ]
+        },
+        {
+          "seccion": "4",
+          "diametro_mm": 6.6,
+          "area_mm2": 35,
+          "ductos_mm": [
+            16,
+            25,
+            25,
+            32,
+            40
+          ]
+        },
+        {
+          "seccion": "6",
+          "diametro_mm": 7.2,
+          "area_mm2": 41,
+          "ductos_mm": [
+            16,
+            25,
+            32,
+            32,
+            40
+          ]
+        },
+        {
+          "seccion": "10",
+          "diametro_mm": 8.2,
+          "area_mm2": 53,
+          "ductos_mm": [
+            20,
+            32,
+            32,
+            40,
+            50
+          ]
+        },
+        {
+          "seccion": "16",
+          "diametro_mm": 9.3,
+          "area_mm2": 67,
+          "ductos_mm": [
+            25,
+            32,
+            40,
+            50,
+            50
+          ]
+        },
+        {
+          "seccion": "25",
+          "diametro_mm": 10.9,
+          "area_mm2": 94,
+          "ductos_mm": [
+            25,
+            40,
+            50,
+            50,
+            63
+          ]
+        },
+        {
+          "seccion": "35",
+          "diametro_mm": 12,
+          "area_mm2": 113,
+          "ductos_mm": [
+            32,
+            40,
+            50,
+            63,
+            63
+          ]
+        },
+        {
+          "seccion": "50",
+          "diametro_mm": 13.6,
+          "area_mm2": 145,
+          "ductos_mm": [
+            32,
+            50,
+            63,
+            63,
+            75
+          ]
+        },
+        {
+          "seccion": "70",
+          "diametro_mm": 15.7,
+          "area_mm2": 192,
+          "ductos_mm": [
+            40,
+            50,
+            63,
+            75,
+            75
+          ]
+        },
+        {
+          "seccion": "95",
+          "diametro_mm": 17.4,
+          "area_mm2": 238,
+          "ductos_mm": [
+            40,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "120",
+          "diametro_mm": 19.3,
+          "area_mm2": 292,
+          "ductos_mm": [
+            50,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "150",
+          "diametro_mm": 21.4,
+          "area_mm2": 360,
+          "ductos_mm": [
+            50,
+            75,
+            100,
+            100,
+            125
+          ]
+        },
+        {
+          "seccion": "185",
+          "diametro_mm": 23.8,
+          "area_mm2": 443,
+          "ductos_mm": [
+            63,
+            75,
+            100,
+            125,
+            125
+          ]
+        },
+        {
+          "seccion": "240",
+          "diametro_mm": 26.4,
+          "area_mm2": 545,
+          "ductos_mm": [
+            63,
+            100,
+            125,
+            125,
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "tabla": "4.20",
+      "titulo": "Cables de uso interior/exterior de fuerza, sección AWG/kcmil",
+      "unidad": "awg",
+      "cables": [
+        "RV",
+        "RV-K",
+        "RZ1",
+        "RZ1-K"
+      ],
+      "filas": [
+        {
+          "seccion": "14",
+          "diametro_mm": 5.5,
+          "area_mm2": 24,
+          "ductos_mm": [
+            16,
+            16,
+            20,
+            25,
+            32
+          ]
+        },
+        {
+          "seccion": "12",
+          "diametro_mm": 5.9,
+          "area_mm2": 27,
+          "ductos_mm": [
+            16,
+            20,
+            25,
+            32,
+            32
+          ]
+        },
+        {
+          "seccion": "10",
+          "diametro_mm": 6.6,
+          "area_mm2": 34,
+          "ductos_mm": [
+            16,
+            25,
+            32,
+            32,
+            40
+          ]
+        },
+        {
+          "seccion": "8",
+          "diametro_mm": 7.4,
+          "area_mm2": 43,
+          "ductos_mm": [
+            20,
+            25,
+            32,
+            40,
+            40
+          ]
+        },
+        {
+          "seccion": "6",
+          "diametro_mm": 8.4,
+          "area_mm2": 55,
+          "ductos_mm": [
+            20,
+            32,
+            40,
+            40,
+            50
+          ]
+        },
+        {
+          "seccion": "4",
+          "diametro_mm": 10,
+          "area_mm2": 79,
+          "ductos_mm": [
+            25,
+            32,
+            40,
+            50,
+            50
+          ]
+        },
+        {
+          "seccion": "2",
+          "diametro_mm": 11.5,
+          "area_mm2": 104,
+          "ductos_mm": [
+            32,
+            40,
+            50,
+            63,
+            63
+          ]
+        },
+        {
+          "seccion": "1",
+          "diametro_mm": 12.6,
+          "area_mm2": 125,
+          "ductos_mm": [
+            32,
+            40,
+            50,
+            63,
+            63
+          ]
+        },
+        {
+          "seccion": "1/0",
+          "diametro_mm": 13.7,
+          "area_mm2": 147,
+          "ductos_mm": [
+            32,
+            50,
+            63,
+            63,
+            75
+          ]
+        },
+        {
+          "seccion": "2/0",
+          "diametro_mm": 15.1,
+          "area_mm2": 179,
+          "ductos_mm": [
+            40,
+            50,
+            63,
+            75,
+            75
+          ]
+        },
+        {
+          "seccion": "3/0",
+          "diametro_mm": 16.3,
+          "area_mm2": 209,
+          "ductos_mm": [
+            40,
+            63,
+            75,
+            75,
+            100
+          ]
+        },
+        {
+          "seccion": "4/0",
+          "diametro_mm": 18.2,
+          "area_mm2": 260,
+          "ductos_mm": [
+            50,
+            63,
+            75,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "250",
+          "diametro_mm": 19.4,
+          "area_mm2": 296,
+          "ductos_mm": [
+            50,
+            63,
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "seccion": "300",
+          "diametro_mm": 20.7,
+          "area_mm2": 335,
+          "ductos_mm": [
+            50,
+            75,
+            100,
+            100,
+            125
+          ]
+        },
+        {
+          "seccion": "350",
+          "diametro_mm": 22.9,
+          "area_mm2": 412,
+          "ductos_mm": [
+            63,
+            75,
+            100,
+            125,
+            125
+          ]
+        },
+        {
+          "seccion": "400",
+          "diametro_mm": 24.4,
+          "area_mm2": 468,
+          "ductos_mm": [
+            63,
+            100,
+            100,
+            125,
+            125
+          ]
+        },
+        {
+          "seccion": "500",
+          "diametro_mm": 27.9,
+          "area_mm2": 611,
+          "ductos_mm": [
+            63,
+            100,
+            125,
+            125,
+            150
+          ]
+        },
+        {
+          "seccion": "600",
+          "diametro_mm": 30,
+          "area_mm2": 707,
+          "ductos_mm": [
+            75,
+            100,
+            125,
+            150,
+            150
+          ]
+        },
+        {
+          "seccion": "750",
+          "diametro_mm": 32.9,
+          "area_mm2": 850,
+          "ductos_mm": [
+            75,
+            125,
+            150,
+            150,
+            175
+          ]
+        },
+        {
+          "seccion": "1000",
+          "diametro_mm": 38.8,
+          "area_mm2": 1182,
+          "ductos_mm": [
+            100,
+            125,
+            150,
+            175,
+            200
+          ]
+        }
+      ]
+    }
+  ],
+  "notas": [
+    "Tabla N°4.21: los conductores, incluida su aislación, pueden ocupar el 50 % de la sección de la tubería con 1 conductor y el 33 % con 2, 3 o más. En tuberías de unión de gabinetes de hasta 1 m se acepta hasta 60 %.",
+    "Si el cálculo de cantidad da decimales, solo se aproxima al entero superior si el decimal es 0,8 o mayor. El conductor de tierra, si va en el haz, se incluye.",
+    "Numeral 7.16.1.13: las tablas N°4.17 a N°4.20 valen para tramos de hasta 20 m, rectos o con no más de dos curvas que sumen hasta 180°.",
+    "Numerales 7.7.9 y 7.10.19: en molduras, bandejas y escalerillas los conductores no deben ocupar más del 40 % del área útil o de la sección transversal.",
+    "En instalaciones subterráneas el diámetro del ducto debe ser de al menos 25 mm (notas de las tablas N°4.19 y N°4.20)."
+  ],
+  "revision": {
+    "estado": "pendiente",
+    "observaciones": [
+      "Tabla N°4.21: el PDF da 33 % para 2 conductores y también para 3 o más. Confirmar.",
+      "Tablas N°4.17 a N°4.20 extraídas con script desde pdftotext -table."
+    ]
+  }
+}

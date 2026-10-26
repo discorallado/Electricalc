@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_cable">Cable and size</string>
+    <string name="ayuda_cable">Cable type and size from tables N°4.17 to N°4.20 of RIC N°04, with outer diameter and area.</string>
+    <string name="campo_cantidad_conductores">Conductors in the conduit</string>
+    <string name="ayuda_cantidad_conductores">From 1 to 5, including the earth conductor if it is in the bundle.</string>
+    <string name="campo_diametro_interior">Conduit inner diameter</string>
+    <string name="ayuda_diametro_interior">Usable inner diameter (not nominal). Allowed fill is 50 % with 1 conductor and 33 % with 2 or more.</string>
+    <string name="campo_area_bandeja">Usable tray or trunking area</string>
+    <string name="ayuda_area_bandeja">Usable width by height. Conductors must not exceed 40 %.</string>
+    <string name="variante_ducto_recomendado">Recommended conduit</string>
+    <string name="variante_cantidad_tuberia">How many fit in a conduit</string>
+    <string name="variante_cantidad_bandeja">How many fit in a tray</string>
+    <string name="res_ducto_nominal">Nominal conduit diameter</string>
+    <string name="res_cantidad_maxima">Maximum number of conductors</string>
+    <string name="res_cable">Cable</string>
+    <string name="intro_ductos">Sizes conduits and trays per RIC N°04: nominal conduit for 1 to 5 conductors (tables N°4.17–4.20), maximum number in a conduit (table N°4.21) or in a tray (40 %). Tables apply to runs up to 20 m with no more than two bends totalling 180°.</string>
+</resources>

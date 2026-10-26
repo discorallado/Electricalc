@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(20, Ric.todas.size)
+        assertEquals(21, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -199,6 +199,22 @@ class RicTest {
         assertEquals(1.15, v.factorProteccion(200.0))
         // Residencial 50 kW: 10 × 1 + 40 × (0,5 a 1) = 30 a 50 kW.
         assertEquals(30.0 to 50.0, v.demandaConSgc("residencial", 50.0))
+    }
+
+    @Test
+    fun `ductos RIC 04`() {
+        val d = Ric.ductos
+        assertEquals(listOf(15, 19, 15, 20), d.tablas.map { it.filas.size })
+        for (t in d.tablas) for (f in t.filas) {
+            assertEquals(5, f.ductosMm.size, "${t.tabla} ${f.seccion}")
+            assertTrue(f.ductosMm.zipWithNext().all { (a, b) -> b >= a }, "${t.tabla} ${f.seccion}: el ducto no baja con más conductores")
+        }
+        for (t in d.tablas) assertTrue(t.filas.zipWithNext().all { (a, b) -> b.areaMm2 > a.areaMm2 }, t.tabla)
+        // Tubería de 20 mm interior (314 mm²) y cable de 11 mm²: 33 % → 9,4 → 9 conductores.
+        assertEquals(9, d.cantidadMaxima(20.0, 11.0))
+        // 0,86 de un segundo conductor se aproxima, pero no alcanza para 2: queda 1.
+        assertEquals(1, d.cantidadMaxima(10.0, 30.0))
+        assertEquals(4, d.cantidadEnBandeja(1000.0, 100.0))
     }
 
     @Test

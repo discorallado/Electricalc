@@ -5,7 +5,7 @@ object Registro {
     val todas = CalculadorasOhm.todas +
         listOf(CalculadoraCaida.caida, CalculadoraCaida.cargasDistribuidas, CalculadoraCaida.longitudMaxima) +
         CalculadorasTierra.todas + CalculadorasRic.todas + CalculadorasProteccion.todas +
-        CalculadorasEmpalme.todas
+        CalculadorasEmpalme.todas + CalculadoraDuctos.ductos
 
     private val porId = todas.associateBy { it.id }
 
