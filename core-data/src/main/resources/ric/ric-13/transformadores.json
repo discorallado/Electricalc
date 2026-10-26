@@ -1,0 +1,27 @@
+{
+  "pliego": 13,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "13",
+  "tabla": "13.3",
+  "titulo": "Protección, ventilación y vigilancia térmica de transformadores",
+  "paginas": [8, 9, 11],
+  "fusible_primario_max_in": 1.5,
+  "automatico_primario_max_in": 3,
+  "limite_impedancia_pu": 0.06,
+  "tabla_13_3": [
+    { "impedancia": "baja", "primario_automatico": 6, "primario_fusible": 3, "secundario_mt_automatico": 3, "secundario_mt_fusible": 1.5, "secundario_bt": 2.5 },
+    { "impedancia": "alta", "primario_automatico": 4, "primario_fusible": 2, "secundario_mt_automatico": 2.5, "secundario_mt_fusible": 1.25, "secundario_bt": 2.5 }
+  ],
+  "ventilacion_cm2_por_kva": 20,
+  "ventilacion_min_m2": 0.1,
+  "renovaciones_hora": 20,
+  "pt100_seco_sobre_kva": 100,
+  "buchholz_aceite_sobre_kva": 250,
+  "notas": [
+    "Numerales 13.2 y 13.4: protección individual del primario con fusible de hasta 1,5 In (o el comercial superior más próximo) o automático de hasta 3 In.",
+    "Numeral 13.5 y tabla N°13.3: se puede omitir la protección individual si las del alimentador primario y del secundario no superan los múltiplos de In de la tabla, según la impedancia del transformador sea de hasta 0,06 por unidad o mayor.",
+    "Numeral 8.10: ventilación natural con 20 cm² libres por kVA, mínimo 0,1 m²; ventilación forzada con 20 renovaciones por hora del volumen del recinto.",
+    "Numerales 9.7 y 9.8: en edificios de uso general, transformadores secos sobre 100 kVA con sondas PT100, y en aceite sobre 250 kVA con detector de sobretemperatura o relé Buchholz."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

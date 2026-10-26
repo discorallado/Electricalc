@@ -295,3 +295,66 @@ object CalculadoraImpedanciaBucle {
             )
     }
 }
+
+/** Transformador de subestación: potencia, corrientes, cortocircuito en BT y exigencias del RIC N°13. */
+object CalculadoraTransformador {
+    private val t by lazy { cl.electricalc.datos.ric.Ric.transformadores }
+    private val porciento = Unidad("%") { it / 100 }
+
+    val transformador = calculadoraSimple(
+        "transformador_se",
+        listOf(
+            campo("p", R.string.campo_demanda_maxima, R.string.ayuda_demanda_trafo, listOf(Unidades.kW, Unidades.W), "120"),
+            campo("cos", R.string.campo_factor_potencia, R.string.ayuda_factor_potencia, hint = "0,9", inicial = Formato.numero(0.9)),
+            campo("r", R.string.campo_reserva, R.string.ayuda_reserva, listOf(porciento), "20", inicial = "20"),
+            campo("s", R.string.campo_potencia_trafo, R.string.ayuda_potencia_trafo, listOf(Unidades.kVA), "150", opcional = true),
+            campo("u1", R.string.campo_tension_primario, R.string.ayuda_tension_primario, listOf(Unidades.kV, Unidades.V), "12", inicial = "12"),
+            campo("u2", R.string.campo_tension_secundario, R.string.ayuda_tension_secundario, listOf(Unidades.V), "380", inicial = "380"),
+            campo("z", R.string.campo_impedancia_trafo, R.string.ayuda_impedancia_trafo, listOf(porciento), "4", inicial = "4"),
+            CampoOpciones("tipo", R.string.campo_tipo_trafo, listOf(R.string.ayuda_tipo_trafo), listOf(R.string.trafo_seco, R.string.trafo_aceite).map { TextoOpcion.Recurso(it) }),
+        ),
+        listOf(R.string.intro_transformador),
+    ) { e ->
+        val requerida = e.valor("p") / e.valor("cos") * (1 + e.valor("r"))
+        val s = if (e.tiene("s")) e.valor("s") else requerida
+        val kva = s / 1000
+        val raiz3 = kotlin.math.sqrt(3.0)
+        val i1 = s / (raiz3 * e.valor("u1"))
+        val i2 = s / (raiz3 * e.valor("u2"))
+        val z = e.valor("z")
+        val p = t.tabla133(z)
+        val bt = e.valor("u2") <= 600
+        listOf(
+            LineaResultado(R.string.res_potencia_requerida, Formato.conPrefijo(requerida, "VA")),
+            LineaResultado(R.string.res_in_primario, Formato.conPrefijo(i1, "A")),
+            LineaResultado(R.string.res_in_secundario, Formato.conPrefijo(i2, "A")),
+            LineaResultado(R.string.res_icc_secundario, Formato.conPrefijo(i2 / z, "A")),
+            LineaResultado(
+                R.string.res_proteccion_primario,
+                "Fusible ≤ ${Formato.conPrefijo(i1 * t.fusiblePrimarioMaxIn, "A")} · automático ≤ ${Formato.conPrefijo(i1 * t.automaticoPrimarioMaxIn, "A")}",
+            ),
+            LineaResultado(
+                R.string.res_sin_proteccion_individual,
+                "Primario: automático ≤ ${Formato.numero(p.primarioAutomatico, 0)} In o fusible ≤ ${Formato.numero(p.primarioFusible, 0)} In · secundario: " +
+                    if (bt) "≤ ${Formato.numero(p.secundarioBt, 1)} In (${Formato.conPrefijo(i2 * p.secundarioBt, "A")})"
+                    else "automático ≤ ${Formato.numero(p.secundarioMtAutomatico, 1)} In o fusible ≤ ${Formato.numero(p.secundarioMtFusible, 2)} In",
+                principal = false,
+            ),
+            LineaResultado(
+                R.string.res_ventilacion,
+                "Natural: ${Formato.numero(t.ventilacionM2(kva), 2)} m² libres · forzada: ${Formato.numero(t.renovacionesHora, 0)} renovaciones/h",
+                principal = false,
+            ),
+            LineaResultado(
+                R.string.res_vigilancia_termica,
+                when {
+                    !t.vigilanciaTermica(kva, e.opcion("tipo") == 1) -> "No exigida"
+                    e.opcion("tipo") == 1 -> "Detector de sobretemperatura o relé Buchholz"
+                    else -> "Sondas PT100 o equivalentes"
+                },
+                principal = false,
+            ),
+            LineaResultado(R.string.res_referencia, "RIC N°13, numerales 8.10, 9.7, 9.8, 13.2 a 13.5 y tabla N°13.3", principal = false),
+        )
+    }
+}

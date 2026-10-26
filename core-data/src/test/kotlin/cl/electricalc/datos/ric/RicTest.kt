@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(27, Ric.todas.size)
+        assertEquals(28, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -22,7 +22,7 @@ class RicTest {
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 15, 18, 19), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 15, 18, 19), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -268,5 +268,16 @@ class RicTest {
         assertEquals(EstadoVerificacion.CUMPLE, VerificacionRic.bucle(1.2, false, 16, 'C').estado)
         assertEquals(EstadoVerificacion.NO_CUMPLE, VerificacionRic.bucle(85.0, true, 16, 'C').estado)
         assertEquals(233.2, b.ipcc(1.0), 1e-9)
+    }
+
+    @Test
+    fun transformadores() {
+        val t = Ric.transformadores
+        assertEquals(6.0, t.tabla133(0.04).primarioAutomatico)
+        assertEquals(1.25, t.tabla133(0.07).secundarioMtFusible)
+        assertEquals(0.1, t.ventilacionM2(30.0))
+        assertEquals(1.0, t.ventilacionM2(500.0), 1e-9)
+        assertEquals(true, t.vigilanciaTermica(150.0, aceite = false))
+        assertEquals(false, t.vigilanciaTermica(150.0, aceite = true))
     }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ayuda_demanda_trafo">Demanda máxima de la instalación, del cuadro de cargas con sus factores de demanda.</string>
+    <string name="campo_potencia_trafo">Potencia del transformador</string>
+    <string name="ayuda_potencia_trafo">Opcional: la potencia nominal elegida. Si la dejas vacía se usa la requerida.</string>
+    <string name="campo_tension_primario">Tensión del primario</string>
+    <string name="ayuda_tension_primario">Tensión entre fases de la red de media tensión.</string>
+    <string name="campo_tension_secundario">Tensión del secundario</string>
+    <string name="ayuda_tension_secundario">Tensión entre fases en baja tensión.</string>
+    <string name="campo_impedancia_trafo">Impedancia de cortocircuito</string>
+    <string name="ayuda_impedancia_trafo">Dato de placa (Z %). Define la corriente de cortocircuito y la columna de la tabla N°13.3.</string>
+    <string name="campo_tipo_trafo">Tipo de transformador</string>
+    <string name="ayuda_tipo_trafo">Dentro de edificios de uso general solo se admiten secos o con líquido clase K.</string>
+    <string name="trafo_seco">Seco</string>
+    <string name="trafo_aceite">En aceite</string>
+    <string name="res_potencia_requerida">Potencia requerida</string>
+    <string name="res_in_primario">Corriente nominal primaria</string>
+    <string name="res_in_secundario">Corriente nominal secundaria</string>
+    <string name="res_icc_secundario">Cortocircuito en bornes BT</string>
+    <string name="res_proteccion_primario">Protección individual del primario</string>
+    <string name="res_sin_proteccion_individual">Sin protección individual (tabla N°13.3)</string>
+    <string name="res_ventilacion">Ventilación del recinto</string>
+    <string name="res_vigilancia_termica">Vigilancia térmica en edificios</string>
+    <string name="intro_transformador">Calcula la potencia del transformador según la demanda y la reserva, sus corrientes nominales y el cortocircuito en bornes de baja tensión (red de potencia infinita, Icc = In / Z), y entrega las exigencias del RIC N°13 de protección, ventilación y vigilancia térmica.</string>
+</resources>
