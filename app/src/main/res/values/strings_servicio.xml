@@ -15,4 +15,17 @@
     <string name="col_circuito">Circuito</string>
     <string name="col_ensayo">Ensayo CC</string>
     <string name="intro_protocolo">Protocolo de puesta en servicio según el RIC N°19: los ensayos en el orden que exige el pliego y la verificación de la resistencia de aislamiento contra la tabla N°19.1.</string>
+    <string name="campo_esquema_bucle">Esquema de conexión a tierra</string>
+    <string name="ayuda_esquema_bucle">En TN el máximo depende de la protección; en TT la impedancia de bucle debe quedar bajo 80 Ω.</string>
+    <string name="campo_curva">Curva del interruptor</string>
+    <string name="ayuda_curva">B dispara a 5 In, C a 10 In y D a 20 In.</string>
+    <string name="campo_in_bucle">Corriente nominal del interruptor</string>
+    <string name="ayuda_in_bucle">Corrientes de la tabla 19.2.1 del RIC N°19.</string>
+    <string name="campo_zs_medida">Impedancia de bucle medida</string>
+    <string name="ayuda_zs_medida">Lectura del medidor de lazo fase-protección en el punto más alejado del circuito.</string>
+    <string name="res_zs_maxima">Impedancia máxima</string>
+    <string name="res_ipcc">Cortocircuito presunto (Ipcc)</string>
+    <string name="res_corriente_disparo">Corriente de disparo magnético</string>
+    <string name="ver_impedancia_bucle">Impedancia de bucle</string>
+    <string name="intro_bucle">Verifica la impedancia de bucle de falla medida contra el máximo del RIC N°19 (220 V fase-neutro, disparo en 0,2 s) y calcula la corriente de cortocircuito presunta Ipcc = Vn × 1,06 / Zs.</string>
 </resources>

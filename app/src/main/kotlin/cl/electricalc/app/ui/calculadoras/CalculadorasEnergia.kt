@@ -22,9 +22,15 @@ fun campo(
 )
 
 /** Calculadora sin tipo de corriente y con todos sus campos visibles. */
-fun calculadoraSimple(id: String, campos: List<Campo>, intro: List<Int>, calcular: (Entrada) -> List<LineaResultado>) = Calculadora(
+fun calculadoraSimple(
+    id: String,
+    campos: List<Campo>,
+    intro: List<Int>,
+    verificar: (Entrada) -> List<cl.electricalc.datos.ric.Verificacion> = { emptyList() },
+    calcular: (Entrada) -> List<LineaResultado>,
+) = Calculadora(
     id = id, sistemas = listOf(SistemaElectrico.MONOFASICA), campos = campos,
-    visible = { _, _, _, _ -> true }, guia = Guia(intro), calcular = calcular,
+    visible = { _, _, _, _ -> true }, guia = Guia(intro), calcular = calcular, verificar = verificar,
 )
 
 /** Energía, iluminación, factor de potencia y respaldo (fase D de docs/arquitectura-v2.md). */
@@ -255,5 +261,37 @@ object CalculadoraVolumenesBano {
             LineaResultado(R.string.res_cableado, r.cableado, principal = false),
             LineaResultado(R.string.res_referencia, "RIC N°11, numerales 6.4.1 y 6.4.3", principal = false),
         )
+    }
+}
+
+/** Impedancia de bucle de falla medida frente al máximo del RIC N°19 (tabla 19.2.1) y Ipcc presunta. */
+object CalculadoraImpedanciaBucle {
+    private val b by lazy { cl.electricalc.datos.ric.Ric.impedanciaBucle }
+    private val corrientes by lazy { b.filas.map { it.inA } }
+    private const val CURVAS = "BCD"
+
+    val bucle = calculadoraSimple(
+        "impedancia_bucle",
+        listOf(
+            CampoOpciones("esquema", R.string.campo_esquema_bucle, listOf(R.string.ayuda_esquema_bucle), listOf("TN", "TT").map { TextoOpcion.Literal(it) }),
+            CampoOpciones("curva", R.string.campo_curva, listOf(R.string.ayuda_curva), CURVAS.map { TextoOpcion.Literal("Curva $it") }, 1),
+            CampoOpciones("in", R.string.campo_in_bucle, listOf(R.string.ayuda_in_bucle), listOf(2, 4, 6, 10, 16, 20, 25, 32, 35, 40, 50, 63).map { TextoOpcion.Literal("$it A") }, 4),
+            campo("zs", R.string.campo_zs_medida, R.string.ayuda_zs_medida, listOf(Unidades.ohm), "1,2"),
+        ),
+        listOf(R.string.intro_bucle),
+        verificar = { e ->
+            listOf(cl.electricalc.datos.ric.VerificacionRic.bucle(e.valor("zs"), e.opcion("esquema") == 1, corrientes[e.opcion("in")], CURVAS[e.opcion("curva")]))
+        },
+    ) { e ->
+            val curva = CURVAS[e.opcion("curva")]
+            val inA = corrientes[e.opcion("in")]
+            val tt = e.opcion("esquema") == 1
+            val maxima = if (tt) b.ttMaxOhm else b.maxima(inA, curva)
+            listOf(
+                LineaResultado(R.string.res_zs_maxima, "${if (tt) "<" else "≤"} ${Formato.numero(maxima, 2)} Ω"),
+                LineaResultado(R.string.res_ipcc, Formato.conPrefijo(b.ipcc(e.valor("zs")), "A")),
+                LineaResultado(R.string.res_corriente_disparo, "${inA * b.multiplicador.getValue(curva.toString())} A", principal = false),
+                LineaResultado(R.string.res_referencia, "RIC N°19, anexo 19.2, tabla 19.2.1", principal = false),
+            )
     }
 }

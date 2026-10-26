@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(26, Ric.todas.size)
+        assertEquals(27, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -258,5 +258,15 @@ class RicTest {
         assertEquals(2, v.volumen(TipoDucha.DIFUSOR_FIJO, 0.5, 2.5, techo = 2.6))
         assertEquals(null, v.volumen(TipoDucha.DIFUSOR_FIJO, 0.5, 2.7, techo = 2.6))
         assertEquals("IPX7", v.requisitos(0).ip)
+    }
+
+    @Test
+    fun `impedancia de bucle`() {
+        val b = Ric.impedanciaBucle
+        assertEquals(1.4, b.maxima(16, 'C'))
+        assertEquals(0.17, b.maxima(63, 'D'))
+        assertEquals(EstadoVerificacion.CUMPLE, VerificacionRic.bucle(1.2, false, 16, 'C').estado)
+        assertEquals(EstadoVerificacion.NO_CUMPLE, VerificacionRic.bucle(85.0, true, 16, 'C').estado)
+        assertEquals(233.2, b.ipcc(1.0), 1e-9)
     }
 }

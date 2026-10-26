@@ -3020,6 +3020,21 @@
    ]
   },
   {
+   "id": "impedancia_bucle",
+   "titulo": "Impedancia de bucle de falla",
+   "tipo": "calculadora",
+   "categoria": "tierra",
+   "ric": [
+    19
+   ],
+   "etapa": "documentacion",
+   "prioridad": 2,
+   "descripcion": "Verifica la impedancia de bucle medida contra la tabla 19.2.1 (curvas B, C y D) o el máximo TT, y calcula la Ipcc presunta.",
+   "datos_ric": [
+    "Zs máximo por interruptor (RIC N°19, tabla 19.2.1)"
+   ]
+  },
+  {
    "id": "plan_mantenimiento",
    "titulo": "Plan de mantenimiento",
    "tipo": "checklist",

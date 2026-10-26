@@ -65,6 +65,7 @@ private fun FilaVerificacion(v: Verificacion, alAbrirPliego: (Int) -> Unit) {
         TipoVerificacion.CAIDA_TOTAL -> stringResource(R.string.ver_caida_total)
         TipoVerificacion.TENSION_CONTACTO -> stringResource(R.string.ver_tension_contacto)
         TipoVerificacion.AISLAMIENTO -> stringResource(R.string.ver_aislamiento)
+        TipoVerificacion.IMPEDANCIA_BUCLE -> stringResource(R.string.ver_impedancia_bucle)
         TipoVerificacion.SECCION_MINIMA -> v.uso?.let { stringResource(R.string.ver_seccion_uso, nombreUso(it.uso)) }
             ?: stringResource(R.string.ver_seccion)
     }
@@ -72,6 +73,7 @@ private fun FilaVerificacion(v: Verificacion, alAbrirPliego: (Int) -> Unit) {
         TipoVerificacion.SECCION_MINIMA -> "mm²"
         TipoVerificacion.TENSION_CONTACTO -> "V"
         TipoVerificacion.AISLAMIENTO -> "MΩ"
+        TipoVerificacion.IMPEDANCIA_BUCLE -> "Ω"
         else -> "%"
     }
     val decimales = 2

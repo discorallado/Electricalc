@@ -1,0 +1,32 @@
+{
+  "pliego": 19,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "Anexo 19.2",
+  "tabla": "19.2.1",
+  "titulo": "Impedancia de bucle de falla máxima",
+  "paginas": [20, 21],
+  "tension_fase_neutro_v": 220,
+  "multiplicador_disparo": { "B": 5, "C": 10, "D": 20 },
+  "tt_max_ohm": 80,
+  "factor_ipcc": 1.06,
+  "filas": [
+    { "in_a": 2, "zs_b": 22, "zs_c": 11, "zs_d": 5.5 },
+    { "in_a": 4, "zs_b": 11, "zs_c": 5.5, "zs_d": 2.8 },
+    { "in_a": 6, "zs_b": 7.3, "zs_c": 3.65, "zs_d": 1.83 },
+    { "in_a": 10, "zs_b": 4.4, "zs_c": 2.2, "zs_d": 1.1 },
+    { "in_a": 16, "zs_b": 2.8, "zs_c": 1.4, "zs_d": 0.7 },
+    { "in_a": 20, "zs_b": 2.2, "zs_c": 1.1, "zs_d": 0.55 },
+    { "in_a": 25, "zs_b": 1.8, "zs_c": 0.9, "zs_d": 0.45 },
+    { "in_a": 32, "zs_b": 1.4, "zs_c": 0.7, "zs_d": 0.34 },
+    { "in_a": 35, "zs_b": 1.3, "zs_c": 0.65, "zs_d": 0.31 },
+    { "in_a": 40, "zs_b": 1.1, "zs_c": 0.55, "zs_d": 0.27 },
+    { "in_a": 50, "zs_b": 0.9, "zs_c": 0.45, "zs_d": 0.22 },
+    { "in_a": 63, "zs_b": 0.7, "zs_c": 0.35, "zs_d": 0.17 }
+  ],
+  "notas": [
+    "Tabla 19.2.1: Zs máximo para disparo en 0,2 s con 220 V fase-neutro; la corriente de disparo es 5, 10 o 20 veces In según la curva B, C o D.",
+    "En esquema TT la impedancia de bucle de defecto debe ser inferior a 80 Ω.",
+    "Corriente de cortocircuito presunta: Ipcc = Vn × 1,06 / Zs."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

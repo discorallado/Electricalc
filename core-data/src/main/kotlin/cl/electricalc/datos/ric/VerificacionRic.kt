@@ -4,7 +4,7 @@ package cl.electricalc.datos.ric
 enum class EstadoVerificacion { CUMPLE, NO_CUMPLE, REVISAR }
 
 /** Qué se verificó; la app lo usa para elegir el texto. */
-enum class TipoVerificacion { CAIDA_TRAMO, CAIDA_TOTAL, SECCION_MINIMA, TENSION_CONTACTO, AISLAMIENTO }
+enum class TipoVerificacion { CAIDA_TRAMO, CAIDA_TOTAL, SECCION_MINIMA, TENSION_CONTACTO, AISLAMIENTO, IMPEDANCIA_BUCLE }
 
 /**
  * Resultado de comparar un valor calculado con un límite del RIC. [limite] y [calculado] van en la
@@ -57,6 +57,13 @@ object VerificacionRic {
         val t = Ric.puestaEnServicio
         val minimo = t.aislamiento.first { it.circuito == circuito }.minimoMohm
         return Verificacion(TipoVerificacion.AISLAMIENTO, estado(medidaMohm >= minimo), medidaMohm, minimo, t)
+    }
+
+    /** Impedancia de bucle medida: en TN contra la tabla 19.2.1 (In y curva); en TT, bajo 80 Ω. */
+    fun bucle(zsOhm: Double, tt: Boolean, inA: Int, curva: Char): Verificacion {
+        val t = Ric.impedanciaBucle
+        val maxima = if (tt) t.ttMaxOhm else t.maxima(inA, curva)
+        return Verificacion(TipoVerificacion.IMPEDANCIA_BUCLE, estado(if (tt) zsOhm < maxima else zsOhm <= maxima), zsOhm, maxima, t)
     }
 
     private fun estado(cumple: Boolean) = if (cumple) EstadoVerificacion.CUMPLE else EstadoVerificacion.NO_CUMPLE

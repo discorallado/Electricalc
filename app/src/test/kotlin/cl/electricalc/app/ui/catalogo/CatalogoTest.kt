@@ -34,7 +34,7 @@ class CatalogoTest {
     @Test
     fun `el catalogo trae todas las herramientas y los 19 pliegos`() {
         assertEquals(221, catalogo.herramientas.count { !it.nueva })
-        assertEquals(36, catalogo.herramientas.count { it.nueva })
+        assertEquals(37, catalogo.herramientas.count { it.nueva })
         assertEquals((1..19).toList(), catalogo.pliegos.map { it.numero })
         assertEquals("Cálculo de la corriente", catalogo.item("CalcoloIntensita")?.tituloEs)
         assertEquals("Calculation of current", catalogo.item("CalcoloIntensita")?.tituloEn)
