@@ -42,6 +42,10 @@ import cl.electricalc.datos.ric.FactorTemperatura
 import cl.electricalc.datos.ric.FactoresDemanda
 import cl.electricalc.datos.ric.FactoresSimultaneidad
 import cl.electricalc.datos.ric.FuenteRic
+import cl.electricalc.datos.ric.MedicionResistividad
+import cl.electricalc.datos.ric.ResistenciaElectrodos
+import cl.electricalc.datos.ric.ResistividadTerrenos
+import cl.electricalc.datos.ric.SeccionProteccion
 import cl.electricalc.datos.ric.Ric
 import cl.electricalc.datos.ric.SeccionesMinimas
 
@@ -52,6 +56,8 @@ object TablasRic {
             "caidas" to Ric.caidas, "demanda" to Ric.factoresDemanda, "simultaneidad" to Ric.simultaneidad,
             "secciones" to Ric.seccionesMinimas, "colores" to Ric.colores, "capacidad" to Ric.capacidad,
             "capacidad_movil" to Ric.capacidadMovil, "fn" to Ric.fn, "ft" to Ric.ft,
+            "resistividad" to Ric.resistividad, "electrodos" to Ric.electrodos,
+            "seccion_proteccion" to Ric.seccionProteccion, "medicion_resistividad" to Ric.medicionResistividad,
         )
     }
 
@@ -184,6 +190,42 @@ fun ContenidoFuente(f: FuenteRic) {
             f.filas.map { listOf(n(it.mm2, 2), it.awg ?: "–", n(it.amperes, 1)) },
             listOf(72.dp, 56.dp, 96.dp),
         )
+        is ResistividadTerrenos -> {
+            Tabla(
+                listOf(stringResource(R.string.col_terreno), "Ω·m"),
+                f.terrenos.map { listOf(it.terreno, it.texto ?: if (it.minimo == it.maximo) n(it.maximo, 0) else "${n(it.minimo, 0)} – ${n(it.maximo, 0)}") },
+                listOf(240.dp, 120.dp),
+            )
+            Text(f.valoresMedios.titulo + " (tabla N°" + f.valoresMedios.tabla + ")", style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 12.dp))
+            Tabla(
+                listOf(stringResource(R.string.col_terreno), "Ω·m"),
+                f.valoresMedios.terrenos.map { listOf(it.terreno, n(it.valor, 0)) },
+                listOf(240.dp, 80.dp),
+            )
+        }
+        is ResistenciaElectrodos -> Tabla(
+            listOf(stringResource(R.string.campo_electrodo), stringResource(R.string.col_formula)),
+            f.electrodos.map { listOf(it.nombre, it.formula) },
+            listOf(220.dp, 120.dp),
+        )
+        is SeccionProteccion -> Tabla(
+            listOf(stringResource(R.string.col_seccion_fase), stringResource(R.string.col_seccion_proteccion)),
+            f.tramos.fold(0.0 to listOf<List<String>>()) { (desde, filas), t ->
+                val rango = if (t.faseHasta == null) "S > ${n(desde, 0)}" else if (desde == 0.0) "S ≤ ${n(t.faseHasta, 0)}" else "${n(desde, 0)} < S ≤ ${n(t.faseHasta, 0)}"
+                (t.faseHasta ?: desde) to (filas + listOf(listOf(rango, t.proteccion)))
+            }.second,
+            listOf(160.dp, 120.dp),
+        )
+        is MedicionResistividad -> Tabla(
+            listOf(stringResource(R.string.col_requisito), stringResource(R.string.col_limite)),
+            listOf(
+                listOf(stringResource(R.string.col_metodos), f.metodos.joinToString(" o ")),
+                listOf(stringResource(R.string.col_ala_maxima), "${n(f.alaMaximaM, 0)} m"),
+                listOf(stringResource(R.string.col_ala_reducida), "${n(f.alaReducidaM, 0)} m"),
+                listOf(stringResource(R.string.col_ala_excepcional), "${n(f.alaExcepcionalM, 0)} m"),
+            ),
+            listOf(220.dp, 160.dp),
+        )
         is CapacidadCobreAislado -> {
             var indice by rememberSaveable { mutableIntStateOf(0) }
             SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
@@ -242,5 +284,9 @@ private fun notasDe(f: FuenteRic): List<String> = when (f) {
     is CapacidadUsoMovil -> f.notas
     is FactorCantidadConductores -> f.notas
     is FactorTemperatura -> f.notas
+    is ResistividadTerrenos -> f.notas
+    is ResistenciaElectrodos -> f.notas
+    is SeccionProteccion -> f.notas
+    is MedicionResistividad -> f.notas
     else -> emptyList()
 }

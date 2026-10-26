@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Puesta a tierra: resistividad del terreno y resistencia de electrodos (RIC N°06). -->
+<resources>
+    <string name="metodo_wenner">Wenner</string>
+    <string name="metodo_wenner_profundo">Wenner con profundidad de electrodos</string>
+    <string name="metodo_schlumberger">Schlumberger</string>
+    <string name="campo_separacion">Separación entre electrodos (a)</string>
+    <string name="campo_profundidad">Profundidad de los electrodos (b)</string>
+    <string name="campo_semi_corriente">Semidistancia de corriente (AB/2)</string>
+    <string name="campo_semi_potencial">Semidistancia de potencial (MN/2)</string>
+    <string name="campo_resistencia_medida">Resistencia medida</string>
+    <string name="ayuda_separacion">Distancia entre dos electrodos vecinos. En el método de Wenner los cuatro quedan en línea a la misma distancia a.</string>
+    <string name="ayuda_profundidad">Profundidad a la que están clavados los electrodos. Úsala cuando no sea pequeña frente a la separación.</string>
+    <string name="ayuda_semi_corriente">Distancia desde el centro de la línea hasta cada electrodo de corriente (A y B).</string>
+    <string name="ayuda_semi_potencial">Distancia desde el centro hasta cada electrodo de potencial (M y N). Debe ser menor que AB/2.</string>
+    <string name="ayuda_resistencia_medida">Lectura del telurómetro (tensión entre M y N dividida por la corriente inyectada entre A y B).</string>
+    <string name="res_resistividad">Resistividad aparente</string>
+    <string name="res_ala_medicion">Ala de medición</string>
+    <string name="intro_resistividad">Calcula la resistividad aparente del terreno a partir de una medición con cuatro electrodos en línea. Repite la medición aumentando la separación para conocer cómo cambia la resistividad con la profundidad (sondeo eléctrico vertical).</string>
+    <string name="intro_resistividad_norma">El RIC N°06 (anexo 6.6) acepta los métodos de Wenner y Schlumberger, uno solo en cada medición, con alas de hasta 100 m; si falta terreno se aceptan alas de 50 m y, excepcionalmente, de 30 m.</string>
+
+    <string name="campo_electrodo">Electrodo</string>
+    <string name="electrodo_placa">Placa enterrada</string>
+    <string name="electrodo_pica">Pica vertical (barra)</string>
+    <string name="electrodo_conductor">Conductor horizontal enterrado</string>
+    <string name="campo_resistividad">Resistividad del terreno</string>
+    <string name="campo_terreno">Tipo de terreno</string>
+    <string name="campo_medida_electrodo">Longitud o perímetro</string>
+    <string name="variante_resistividad_conocida">Resistividad medida</string>
+    <string name="variante_valor_medio_terreno">Valor medio según el terreno</string>
+    <string name="ayuda_electrodo">Forma del electrodo de puesta a tierra. Cada uno tiene su fórmula en la tabla N°6.4 del RIC N°06.</string>
+    <string name="ayuda_resistividad">Resistividad del terreno, idealmente medida en el lugar con la calculadora de resistividad.</string>
+    <string name="ayuda_terreno">Valores medios de la tabla N°6.3 del RIC N°06, para una primera aproximación cuando aún no hay medición.</string>
+    <string name="ayuda_medida_electrodo">Longitud de la pica o del conductor enterrado; para una placa, su perímetro.</string>
+    <string name="res_resistencia_tierra">Resistencia de tierra estimada</string>
+    <string name="res_formula_usada">Fórmula (tabla N°6.4)</string>
+    <string name="res_resistividad_usada">Resistividad usada</string>
+    <string name="intro_electrodos">Estima la resistencia de un electrodo de puesta a tierra con las fórmulas del RIC N°06 (tabla N°6.4) según su forma y la resistividad del terreno.</string>
+    <string name="intro_electrodos_norma">El resultado es aproximado: el pliego exige medir y comprobar la puesta a tierra al ponerla en servicio (numeral 9.2).</string>
+</resources>

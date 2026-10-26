@@ -159,6 +159,10 @@ class EstadoCalculadora(val definicion: Calculadora, private val preferencias: P
         } catch (_: FaltanDatos) {
             resultado = null
             R.string.err_faltan_datos
+        } catch (_: IllegalArgumentException) {
+            // Validaciones del motor o de las tablas (require): se informan como dato fuera de rango.
+            resultado = null
+            R.string.err_valor_fuera
         }
     }
 

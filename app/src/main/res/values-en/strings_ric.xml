@@ -41,4 +41,12 @@
     <string name="col_viviendas">Dwellings (n)</string>
     <string name="servicio_a">Service %1$d °C</string>
     <string name="aplica_a">Applies to: %1$s</string>
+    <string name="col_terreno">Soil type</string>
+    <string name="col_formula">Formula</string>
+    <string name="col_seccion_fase">Phase size S [mm²]</string>
+    <string name="col_seccion_proteccion">Protective conductor [mm²]</string>
+    <string name="col_metodos">Accepted methods</string>
+    <string name="col_ala_maxima">Measurement wing</string>
+    <string name="col_ala_reducida">Wing if space is lacking</string>
+    <string name="col_ala_excepcional">Exceptional wing</string>
 </resources>

@@ -3,7 +3,8 @@ package cl.electricalc.app.ui.calculadoras
 /** Calculadoras implementadas, por id del catálogo. Las demás herramientas abren "Próximamente". */
 object Registro {
     val todas = CalculadorasOhm.todas +
-        listOf(CalculadoraCaida.caida, CalculadoraCaida.cargasDistribuidas, CalculadoraCaida.longitudMaxima)
+        listOf(CalculadoraCaida.caida, CalculadoraCaida.cargasDistribuidas, CalculadoraCaida.longitudMaxima) +
+        CalculadorasTierra.todas
 
     private val porId = todas.associateBy { it.id }
 

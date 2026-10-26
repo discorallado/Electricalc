@@ -1,0 +1,20 @@
+{
+  "pliego": 6,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "Anexo 6.7",
+  "tabla": null,
+  "titulo": "Sección mínima del conductor de tierra de protección",
+  "paginas": [27],
+  "unidades": { "seccion": "mm²" },
+  "notas": [
+    "Aplicable solo a conductores de cobre. Para otros materiales, la sección del conductor de protección será igual a la del conductor de fase."
+  ],
+  "tramos": [
+    { "fase_hasta": 25, "proteccion": "S" },
+    { "fase_hasta": 50, "proteccion": "25" },
+    { "fase_hasta": null, "proteccion": "S/2" }
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "La expresión para S > 50 aparece como imagen en el PDF; se lee S/2 (como en IEC 60364-5-54). Confirmar."
+  ] }
+}

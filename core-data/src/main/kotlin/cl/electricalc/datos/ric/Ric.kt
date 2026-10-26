@@ -259,10 +259,17 @@ object Ric {
     val capacidadMovil: CapacidadUsoMovil by lazy { leer("ric-04/capacidad-uso-movil.json") }
     val fn: FactorCantidadConductores by lazy { leer("ric-04/factor-cantidad-conductores.json") }
     val ft: FactorTemperatura by lazy { leer("ric-04/factor-temperatura.json") }
+    val resistividad: ResistividadTerrenos by lazy { leer("ric-06/resistividad-terrenos.json") }
+    val electrodos: ResistenciaElectrodos by lazy { leer("ric-06/resistencia-electrodos.json") }
+    val seccionProteccion: SeccionProteccion by lazy { leer("ric-06/seccion-proteccion.json") }
+    val medicionResistividad: MedicionResistividad by lazy { leer("ric-06/medicion-resistividad.json") }
 
     /** Todas las fuentes transcritas, para listarlas en la página de cada pliego. */
     val todas: List<FuenteRic>
-        get() = listOf(caidas, factoresDemanda, simultaneidad, seccionesMinimas, colores, capacidad, capacidadMovil, fn, ft)
+        get() = listOf(
+            caidas, factoresDemanda, simultaneidad, seccionesMinimas, colores, capacidad, capacidadMovil, fn, ft,
+            resistividad, electrodos, seccionProteccion, medicionResistividad,
+        )
 
     fun delPliego(numero: Int): List<FuenteRic> = todas.filter { it.pliego == numero }
 }

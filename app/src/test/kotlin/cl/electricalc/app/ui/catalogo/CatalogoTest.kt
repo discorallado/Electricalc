@@ -62,7 +62,8 @@ class CatalogoTest {
             assertNotNull(catalogo.item(it), "Ficha sin entrada en el catálogo: $it")
         }
         calculadoras.forEach { c ->
-            val formula = catalogo.item(c.id)!!.formula
+            // Las herramientas nuevas no traen ficha en el catálogo; si la declaran, debe existir.
+            val formula = catalogo.item(c.id)!!.formula ?: return@forEach
             assertTrue(Fichas.existe(formula), "La calculadora ${c.id} apunta a una ficha sin implementar: $formula")
         }
         listOf("tabla_caidas_admisibles", "tabla_secciones_minimas", "tabla_colores_ric").forEach {

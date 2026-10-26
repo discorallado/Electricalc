@@ -1,0 +1,21 @@
+{
+  "pliego": 6,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "8.14",
+  "tabla": "6.4",
+  "titulo": "Fórmulas para estimar la resistencia de tierra en función de la resistividad del terreno y las características del electrodo",
+  "paginas": [11],
+  "unidades": { "resistividad": "Ω·m", "longitud": "m", "resistencia": "Ω" },
+  "notas": [
+    "ρ: resistividad del terreno (Ω·m); P: perímetro de la placa (m); L: longitud de la pica o del conductor (m).",
+    "El valor calculado es aproximado: la puesta a tierra se debe medir y comprobar al ponerla en servicio (numeral 9.2)."
+  ],
+  "electrodos": [
+    { "electrodo": "placa", "nombre": "Placa enterrada", "formula": "R = 0,8 ρ/P", "coeficiente": 0.8, "variable": "perimetro" },
+    { "electrodo": "pica", "nombre": "Pica vertical", "formula": "R = ρ/L", "coeficiente": 1.0, "variable": "longitud" },
+    { "electrodo": "conductor", "nombre": "Conductor enterrado horizontalmente", "formula": "R = 2 ρ/L", "coeficiente": 2.0, "variable": "longitud" }
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "Conductor horizontal: el PDF dice «R = 2 ρL», que no es dimensionalmente correcto (daría Ω·m²). Se usa R = 2ρ/L, como en la tabla de origen (REBT ITC-BT-18). Confirmar."
+  ] }
+}

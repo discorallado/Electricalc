@@ -1,0 +1,20 @@
+{
+  "pliego": 6,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "Anexo 6.6",
+  "tabla": null,
+  "titulo": "Procedimiento de medición de resistividad de terreno",
+  "paginas": [26],
+  "unidades": { "longitud": "m" },
+  "metodos": ["Schlumberger", "Wenner"],
+  "ala_maxima_m": 100,
+  "ala_reducida_m": 50,
+  "ala_excepcional_m": 30,
+  "notas": [
+    "Se aceptan las configuraciones tetraelectródicas Schlumberger o Wenner, indistintamente, pero una sola de ellas en cada oportunidad.",
+    "Los electrodos se disponen en línea recta, con alas de medición de hasta 100 m; si no hay terreno, se aceptan alas de 50 m y, excepcionalmente, de hasta 30 m.",
+    "Si no es posible la línea recta: sobre una misma línea de nivel en cerros, o sobre dos rectas que formen un ángulo no mayor de 15° con vértice en el centro de medición.",
+    "Instrumento: geómetro de cuatro terminales, escala mínima de 1 Ω, resolución no mayor de 0,01 Ω y escala máxima no inferior a 100 Ω."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

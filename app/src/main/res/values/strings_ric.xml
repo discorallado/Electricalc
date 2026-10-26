@@ -42,4 +42,12 @@
     <string name="col_viviendas">Viviendas (n)</string>
     <string name="servicio_a">Servicio %1$d °C</string>
     <string name="aplica_a">Aplica a: %1$s</string>
+    <string name="col_terreno">Naturaleza del terreno</string>
+    <string name="col_formula">Fórmula</string>
+    <string name="col_seccion_fase">Sección de fase S [mm²]</string>
+    <string name="col_seccion_proteccion">Conductor de protección [mm²]</string>
+    <string name="col_metodos">Métodos aceptados</string>
+    <string name="col_ala_maxima">Ala de medición</string>
+    <string name="col_ala_reducida">Ala si falta terreno</string>
+    <string name="col_ala_excepcional">Ala excepcional</string>
 </resources>

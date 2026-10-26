@@ -1,0 +1,46 @@
+{
+  "pliego": 6,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "8.13",
+  "tabla": "6.2",
+  "titulo": "Valores orientativos de la resistividad en función del terreno",
+  "paginas": [10, 11],
+  "unidades": { "resistividad": "Ω·m" },
+  "notas": [
+    "Valores a título de orientación. Para una primera aproximación de la resistencia a tierra se pueden usar los valores medios de la tabla N°6.3 (numeral 8.13).",
+    "El resultado es aproximado: se debe medir la resistencia del electrodo para estimar el valor medio local de la resistividad (numeral 8.14)."
+  ],
+  "terrenos": [
+    { "terreno": "Terrenos pantanosos", "minimo": null, "maximo": 30, "texto": "de algunas unidades a 30" },
+    { "terreno": "Limo", "minimo": 20, "maximo": 100 },
+    { "terreno": "Humus", "minimo": 10, "maximo": 150 },
+    { "terreno": "Turba húmeda", "minimo": 5, "maximo": 100 },
+    { "terreno": "Arcilla plástica", "minimo": 50, "maximo": 50 },
+    { "terreno": "Margas y arcillas compactas", "minimo": 100, "maximo": 200 },
+    { "terreno": "Margas del Jurásico", "minimo": 30, "maximo": 40 },
+    { "terreno": "Arenas arcillosas", "minimo": 50, "maximo": 500 },
+    { "terreno": "Arena silícea", "minimo": 200, "maximo": 3000 },
+    { "terreno": "Suelo pedregoso cubierto de césped", "minimo": 300, "maximo": 5000 },
+    { "terreno": "Suelo pedregoso desnudo", "minimo": 1500, "maximo": 3000 },
+    { "terreno": "Calizas blandas", "minimo": 100, "maximo": 300 },
+    { "terreno": "Calizas compactas", "minimo": 1000, "maximo": 5000 },
+    { "terreno": "Calizas agrietadas", "minimo": 500, "maximo": 1000 },
+    { "terreno": "Pizarras", "minimo": 50, "maximo": 300 },
+    { "terreno": "Roca de mica y cuarzo", "minimo": 800, "maximo": 800 },
+    { "terreno": "Granitos y gres procedente de alteración", "minimo": 1500, "maximo": 10000 },
+    { "terreno": "Granito y gres muy alterado", "minimo": 100, "maximo": 600 }
+  ],
+  "valores_medios": {
+    "tabla": "6.3",
+    "titulo": "Valores medios aproximados de la resistividad en función del terreno",
+    "terrenos": [
+      { "terreno": "Terrenos cultivables y fértiles, terraplenes compactos y húmedos", "valor": 50 },
+      { "terreno": "Terraplenes cultivables poco fértiles y otros terraplenes", "valor": 500 },
+      { "terreno": "Suelos pedregosos desnudos, arenas secas permeables", "valor": 3000 }
+    ]
+  },
+  "revision": { "estado": "pendiente", "observaciones": [
+    "Suelo pedregoso cubierto de césped: el PDF dice «300 a 5.00»; se transcribe 300 a 5.000 (errata evidente). Confirmar.",
+    "Las dos últimas filas (granitos) salen desalineadas en el texto extraído; se asignó 1.500 a 10.000 a «procedente de alteración» y 100 a 600 a «muy alterado», como en la tabla de origen (REBT ITC-BT-18). Confirmar."
+  ] }
+}

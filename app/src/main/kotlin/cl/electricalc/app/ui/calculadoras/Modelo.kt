@@ -60,8 +60,8 @@ sealed interface TextoOpcion {
     data class Literal(val texto: String) : TextoOpcion
 }
 
-/** Combinación de datos conocidos ("Tensión y potencia"). */
-class Variante(val campos: List<String>)
+/** Combinación de datos conocidos ("Tensión y potencia"), o un método con nombre propio ("Wenner"). */
+class Variante(val campos: List<String>, @StringRes val nombre: Int? = null)
 
 /** Lo que el formulario entrega al cálculo, ya convertido a unidades base. */
 class Entrada(

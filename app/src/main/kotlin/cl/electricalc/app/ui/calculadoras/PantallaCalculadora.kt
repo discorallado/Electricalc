@@ -58,6 +58,7 @@ import kotlinx.coroutines.launch
 
 /** Nombre de una combinación de datos: "Tensión y potencia". */
 private fun nombreVariante(contexto: Context, calculadora: Calculadora, variante: Variante): String {
+    variante.nombre?.let { return contexto.getString(it) }
     val nombres = variante.campos.mapIndexed { i, id ->
         val texto = contexto.getString(calculadora.campos.first { it.id == id }.etiqueta)
         if (i == 0) texto else texto.lowercase()

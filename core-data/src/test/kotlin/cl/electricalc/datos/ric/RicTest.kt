@@ -14,15 +14,15 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(9, Ric.todas.size)
+        assertEquals(13, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
-            assertTrue(t.numeral.matches(Regex("""\d+(\.\d+)+""")), "${t.titulo}: numeral ${t.numeral}")
+            assertTrue(t.numeral.matches(Regex("""(Anexo )?\d+(\.\d+)+""")), "${t.titulo}: numeral ${t.numeral}")
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(3, 4), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(3, 4, 6), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -138,5 +138,24 @@ class RicTest {
         val v = VerificacionRic.seccion(4.0, "alimentador")
         assertNotNull(v.uso)
         assertEquals("5.4", v.fuente.numeral)
+    }
+
+    @Test
+    fun `puesta a tierra del RIC 06`() {
+        val r = Ric.resistividad
+        assertEquals(18, r.terrenos.size)
+        assertTrue(r.terrenos.all { (it.minimo ?: 0.0) <= it.maximo }, "mínimo ≤ máximo")
+        assertEquals(listOf(50.0, 500.0, 3000.0), r.valoresMedios.terrenos.map { it.valor })
+        val e = Ric.electrodos
+        // Pica de 2 m en 100 Ω·m: R = ρ/L = 50 Ω; placa de 4 m de perímetro: 0,8 × 100/4 = 20 Ω.
+        assertEquals(50.0, e.resistencia("pica", 100.0, 2.0), 1e-9)
+        assertEquals(20.0, e.resistencia("placa", 100.0, 4.0), 1e-9)
+        assertEquals(10.0, e.resistencia("conductor", 100.0, 20.0), 1e-9)
+        val p = Ric.seccionProteccion
+        assertEquals(16.0, p.minima(16.0))
+        assertEquals(25.0, p.minima(25.0))
+        assertEquals(25.0, p.minima(35.0))
+        assertEquals(35.0, p.minima(70.0))
+        assertEquals(listOf("Schlumberger", "Wenner"), Ric.medicionResistividad.metodos)
     }
 }

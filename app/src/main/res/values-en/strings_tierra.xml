@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="metodo_wenner">Wenner</string>
+    <string name="metodo_wenner_profundo">Wenner with electrode depth</string>
+    <string name="metodo_schlumberger">Schlumberger</string>
+    <string name="campo_separacion">Electrode spacing (a)</string>
+    <string name="campo_profundidad">Electrode depth (b)</string>
+    <string name="campo_semi_corriente">Current half-spacing (AB/2)</string>
+    <string name="campo_semi_potencial">Potential half-spacing (MN/2)</string>
+    <string name="campo_resistencia_medida">Measured resistance</string>
+    <string name="ayuda_separacion">Distance between neighbouring electrodes. In the Wenner method all four are in line at the same spacing a.</string>
+    <string name="ayuda_profundidad">Depth at which the electrodes are driven. Use it when it is not small compared with the spacing.</string>
+    <string name="ayuda_semi_corriente">Distance from the centre of the line to each current electrode (A and B).</string>
+    <string name="ayuda_semi_potencial">Distance from the centre to each potential electrode (M and N). Must be less than AB/2.</string>
+    <string name="ayuda_resistencia_medida">Earth tester reading (voltage between M and N divided by the current injected between A and B).</string>
+    <string name="res_resistividad">Apparent resistivity</string>
+    <string name="res_ala_medicion">Measurement wing</string>
+    <string name="intro_resistividad">Calculates the apparent soil resistivity from a four-electrode measurement in line. Repeat with larger spacings to see how resistivity changes with depth (vertical electrical sounding).</string>
+    <string name="intro_resistividad_norma">RIC N°06 (annex 6.6) accepts the Wenner and Schlumberger methods, one per measurement, with wings up to 100 m; 50 m if space is lacking and, exceptionally, 30 m.</string>
+
+    <string name="campo_electrodo">Electrode</string>
+    <string name="electrodo_placa">Buried plate</string>
+    <string name="electrodo_pica">Vertical rod</string>
+    <string name="electrodo_conductor">Buried horizontal conductor</string>
+    <string name="campo_resistividad">Soil resistivity</string>
+    <string name="campo_terreno">Soil type</string>
+    <string name="campo_medida_electrodo">Length or perimeter</string>
+    <string name="variante_resistividad_conocida">Measured resistivity</string>
+    <string name="variante_valor_medio_terreno">Average value for the soil</string>
+    <string name="ayuda_electrodo">Shape of the earth electrode. Each has its formula in table N°6.4 of RIC N°06.</string>
+    <string name="ayuda_resistividad">Soil resistivity, ideally measured on site with the resistivity calculator.</string>
+    <string name="ayuda_terreno">Average values from table N°6.3 of RIC N°06, for a first estimate before measuring.</string>
+    <string name="ayuda_medida_electrodo">Length of the rod or buried conductor; for a plate, its perimeter.</string>
+    <string name="res_resistencia_tierra">Estimated earth resistance</string>
+    <string name="res_formula_usada">Formula (table N°6.4)</string>
+    <string name="res_resistividad_usada">Resistivity used</string>
+    <string name="intro_electrodos">Estimates the resistance of an earth electrode with the formulas of RIC N°06 (table N°6.4) from its shape and the soil resistivity.</string>
+    <string name="intro_electrodos_norma">The result is approximate: the standard requires measuring and checking the earthing when it is put into service (clause 9.2).</string>
+</resources>
