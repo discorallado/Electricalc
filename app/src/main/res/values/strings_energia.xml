@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_potencia_equipo">Potencia del equipo</string>
+    <string name="campo_horas_dia">Uso diario</string>
+    <string name="campo_dias">Días del período</string>
+    <string name="campo_tarifa">Precio de la energía</string>
+    <string name="ayuda_potencia_equipo">Potencia nominal o medida del equipo o del conjunto de equipos.</string>
+    <string name="ayuda_horas_dia">Horas de funcionamiento por día.</string>
+    <string name="ayuda_dias">Días que dura el período a calcular (30 para un mes).</string>
+    <string name="ayuda_tarifa">Precio por kWh de tu boleta, con impuestos si quieres el costo final.</string>
+    <string name="res_energia">Energía consumida</string>
+    <string name="res_costo">Costo del período</string>
+    <string name="res_costo_dia">Costo por día</string>
+    <string name="intro_consumo">Calcula la energía que consume un equipo en un período y cuánto cuesta según el precio del kWh.</string>
+    <string name="campo_iluminancia">Iluminancia requerida</string>
+    <string name="campo_largo">Largo del recinto</string>
+    <string name="campo_ancho">Ancho del recinto</string>
+    <string name="campo_altura_montaje">Altura útil</string>
+    <string name="campo_flujo_luminaria">Flujo de cada luminaria</string>
+    <string name="campo_utilizacion">Coeficiente de utilización</string>
+    <string name="campo_mantenimiento">Factor de mantenimiento</string>
+    <string name="ayuda_iluminancia">Iluminancia media que exige la tarea. El anexo del RIC N°10 da valores de referencia por recinto y actividad.</string>
+    <string name="ayuda_largo">Dimensión del recinto en planta.</string>
+    <string name="ayuda_altura_montaje">Altura entre las luminarias y el plano de trabajo (habitualmente a 0,85 m del piso).</string>
+    <string name="ayuda_flujo_luminaria">Flujo luminoso total de cada luminaria, según su ficha técnica.</string>
+    <string name="ayuda_utilizacion">Fracción del flujo que llega al plano de trabajo; depende de la luminaria, del índice del local y de las reflectancias. Se obtiene de las tablas del fabricante.</string>
+    <string name="ayuda_mantenimiento">Pérdida por envejecimiento y suciedad: 0,8 en ambientes limpios, 0,7 o menos en ambientes sucios.</string>
+    <string name="res_luminarias">Luminarias necesarias</string>
+    <string name="res_iluminancia_obtenida">Iluminancia obtenida</string>
+    <string name="res_flujo_total">Flujo total necesario</string>
+    <string name="res_indice_local">Índice del local K</string>
+    <string name="intro_iluminacion">Calcula cuántas luminarias necesita un recinto por el método de los lúmenes: Φ = E·S / (CU·FM).</string>
+    <string name="campo_cos_actual">cosφ actual</string>
+    <string name="campo_cos_objetivo">cosφ deseado</string>
+    <string name="campo_tension_linea">Tensión entre fases</string>
+    <string name="ayuda_cos_actual">Factor de potencia medido de la instalación.</string>
+    <string name="ayuda_cos_objetivo">Factor de potencia que quieres alcanzar, por ejemplo el mínimo que exige tu tarifa para no pagar recargo.</string>
+    <string name="ayuda_tension_linea">Tensión a la que se conecta el banco de condensadores.</string>
+    <string name="res_reactiva_banco">Potencia del banco de condensadores</string>
+    <string name="res_capacidad_fase">Capacidad por fase (estrella, 50 Hz)</string>
+    <string name="intro_fp">Calcula la potencia reactiva de condensadores para mejorar el factor de potencia: Qc = P·(tan φ1 − tan φ2).</string>
+    <string name="campo_carga_respaldada">Carga a respaldar</string>
+    <string name="campo_reserva">Reserva</string>
+    <string name="campo_autonomia">Autonomía</string>
+    <string name="campo_tension_banco">Tensión del banco de baterías</string>
+    <string name="campo_rendimiento_inversor">Rendimiento del inversor</string>
+    <string name="campo_descarga">Profundidad de descarga</string>
+    <string name="ayuda_carga_respaldada">Potencia activa de los consumos que deben seguir funcionando.</string>
+    <string name="ayuda_reserva">Margen sobre la carga para crecimiento y arranques (habitualmente 20 a 30 %).</string>
+    <string name="ayuda_autonomia">Tiempo que deben durar las baterías sin red (UPS).</string>
+    <string name="ayuda_tension_banco">Tensión nominal del banco de baterías del UPS o inversor.</string>
+    <string name="ayuda_rendimiento_inversor">Rendimiento de la conversión de las baterías a la carga.</string>
+    <string name="ayuda_descarga">Fracción de la capacidad que se puede usar: cerca de 50 % en plomo-ácido y 80 a 90 % en litio.</string>
+    <string name="res_potencia_equipo">Potencia del UPS o grupo</string>
+    <string name="res_capacidad_baterias">Capacidad de baterías</string>
+    <string name="intro_respaldo">Dimensiona un UPS o grupo electrógeno para la carga a respaldar, y la capacidad de baterías para la autonomía pedida. Las exigencias de los sistemas de emergencia están en el RIC N°08.</string>
+</resources>
