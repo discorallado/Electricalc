@@ -1,0 +1,32 @@
+{
+  "pliego": 18,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "6",
+  "tabla": null,
+  "titulo": "Contenido del proyecto y de la memoria de cálculo",
+  "paginas": [3, 4, 6],
+  "partes": ["Memoria explicativa", "Planos", "Informe de verificación inicial", "Informe de imágenes"],
+  "memoria_obligatoria_sobre_kw": 10,
+  "calculos": [
+    "Análisis de cargas",
+    "Cálculos de intensidades de corrientes",
+    "Cálculos de alimentadores y conductores",
+    "Cálculos de canalizaciones: sección, tipo y código utilizado",
+    "Cálculos de caídas de tensión de alimentadores y circuitos finales",
+    "Análisis de distancias de seguridad",
+    "Cálculos de cortocircuito o niveles de cortocircuito informados por la distribuidora"
+  ],
+  "adicionales_sobre_kw": 20,
+  "calculos_adicionales": [
+    "Estudio de coordinación y selectividad de protecciones",
+    "Cálculos de iluminación",
+    "Cálculo y diseño del sistema de puesta a tierra, con registro de la medición de resistividad (fecha y método Schlumberger o Wenner)"
+  ],
+  "notas": [
+    "Numeral 6.1.1: todo proyecto incluye memoria explicativa, planos, informe de verificación inicial e informe de imágenes.",
+    "Numeral 6.2.1: la memoria explicativa es obligatoria sobre 10 kW declarados, en edificios y conjuntos habitacionales, en locales de reunión de personas y ambientes explosivos, y con empalme de media tensión.",
+    "Numeral 6.2.3.2: los cálculos justificativos incluyen, entre otros, los de esta lista; sobre 20 kW o con empalme de media tensión se agregan los adicionales.",
+    "Numeral 6.3.16: el proyecto incluye un cuadro de cargas (formato en el anexo 18.4)."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

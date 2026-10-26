@@ -24,7 +24,7 @@
 
     <!-- Proyecto -->
     <string name="proyecto_titulo">Proyecto por etapas</string>
-    <string name="proyecto_intro">Las herramientas ordenadas como avanza un proyecto, desde las cargas hasta la documentación. Pronto podrás guardar proyectos y los resultados de cada etapa pasarán solos a la siguiente.</string>
+    <string name="proyecto_intro">Crea un proyecto, ingresa su cuadro de cargas y obtén la demanda, el empalme, el alimentador y la memoria de cálculo. Abajo están las herramientas de cada etapa.</string>
     <string name="etapa_cargas">Cargas y demanda</string>
     <string name="etapa_empalme">Empalme</string>
     <string name="etapa_tableros">Tableros</string>

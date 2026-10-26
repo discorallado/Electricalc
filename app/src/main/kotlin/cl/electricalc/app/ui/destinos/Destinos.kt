@@ -10,6 +10,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Assignment
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -57,6 +60,8 @@ fun Proyecto(
     modifier: Modifier,
     alAbrir: (Herramienta) -> Unit,
     alMantener: (Herramienta) -> Unit,
+    alAbrirProyecto: (String) -> Unit,
+    alNuevoProyecto: () -> Unit,
 ) {
     val preferencias = LocalPreferencias.current
     LazyColumn(modifier) {
@@ -72,9 +77,22 @@ fun Proyecto(
                         style = MaterialTheme.typography.bodyMedium,
                         modifier = Modifier.padding(top = 6.dp),
                     )
+                    Button(onClick = alNuevoProyecto, modifier = Modifier.padding(top = 12.dp)) {
+                        Text(stringResource(R.string.nuevo_proyecto))
+                    }
                 }
             }
         }
+        if (preferencias.proyectos.isNotEmpty()) item { Titular(stringResource(R.string.mis_proyectos)) }
+        items(preferencias.proyectos, key = { "p" + it.id }) { pr ->
+            ListItem(
+                headlineContent = { Text(pr.nombre) },
+                supportingContent = { Text(pluralStringResource(R.plurals.cargas_n, pr.cargas.size, pr.cargas.size)) },
+                leadingContent = { Icon(Icons.AutoMirrored.Filled.Assignment, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
+                modifier = Modifier.clickable { alAbrirProyecto(pr.id) },
+            )
+        }
+        item { Titular(stringResource(R.string.herramientas_por_etapa)) }
         ETAPAS.forEachIndexed { i, etapa ->
             item(key = etapa) {
                 ListItem(

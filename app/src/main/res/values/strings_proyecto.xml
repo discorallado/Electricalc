@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nuevo_proyecto">Nuevo proyecto</string>
+    <string name="mis_proyectos">Mis proyectos</string>
+    <string name="herramientas_por_etapa">Herramientas por etapa</string>
+    <string name="proyecto_sin_nombre">Proyecto nuevo</string>
+    <plurals name="cargas_n">
+        <item quantity="one">%1$d carga</item>
+        <item quantity="other">%1$d cargas</item>
+    </plurals>
+    <string name="campo_nombre">Nombre</string>
+    <string name="campo_tipo_consumidor">Tipo de consumidor (RIC N°03, tabla N°3.1)</string>
+    <string name="campo_potencia_unitaria_w">Potencia de cada una (W)</string>
+    <string name="campo_cantidad">Cantidad</string>
+    <string name="carga_iluminacion">Iluminación</string>
+    <string name="carga_enchufes">Enchufes</string>
+    <string name="carga_fuerza">Fuerza (motores)</string>
+    <string name="carga_climatizacion">Climatización</string>
+    <string name="agregar_carga">Agregar carga</string>
+    <string name="agregar">Agregar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="quitar">Quitar</string>
+    <string name="sin_cargas">Agrega las cargas de la instalación: iluminación, enchufes, fuerza y climatización.</string>
+    <string name="etapa_1_cuadro">1. Cuadro de cargas</string>
+    <string name="resultados_etapas">Cargas → empalme → alimentador</string>
+    <string name="cuadro_cargas">Cuadro de cargas</string>
+    <string name="res_potencia_instalada">Potencia instalada</string>
+    <string name="res_demanda_maxima">Demanda máxima</string>
+    <string name="res_corriente_diseno">Corriente de diseño del alimentador</string>
+    <string name="res_seccion_alimentador">Sección mínima del alimentador</string>
+    <string name="nota_alimentador">Demanda: alumbrado con los factores de la tabla N°3.1 y fuerza con factor 1. Corriente: motores con 1,25 × el mayor (RIC N°07, 5.5.5). Alimentador: capacidad a 70 °C, método B1 y 30 °C, mínimo 4 mm²; verifica la caída de tensión con su largo real.</string>
+    <string name="memoria_requisitos">Memoria de cálculo (RIC N°18)</string>
+    <string name="memoria_obligatoria">Sobre 10 kW la memoria explicativa es obligatoria.</string>
+    <string name="memoria_cita">RIC N°18, numerales 6.1.1, 6.2.1 y 6.2.3.2</string>
+    <string name="exportar_memoria">Exportar memoria en PDF</string>
+    <string name="eliminar_proyecto">Eliminar proyecto</string>
+    <string name="memoria_titulo">Memoria de cálculo: %1$s</string>
+    <string name="memoria_datos">Datos generales</string>
+    <string name="memoria_resultados">Resultados</string>
+    <string name="memoria_aviso_titulo">Advertencia</string>
+    <string name="memoria_aviso">Borrador generado por Electricalc con tablas RIC en revisión. Debe ser revisado y firmado por un instalador eléctrico autorizado antes de presentarse ante la SEC.</string>
+</resources>

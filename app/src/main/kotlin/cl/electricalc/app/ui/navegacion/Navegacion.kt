@@ -7,11 +7,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import cl.electricalc.app.datos.LocalPreferencias
+import cl.electricalc.app.R
+import cl.electricalc.app.datos.Proyecto
+import cl.electricalc.app.ui.proyecto.PantallaProyecto
+import androidx.compose.ui.platform.LocalContext
 import cl.electricalc.app.ui.calculadoras.PantallaCalculadora
 import cl.electricalc.app.ui.calculadoras.Registro
 import cl.electricalc.app.ui.catalogo.Catalogo
 import cl.electricalc.app.ui.catalogo.Herramienta
 import cl.electricalc.app.ui.componentes.PantallaConBarra
+import cl.electricalc.app.ui.componentes.HERRAMIENTAS_PROYECTO
 import cl.electricalc.app.ui.componentes.nombreCategoria
 import cl.electricalc.app.ui.destinos.Accesos
 import cl.electricalc.app.ui.destinos.ListaHerramientas
@@ -46,10 +51,17 @@ private fun NavHostController.volver() {
 fun NavegacionApp(catalogo: Catalogo) {
     val nav = rememberNavController()
     val preferencias = LocalPreferencias.current
+    val contexto = LocalContext.current
 
     val abrir = { h: Herramienta ->
         preferencias.registrarReciente(h.id)
-        nav.navigate(if (h.esFicha) Rutas.ficha(h.id) else Rutas.herramienta(h.id))
+        if (h.id in HERRAMIENTAS_PROYECTO) {
+            val p = Proyecto(nombre = contexto.getString(R.string.proyecto_sin_nombre))
+            preferencias.guardarProyecto(p)
+            nav.navigate("proyecto/${p.id}")
+        } else {
+            nav.navigate(if (h.esFicha) Rutas.ficha(h.id) else Rutas.herramienta(h.id))
+    }
     }
     val abrirPliego = { n: Int -> nav.navigate(Rutas.pliego(n)) }
     val alMantener = { h: Herramienta -> preferencias.alternarFavorito(h.id) }
@@ -61,6 +73,12 @@ fun NavegacionApp(catalogo: Catalogo) {
         abrirAjustes = { nav.navigate(Rutas.AJUSTES) },
         abrirAcerca = { nav.navigate(Rutas.ACERCA) },
         abrirGuiaUso = { nav.navigate(Rutas.GUIA_USO) },
+        abrirProyecto = { nav.navigate("proyecto/$it") },
+        nuevoProyecto = {
+            val p = Proyecto(nombre = contexto.getString(R.string.proyecto_sin_nombre))
+            preferencias.guardarProyecto(p)
+            nav.navigate("proyecto/${p.id}")
+        },
     )
 
     NavHost(navController = nav, startDestination = Rutas.PRINCIPAL) {
@@ -121,6 +139,9 @@ fun NavegacionApp(catalogo: Catalogo) {
         }
         composable("tabla_ric/{clave}") { entrada ->
             TablasRic.porClave[entrada.arguments?.getString("clave")]?.let { PantallaTablaRic(it, nav::volver) }
+        }
+        composable("proyecto/{id}") { entrada ->
+            PantallaProyecto(entrada.arguments?.getString("id").orEmpty(), nav::volver)
         }
         composable(Rutas.AJUSTES) { PantallaAjustes(nav::volver) }
         composable(Rutas.ACERCA) { PantallaAcerca(nav::volver) }

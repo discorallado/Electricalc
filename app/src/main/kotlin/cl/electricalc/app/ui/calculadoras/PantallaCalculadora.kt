@@ -97,7 +97,7 @@ private fun informe(contexto: Context, titulo: String, estado: EstadoCalculadora
         }
     }
     val resultados = estado.resultado.orEmpty().map { contexto.getString(it.etiqueta) to it.valor }
-    return Informe(titulo, datos, resultados)
+    return Informe(contexto, titulo, datos, resultados)
 }
 
 /** Pantalla de una calculadora, armada a partir de su definición declarativa. */

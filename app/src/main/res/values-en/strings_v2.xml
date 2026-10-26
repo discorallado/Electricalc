@@ -20,7 +20,7 @@
     <string name="acceso_tierra">Earthing</string>
 
     <string name="proyecto_titulo">Project by stages</string>
-    <string name="proyecto_intro">Tools in the order a project moves forward, from loads to documentation. Soon you will be able to save projects, and each stage will feed its results into the next.</string>
+    <string name="proyecto_intro">Create a project, enter its load schedule and get the demand, service, feeder and design calculation report. The tools for each stage are below.</string>
     <string name="etapa_cargas">Loads and demand</string>
     <string name="etapa_empalme">Service connection</string>
     <string name="etapa_tableros">Panels</string>

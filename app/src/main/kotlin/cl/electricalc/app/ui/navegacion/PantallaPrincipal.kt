@@ -72,6 +72,8 @@ class Acciones(
     val abrirAjustes: () -> Unit,
     val abrirAcerca: () -> Unit,
     val abrirGuiaUso: () -> Unit,
+    val abrirProyecto: (String) -> Unit,
+    val nuevoProyecto: () -> Unit,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -152,7 +154,7 @@ fun PantallaPrincipal(catalogo: Catalogo, acciones: Acciones) {
             val m = Modifier.padding(relleno).consumeWindowInsets(relleno).imePadding()
             when (actual) {
                 Destino.INICIO -> Inicio(catalogo, m, acciones.abrir, alMantener, acciones.abrirPliego, acciones.abrirAcceso)
-                Destino.PROYECTO -> Proyecto(catalogo, m, acciones.abrir, alMantener)
+                Destino.PROYECTO -> Proyecto(catalogo, m, acciones.abrir, alMantener, acciones.abrirProyecto, acciones.nuevoProyecto)
                 Destino.CALCULAR -> ListaCategorias(catalogo, Categorias.CALCULAR, m, acciones.abrirCategoria)
                 Destino.RIC -> ListaPliegos(catalogo, m, acciones.abrirPliego)
                 Destino.REFERENCIAS -> ListaCategorias(catalogo, Categorias.REFERENCIAS, m, acciones.abrirCategoria)

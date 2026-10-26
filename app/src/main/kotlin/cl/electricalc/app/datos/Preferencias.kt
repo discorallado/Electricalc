@@ -30,6 +30,27 @@ class Preferencias(contexto: Context) {
         sp.edit { putStringSet(FAVORITOS, favoritos) }
     }
 
+    /** Proyectos guardados, el más reciente primero. */
+    var proyectos by mutableStateOf(
+        runCatching {
+            val a = org.json.JSONArray(sp.getString(PROYECTOS, "[]"))
+            (0 until a.length()).map { Proyecto.deJson(a.getJSONObject(it)) }
+        }.getOrDefault(emptyList()),
+    )
+        private set
+
+    fun proyecto(id: String): Proyecto? = proyectos.firstOrNull { it.id == id }
+
+    fun guardarProyecto(p: Proyecto) {
+        proyectos = listOf(p) + proyectos.filter { it.id != p.id }
+        sp.edit { putString(PROYECTOS, org.json.JSONArray(proyectos.map { it.aJson() }).toString()) }
+    }
+
+    fun eliminarProyecto(id: String) {
+        proyectos = proyectos.filter { it.id != id }
+        sp.edit { putString(PROYECTOS, org.json.JSONArray(proyectos.map { it.aJson() }).toString()) }
+    }
+
     /** Últimas herramientas abiertas, la más reciente primero. */
     var recientes by mutableStateOf(sp.getString(RECIENTES, "").orEmpty().split(',').filter { it.isNotBlank() })
         private set
@@ -96,6 +117,7 @@ class Preferencias(contexto: Context) {
     private companion object {
         const val FAVORITOS = "favoritos"
         const val RECIENTES = "recientes"
+        const val PROYECTOS = "proyectos"
         const val MAX_RECIENTES = 8
         const val NORMA = "norma"
         const val COS_PHI = "cos_phi_por_defecto"

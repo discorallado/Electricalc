@@ -11,17 +11,20 @@ import java.io.File
 import java.text.DateFormat
 import java.util.Date
 
-/** Resumen de un cálculo (datos y resultados) para compartirlo como texto o PDF. */
-class Informe(val titulo: String, val datos: List<Pair<String, String>>, val resultados: List<Pair<String, String>>) {
+/** Resumen para compartir como texto o PDF: secciones con filas "dato: valor" o líneas sueltas. */
+class Informe(val titulo: String, val secciones: List<Pair<String, List<Pair<String, String>>>>) {
+
+    /** Informe de una calculadora: datos y resultados. */
+    constructor(contexto: Context, titulo: String, datos: List<Pair<String, String>>, resultados: List<Pair<String, String>>) :
+        this(titulo, listOf(contexto.getString(R.string.datos) to datos, contexto.getString(R.string.resultado) to resultados))
 
     fun comoTexto(contexto: Context): String = buildString {
         appendLine(titulo)
-        appendLine()
-        appendLine(contexto.getString(R.string.datos))
-        datos.forEach { (k, v) -> appendLine("• $k: $v") }
-        appendLine()
-        appendLine(contexto.getString(R.string.resultado))
-        resultados.forEach { (k, v) -> appendLine("• $k: $v") }
+        secciones.forEach { (nombre, filas) ->
+            appendLine()
+            appendLine(nombre)
+            filas.forEach { (k, v) -> appendLine(if (v.isEmpty()) "• $k" else "• $k: $v") }
+        }
         appendLine()
         append(contexto.getString(R.string.generado_con, contexto.getString(R.string.app_name)))
     }
@@ -35,32 +38,74 @@ class Informe(val titulo: String, val datos: List<Pair<String, String>>, val res
         contexto.startActivity(Intent.createChooser(intent, contexto.getString(R.string.compartir)))
     }
 
-    /** Dibuja una página A4 con el resumen y la comparte. */
+    /** Dibuja el informe en páginas A4 (con salto de página) y lo comparte. */
     fun compartirPdf(contexto: Context) {
         val documento = PdfDocument()
-        val pagina = documento.startPage(PdfDocument.PageInfo.Builder(595, 842, 1).create())
-        val lienzo = pagina.canvas
         val titular = Paint().apply { textSize = 18f; typeface = Typeface.DEFAULT_BOLD; isAntiAlias = true }
         val seccion = Paint().apply { textSize = 13f; typeface = Typeface.DEFAULT_BOLD; isAntiAlias = true }
-        val normal = Paint().apply { textSize = 12f; isAntiAlias = true }
+        val normal = Paint().apply { textSize = 11f; isAntiAlias = true }
         val tenue = Paint().apply { textSize = 10f; color = 0xFF666666.toInt(); isAntiAlias = true }
-        var y = 60f
-        lienzo.drawText(titulo, 50f, y, titular)
-        y += 18f
-        lienzo.drawText(DateFormat.getDateTimeInstance().format(Date()), 50f, y, tenue)
-        fun bloque(nombre: String, filas: List<Pair<String, String>>) {
-            y += 32f
-            lienzo.drawText(nombre, 50f, y, seccion)
-            y += 6f
-            filas.forEach { (k, v) ->
-                y += 20f
-                lienzo.drawText(k, 60f, y, normal)
-                lienzo.drawText(v, 330f, y, normal)
+        var numero = 0
+        var pagina: PdfDocument.Page? = null
+        var y = 0f
+
+        fun nuevaPagina() {
+            pagina?.let {
+                it.canvas.drawText(contexto.getString(R.string.generado_con, contexto.getString(R.string.app_name)), 50f, 810f, tenue)
+                documento.finishPage(it)
+            }
+            numero++
+            pagina = documento.startPage(PdfDocument.PageInfo.Builder(595, 842, numero).create())
+            y = 60f
+        }
+
+        fun espacio(alto: Float) {
+            if (y + alto > 780f) nuevaPagina()
+            y += alto
+        }
+
+        /** Corta un texto largo en líneas que quepan en [ancho] puntos. */
+        fun lineas(texto: String, paint: Paint, ancho: Float): List<String> {
+            val salida = mutableListOf<String>()
+            var actual = ""
+            for (palabra in texto.split(' ')) {
+                val prueba = if (actual.isEmpty()) palabra else "$actual $palabra"
+                if (paint.measureText(prueba) > ancho && actual.isNotEmpty()) {
+                    salida += actual
+                    actual = palabra
+                } else {
+                    actual = prueba
+                }
+            }
+            if (actual.isNotEmpty()) salida += actual
+            return salida
+        }
+
+        nuevaPagina()
+        lineas(titulo, titular, 495f).forEach { espacio(22f); pagina!!.canvas.drawText(it, 50f, y, titular) }
+        espacio(16f)
+        pagina!!.canvas.drawText(DateFormat.getDateTimeInstance().format(Date()), 50f, y, tenue)
+        for ((nombre, filas) in secciones) {
+            espacio(30f)
+            pagina!!.canvas.drawText(nombre, 50f, y, seccion)
+            espacio(4f)
+            for ((k, v) in filas) {
+                if (v.isEmpty()) {
+                    lineas("• $k", normal, 485f).forEach { espacio(16f); pagina!!.canvas.drawText(it, 60f, y, normal) }
+                } else {
+                    val izquierda = lineas(k, normal, 250f)
+                    val derecha = lineas(v, normal, 225f)
+                    val filasTexto = maxOf(izquierda.size, derecha.size)
+                    espacio(16f)
+                    for (i in 0 until filasTexto) {
+                        if (i > 0) espacio(14f)
+                        izquierda.getOrNull(i)?.let { pagina!!.canvas.drawText(it, 60f, y, normal) }
+                        derecha.getOrNull(i)?.let { pagina!!.canvas.drawText(it, 320f, y, normal) }
+                    }
+                }
             }
         }
-        bloque(contexto.getString(R.string.datos), datos)
-        bloque(contexto.getString(R.string.resultado), resultados)
-        lienzo.drawText(contexto.getString(R.string.generado_con, contexto.getString(R.string.app_name)), 50f, 800f, tenue)
+        pagina!!.canvas.drawText(contexto.getString(R.string.generado_con, contexto.getString(R.string.app_name)), 50f, 810f, tenue)
         documento.finishPage(pagina)
 
         val carpeta = File(contexto.cacheDir, "informes").apply { mkdirs() }

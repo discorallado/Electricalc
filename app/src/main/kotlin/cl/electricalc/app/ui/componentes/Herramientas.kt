@@ -73,8 +73,12 @@ fun nombreTipo(tipo: String?): Int = when (tipo) {
 }
 
 /** Si la herramienta ya se puede abrir (calculadora o ficha implementada). */
+/** Herramientas que se resuelven dentro de un proyecto (destino Proyecto). */
+val HERRAMIENTAS_PROYECTO = setOf("cuadro_cargas", "memoria_calculo")
+
 fun disponible(h: Herramienta) =
-    Registro.implementada(h.id) || Fichas.existe(h.id) || TablasRic.claveDeHerramienta(h.id) != null
+    Registro.implementada(h.id) || Fichas.existe(h.id) || TablasRic.claveDeHerramienta(h.id) != null ||
+        h.id in HERRAMIENTAS_PROYECTO
 
 /**
  * Fila de una herramienta: ícono, título, estado y estrella si es favorita. Tocar la abre y

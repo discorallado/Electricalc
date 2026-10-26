@@ -14,15 +14,15 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(21, Ric.todas.size)
+        assertEquals(22, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
-            assertTrue(t.numeral.matches(Regex("""(Anexo )?\d+(\.\d+)+""")), "${t.titulo}: numeral ${t.numeral}")
+            assertTrue(t.numeral.matches(Regex("""(Anexo )?\d+(\.\d+)*""")), "${t.titulo}: numeral ${t.numeral}")
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(1, 3, 4, 5, 6, 7, 10, 15), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(1, 3, 4, 5, 6, 7, 10, 15, 18), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
