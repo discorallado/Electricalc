@@ -312,7 +312,95 @@ object Fichas {
         ),
     )
 
+    private fun simple(formulas: List<Expr>, vararg leyenda: Simbolo) =
+        Ficha(listOf(TarjetaFicha(R.string.ficha_comunes, formulas)), leyenda.toList())
+
+    private fun reactanciaF() = simple(
+        listOf(e("X_L = 2π × f × L"), e("X_C = ", frac("1", "2π × f × C"))),
+        Simbolo("X_L, X_C", R.string.sim_reactancia, "Ω"), Simbolo("f", R.string.sim_frecuencia, "Hz"),
+        Simbolo("L", R.string.sim_inductancia, "H"), Simbolo("C", R.string.sim_capacidad, "F"),
+    )
+
+    private fun impedanciaRx() = simple(
+        listOf(e("Z = ", raiz("R^2 + X^2")), e("φ = arctan(X / R)"), e("cos φ = ", frac("R", "Z"))),
+        Simbolo("Z", R.string.sim_impedancia, "Ω"), Simbolo("R", R.string.sim_resistencia, "Ω"),
+        Simbolo("X", R.string.sim_reactancia, "Ω"), Simbolo("φ", R.string.sim_desfase, "°"),
+    )
+
+    private fun jouleF() = simple(
+        listOf(e("Q = I^2 × R × t")),
+        Simbolo("Q", R.string.sim_calor, "J"), Simbolo("I", R.string.sim_corriente, "A"),
+        Simbolo("R", R.string.sim_resistencia, "Ω"), Simbolo("t", R.string.sim_tiempo, "s"),
+    )
+
+    private fun sumaResistenciasF() = Ficha(
+        listOf(
+            TarjetaFicha(R.string.conexion_serie, listOf(e("R_eq = R_1 + R_2 + … + R_n"))),
+            TarjetaFicha(R.string.conexion_paralelo, listOf(e(frac("1", "R_eq"), " = ", frac("1", "R_1"), " + ", frac("1", "R_2"), " + …"))),
+        ),
+        listOf(Simbolo("R_eq", R.string.sim_equivalente, "Ω")),
+    )
+
+    private fun sumaCondensadoresF() = Ficha(
+        listOf(
+            TarjetaFicha(R.string.conexion_serie, listOf(e(frac("1", "C_eq"), " = ", frac("1", "C_1"), " + ", frac("1", "C_2"), " + …"))),
+            TarjetaFicha(R.string.conexion_paralelo, listOf(e("C_eq = C_1 + C_2 + … + C_n"))),
+        ),
+        listOf(Simbolo("C_eq", R.string.sim_equivalente, "F")),
+    )
+
+    private fun resonanciaF() = simple(
+        listOf(e("f_0 = ", frac("1", e("2π × ", raiz("L × C"))))),
+        Simbolo("f_0", R.string.sim_frecuencia, "Hz"), Simbolo("L", R.string.sim_inductancia, "H"), Simbolo("C", R.string.sim_capacidad, "F"),
+    )
+
+    private fun condensadorF() = simple(
+        listOf(e("Q = U^2 × 2π × f × C")),
+        Simbolo("Q", R.string.sim_potencia_reactiva, "var"), Simbolo("U", R.string.sim_tension_alimentacion, "V"),
+        Simbolo("f", R.string.sim_frecuencia, "Hz"), Simbolo("C", R.string.sim_capacidad, "F"),
+    )
+
+    private fun divisorTensionF() = simple(
+        listOf(e("U_out = U_in × ", frac("R_2", "R_1 + R_2"))),
+        Simbolo("U_in", R.string.sim_tension_entrada, "V"), Simbolo("U_out", R.string.sim_tension_salida, "V"),
+    )
+
+    private fun divisorCorrienteF() = simple(
+        listOf(e("I_1 = I × ", frac("R_2", "R_1 + R_2")), e("I_2 = I × ", frac("R_1", "R_1 + R_2"))),
+        Simbolo("I", R.string.sim_corriente, "A"),
+    )
+
+    private fun zenerF() = simple(
+        listOf(e("R = ", frac("U_in − U_Z", "I_Z + I_L")), e("P_R = R × (I_Z + I_L)^2")),
+        Simbolo("U_in", R.string.sim_tension_entrada, "V"), Simbolo("U_Z", R.string.sim_tension_zener, "V"),
+        Simbolo("I_Z", R.string.sim_corriente_zener, "A"), Simbolo("I_L", R.string.sim_corriente_carga, "A"),
+    )
+
+    private fun reducirTensionF() = simple(
+        listOf(e("R = ", frac("U_in − U_out", "I")), e("P_R = R × I^2"), e("LED: R = ", frac("U_in − n × U_f", "I"))),
+        Simbolo("U_in", R.string.sim_tension_entrada, "V"), Simbolo("U_out", R.string.sim_tension_salida, "V"),
+        Simbolo("I", R.string.sim_corriente_carga, "A"),
+    )
+
+    private fun antenaF() = simple(
+        listOf(e("λ = ", frac("c × k", "f")), e("L_dipolo = ", frac("λ", "2")), e("L_monopolo = ", frac("λ", "4"))),
+        Simbolo("λ", R.string.sim_longitud_onda, "m"), Simbolo("c", R.string.sim_velocidad_luz, "m/s"),
+        Simbolo("k", R.string.sim_factor_velocidad), Simbolo("f", R.string.sim_frecuencia, "Hz"),
+    )
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaReattanza" to ::reactanciaF,
+        "FormulaImpedenzaDaResistenzaEReattanza" to ::impedanciaRx,
+        "FormulaEffettoJoule" to ::jouleF,
+        "FormulaSommaResistenze" to ::sumaResistenciasF,
+        "FormulaSommaCondensatori" to ::sumaCondensadoresF,
+        "FormulaFrequenzaRisonanza" to ::resonanciaF,
+        "FormulaPotenzaResaCondensatore" to ::condensadorF,
+        "FormulaPartitoreTensione" to ::divisorTensionF,
+        "FormulaPartitoreCorrente" to ::divisorCorrienteF,
+        "FormulaStabilizzatoreTensioneZener" to ::zenerF,
+        "FormulaResistenzaRidurreTensione" to ::reducirTensionF,
+        "FormulaLunghezzaAntenna" to ::antenaF,
         "FormulaCorrenteMotore" to ::corrienteMotor,
         "FormulaPotenzaMotore" to ::potenciaMotor,
         "FormulaTensioneMotore" to ::tensionMotor,
