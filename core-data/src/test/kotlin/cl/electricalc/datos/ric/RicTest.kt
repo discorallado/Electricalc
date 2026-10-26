@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(18, Ric.todas.size)
+        assertEquals(20, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -22,7 +22,7 @@ class RicTest {
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(3, 4, 5, 6, 7, 10, 15), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(1, 3, 4, 5, 6, 7, 10, 15), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -182,6 +182,23 @@ class RicTest {
         assertEquals(2, v.centrosIluminacionMinimos(12.0))
         assertEquals(2, v.enchufesMinimos(14.0))
         assertEquals(1, v.enchufesMinimos(8.0))
+    }
+
+    @Test
+    fun `empalmes RIC 01 y carga VE RIC 15`() {
+        val e = Ric.empalmes
+        assertEquals(11, e.monofasicos.size)
+        assertEquals(18, e.trifasicos.size)
+        assertTrue(e.trifasicos.zipWithNext().all { (a, b) -> b.a > a.a && b.kw > a.kw })
+        assertEquals(25.0, e.para(4.5, trifasico = false)!!.a)
+        assertEquals(25.0, e.para(1.0, trifasico = false, minimoA = 25.0)!!.a)
+        assertEquals(50.0, e.para(25.0, trifasico = true)!!.a)
+        val v = Ric.cargaVe
+        assertEquals(1.25, v.factorProteccion(32.0))
+        assertEquals(1.20, v.factorProteccion(100.0))
+        assertEquals(1.15, v.factorProteccion(200.0))
+        // Residencial 50 kW: 10 × 1 + 40 × (0,5 a 1) = 30 a 50 kW.
+        assertEquals(30.0 to 50.0, v.demandaConSgc("residencial", 50.0))
     }
 
     @Test

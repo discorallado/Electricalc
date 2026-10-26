@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no">No</string>
+    <string name="si">Sí</string>
+    <string name="campo_potencia_instalada">Potencia instalada</string>
+    <string name="campo_demanda_maxima">Demanda máxima</string>
+    <string name="campo_es_vivienda">Es una vivienda</string>
+    <string name="ayuda_potencia_instalada">Suma de las potencias nominales de todos los consumos permanentes, la que se declara ante la SEC.</string>
+    <string name="ayuda_demanda_maxima">Opcional: demanda máxima del cuadro de cargas. Si la dejas vacía se usa la potencia instalada. No puede superarla.</string>
+    <string name="ayuda_es_vivienda">En viviendas el empalme debe tener una protección de al menos 25 A (RIC N°10, numeral 5.2).</string>
+    <string name="res_empalme">Empalme normalizado</string>
+    <string name="res_potencia_maxima_empalme">Potencia máxima del empalme</string>
+    <string name="res_demanda_usada">Demanda considerada</string>
+    <string name="intro_empalme">Elige el empalme normalizado de baja tensión (RIC N°01, anexo 1.3) que cubre la demanda de la instalación.</string>
+    <string name="intro_empalme_norma">Según el numeral 5.3, la capacidad del empalme puede ser igual o inferior a la potencia total instalada, pero nunca superior. Confirma el tipo de empalme con la distribuidora.</string>
+    <string name="campo_potencia_save">Potencia de cada cargador</string>
+    <string name="campo_cantidad_cargadores">Cantidad de cargadores</string>
+    <string name="campo_modo_carga">Modo de carga</string>
+    <string name="campo_tipo_irve">Tipo de instalación</string>
+    <string name="campo_sgc">Sistema de gestión de carga</string>
+    <string name="campo_capacidad_empalme">Capacidad disponible del empalme</string>
+    <string name="ayuda_potencia_save">Potencia nominal del SAVE o punto de carga (por ejemplo, 3,7 kW o 7,4 kW monofásico; 11 o 22 kW trifásico).</string>
+    <string name="ayuda_cantidad_cargadores">Número de cargadores iguales que alimenta el circuito o el alimentador.</string>
+    <string name="ayuda_modo_carga">Modo 1 y 2: enchufe doméstico o industrial; modo 3: cargador dedicado (SAVE, wallbox); modo 4: carga rápida en corriente continua.</string>
+    <string name="ayuda_tipo_irve">Define los factores de demanda de la tabla N°15.1, que solo se aplican con un sistema de gestión de carga.</string>
+    <string name="ayuda_sgc">Sin gestión de carga el factor de demanda es 1 (numeral 9.4.1).</string>
+    <string name="ayuda_capacidad_empalme">Opcional: potencia del empalme que queda disponible para la recarga, para ver el margen.</string>
+    <string name="irve_residencial">Vivienda, edificio o conjunto habitacional</string>
+    <string name="irve_publico">Autoservicio público o electrolinera</string>
+    <string name="irve_transporte">Electroterminal o transporte público</string>
+    <string name="res_corriente_save">Corriente de cada cargador</string>
+    <string name="res_demanda_ve">Demanda de la recarga</string>
+    <string name="res_margen_empalme">Margen del empalme</string>
+    <string name="intro_carga_ve">Dimensiona la recarga de vehículos eléctricos según el RIC N°15: corriente y protección de cada cargador (tabla N°15.3), diferencial según el modo de carga (numeral 12.5) y demanda total (tabla N°15.1).</string>
+</resources>

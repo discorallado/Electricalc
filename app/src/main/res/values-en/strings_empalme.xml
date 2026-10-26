@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no">No</string>
+    <string name="si">Yes</string>
+    <string name="campo_potencia_instalada">Installed power</string>
+    <string name="campo_demanda_maxima">Maximum demand</string>
+    <string name="campo_es_vivienda">It is a dwelling</string>
+    <string name="ayuda_potencia_instalada">Sum of the rated power of all permanent loads, as declared to the SEC.</string>
+    <string name="ayuda_demanda_maxima">Optional: maximum demand from the load schedule. If empty, installed power is used. It cannot exceed it.</string>
+    <string name="ayuda_es_vivienda">Dwellings need a service protection of at least 25 A (RIC N°10, clause 5.2).</string>
+    <string name="res_empalme">Standard service</string>
+    <string name="res_potencia_maxima_empalme">Maximum service power</string>
+    <string name="res_demanda_usada">Demand considered</string>
+    <string name="intro_empalme">Chooses the standard low-voltage service (RIC N°01, annex 1.3) that covers the installation demand.</string>
+    <string name="intro_empalme_norma">Per clause 5.3, the service capacity may equal or be below the total installed power, never above it. Confirm the service type with the utility.</string>
+    <string name="campo_potencia_save">Power of each charger</string>
+    <string name="campo_cantidad_cargadores">Number of chargers</string>
+    <string name="campo_modo_carga">Charging mode</string>
+    <string name="campo_tipo_irve">Installation type</string>
+    <string name="campo_sgc">Load management system</string>
+    <string name="campo_capacidad_empalme">Available service capacity</string>
+    <string name="ayuda_potencia_save">Rated power of the EVSE or charging point (e.g. 3.7 or 7.4 kW single-phase; 11 or 22 kW three-phase).</string>
+    <string name="ayuda_cantidad_cargadores">Number of identical chargers on the circuit or feeder.</string>
+    <string name="ayuda_modo_carga">Modes 1 and 2: household or industrial socket; mode 3: dedicated charger (wallbox); mode 4: DC fast charging.</string>
+    <string name="ayuda_tipo_irve">Sets the demand factors of table N°15.1, which only apply with a load management system.</string>
+    <string name="ayuda_sgc">Without load management the demand factor is 1 (clause 9.4.1).</string>
+    <string name="ayuda_capacidad_empalme">Optional: service power left for charging, to see the margin.</string>
+    <string name="irve_residencial">Dwelling, building or housing complex</string>
+    <string name="irve_publico">Public self-service or charging station</string>
+    <string name="irve_transporte">Public transport depot</string>
+    <string name="res_corriente_save">Current of each charger</string>
+    <string name="res_demanda_ve">Charging demand</string>
+    <string name="res_margen_empalme">Service margin</string>
+    <string name="intro_carga_ve">Sizes EV charging per RIC N°15: current and protection of each charger (table N°15.3), RCD by charging mode (clause 12.5) and total demand (table N°15.1).</string>
+</resources>

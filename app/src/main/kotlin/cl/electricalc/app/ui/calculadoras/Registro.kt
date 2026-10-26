@@ -4,7 +4,8 @@ package cl.electricalc.app.ui.calculadoras
 object Registro {
     val todas = CalculadorasOhm.todas +
         listOf(CalculadoraCaida.caida, CalculadoraCaida.cargasDistribuidas, CalculadoraCaida.longitudMaxima) +
-        CalculadorasTierra.todas + CalculadorasRic.todas + CalculadorasProteccion.todas
+        CalculadorasTierra.todas + CalculadorasRic.todas + CalculadorasProteccion.todas +
+        CalculadorasEmpalme.todas
 
     private val porId = todas.associateBy { it.id }
 

@@ -1,0 +1,30 @@
+{
+  "pliego": 1,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "Anexo 1.3",
+  "tabla": null,
+  "titulo": "Tipos de empalme de baja tensión y potencias estandarizadas",
+  "paginas": [3, 11],
+  "monofasicos": [
+    { "a": 6, "kw": 1, "kva": 1.3 }, { "a": 10, "kw": 2, "kva": 2.2 }, { "a": 16, "kw": 3, "kva": 3.5 },
+    { "a": 20, "kw": 4, "kva": 4.4 }, { "a": 25, "kw": 5, "kva": 5.5 }, { "a": 30, "kw": 6, "kva": 6.6 },
+    { "a": 32, "kw": 6.5, "kva": 7.0 }, { "a": 35, "kw": 7, "kva": 7.7 }, { "a": 40, "kw": 8, "kva": 8.8 },
+    { "a": 50, "kw": 10, "kva": 11 }, { "a": 63, "kw": 13, "kva": 13.8 }
+  ],
+  "trifasicos": [
+    { "a": 6, "kw": 3.6, "kva": 3.95 }, { "a": 10, "kw": 6, "kva": 6.58 }, { "a": 16, "kw": 9.7, "kva": 10.53 },
+    { "a": 20, "kw": 12, "kva": 13.16 }, { "a": 25, "kw": 15, "kva": 16.45 }, { "a": 30, "kw": 18, "kva": 19.75 },
+    { "a": 32, "kw": 19, "kva": 21.06 }, { "a": 35, "kw": 21, "kva": 23.04 }, { "a": 40, "kw": 24, "kva": 26.33 },
+    { "a": 50, "kw": 30, "kva": 32.91 }, { "a": 63, "kw": 38, "kva": 41.47 }, { "a": 80, "kw": 48, "kva": 52.65 },
+    { "a": 90, "kw": 55, "kva": 59.24 }, { "a": 100, "kw": 61, "kva": 65.82 }, { "a": 125, "kw": 76, "kva": 82.27 },
+    { "a": 150, "kw": 91, "kva": 98.70 }, { "a": 160, "kw": 97, "kva": 105.31 }, { "a": 200, "kw": 122, "kva": 131.64 }
+  ],
+  "notas": [
+    "Numeral 5.3: la capacidad del empalme se determina según la potencia total instalada declarada, ajustada a estos valores normalizados; puede ser igual o inferior a la potencia instalada, nunca superior (salvo lo del punto 5.2.1 del RIC N°10).",
+    "Columnas: interruptor termomagnético (A), potencia nominal o a contratar (kW) y potencia máxima del empalme (kVA)."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "No se transcribió la columna «Tipo de empalme normalizado» (A-6, S-9, AR-18…): en el PDF cada tipo abarca varias filas y el texto extraído no deja claro su rango.",
+    "Tampoco se transcribió la columna «Tipo de tarifa»."
+  ] }
+}

@@ -1,0 +1,26 @@
+{
+  "pliego": 15,
+  "version": "Resolución Exenta N°33.374 del 30/09/2020",
+  "numeral": "9.4",
+  "tabla": "15.1",
+  "titulo": "Factores de demanda y protección de sobrecorriente de la infraestructura de recarga",
+  "paginas": [11, 15],
+  "tipos": [
+    { "tipo": "residencial", "nombre": "Instalaciones individuales y edificios o conjuntos habitacionales",
+      "tramos": [ { "hasta_kw": 10, "fd_min": 1, "fd_max": 1 }, { "hasta_kw": 120, "fd_min": 0.5, "fd_max": 1 }, { "hasta_kw": null, "fd_min": 0.3, "fd_max": 1 } ] },
+    { "tipo": "publico", "nombre": "Autoservicio con acceso a público y electrolineras",
+      "tramos": [ { "hasta_kw": 20, "fd_min": 1, "fd_max": 1 }, { "hasta_kw": 150, "fd_min": 0.6, "fd_max": 1 }, { "hasta_kw": null, "fd_min": 0.5, "fd_max": 1 } ] },
+    { "tipo": "transporte", "nombre": "Electroterminales o centros de carga para transporte público",
+      "tramos": [ { "hasta_kw": 20, "fd_min": 1, "fd_max": 1 }, { "hasta_kw": 150, "fd_min": 1, "fd_max": 1 }, { "hasta_kw": null, "fd_min": 0.5, "fd_max": 1 } ] }
+  ],
+  "proteccion": { "numeral": "12.6.1", "tabla": "15.3", "tramos": [ { "hasta_a": 80, "factor": 1.25 }, { "hasta_a": 180, "factor": 1.20 }, { "hasta_a": null, "factor": 1.15 } ] },
+  "notas": [
+    "Numeral 9.4.1: el alimentador de una IRVE se dimensiona con factor de demanda 1 para la carga total de PCS y de SAVE. Solo con un sistema de gestión de carga (SGC) se pueden aplicar, como mínimo, los factores de la tabla N°15.1.",
+    "Numeral 9.4.2: los subalimentadores se dimensionan con factor de demanda 1.",
+    "Tabla N°15.3: protección de sobrecorriente de 1,25 × In hasta 80 A, 1,20 × In entre 80 y 180 A y 1,15 × In sobre 180 A.",
+    "Numeral 12.6.2: interruptor magnetotérmico bipolar en monofásica y tetrapolar en trifásica."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "La tabla N°15.1 da rangos de factor de demanda («0,5-1,0»); se guardan como mínimo y máximo."
+  ] }
+}
