@@ -1,0 +1,37 @@
+{
+  "pliego": 9,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "Anexo 9.1",
+  "titulo": "Exigencia de protecciones para sistemas de autogeneración",
+  "paginas": [5, 6, 9, 10, 11, 14],
+  "diferencial_umbral_kw": 10,
+  "diferencial_bajo_ma": 30,
+  "diferencial_alto_ma": 300,
+  "ri_centralizada_sobre_kw": 100,
+  "registrador_sobre_kw": 30,
+  "responsable_tecnico_sobre_kw": 300,
+  "exencion_inversa": [
+    { "hasta_kw": 10, "max_fraccion_empalme": 0.30, "empalme_max_kw": 10 },
+    { "hasta_kw": 100, "max_fraccion_empalme": 0.10 }
+  ],
+  "rele_inversa": [
+    { "hasta_kw": 300, "tiempo_s": 10 },
+    { "hasta_kw": 1500, "tiempo_s": 5 },
+    { "tiempo_s": 2 }
+  ],
+  "rele_inversa_pickup": 0.02,
+  "notas": [
+    "Numeral 6.4.2.4: diferencial tipo A o B; hasta 30 mA para potencia instalada inferior a 10 kW y hasta 300 mA desde 10 kW.",
+    "Anexo 9.1 (b): hasta 100 kW basta la protección RI complementaria o la integrada en el inversor; sobre 100 kW, o sin inversor, la RI es centralizada.",
+    "Anexo 9.1 (c) y numeral 6.6.8: la protección de potencia inversa se exime con control de inyección cero si la capacidad instalada no supera 10 kW y el 30 % del empalme, o 100 kW y el 10 % del empalme.",
+    "Numeral 6.6.7 (tabla): relé de potencia inversa con ajuste en 2 % de la potencia nominal; 10 s hasta 300 kW, 5 s hasta 1.500 kW y 2 s sobre 1.500 kW.",
+    "Numeral 8.2 y anexo 9.1 (d): registrador de energía exclusivo sobre 30 kW. Numeral 9: responsable técnico sobre 300 kW."
+  ],
+  "revision": {
+    "estado": "pendiente",
+    "observaciones": [
+      "El numeral 6.6.8.1 exime hasta 300 kW con 10 % del empalme y el 6.6.8.2 exige empalme BT de hasta 10 kW; el anexo 9.1 (c) dice 100 kW y no limita el empalme. Se usa la condición más estricta de ambos.",
+      "Las columnas del anexo 9.1 quedan desalineadas en la extracción; los valores salen de las notas (a) a (d) y del cuerpo del pliego."
+    ]
+  }
+}

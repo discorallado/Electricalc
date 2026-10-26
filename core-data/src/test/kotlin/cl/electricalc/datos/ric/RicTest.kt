@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(24, Ric.todas.size)
+        assertEquals(25, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -22,7 +22,7 @@ class RicTest {
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 10, 15, 18, 19), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(1, 2, 3, 4, 5, 6, 7, 9, 10, 15, 18, 19), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -226,5 +226,24 @@ class RicTest {
         assertEquals("B", c.clases.sinPasoPorCero)
         assertEquals("B", Ric.diferencialesVe.modo(3).tipo)
         assertEquals(30, Ric.diferencialesVe.modo(1).sensibilidadMa)
+    }
+
+    @Test
+    fun `autogeneracion y tablero`() {
+        val a = Ric.autogeneracion
+        val casa = a.para(3.0, 10.0, conInversor = true, inyeccionCero = true)
+        assertEquals(30, casa.diferencialMa)
+        assertEquals(false, casa.potenciaInversa)
+        assertEquals(false, casa.riCentralizada)
+        val media = a.para(50.0, 300.0, conInversor = true, inyeccionCero = true)
+        assertEquals(true, media.potenciaInversa)
+        assertEquals(10.0, media.tiempoInversaS)
+        assertEquals(true, media.registrador)
+        val grande = a.para(2000.0, 5000.0, conInversor = true, inyeccionCero = false)
+        assertEquals(2.0, grande.tiempoInversaS)
+        assertEquals(true, grande.riCentralizada)
+        assertEquals(300, grande.diferencialMa)
+        assertEquals(30, Ric.tableros.modulosConReserva(24))
+        assertEquals(1.2, Ric.tableros.espaciosTrabajo[1].m)
     }
 }

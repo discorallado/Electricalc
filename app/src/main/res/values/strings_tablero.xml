@@ -13,4 +13,18 @@
     <string name="res_espacio_trabajo">Espacio libre de trabajo</string>
     <string name="res_bandeja_interna">Bandeja interna</string>
     <string name="intro_tablero">Dimensiona un tablero según el RIC N°02: capacidad del gabinete con la ampliación del 25 % que exige una instalación nueva, bandejas internas y espacio libre de trabajo frente al tablero.</string>
+    <string name="campo_potencia_generacion">Potencia instalada de generación</string>
+    <string name="ayuda_potencia_generacion">Potencia nominal en alterna del o los inversores o generadores.</string>
+    <string name="campo_empalme_fv">Capacidad del empalme</string>
+    <string name="ayuda_empalme_fv">Potencia total del empalme de la instalación de consumo (BT o MT).</string>
+    <string name="campo_con_inversor">¿Genera mediante inversor?</string>
+    <string name="ayuda_con_inversor">Sin inversor la protección RI debe ser centralizada.</string>
+    <string name="campo_inyeccion_cero">¿Tiene control de inyección cero?</string>
+    <string name="ayuda_inyeccion_cero">Un sistema autorizado por la SEC que impide inyectar a la red; puede eximir la protección de potencia inversa.</string>
+    <string name="res_diferencial_fv">Diferencial</string>
+    <string name="res_proteccion_ri">Protección RI</string>
+    <string name="res_potencia_inversa">Potencia inversa</string>
+    <string name="res_registrador">Registrador de energía exclusivo</string>
+    <string name="res_responsable_tecnico">Responsable técnico designado</string>
+    <string name="intro_autogeneracion">Indica qué protecciones exige el RIC N°09 a un sistema de autogeneración (por ejemplo, fotovoltaico con net billing) según su potencia y la del empalme. La sobrecorriente y la falla a tierra se exigen siempre.</string>
 </resources>

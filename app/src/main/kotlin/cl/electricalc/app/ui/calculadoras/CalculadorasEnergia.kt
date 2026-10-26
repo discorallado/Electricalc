@@ -181,3 +181,41 @@ object CalculadoraTablero {
         },
     )
 }
+
+/** Protecciones de un sistema de autogeneración conectado a la red (RIC N°09, anexo 9.1). */
+object CalculadoraAutogeneracion {
+    private val a by lazy { cl.electricalc.datos.ric.Ric.autogeneracion }
+
+    private fun siNo(id: String, etiqueta: Int, ayuda: Int, porDefecto: Int) =
+        CampoOpciones(id, etiqueta, listOf(ayuda), listOf(R.string.si, R.string.no).map { TextoOpcion.Recurso(it) }, porDefecto)
+
+    private fun texto(b: Boolean) = if (b) "Exigida" else "No exigida"
+
+    val fv = Calculadora(
+        id = "fv_netbilling",
+        sistemas = listOf(SistemaElectrico.MONOFASICA),
+        campos = listOf(
+            campo("p", R.string.campo_potencia_generacion, R.string.ayuda_potencia_generacion, listOf(Unidades.kW), "3"),
+            campo("emp", R.string.campo_empalme_fv, R.string.ayuda_empalme_fv, listOf(Unidades.kW), "10"),
+            siNo("inv", R.string.campo_con_inversor, R.string.ayuda_con_inversor, 0),
+            siNo("cero", R.string.campo_inyeccion_cero, R.string.ayuda_inyeccion_cero, 1),
+        ),
+        visible = { _, _, _, _ -> true },
+        guia = Guia(listOf(R.string.intro_autogeneracion)),
+        calcular = { e ->
+            val kw = e.valor("p") / 1000
+            val r = a.para(kw, e.valor("emp") / 1000, e.opcion("inv") == 0, e.opcion("cero") == 0)
+            listOf(
+                LineaResultado(R.string.res_diferencial_fv, "Tipo A o B, ≤ ${r.diferencialMa} mA"),
+                LineaResultado(R.string.res_proteccion_ri, if (r.riCentralizada) "Centralizada" else "Complementaria o integrada al inversor"),
+                LineaResultado(
+                    R.string.res_potencia_inversa,
+                    r.tiempoInversaS?.let { "Exigida · ${Formato.numero(it, 0)} s · ajuste ${Formato.conPrefijo(r.pickupKw * 1000, "W")}" } ?: "Exenta (inyección cero)",
+                ),
+                LineaResultado(R.string.res_registrador, texto(r.registrador), principal = false),
+                LineaResultado(R.string.res_responsable_tecnico, texto(r.responsableTecnico), principal = false),
+                LineaResultado(R.string.res_referencia, "RIC N°09, numerales 6.4.2.4, 6.6.7, 6.6.8 y anexo 9.1", principal = false),
+            )
+        },
+    )
+}
