@@ -1,0 +1,27 @@
+{
+  "pliego": 10,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "5.1.4",
+  "tabla": null,
+  "titulo": "Circuitos de alumbrado (iluminación y enchufes)",
+  "paginas": [5],
+  "diferencial_max_ma": 30,
+  "circuitos_por_diferencial_max": 3,
+  "capacidad_adicional": 0.10,
+  "uso_capacidad_centros": 0.90,
+  "potencia_centro_iluminacion_w": 100,
+  "potencia_enchufe_w": 250,
+  "curvas": { "iluminacion": "B", "enchufes": "C", "generales": "D o K", "electronicos": "Z", "motores": "MA" },
+  "notas": [
+    "Numeral 5.1.3.5: todo circuito de alumbrado (iluminación y enchufes) debe estar protegido por un diferencial de sensibilidad no superior a 30 mA.",
+    "Numeral 5.1.3.6: el diferencial queda protegido por una termomagnética; su corriente nominal debe ser igual o mayor que la de la termomagnética aguas arriba, o que la suma de las termomagnéticas aguas abajo.",
+    "Numeral 5.1.3.7: desde un diferencial no se derivan más de 3 circuitos (salvo el de 300 mA de la protección general, RIC N°02).",
+    "Numeral 5.1.4.1: la capacidad del circuito es la potencia requerida más un 10 %; su valor nominal es el de la protección inmediatamente superior disponible en el mercado.",
+    "Numeral 5.1.4.2: como referencia, curva B en iluminación, C en enchufes, D o K en protecciones generales, Z en circuitos electrónicos y MA en guardamotores.",
+    "Numeral 5.1.4.4: la cantidad de centros se fija igualando la suma de sus potencias con el 90 % de la capacidad nominal del circuito.",
+    "Numeral 5.1.4.5: si se desconoce la potencia de un artefacto de iluminación, se consideran 100 W por centro.",
+    "Numeral 5.1.4.6: cada enchufe hembra se considera de 250 W (los múltiples de hasta tres salidas, como un centro de 250 W); si se conoce la carga, se usa su potencia.",
+    "Numeral 5.1.2.9: la capacidad de los módulos de enchufe no debe ser inferior a la de la protección del circuito."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

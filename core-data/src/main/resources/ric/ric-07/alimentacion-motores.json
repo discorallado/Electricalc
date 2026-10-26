@@ -1,0 +1,35 @@
+{
+  "pliego": 7,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "5.5",
+  "tabla": "7.1",
+  "titulo": "Conductores y protección de sobrecarga de motores",
+  "paginas": [7, 8],
+  "seccion_minima": { "numeral": "5.5.1", "potencia_hp_sobre": 3, "mm2": 2.5 },
+  "factor_permanente": { "numeral": "5.5.2", "factor": 1.25 },
+  "grupo": { "numeral": "5.5.5", "factor_mayor": 1.25 },
+  "grupo_mixto": { "numeral": "5.5.6", "factor_mayor": 0.25 },
+  "periodos": ["5", "15", "30-60", "mas_60"],
+  "regimenes": [
+    { "regimen": "breve", "nombre": "Breve duración (operación de válvulas o descenso de rodillos y otros similares)",
+      "factores": { "5": 1.1, "15": 1.2, "30-60": 1.5, "mas_60": null } },
+    { "regimen": "intermitente", "nombre": "Intermitentes (bombas, ascensores, montacargas, puentes levadizos, máquinas herramientas, tornamesas, etc.)",
+      "factores": { "5": 0.85, "15": 0.85, "30-60": 0.9, "mas_60": 1.4 } },
+    { "regimen": "periodico", "nombre": "Periódicos (rodillos, laminadores, etc.)",
+      "factores": { "5": 0.85, "15": 0.9, "30-60": 0.95, "mas_60": 1.4 } },
+    { "regimen": "variable", "nombre": "Variables",
+      "factores": { "5": 1.1, "15": 1.2, "30-60": 1.5, "mas_60": 2 } }
+  ],
+  "sobrecarga": { "numeral": "5.6.1.2", "potencia_hp_sobre": 1, "factor_servicio_minimo": 1.15, "factor_con_servicio": 1.25, "factor_otro": 1.15 },
+  "notas": [
+    "Numeral 5.5.2: un motor de régimen permanente requiere una capacidad de transporte de al menos 1,25 veces su corriente de plena carga.",
+    "Numeral 5.5.3 y tabla N°7.1: los motores de régimen no permanente usan la corriente de plena carga por el factor de la tabla; aplica solo a accionamientos tradicionales. Los períodos son los tiempos en que el motor alcanza su temperatura nominal y luego necesita refrigerarse.",
+    "Numeral 5.5.5: un grupo de motores de régimen permanente requiere 1,25 veces la corriente del motor de mayor potencia más la suma de las de los demás.",
+    "Numeral 5.5.6: en grupos mixtos se suman las corrientes de los motores permanentes, las de los no permanentes afectadas por su factor, y 0,25 veces la del motor de mayor potencia (afectada por su factor si no es permanente).",
+    "Numeral 5.5.10: todo motor se considera de régimen permanente, salvo que por el proceso sea imposible que trabaje en forma permanente.",
+    "Numeral 5.6.1.2: los motores permanentes de más de 1 HP llevan protección de sobrecarga regulada a no más de 1,25 veces la corriente nominal si su factor de servicio es de al menos 1,15, o a no más de 1,15 veces en los demás casos."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [
+    "Tabla N°7.1, breve duración: la celda «más de 60 minutos» está vacía en el PDF; se guarda sin valor."
+  ] }
+}

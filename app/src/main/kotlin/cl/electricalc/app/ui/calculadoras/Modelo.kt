@@ -36,6 +36,8 @@ class CampoNumerico(
     val hint: (SistemaElectrico) -> String = { "" },
     /** Texto con que se rellena el campo al abrir la pantalla o cambiar el tipo de corriente. */
     val inicial: ((SistemaElectrico, Preferencias) -> String)? = null,
+    /** Si se puede dejar vacío; el cálculo usa entonces un valor por defecto (Entrada.tiene). */
+    val opcional: Boolean = false,
 ) : Campo
 
 /** Lista de opciones fijas (material, tipo de cable, conductores en paralelo). */

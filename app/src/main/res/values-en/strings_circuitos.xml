@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_aislacion">Insulation (service temperature)</string>
+    <string name="aislacion_70">70 °C: H07V, H07Z1, THWN, NYIFY</string>
+    <string name="aislacion_90">90 °C: THHN, RV, RV-K, RZ1, RZ1-K</string>
+    <string name="campo_metodo">Installation method</string>
+    <string name="campo_t_ambiente">Ambient temperature</string>
+    <string name="campo_conductores_activos">Active conductors in the conduit</string>
+    <string name="ayuda_aislacion">Cable type by maximum service temperature; selects the block of table N°4.4 of RIC N°04.</string>
+    <string name="ayuda_metodo">A1/A2: conduit in walls; B1/B2: conduit or trays on walls; D1/D2: buried; E/F: free air on ladders or perforated trays. At 70 °C only A1, B1 and E exist.</string>
+    <string name="ayuda_seccion_tabla">Sizes of table N°4.4, in mm² with their AWG equivalent.</string>
+    <string name="ayuda_t_ambiente">Corrects capacity with factor ft (table N°4.7). For buried methods it is the soil temperature.</string>
+    <string name="ayuda_conductores_activos">Above 3, factor fn applies (table N°4.6). In three-phase the neutral does not count, nor does the protective conductor.</string>
+    <string name="res_ic">Corrected capacity Ic</string>
+    <string name="res_it">Table capacity It</string>
+    <string name="res_fn">Factor fn</string>
+    <string name="res_ft">Factor ft</string>
+    <string name="intro_capacidad_ric">Current capacity of an insulated copper conductor per RIC N°04: value from table N°4.4 corrected for number of conductors (fn) and ambient temperature (ft), Ic = It × fn × ft.</string>
+    <string name="campo_tipo_circuito">Circuit type</string>
+    <string name="circuito_iluminacion">Lighting</string>
+    <string name="circuito_enchufes">Outlets</string>
+    <string name="circuito_cocina">Kitchen and laundry outlets</string>
+    <string name="circuito_horno">Oven or electric cooker</string>
+    <string name="campo_centros">Number of points</string>
+    <string name="campo_potencia_centro">Power per point</string>
+    <string name="ayuda_tipo_circuito">Sets the reference curve, minimum wire size and minimum circuit rating (RIC N°10 and N°04).</string>
+    <string name="ayuda_centros">Lighting points or outlets on the circuit. A multiple outlet of up to three sockets counts as one point.</string>
+    <string name="ayuda_potencia_centro">Leave empty to use the RIC N°10 value: 100 W per lighting point and 250 W per outlet.</string>
+    <string name="res_proteccion">Protection</string>
+    <string name="res_seccion_conductor">Conductor size</string>
+    <string name="res_diferencial">RCD</string>
+    <string name="res_potencia_circuito">Circuit power</string>
+    <string name="res_corriente_requerida">Current with +10 %</string>
+    <string name="res_centros_maximos">Maximum points with that protection</string>
+    <string name="res_ic_conductor">Conductor capacity (Ic)</string>
+    <string name="res_circuitos_por_diferencial">Circuits per RCD</string>
+    <string name="intro_circuitos_vivienda">Sizes a lighting or outlet circuit per RIC N°10: power plus 10 %, next commercial protection rating, maximum points at 90 % of its capacity and a wire size with enough capacity per RIC N°04.</string>
+    <string name="intro_circuitos_vivienda_norma">Protections are chosen from usual commercial ratings (6, 10, 16, 20, 25, 32… A). Every lighting circuit has an RCD of at most 30 mA, and one RCD groups at most 3 circuits.</string>
+</resources>

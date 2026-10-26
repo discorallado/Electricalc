@@ -136,6 +136,7 @@ class EstadoCalculadora(val definicion: Calculadora, private val preferencias: P
         val valores = mutableMapOf<String, Double>()
         val unidades = unidadesActuales
         for (campo in camposVisibles.filterIsInstance<CampoNumerico>()) {
+            if (campo.opcional && textos[campo.id].isNullOrBlank()) continue
             val numero = Formato.leer(textos[campo.id].orEmpty())
             if (numero == null) {
                 resultado = null

@@ -1,0 +1,33 @@
+{
+  "pliego": 10,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "5.2",
+  "tabla": null,
+  "titulo": "Alumbrado de viviendas",
+  "paginas": [6],
+  "empalme_proteccion_min_a": 25,
+  "alimentador_min_mm2": 4,
+  "superficie_limite_m2": 30,
+  "circuitos_min_menor": 2,
+  "circuitos_min_mayor": 3,
+  "circuito_cocina_min_a": 16,
+  "circuito_horno_min_a": 16,
+  "esquema_tierra": "TN-S",
+  "recinto_un_centro_hasta_m2": 10,
+  "centros_recinto_mayor": 2,
+  "perimetro_por_enchufe_m": 8,
+  "enchufes_cocina": 3,
+  "enchufes_lavadero": 1,
+  "potencia_enchufe_horno_min_w": 1500,
+  "notas": [
+    "Empalme con protección de al menos 25 A y alimentador de al menos 4 mm².",
+    "Al menos 2 circuitos en viviendas de menos de 30 m² y 3 en las de 30 m² o más; todos con diferencial y protección de sobrecarga y cortocircuito.",
+    "Al menos un circuito exclusivo de enchufes de cocina y/o lavadero de 16 A como mínimo; si hay horno o cocina eléctrica, un circuito adicional independiente de al menos 16 A.",
+    "Esquema de conexión a tierra TN-S.",
+    "Un centro de iluminación por recinto de hasta 10 m² (no alimentado desde un enchufe) y dos si es mayor, cada uno con su interruptor.",
+    "En dormitorios, living, comedor y sala de estar, al menos un enchufe doble o triple por cada 8 m de perímetro o fracción.",
+    "En cocina, al menos tres enchufes doble o triple de 10/16 A; en lavadero, al menos uno.",
+    "Horno o cocina eléctrica: un enchufe adicional de al menos 16 A por equipo, con potencia no inferior a 1.500 W (o conexión fija si no hay módulo adecuado)."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": [] }
+}

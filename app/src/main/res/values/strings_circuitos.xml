@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_aislacion">Aislación (temperatura de servicio)</string>
+    <string name="aislacion_70">70 °C: H07V, H07Z1, THWN, NYIFY</string>
+    <string name="aislacion_90">90 °C: THHN, RV, RV-K, RZ1, RZ1-K</string>
+    <string name="campo_metodo">Método de instalación</string>
+    <string name="campo_t_ambiente">Temperatura ambiente</string>
+    <string name="campo_conductores_activos">Conductores activos en el ducto</string>
+    <string name="ayuda_aislacion">Tipo de cable según su temperatura máxima de servicio; define el bloque de la tabla N°4.4 del RIC N°04.</string>
+    <string name="ayuda_metodo">A1/A2: en ductos embutidos; B1/B2: en ductos o bandejas adosadas; D1/D2: enterrados; E/F: al aire en escalerillas o bandejas perforadas. A 70 °C solo hay A1, B1 y E.</string>
+    <string name="ayuda_seccion_tabla">Secciones de la tabla N°4.4, en mm² con su equivalente AWG.</string>
+    <string name="ayuda_t_ambiente">Corrige la capacidad con el factor ft (tabla N°4.7). En métodos enterrados es la temperatura del suelo.</string>
+    <string name="ayuda_conductores_activos">Sobre 3 se aplica el factor fn (tabla N°4.6). En trifásica el neutro no cuenta y el de protección nunca.</string>
+    <string name="res_ic">Capacidad corregida Ic</string>
+    <string name="res_it">Capacidad de tabla It</string>
+    <string name="res_fn">Factor fn</string>
+    <string name="res_ft">Factor ft</string>
+    <string name="intro_capacidad_ric">Capacidad de corriente de un conductor de cobre aislado según el RIC N°04: valor de la tabla N°4.4 corregido por cantidad de conductores (fn) y temperatura ambiente (ft), Ic = It × fn × ft.</string>
+    <string name="campo_tipo_circuito">Tipo de circuito</string>
+    <string name="circuito_iluminacion">Iluminación</string>
+    <string name="circuito_enchufes">Enchufes</string>
+    <string name="circuito_cocina">Enchufes de cocina y lavadero</string>
+    <string name="circuito_horno">Horno o cocina eléctrica</string>
+    <string name="campo_centros">Número de centros</string>
+    <string name="campo_potencia_centro">Potencia por centro</string>
+    <string name="ayuda_tipo_circuito">Define la curva de referencia, la sección mínima y la capacidad mínima del circuito (RIC N°10 y N°04).</string>
+    <string name="ayuda_centros">Puntos de iluminación o enchufes del circuito. Un enchufe múltiple de hasta tres salidas cuenta como un centro.</string>
+    <string name="ayuda_potencia_centro">Déjalo vacío para usar el valor del RIC N°10: 100 W por centro de iluminación y 250 W por enchufe.</string>
+    <string name="res_proteccion">Protección</string>
+    <string name="res_seccion_conductor">Sección del conductor</string>
+    <string name="res_diferencial">Diferencial</string>
+    <string name="res_potencia_circuito">Potencia del circuito</string>
+    <string name="res_corriente_requerida">Corriente con +10 %</string>
+    <string name="res_centros_maximos">Centros máximos con esa protección</string>
+    <string name="res_ic_conductor">Capacidad del conductor (Ic)</string>
+    <string name="res_circuitos_por_diferencial">Circuitos por diferencial</string>
+    <string name="intro_circuitos_vivienda">Dimensiona un circuito de alumbrado (iluminación o enchufes) según el RIC N°10: potencia más 10 %, protección comercial inmediatamente superior, centros máximos al 90 % de su capacidad y sección con capacidad suficiente según el RIC N°04.</string>
+    <string name="intro_circuitos_vivienda_norma">Las protecciones se eligen entre los valores comerciales usuales (6, 10, 16, 20, 25, 32… A). Todo circuito de alumbrado lleva diferencial de hasta 30 mA, y un diferencial agrupa a lo más 3 circuitos.</string>
+</resources>

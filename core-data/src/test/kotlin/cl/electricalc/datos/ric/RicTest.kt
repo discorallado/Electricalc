@@ -14,7 +14,7 @@ class RicTest {
 
     @Test
     fun `todas las tablas cargan y citan su fuente`() {
-        assertEquals(13, Ric.todas.size)
+        assertEquals(16, Ric.todas.size)
         for (t in Ric.todas) {
             assertTrue(t.pliego in 1..19, t.titulo)
             assertTrue(t.version.startsWith("Resolución Exenta"), t.titulo)
@@ -22,7 +22,7 @@ class RicTest {
             assertTrue(t.paginas.isNotEmpty() && t.paginas.all { it > 0 }, t.titulo)
             assertTrue(t.revision.estado in setOf("pendiente", "revisada"), t.titulo)
         }
-        assertEquals(setOf(3, 4, 6), Ric.todas.map { it.pliego }.toSet())
+        assertEquals(setOf(3, 4, 6, 7, 10), Ric.todas.map { it.pliego }.toSet())
         assertEquals(3, Ric.delPliego(3).size)
     }
 
@@ -157,5 +157,30 @@ class RicTest {
         assertEquals(25.0, p.minima(35.0))
         assertEquals(35.0, p.minima(70.0))
         assertEquals(listOf("Schlumberger", "Wenner"), Ric.medicionResistividad.metodos)
+    }
+
+    @Test
+    fun `motores RIC 07 y circuitos RIC 10`() {
+        val m = Ric.motores
+        assertEquals(12.5, m.corrienteDiseno(MotorGrupo(10.0)), 1e-9)
+        assertEquals(1.4, m.factor("intermitente", "mas_60"))
+        assertNull(m.factor("breve", "mas_60"))
+        // Grupo permanente 10, 6, 4 A: 1,25·10 + 6 + 4 = 22,5 A.
+        assertEquals(22.5, m.corrienteGrupo(listOf(MotorGrupo(10.0), MotorGrupo(6.0), MotorGrupo(4.0))), 1e-9)
+        // Mixto: 10 A permanente + 8 A intermitente 15 min (0,85): 10 + 6,8 + 0,25·10 = 19,3 A.
+        assertEquals(19.3, m.corrienteGrupo(listOf(MotorGrupo(10.0), MotorGrupo(8.0, "intermitente", "15"))), 1e-9)
+        assertEquals(12.5, m.sobrecargaMaxima(10.0, 1.15), 1e-9)
+        assertEquals(11.5, m.sobrecargaMaxima(10.0, 1.0), 1e-9)
+        val c = Ric.circuitosAlumbrado
+        assertEquals(30, c.diferencialMaxMa)
+        // 10 A a 220 V, centros de 100 W: 0,9·10·220/100 = 19,8 → 19.
+        assertEquals(19, c.centrosMaximos(10.0, 220.0, 100.0))
+        assertEquals(5.5, c.corrienteRequerida(1100.0, 220.0), 1e-9)
+        val v = Ric.vivienda
+        assertEquals(2, v.circuitosMinimos(25.0))
+        assertEquals(3, v.circuitosMinimos(30.0))
+        assertEquals(2, v.centrosIluminacionMinimos(12.0))
+        assertEquals(2, v.enchufesMinimos(14.0))
+        assertEquals(1, v.enchufesMinimos(8.0))
     }
 }
