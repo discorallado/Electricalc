@@ -1,0 +1,30 @@
+{
+  "pliego": 12,
+  "version": "Resolución Exenta N°33.877 del 30/12/2020",
+  "numeral": "7.5",
+  "titulo": "Clasificación de zonas y modos de protección admitidos",
+  "paginas": [6, 9, 12],
+  "reduccion_corriente": 0.15,
+  "proteccion_cables_desde_m": 5,
+  "zonas": [
+    { "nivel": 0, "gas": 0, "polvo": 20, "proteccion": "Muy alta",
+      "presencia": "Atmósfera explosiva permanente, prolongada o frecuente.",
+      "modos_gas": ["Seguridad intrínseca 'ia'", "Encapsulado 'ma'", "Doble modo de protección (UNE-EN 60079-26)", "Protección especial 'sa'"],
+      "modos_polvo": ["Seguridad intrínseca 'ia'", "Encapsulado 'ma'", "Envolvente 'ta'", "Protección especial 'sa'"] },
+    { "nivel": 1, "gas": 1, "polvo": 21, "proteccion": "Alta",
+      "presencia": "Formación ocasional en funcionamiento normal.",
+      "modos_gas": ["Antideflagrante 'd'", "Sobrepresión 'pb' o 'pv'", "Relleno pulverulento 'q'", "Inmersión en aceite 'o'", "Seguridad aumentada 'e'", "Encapsulado 'm' o 'mb'", "Seguridad intrínseca 'ib'", "Protección especial 'sb'"],
+      "modos_polvo": ["Sobrepresión 'pD'", "Encapsulado 'm' o 'mb'", "Seguridad intrínseca 'ib'", "Envolvente 'tb'", "Protección especial 'sb'"] },
+    { "nivel": 2, "gas": 2, "polvo": 22, "proteccion": "Normal",
+      "presencia": "No se espera en funcionamiento normal o, si se forma, dura muy poco.",
+      "modos_gas": ["Simplificado 'nA', 'nL' o 'nC'", "Seguridad intrínseca 'ic'", "Sobrepresión 'pc'", "Protección especial 'sc'"],
+      "modos_polvo": ["Seguridad intrínseca 'ic'", "Sobrepresión 'pD'", "Envolvente 'tc'", "Protección especial 'sc'"] }
+  ],
+  "notas": [
+    "Numeral 7.1: Grupo II para gases, vapores o nieblas (zonas 0, 1 y 2); Grupo III para polvo (zonas 20, 21 y 22).",
+    "Numeral 5: cada zona admite además todos los modos de protección de la zona más exigente.",
+    "Numeral 11.1.5: la corriente admisible de los conductores se reduce en 15 % respecto a una instalación convencional, y todo cable de 5 m o más se protege contra sobrecarga y cortocircuito.",
+    "La clasificación considera el funcionamiento normal; no incluye escapes catastróficos (numeral 7.2)."
+  ],
+  "revision": { "estado": "pendiente", "observaciones": ["La lista de modos de la zona 1 no separa 'tb' entre gas y polvo; se asigna a polvo porque el modo 't' es de envolvente contra polvo."] }
+}

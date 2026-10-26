@@ -22,4 +22,20 @@
     <string name="res_ventilacion">Ventilación del recinto</string>
     <string name="res_vigilancia_termica">Vigilancia térmica en edificios</string>
     <string name="intro_transformador">Calcula la potencia del transformador según la demanda y la reserva, sus corrientes nominales y el cortocircuito en bornes de baja tensión (red de potencia infinita, Icc = In / Z), y entrega las exigencias del RIC N°13 de protección, ventilación y vigilancia térmica.</string>
+    <string name="campo_sustancia">Sustancia inflamable</string>
+    <string name="ayuda_sustancia">Gases, vapores o nieblas (Grupo II) o polvo combustible (Grupo III).</string>
+    <string name="sustancia_gas">Gas, vapor o niebla</string>
+    <string name="sustancia_polvo">Polvo combustible</string>
+    <string name="campo_presencia">Presencia de atmósfera explosiva</string>
+    <string name="ayuda_presencia">En funcionamiento normal, sin considerar roturas o escapes catastróficos.</string>
+    <string name="presencia_permanente">Permanente, prolongada o frecuente</string>
+    <string name="presencia_ocasional">Ocasional en funcionamiento normal</string>
+    <string name="presencia_rara">Rara o de muy corta duración</string>
+    <string name="campo_iz_convencional">Corriente admisible convencional</string>
+    <string name="ayuda_iz_convencional">Opcional: la del conductor en una instalación normal, para aplicar la reducción del 15 %.</string>
+    <string name="res_zona">Zona</string>
+    <string name="res_nivel_proteccion">Nivel de protección del equipo</string>
+    <string name="res_iz_reducida">Corriente admisible en zona clasificada</string>
+    <string name="res_modo_admitido">Modo admitido</string>
+    <string name="intro_areas">Clasifica un lugar con riesgo de explosión según el RIC N°12 y entrega los modos de protección admitidos para los equipos. La clasificación formal requiere un plano de áreas con la extensión de cada zona.</string>
 </resources>

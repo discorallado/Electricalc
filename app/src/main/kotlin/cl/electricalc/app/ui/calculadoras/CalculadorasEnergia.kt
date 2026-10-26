@@ -358,3 +358,30 @@ object CalculadoraTransformador {
         )
     }
 }
+
+/** Asistente de clasificación de zonas con riesgo de explosión (RIC N°12). */
+object CalculadoraAreasPeligrosas {
+    private val a by lazy { cl.electricalc.datos.ric.Ric.areasPeligrosas }
+
+    val areas = calculadoraSimple(
+        "areas_peligrosas",
+        listOf(
+            CampoOpciones("sustancia", R.string.campo_sustancia, listOf(R.string.ayuda_sustancia), listOf(R.string.sustancia_gas, R.string.sustancia_polvo).map { TextoOpcion.Recurso(it) }),
+            CampoOpciones(
+                "presencia", R.string.campo_presencia, listOf(R.string.ayuda_presencia),
+                listOf(R.string.presencia_permanente, R.string.presencia_ocasional, R.string.presencia_rara).map { TextoOpcion.Recurso(it) }, 1,
+            ),
+            campo("iz", R.string.campo_iz_convencional, R.string.ayuda_iz_convencional, listOf(Unidades.A), "32", opcional = true),
+        ),
+        listOf(R.string.intro_areas),
+    ) { e ->
+        val polvo = e.opcion("sustancia") == 1
+        val z = a.zonas[e.opcion("presencia")]
+        listOfNotNull(
+            LineaResultado(R.string.res_zona, "Zona ${if (polvo) z.polvo else z.gas} (Grupo ${if (polvo) "III" else "II"})"),
+            LineaResultado(R.string.res_nivel_proteccion, z.proteccion),
+            if (e.tiene("iz")) LineaResultado(R.string.res_iz_reducida, Formato.conPrefijo(a.corrienteAdmisible(e.valor("iz")), "A")) else null,
+        ) + a.modos(z.nivel, polvo).map { LineaResultado(R.string.res_modo_admitido, it, principal = false) } +
+            LineaResultado(R.string.res_referencia, "RIC N°12, numerales 5, 7.5 y 11.1.5", principal = false)
+    }
+}

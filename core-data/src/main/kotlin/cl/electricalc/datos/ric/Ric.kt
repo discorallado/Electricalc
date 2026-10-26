@@ -278,6 +278,7 @@ object Ric {
     val volumenesBano: VolumenesBano by lazy { leer("ric-11/volumenes-bano.json") }
     val impedanciaBucle: ImpedanciaBucle by lazy { leer("ric-19/impedancia-bucle.json") }
     val transformadores: Transformadores by lazy { leer("ric-13/transformadores.json") }
+    val areasPeligrosas: AreasPeligrosas by lazy { leer("ric-12/areas-peligrosas.json") }
 
     /** Todas las fuentes transcritas, para listarlas en la página de cada pliego. */
     val todas: List<FuenteRic>
@@ -295,6 +296,7 @@ object Ric {
             volumenesBano,
             impedanciaBucle,
             transformadores,
+            areasPeligrosas,
         )
 
     fun delPliego(numero: Int): List<FuenteRic> = todas.filter { it.pliego == numero }
