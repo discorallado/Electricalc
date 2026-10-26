@@ -52,4 +52,11 @@
     <string name="sim_ra">Resistencia de puesta a tierra de las masas</string>
     <string name="sim_ul">Tensión de contacto límite (RIC N°05)</string>
     <string name="sim_idn">Sensibilidad del diferencial</string>
+    <string name="ficha_capacidad">Capacidad de corriente</string>
+    <string name="sim_corriente_tabla">Corriente de la tabla del RIC N°04</string>
+    <string name="sim_factor_agrupamiento">Factor por cantidad de conductores</string>
+    <string name="sim_factor_temperatura">Factor por temperatura ambiente</string>
+    <string name="sim_cifras_color">Cifras de las bandas de color</string>
+    <string name="sim_multiplicador_color">Exponente de la banda multiplicadora</string>
+    <string name="nota_seccion_ric">La sección elegida es la mayor entre la que da la capacidad de corriente, la de caída de tensión y la mínima del RIC N°04 para el uso de la línea.</string>
 </resources>

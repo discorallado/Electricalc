@@ -540,7 +540,55 @@ object Fichas {
         Simbolo("R_A", R.string.sim_ra, "Ω"), Simbolo("U_L", R.string.sim_ul, "V"), Simbolo("I_Δn", R.string.sim_idn, "A"),
     )
 
+    private fun primeraOhmF() = simple(
+        listOf(e("U = R × I"), e("I = ", frac("U", "R")), e("R = ", frac("U", "I"))),
+        Simbolo("U", R.string.sim_tension_alimentacion, "V"), Simbolo("I", R.string.sim_corriente, "A"), Simbolo("R", R.string.sim_resistencia, "Ω"),
+    )
+
+    private fun segundaOhmF() = simple(
+        listOf(e("R = ", frac("ρ × L", "S"))),
+        Simbolo("R", R.string.sim_resistencia, "Ω"), Simbolo("ρ", R.string.sim_resistividad, "Ω·mm²/m"),
+        Simbolo("L", R.string.sim_longitud, "m"), Simbolo("S", R.string.sim_seccion, "mm²"),
+    )
+
+    private fun potenciaF() = simple(
+        listOf(e("P = U × I"), e("P = R × I^2"), e("P = ", frac("U^2", "R"))),
+        Simbolo("P", R.string.sim_potencia_activa, "W"), Simbolo("U", R.string.sim_tension_alimentacion, "V"),
+        Simbolo("I", R.string.sim_corriente, "A"), Simbolo("R", R.string.sim_resistencia, "Ω"),
+    )
+
+    private fun resistividadF() = simple(
+        listOf(e("ρ_T = ρ_20 × (1 + α × (T − 20))")),
+        Simbolo("ρ_20", R.string.sim_resistividad, "Ω·mm²/m"), Simbolo("α", R.string.sim_alfa, "1/°C"), Simbolo("T", R.string.sim_temperatura, "°C"),
+    )
+
+    private fun calculoSeccionF() = Ficha(
+        listOf(
+            TarjetaFicha(R.string.ficha_capacidad, listOf(e("I_b ≤ I_n ≤ I_z"), e("I_z = I_t × f_n × f_t"))),
+            TarjetaFicha(R.string.sistema_mono_bifasica, listOf(e("S = ", frac("2 × ρ × L × I × cos φ", "ΔU")))),
+            TarjetaFicha(R.string.sistema_trifasica, listOf(e("S = ", frac(e(raiz("3"), " × ρ × L × I × cos φ"), "ΔU")))),
+        ),
+        listOf(
+            Simbolo("I_t", R.string.sim_corriente_tabla, "A"), Simbolo("f_n", R.string.sim_factor_agrupamiento), Simbolo("f_t", R.string.sim_factor_temperatura),
+            Simbolo("ΔU", R.string.sim_caida_maxima, "V"), Simbolo("ρ", R.string.sim_resistividad, "Ω·mm²/m"), Simbolo("L", R.string.sim_longitud, "m"),
+        ),
+        notas = listOf(R.string.nota_seccion_ric),
+    )
+
+    private fun codigoColoresF() = simple(
+        listOf(e("R = (d_1 d_2 d_3) × 10^m"), e("tolerancia: última banda")),
+        Simbolo("d", R.string.sim_cifras_color), Simbolo("m", R.string.sim_multiplicador_color),
+    )
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaLeggeOhmPrima" to ::primeraOhmF,
+        "FormulaLeggeOhmSeconda" to ::segundaOhmF,
+        "FormulaPotenza" to ::potenciaF,
+        "FormulaResistivita" to ::resistividadF,
+        "FormulaTabCalcoloSezione" to ::calculoSeccionF,
+        "FormulaTabCalcoloSezioneAvanzata" to ::calculoSeccionF,
+        "FormulaCodiceResistori" to ::codigoColoresF,
+        "FormulaCodiceInduttori" to ::codigoColoresF,
         "FormulaDurataBatteria" to ::duracionBateriaF,
         "FormulaRifasamento" to ::compensacionF,
         "FormulaImpiantoDiTerra" to ::puestaTierraF,
