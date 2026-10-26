@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_k_cable">Coeficiente k del conductor</string>
+    <string name="ayuda_k_cable">Depende del material del conductor y de su aislamiento; tómalo de la norma o de la ficha del fabricante del cable.</string>
+    <string name="ayuda_seccion_cc">Sección del conductor de fase.</string>
+    <string name="campo_icc">Corriente de cortocircuito</string>
+    <string name="ayuda_icc">Corriente de cortocircuito presunta en el punto de instalación.</string>
+    <string name="ayuda_icc_tiempo">Opcional: con la corriente de falla se calcula el tiempo que el cable la soporta.</string>
+    <string name="campo_icc_origen">Icc en el origen de la línea</string>
+    <string name="ayuda_icc_origen">Corriente de cortocircuito trifásica en el tablero de donde sale la línea.</string>
+    <string name="ayuda_icc_origen_opcional">Opcional: sin este dato se supone una red de impedancia nula aguas arriba.</string>
+    <string name="campo_tiempo_despeje">Tiempo de despeje</string>
+    <string name="ayuda_tiempo_despeje">Tiempo en que la protección interrumpe la falla, de su curva.</string>
+    <string name="campo_corriente_empleo">Corriente de empleo (Ib)</string>
+    <string name="ayuda_ib">Corriente que toma el circuito en servicio normal.</string>
+    <string name="campo_corriente_nominal_prot">Corriente nominal de la protección (In)</string>
+    <string name="ayuda_in_prot">Corriente nominal o de ajuste del interruptor o fusible.</string>
+    <string name="ayuda_potencia_trafo_cc">Potencia nominal del transformador.</string>
+    <string name="campo_scc_red">Potencia de cortocircuito de la red</string>
+    <string name="ayuda_scc_red">Opcional: dato de la distribuidora en el punto de conexión de MT. Sin él se supone red infinita.</string>
+    <string name="campo_tension_fn">Tensión fase-neutro</string>
+    <string name="ayuda_tension_fn">Tensión entre fase y neutro o fase y conductor de protección.</string>
+    <string name="campo_corriente_disparo">Corriente de disparo magnético</string>
+    <string name="ayuda_corriente_disparo">Corriente que hace disparar la protección en el tiempo exigido, por ejemplo 10 × In para curva C.</string>
+    <string name="res_k2s2">Energía específica admisible (k²S²)</string>
+    <string name="res_tiempo_maximo">Tiempo máximo de la falla</string>
+    <string name="res_seccion_minima_cc">Sección mínima por cortocircuito</string>
+    <string name="res_coordinacion">Coordinación</string>
+    <string name="res_margen_conductor">Margen del conductor sobre la protección</string>
+    <string name="res_icc_trifasica">Icc trifásica</string>
+    <string name="res_impedancia_trafo">Impedancia del transformador</string>
+    <string name="res_impedancia_linea">Impedancia de una fase de la línea</string>
+    <string name="res_icc_minima">Icc mínima fase-neutro al final</string>
+    <string name="res_largo_maximo">Largo máximo de la línea</string>
+    <string name="intro_energia_especifica">Calcula la energía específica (k²S²) que soporta un cable en cortocircuito; la protección debe dejar pasar menos I²t que este valor.</string>
+    <string name="intro_proteccion_cable_cc">Calcula la sección mínima que soporta una corriente de cortocircuito durante el tiempo de despeje: S = I × √t / k.</string>
+    <string name="intro_dispositivo">Verifica que la corriente nominal de la protección quede entre la de empleo del circuito y la admisible del conductor.</string>
+    <string name="intro_icc_trafo">Calcula la corriente de cortocircuito trifásica en los bornes de baja tensión de un transformador, con la red de media tensión si la conoces.</string>
+    <string name="intro_icc_aguas_abajo">Calcula la corriente de cortocircuito trifásica al final de una línea conociendo la del tablero de origen.</string>
+    <string name="intro_icc_minima">Calcula la corriente de cortocircuito mínima (falla fase-neutro al final de la línea), la que debe hacer disparar la protección.</string>
+    <string name="intro_largo_maximo_cc">Calcula el largo máximo de la línea para que la falla fase-neutro al final alcance la corriente de disparo magnético de la protección.</string>
+    <string name="intro_cc_supuestos">Método de impedancias con la tensión nominal y el conductor a su temperatura de servicio; no aplica factores de tensión ni de temperatura de falla de las normas, así que verifica con un margen.</string>
+    <string name="sim_k">Coeficiente del conductor</string>
+    <string name="sim_icc">Corriente de cortocircuito</string>
+    <string name="sim_tiempo_despeje">Tiempo de despeje</string>
+    <string name="sim_ib">Corriente de empleo</string>
+    <string name="sim_in">Corriente nominal de la protección</string>
+    <string name="sim_potencia_trafo">Potencia del transformador</string>
+    <string name="sim_ucc">Tensión de cortocircuito (por unidad)</string>
+    <string name="sim_scc">Potencia de cortocircuito de la red</string>
+    <string name="sim_impedancia_origen">Impedancia aguas arriba</string>
+    <string name="sim_corriente_disparo">Corriente de disparo</string>
+</resources>

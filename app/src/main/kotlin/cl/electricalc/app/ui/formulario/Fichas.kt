@@ -486,7 +486,50 @@ object Fichas {
         Simbolo("I_1, I_2, I_3", R.string.sim_corrientes_fase, "A"),
     )
 
+    private val simK = Simbolo("k", R.string.sim_k)
+    private val simS = Simbolo("S", R.string.sim_seccion, "mm²")
+
+    private fun energiaEspecificaF() = simple(listOf(e("I^2 t ≤ k^2 × S^2"), e("t_max = ", e("(", frac("k × S", "I"), ")^2"))), simK, simS, Simbolo("I", R.string.sim_icc, "A"))
+
+    private fun proteccionCableF() = simple(
+        listOf(e("S ≥ ", frac(e("I_cc × ", raiz("t")), "k"))),
+        simS, Simbolo("I_cc", R.string.sim_icc, "A"), Simbolo("t", R.string.sim_tiempo_despeje, "s"), simK,
+    )
+
+    private fun dispositivoF() = simple(
+        listOf(e("I_b ≤ I_n ≤ I_z")),
+        Simbolo("I_b", R.string.sim_ib, "A"), Simbolo("I_n", R.string.sim_in, "A"), Simbolo("I_z", R.string.sim_corriente_admisible, "A"),
+    )
+
+    private fun iccTrafoF() = simple(
+        listOf(e("Z_t = ", frac("u_cc × U^2", "S")), e("Z_r = ", frac("U^2", "S_cc")), e("I_cc = ", frac("U", e(raiz("3"), " × (Z_r + Z_t)")))),
+        Simbolo("S", R.string.sim_potencia_trafo, "VA"), Simbolo("u_cc", R.string.sim_ucc), Simbolo("S_cc", R.string.sim_scc, "VA"),
+        Simbolo("U", R.string.sim_tension_ff, "V"),
+    )
+
+    private fun iccLineaF() = simple(
+        listOf(e("Z_0 = ", frac("U", e(raiz("3"), " × I_cc0"))), e("I_cc = ", frac("U", e(raiz("3"), " × |Z_0 + R + jX|")))),
+        Simbolo("Z_0", R.string.sim_impedancia_origen, "Ω"), Simbolo("R", R.string.sim_resistencia, "Ω"), Simbolo("X", R.string.sim_reactancia, "Ω"),
+    )
+
+    private fun iccMinimaF() = simple(
+        listOf(e("Z_0 = ", frac("U_0", "I_cc0")), e("I_cc,min = ", frac("U_0", "|Z_0 + 2 × (R + jX)|"))),
+        Simbolo("U_0", R.string.sim_tension_fn, "V"), Simbolo("Z_0", R.string.sim_impedancia_origen, "Ω"),
+    )
+
+    private fun largoMaximoCcF() = simple(
+        listOf(e("|Z_0 + 2 × (r + jx) × L| = ", frac("U_0", "I_a"))),
+        Simbolo("I_a", R.string.sim_corriente_disparo, "A"), Simbolo("r, x", R.string.sim_resistencia_linea, "Ω/km"), Simbolo("L", R.string.sim_longitud, "km"),
+    )
+
     private val constructores: Map<String, () -> Ficha> = mapOf(
+        "FormulaTabEnergiaSpecifica" to ::energiaEspecificaF,
+        "FormulaProtezioneCavoCortocircuito" to ::proteccionCableF,
+        "FormulaDispositivoProtezione" to ::dispositivoF,
+        "FormulaCorrenteCortoCircuitoTrasf" to ::iccTrafoF,
+        "FormulaCorrenteCortoCircuito" to ::iccLineaF,
+        "FormulaCorrenteCortoCircuitoMin" to ::iccMinimaF,
+        "FormulaLunghezzaCavoCortocircuito" to ::largoMaximoCcF,
         "FormulaResistenzaCavo" to ::resistenciaCableF,
         "FormulaPerditaPotenzaCavo" to ::perdidasCableF,
         "FormulaTemperaturaCavo" to ::temperaturaCableF,
