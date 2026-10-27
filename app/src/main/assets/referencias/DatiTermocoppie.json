@@ -11,9 +11,9 @@
         [ "N", "Ni-Cr-Si", "Ni-Si-Mg", "−270 … 1300 °C", "−4,345 … 47,513 mV" ],
         [ "S", "Pt-Rh 10 %", "Pt", "−50 … 1768 °C", "−0,235 … 18,693 mV" ],
         [ "R", "Pt-Rh 13 %", "Pt", "−50 … 1768 °C", "−0,226 … 21,103 mV" ],
-        [ "B", "Pt-Rh 30 %", "Pt-Rh 6 %", "0 a 1820 °C", "0 a 13,820 mV" ],
-        [ "C", "W-Re", "W-Re 26 %", "0 a 2315 °C", "0 a 37,070 mV" ],
-        [ "A", "W-Re", "W-Re 20 %", "0 a 2500 °C", "0 a 33,640 mV" ]
+        [ "B", "Pt-Rh 30 %", "Pt-Rh 6 %", "0 … 1820 °C", "0 … 13,820 mV" ],
+        [ "C", "W-Re", "W-Re 26 %", "0 … 2315 °C", "0 … 37,070 mV" ],
+        [ "A", "W-Re", "W-Re 20 %", "0 … 2500 °C", "0 … 33,640 mV" ]
       ],
       "notas": [
         { "es": "La FEM es con la unión de referencia a 0 °C.", "en": "EMF with the reference junction at 0 °C." },
