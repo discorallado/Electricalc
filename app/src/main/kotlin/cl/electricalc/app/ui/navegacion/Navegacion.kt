@@ -27,6 +27,8 @@ import cl.electricalc.app.ui.formulario.PantallaFicha
 import cl.electricalc.app.ui.guia.PantallaGuia
 import cl.electricalc.app.ui.ric.PantallaTablaRic
 import cl.electricalc.app.ui.ric.TablasRic
+import cl.electricalc.app.ui.referencias.PantallaReferencia
+import cl.electricalc.app.ui.referencias.Referencias
 
 /** Rutas: cada herramienta del catálogo se abre por su id del catálogo v2. */
 object Rutas {
@@ -92,6 +94,7 @@ fun NavegacionApp(catalogo: Catalogo) {
                 item != null && TablasRic.claveDeHerramienta(id) != null -> PantallaTablaRic(
                     TablasRic.porClave.getValue(TablasRic.claveDeHerramienta(id)!!), nav::volver,
                 )
+                item != null && Referencias.existe(id) -> PantallaReferencia(item.titulo, id, nav::volver)
                 item != null && calculadora != null -> PantallaCalculadora(
                     calculadora = calculadora,
                     item = item,

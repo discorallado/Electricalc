@@ -31,6 +31,7 @@ import cl.electricalc.app.ui.catalogo.Herramienta
 import cl.electricalc.app.ui.catalogo.IconoItem
 import cl.electricalc.app.ui.formulario.Fichas
 import cl.electricalc.app.ui.ric.TablasRic
+import cl.electricalc.app.ui.referencias.Referencias
 
 @StringRes
 fun nombreCategoria(id: String): Int = when (id) {
@@ -77,7 +78,7 @@ fun nombreTipo(tipo: String?): Int = when (tipo) {
 val HERRAMIENTAS_PROYECTO = setOf("cuadro_cargas", "memoria_calculo")
 
 fun disponible(h: Herramienta) =
-    Registro.implementada(h.id) || Fichas.existe(h.id) || TablasRic.claveDeHerramienta(h.id) != null ||
+    Registro.implementada(h.id) || Fichas.existe(h.id) || TablasRic.claveDeHerramienta(h.id) != null || Referencias.existe(h.id) ||
         h.id in HERRAMIENTAS_PROYECTO
 
 /**

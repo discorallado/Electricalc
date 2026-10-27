@@ -1,0 +1,79 @@
+{
+  "fuente": "Datos de la app de referencia (IEC 60529, IEC 62262, NEMA 250); textos propios.",
+  "secciones": [
+    {
+      "titulo": { "es": "Código IP: primera cifra (sólidos)", "en": "IP code: first digit (solids)" },
+      "columnas": [ { "es": "Cifra", "en": "Digit" }, { "es": "Protección", "en": "Protection" } ],
+      "filas": [
+        [ "0", { "es": "Sin protección", "en": "Not protected" } ],
+        [ "1", { "es": "Objetos sólidos de más de 50 mm (dorso de la mano)", "en": "Solid objects over 50 mm (back of hand)" } ],
+        [ "2", { "es": "Objetos sólidos de más de 12,5 mm (dedo)", "en": "Solid objects over 12.5 mm (finger)" } ],
+        [ "3", { "es": "Objetos sólidos de más de 2,5 mm (herramienta)", "en": "Solid objects over 2.5 mm (tool)" } ],
+        [ "4", { "es": "Objetos sólidos de más de 1 mm (alambre)", "en": "Solid objects over 1 mm (wire)" } ],
+        [ "5", { "es": "Protegido contra el polvo: puede entrar algo, sin afectar el funcionamiento", "en": "Dust-protected: limited ingress that does not impair operation" } ],
+        [ "6", { "es": "Estanco al polvo", "en": "Dust-tight" } ],
+        [ "X", { "es": "No ensayado o no especificado", "en": "Not tested or not specified" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Código IP: segunda cifra (agua)", "en": "IP code: second digit (water)" },
+      "columnas": [ { "es": "Cifra", "en": "Digit" }, { "es": "Protección", "en": "Protection" } ],
+      "filas": [
+        [ "0", { "es": "Sin protección", "en": "Not protected" } ],
+        [ "1", { "es": "Gotas que caen verticalmente", "en": "Vertically falling drops" } ],
+        [ "2", { "es": "Gotas con el equipo inclinado hasta 15°", "en": "Drops with the enclosure tilted up to 15°" } ],
+        [ "3", { "es": "Lluvia hasta 60° de la vertical", "en": "Spraying water up to 60° from vertical" } ],
+        [ "4", { "es": "Salpicaduras desde cualquier dirección", "en": "Splashing water from any direction" } ],
+        [ "5", { "es": "Chorros de agua desde cualquier dirección", "en": "Water jets from any direction" } ],
+        [ "6", { "es": "Chorros potentes de agua", "en": "Powerful water jets" } ],
+        [ "7", { "es": "Inmersión temporal", "en": "Temporary immersion" } ],
+        [ "8", { "es": "Inmersión prolongada, en las condiciones que indique el fabricante", "en": "Continuous immersion, under conditions stated by the manufacturer" } ],
+        [ "9K", { "es": "Chorros a alta presión y alta temperatura a corta distancia", "en": "High-pressure, high-temperature jets at close range" } ],
+        [ "X", { "es": "No ensayado o no especificado", "en": "Not tested or not specified" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Letras opcionales", "en": "Optional letters" },
+      "columnas": [ { "es": "Letra", "en": "Letter" }, { "es": "Significado", "en": "Meaning" } ],
+      "filas": [
+        [ "A", { "es": "Acceso a partes peligrosas: dorso de la mano", "en": "Access to hazardous parts: back of hand" } ],
+        [ "B", { "es": "Acceso a partes peligrosas: dedo", "en": "Access to hazardous parts: finger" } ],
+        [ "C", { "es": "Acceso a partes peligrosas: herramienta", "en": "Access to hazardous parts: tool" } ],
+        [ "D", { "es": "Acceso a partes peligrosas: alambre", "en": "Access to hazardous parts: wire" } ],
+        [ "H", { "es": "Equipo de alta tensión", "en": "High-voltage equipment" } ],
+        [ "M", { "es": "Ensayo de agua con las partes móviles en movimiento", "en": "Water test with moving parts in motion" } ],
+        [ "S", { "es": "Ensayo de agua con las partes móviles detenidas", "en": "Water test with moving parts stationary" } ],
+        [ "W", { "es": "Apto para condiciones climáticas especificadas, con medidas adicionales", "en": "Suitable for specified weather conditions, with additional measures" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Código IK: resistencia al impacto", "en": "IK code: impact resistance" },
+      "columnas": [ { "es": "Código", "en": "Code" }, { "es": "Energía de impacto", "en": "Impact energy" } ],
+      "filas": [
+        [ "IK00", { "es": "Sin protección", "en": "Not protected" } ],
+        [ "IK01", "0,14 J" ], [ "IK02", "0,2 J" ], [ "IK03", "0,35 J" ], [ "IK04", "0,5 J" ], [ "IK05", "0,7 J" ],
+        [ "IK06", "1 J" ], [ "IK07", "2 J" ], [ "IK08", "5 J" ], [ "IK09", "10 J" ], [ "IK10", "20 J" ], [ "IK11", "50 J" ]
+      ],
+      "notas": [ { "es": "IK11 no figura en IEC 62262; algunos fabricantes lo usan para 50 J.", "en": "IK11 is not in IEC 62262; some manufacturers use it for 50 J." } ]
+    },
+    {
+      "titulo": { "es": "Envolventes NEMA y su IP aproximado", "en": "NEMA enclosures and approximate IP" },
+      "columnas": [ { "es": "Tipo", "en": "Type" }, { "es": "Uso", "en": "Use" } ],
+      "filas": [
+        [ "1", { "es": "Interior; contra contacto y caída de suciedad (≈ IP20)", "en": "Indoor; against contact and falling dirt (≈ IP20)" } ],
+        [ "2", { "es": "Interior; además goteo y salpicadura ligera (≈ IP22)", "en": "Indoor; also dripping and light splashing (≈ IP22)" } ],
+        [ "3", { "es": "Interior o exterior; polvo arrastrado por viento, lluvia y hielo exterior (≈ IP55)", "en": "Indoor or outdoor; windblown dust, rain and external ice (≈ IP55)" } ],
+        [ "3R", { "es": "Interior o exterior; lluvia y hielo exterior, sin polvo (≈ IP24)", "en": "Indoor or outdoor; rain and external ice, no dust (≈ IP24)" } ],
+        [ "3S", { "es": "Como el 3, con mecanismos que funcionan con hielo (≈ IP55)", "en": "Like type 3, with mechanisms operable when iced (≈ IP55)" } ],
+        [ "4", { "es": "Interior o exterior; chorros de agua y manguera (≈ IP66)", "en": "Indoor or outdoor; splashing and hose-directed water (≈ IP66)" } ],
+        [ "4X", { "es": "Como el 4, además resistente a la corrosión (≈ IP66)", "en": "Like type 4, plus corrosion resistant (≈ IP66)" } ],
+        [ "5", { "es": "Interior; polvo, pelusa y fibras en suspensión y goteo (≈ IP53)", "en": "Indoor; settling dust, lint, fibres and dripping (≈ IP53)" } ],
+        [ "6", { "es": "Interior o exterior; inmersión temporal (≈ IP67)", "en": "Indoor or outdoor; temporary submersion (≈ IP67)" } ],
+        [ "6P", { "es": "Interior o exterior; inmersión prolongada (≈ IP68)", "en": "Indoor or outdoor; prolonged submersion (≈ IP68)" } ],
+        [ "12 / 12K", { "es": "Interior; polvo, fibras, goteo de aceite y refrigerante; 12K con troqueles (≈ IP54)", "en": "Indoor; dust, fibres, oil and coolant dripping; 12K with knockouts (≈ IP54)" } ],
+        [ "13", { "es": "Interior; polvo, rocío de aceite y refrigerante (≈ IP54)", "en": "Indoor; dust, oil and coolant spray (≈ IP54)" } ]
+      ],
+      "notas": [ { "es": "La equivalencia NEMA → IP es orientativa: las normas ensayan distinto y no son intercambiables.", "en": "The NEMA → IP match is indicative only: the standards test differently and are not interchangeable." } ]
+    }
+  ]
+}
