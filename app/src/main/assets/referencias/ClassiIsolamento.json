@@ -1,0 +1,14 @@
+{
+  "fuente": "Datos de la app de referencia (IEC 61140); textos propios.",
+  "secciones": [
+    {
+      "columnas": [ { "es": "Clase", "en": "Class" }, { "es": "Protección contra choque eléctrico", "en": "Protection against electric shock" } ],
+      "filas": [
+        [ "0", { "es": "Solo aislamiento básico, sin conexión de las masas a tierra. Prohibida en instalaciones nuevas en muchos países.", "en": "Basic insulation only, exposed parts not earthed. Banned in new installations in many countries." } ],
+        [ "I", { "es": "Aislamiento básico más conexión de las masas al conductor de protección (verde/amarillo).", "en": "Basic insulation plus exposed parts connected to the protective conductor (green/yellow)." } ],
+        [ "II", { "es": "Doble aislamiento o aislamiento reforzado; no lleva ni debe llevar tierra de protección. Símbolo: dos cuadrados concéntricos.", "en": "Double or reinforced insulation; has and must have no protective earth. Symbol: two concentric squares." } ],
+        [ "III", { "es": "Alimentado en muy baja tensión de seguridad (MBTS/MBTP): hasta 50 V CA o 120 V CC sin ondulación.", "en": "Supplied at safety extra-low voltage (SELV/PELV): up to 50 V AC or 120 V ripple-free DC." } ]
+      ]
+    }
+  ]
+}

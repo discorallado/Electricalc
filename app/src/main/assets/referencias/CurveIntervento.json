@@ -1,0 +1,33 @@
+{
+  "fuente": "Datos de la app de referencia (IEC 60898-1, IEC 60947-2, UL 489); textos propios.",
+  "secciones": [
+    {
+      "titulo": { "es": "Disparo magnético por curva", "en": "Magnetic trip by curve" },
+      "columnas": [ { "es": "Curva", "en": "Curve" }, "IEC 60898-1", "IEC 60947-2", "UL 489 / UL 1077" ],
+      "filas": [
+        [ "B", "3–5 In", "4 In ± 20 %", "3–5 In" ],
+        [ "C", "5–10 In", "8 In ± 20 %", "5–10 In" ],
+        [ "D", "10–20 In", "12 In ± 20 %", "10–20 In" ],
+        [ "Z", "–", "3 In ± 20 %", "2–3 In" ],
+        [ "K", "–", "12 In ± 20 %", "8–12 In" ],
+        [ "MA", "–", "12 In ± 20 %", "–" ]
+      ]
+    },
+    {
+      "titulo": { "es": "Uso típico", "en": "Typical use" },
+      "columnas": [ { "es": "Curva", "en": "Curve" }, { "es": "Aplicación", "en": "Application" } ],
+      "filas": [
+        [ "B", { "es": "Cargas resistivas y cables largos en TN e IT, donde la corriente de falla es baja", "en": "Resistive loads and long cables in TN and IT, where fault current is low" } ],
+        [ "C", { "es": "Uso general: cargas mixtas con corriente de arranque moderada", "en": "General use: mixed loads with moderate inrush" } ],
+        [ "D", { "es": "Cargas con arranque alto: motores, transformadores, soldadoras", "en": "High-inrush loads: motors, transformers, welders" } ],
+        [ "Z", { "es": "Circuitos electrónicos y semiconductores sensibles", "en": "Electronic circuits and sensitive semiconductors" } ],
+        [ "K", { "es": "Motores, transformadores y circuitos auxiliares", "en": "Motors, transformers and auxiliary circuits" } ],
+        [ "MA", { "es": "Solo magnético, para motores con relé térmico aparte", "en": "Magnetic only, for motors with a separate overload relay" } ]
+      ],
+      "notas": [
+        { "es": "La zona térmica (sobrecarga) es de tiempo inverso: a más corriente, menor tiempo de disparo.", "en": "The thermal (overload) region is inverse-time: the higher the current, the shorter the trip time." },
+        { "es": "La zona magnética (cortocircuito) dispara en forma prácticamente instantánea dentro del rango de la curva.", "en": "The magnetic (short-circuit) region trips almost instantly within the curve's range." }
+      ]
+    }
+  ]
+}

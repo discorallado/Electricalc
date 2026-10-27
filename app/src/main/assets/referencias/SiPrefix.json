@@ -1,0 +1,16 @@
+{
+  "fuente": "Sistema Internacional de Unidades (BIPM, 2022).",
+  "secciones": [
+    {
+      "columnas": [ { "es": "Prefijo", "en": "Prefix" }, { "es": "Símbolo", "en": "Symbol" }, { "es": "Factor", "en": "Factor" } ],
+      "filas": [
+        [ "quetta", "Q", "10³⁰" ], [ "ronna", "R", "10²⁷" ], [ "yotta", "Y", "10²⁴" ], [ "zetta", "Z", "10²¹" ],
+        [ "exa", "E", "10¹⁸" ], [ "peta", "P", "10¹⁵" ], [ "tera", "T", "10¹²" ], [ "giga", "G", "10⁹" ],
+        [ "mega", "M", "10⁶" ], [ "kilo", "k", "10³" ], [ "hecto", "h", "10²" ], [ "deca", "da", "10¹" ],
+        [ "deci", "d", "10⁻¹" ], [ "centi", "c", "10⁻²" ], [ "mili / milli", "m", "10⁻³" ], [ "micro", "µ", "10⁻⁶" ],
+        [ "nano", "n", "10⁻⁹" ], [ "pico", "p", "10⁻¹²" ], [ "femto", "f", "10⁻¹⁵" ], [ "atto", "a", "10⁻¹⁸" ],
+        [ "zepto", "z", "10⁻²¹" ], [ "yocto", "y", "10⁻²⁴" ], [ "ronto", "r", "10⁻²⁷" ], [ "quecto", "q", "10⁻³⁰" ]
+      ]
+    }
+  ]
+}

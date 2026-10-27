@@ -1,0 +1,20 @@
+{
+  "fuente": "Datos de la app de referencia (UL 248); textos propios.",
+  "secciones": [
+    {
+      "columnas": [ { "es": "Clase", "en": "Class" }, { "es": "Tensión", "en": "Voltage" }, { "es": "Corriente", "en": "Current" } ],
+      "filas": [
+        [ "L", "600 V CA/CC", "601–6000 A" ],
+        [ "R", "250 / 600 V CA · 125 / 300 V CC", "0–600 A" ],
+        [ "J", "600 V CA", "0–600 A" ],
+        [ "CC", "600 V CA", "0–30 A" ],
+        [ "CD", "600 V CA", "35–60 A" ],
+        [ "T", "300 / 600 V CA · 125 / 300 V CC", "0–1200 A" ],
+        [ "G", "600 V CA (0–20 A) · 480 V CA (21–60 A)", "0–60 A" ],
+        [ "K", "250 / 600 V CA", "0–600 A" ],
+        [ "H", "250 / 600 V CA", "0–600 A" ]
+      ],
+      "notas": [ { "es": "El poder de corte depende de la clase y del fabricante: revísalo en la ficha del fusible.", "en": "Interrupting rating depends on the class and manufacturer: check the fuse datasheet." } ]
+    }
+  ]
+}

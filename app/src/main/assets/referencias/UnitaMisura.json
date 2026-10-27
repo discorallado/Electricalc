@@ -1,0 +1,49 @@
+{
+  "fuente": "Datos de la app de referencia; textos propios.",
+  "secciones": [
+    {
+      "columnas": [ { "es": "Símbolo", "en": "Symbol" }, { "es": "Unidad", "en": "Unit" }, { "es": "Magnitud", "en": "Quantity" }, "SI" ],
+      "filas": [
+        [ "V", "volt", { "es": "Tensión", "en": "Voltage" }, "✓" ],
+        [ "A", { "es": "amperio", "en": "ampere" }, { "es": "Corriente", "en": "Current" }, "✓" ],
+        [ "W", "watt", { "es": "Potencia", "en": "Power" }, "✓" ],
+        [ "Hz", { "es": "hercio", "en": "hertz" }, { "es": "Frecuencia", "en": "Frequency" }, "✓" ],
+        [ "Ω", { "es": "ohmio", "en": "ohm" }, { "es": "Resistencia", "en": "Resistance" }, "✓" ],
+        [ "F", { "es": "faradio", "en": "farad" }, { "es": "Capacidad", "en": "Capacitance" }, "✓" ],
+        [ "H", { "es": "henrio", "en": "henry" }, { "es": "Inductancia", "en": "Inductance" }, "✓" ],
+        [ "C", { "es": "culombio", "en": "coulomb" }, { "es": "Carga eléctrica", "en": "Electric charge" }, "✓" ],
+        [ "S", "siemens", { "es": "Conductancia", "en": "Conductance" }, "✓" ],
+        [ "J", { "es": "julio", "en": "joule" }, { "es": "Energía, trabajo", "en": "Energy, work" }, "✓" ],
+        [ "T", "tesla", { "es": "Inducción magnética", "en": "Magnetic flux density" }, "✓" ],
+        [ "Wb", "weber", { "es": "Flujo magnético", "en": "Magnetic flux" }, "✓" ],
+        [ "Pa", "pascal", { "es": "Presión", "en": "Pressure" }, "✓" ],
+        [ "N", "newton", { "es": "Fuerza", "en": "Force" }, "✓" ],
+        [ "N·m", { "es": "newton metro", "en": "newton metre" }, { "es": "Par", "en": "Torque" }, "✓" ],
+        [ "kg", { "es": "kilogramo", "en": "kilogram" }, { "es": "Masa", "en": "Mass" }, "✓" ],
+        [ "m", { "es": "metro", "en": "metre" }, { "es": "Longitud", "en": "Length" }, "✓" ],
+        [ "s", { "es": "segundo", "en": "second" }, { "es": "Tiempo", "en": "Time" }, "✓" ],
+        [ "K", "kelvin", { "es": "Temperatura", "en": "Temperature" }, "✓" ],
+        [ "°C", { "es": "grado Celsius", "en": "degree Celsius" }, { "es": "Temperatura", "en": "Temperature" }, "✓" ],
+        [ "rad", { "es": "radián", "en": "radian" }, { "es": "Ángulo plano", "en": "Plane angle" }, "✓" ],
+        [ "rad/s", { "es": "radián por segundo", "en": "radian per second" }, { "es": "Velocidad angular", "en": "Angular velocity" }, "✓" ],
+        [ "sr", { "es": "estereorradián", "en": "steradian" }, { "es": "Ángulo sólido", "en": "Solid angle" }, "✓" ],
+        [ "Ah", { "es": "amperio-hora", "en": "ampere-hour" }, { "es": "Carga eléctrica", "en": "Electric charge" }, "–" ],
+        [ "Wh", "watt-hora", { "es": "Energía", "en": "Energy" }, "–" ],
+        [ "eV", { "es": "electronvoltio", "en": "electronvolt" }, { "es": "Energía", "en": "Energy" }, "–" ],
+        [ "HP / CV", { "es": "caballo de fuerza / de vapor", "en": "horsepower / metric horsepower" }, { "es": "Potencia", "en": "Power" }, "–" ],
+        [ "G", "gauss", { "es": "Inducción magnética", "en": "Magnetic flux density" }, "–" ],
+        [ "Oe", "oersted", { "es": "Intensidad de campo magnético", "en": "Magnetic field strength" }, "–" ],
+        [ "Mx", "maxwell", { "es": "Flujo magnético", "en": "Magnetic flux" }, "–" ],
+        [ "bar", "bar", { "es": "Presión", "en": "Pressure" }, "–" ],
+        [ "atm", { "es": "atmósfera", "en": "atmosphere" }, { "es": "Presión", "en": "Pressure" }, "–" ],
+        [ "cal", { "es": "caloría", "en": "calorie" }, { "es": "Calor", "en": "Heat" }, "–" ],
+        [ "fr", { "es": "frigoría", "en": "frigorie" }, { "es": "Calor extraído", "en": "Heat removed" }, "–" ],
+        [ "BTU", { "es": "unidad térmica británica", "en": "British thermal unit" }, { "es": "Calor", "en": "Heat" }, "–" ],
+        [ "Å", { "es": "ångström", "en": "ångström" }, { "es": "Longitud de onda", "en": "Wavelength" }, "–" ],
+        [ "ft", { "es": "pie", "en": "foot" }, { "es": "Longitud", "en": "Length" }, "–" ],
+        [ "in", { "es": "pulgada", "en": "inch" }, { "es": "Longitud", "en": "Length" }, "–" ],
+        [ "°F", { "es": "grado Fahrenheit", "en": "degree Fahrenheit" }, { "es": "Temperatura", "en": "Temperature" }, "–" ]
+      ]
+    }
+  ]
+}

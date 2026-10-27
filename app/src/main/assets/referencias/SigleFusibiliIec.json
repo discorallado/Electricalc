@@ -1,0 +1,29 @@
+{
+  "fuente": "Datos de la app de referencia (IEC 60269); textos propios.",
+  "secciones": [
+    {
+      "titulo": { "es": "Primera letra: rango de corte", "en": "First letter: breaking range" },
+      "columnas": [ { "es": "Letra", "en": "Letter" }, { "es": "Significado", "en": "Meaning" } ],
+      "filas": [
+        [ "g", { "es": "Rango completo: corta sobrecargas y cortocircuitos", "en": "Full range: clears overloads and short circuits" } ],
+        [ "a", { "es": "Rango parcial: solo cortocircuitos; la sobrecarga la protege otro dispositivo", "en": "Partial range: short circuits only; another device handles overload" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Segunda letra: objeto protegido", "en": "Second letter: protected object" },
+      "columnas": [ { "es": "Letra", "en": "Letter" }, { "es": "Aplicación", "en": "Application" } ],
+      "filas": [
+        [ "G", { "es": "Uso general (cables y circuitos)", "en": "General purpose (cables and circuits)" } ],
+        [ "L", { "es": "Cables y conductores (designación DIN VDE)", "en": "Cables and conductors (DIN VDE designation)" } ],
+        [ "M", { "es": "Circuitos de motores y aparatos de maniobra", "en": "Motor circuits and switchgear" } ],
+        [ "Tr", { "es": "Transformadores", "en": "Transformers" } ],
+        [ "R / S", { "es": "Semiconductores de potencia", "en": "Power semiconductors" } ],
+        [ "PV", { "es": "Equipos fotovoltaicos", "en": "Photovoltaic equipment" } ],
+        [ "Bat", { "es": "Baterías y sistemas de baterías", "en": "Batteries and battery systems" } ],
+        [ "D", { "es": "Fusible retardado para motores (UL 248, Norteamérica)", "en": "Time-delay motor fuse (UL 248, North America)" } ],
+        [ "N", { "es": "Cables y conductores (UL 248, Norteamérica)", "en": "Cables and conductors (UL 248, North America)" } ]
+      ],
+      "notas": [ { "es": "Ejemplos: gG para circuitos generales, aM para motores, gPV para strings fotovoltaicos.", "en": "Examples: gG for general circuits, aM for motors, gPV for PV strings." } ]
+    }
+  ]
+}
