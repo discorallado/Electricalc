@@ -40,6 +40,7 @@ import cl.electricalc.app.R
 import cl.electricalc.app.datos.LocalPreferencias
 import cl.electricalc.app.ui.catalogo.Herramienta
 import cl.electricalc.app.ui.componentes.ChipsRic
+import cl.electricalc.app.ui.componentes.CampoCodigo
 import cl.electricalc.app.ui.componentes.CampoNumero
 import cl.electricalc.app.ui.componentes.Desplegable
 import cl.electricalc.app.ui.componentes.DialogoAyuda
@@ -91,6 +92,7 @@ private fun informe(contexto: Context, titulo: String, estado: EstadoCalculadora
                     "${estado.textos[c.id].orEmpty()} ${estado.unidad(c).simbolo}".trim()
                 }
                 is CampoOpciones -> textoOpcion(contexto, c.opciones[estado.opcion(c.id)])
+                is CampoTexto -> estado.textos[c.id].orEmpty()
                 is CampoSeccion -> "${estado.opcionesSeccion(c)[estado.opcion(c.id)]} ${estado.unidadSeccion(c).simbolo}"
             }
             add(contexto.getString(c.etiqueta) to valor)
@@ -224,6 +226,12 @@ fun PantallaCalculadora(
                                         )
                                     }
                                 }
+                                is CampoTexto -> CampoCodigo(
+                                    valor = estado.textos[campo.id].orEmpty(),
+                                    alCambiar = { estado.escribir(campo.id, it) },
+                                    hint = campo.hint,
+                                    modifier = Modifier.weight(1f),
+                                )
                                 is CampoOpciones -> Desplegable(
                                     campo.opciones.map { textoOpcion(contexto, it) },
                                     estado.opcion(campo.id),

@@ -49,6 +49,14 @@ class CampoOpciones(
     val porDefecto: Int = 0,
 ) : Campo
 
+/** Texto libre (un código como "4K7" o "104J"); la calculadora lo interpreta. */
+class CampoTexto(
+    override val id: String,
+    @StringRes override val etiqueta: Int,
+    override val ayuda: List<Int>,
+    val hint: String = "",
+) : Campo
+
 /** Sección del conductor: medida normalizada y unidad (mm² o AWG/kcmil). */
 class CampoSeccion(
     override val id: String,
@@ -72,7 +80,10 @@ class Entrada(
     private val valores: Map<String, Double>,
     private val unidades: Map<String, Unidad>,
     private val opciones: Map<String, Int>,
+    private val textos: Map<String, String> = emptyMap(),
 ) {
+    /** Texto de un [CampoTexto], ya recortado; vacío o ausente es [FaltanDatos]. */
+    fun texto(id: String): String = textos[id]?.trim()?.takeIf { it.isNotEmpty() } ?: throw FaltanDatos()
     fun valor(id: String): Double = valores[id] ?: throw FaltanDatos()
     /** Si el campo estaba visible (y por lo tanto se leyó). */
     fun tiene(id: String): Boolean = id in valores

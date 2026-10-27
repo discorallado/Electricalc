@@ -31,4 +31,14 @@
     <string name="val_colores_4">%1$s · %2$s · %3$s · %4$s</string>
     <string name="intro_colores_lectura">Calculates the value and tolerance of a resistor from its colour bands (IEC 60062).</string>
     <string name="intro_colores_valor">Gives the digit and multiplier band colours for a resistance value, for 4 and 5 bands. The value is rounded to 2 or 3 significant figures.</string>
+    <string name="campo_codigo_smd">Printed code</string>
+    <string name="ayuda_codigo_smd">What is printed on the resistor: 472, 4702, 4R7, 4K7, 01A, A01…</string>
+    <string name="campo_letra_tolerancia">Ends with a tolerance letter?</string>
+    <string name="ayuda_letra_tolerancia">Some 4- or 5-character codes end with a tolerance letter (F = 1 %, J = 5 %…).</string>
+    <string name="res_tipo_codigo">Code type</string>
+    <string name="smd_puente">Jumper (0 Ω)</string>
+    <string name="smd_cifras">Digits with exponent or R/K/M separator</string>
+    <string name="smd_eia96">EIA-96 (E96 series and multiplier letter)</string>
+    <string name="smd_letra">Leading letter (E24 and E12 series)</string>
+    <string name="intro_smd">Decodes an SMD resistor marking. In 3 and 4 digit codes the last digit is the number of zeros; R, K and M mark the decimal point (4R7 = 4.7 Ω); in EIA-96 the two digits give an E96 series value and the letter the multiplier.</string>
 </resources>

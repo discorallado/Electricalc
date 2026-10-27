@@ -31,4 +31,14 @@
     <string name="val_colores_4">%1$s · %2$s · %3$s · %4$s</string>
     <string name="intro_colores_lectura">Calcula el valor y la tolerancia de una resistencia a partir de sus bandas de colores (IEC 60062).</string>
     <string name="intro_colores_valor">Entrega los colores de las bandas de cifras y multiplicador para un valor de resistencia, en 4 y 5 bandas. El valor se redondea a 2 o 3 cifras significativas.</string>
+    <string name="campo_codigo_smd">Código impreso</string>
+    <string name="ayuda_codigo_smd">Lo que está escrito sobre la resistencia: 472, 4702, 4R7, 4K7, 01A, A01…</string>
+    <string name="campo_letra_tolerancia">¿Termina en letra de tolerancia?</string>
+    <string name="ayuda_letra_tolerancia">Algunos códigos de 4 o 5 caracteres agregan al final una letra de tolerancia (F = 1 %, J = 5 %…).</string>
+    <string name="res_tipo_codigo">Tipo de código</string>
+    <string name="smd_puente">Puente (0 Ω)</string>
+    <string name="smd_cifras">Cifras con exponente o separador R/K/M</string>
+    <string name="smd_eia96">EIA-96 (serie E96 y letra multiplicadora)</string>
+    <string name="smd_letra">Letra delante (series E24 y E12)</string>
+    <string name="intro_smd">Interpreta el código de una resistencia SMD. En 3 y 4 cifras la última es la cantidad de ceros; R, K y M marcan la coma (4R7 = 4,7 Ω); en EIA-96 las dos cifras indican un valor de la serie E96 y la letra el multiplicador.</string>
 </resources>

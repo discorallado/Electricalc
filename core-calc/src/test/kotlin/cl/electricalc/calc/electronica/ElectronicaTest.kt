@@ -50,3 +50,33 @@ class CodigoColoresTest {
         assertThrows<cl.electricalc.calc.comun.ErrorCalculo> { CodigoColores.bandas(1e13, 2) }
     }
 }
+
+class CodigoSmdTest {
+    private fun ohm(c: String, letra: Boolean = false) = CodigoSmd.leer(c, letra).ohm
+
+    @Test
+    fun codigos() {
+        assertEquals(0.0, ohm("000"))
+        assertEquals(CodigoSmd.Tipo.PUENTE, CodigoSmd.leer("0R").tipo)
+        assertEquals(4700.0, ohm("472"), 1e-9)
+        assertEquals(100.0, ohm("101"), 1e-9)
+        assertEquals(22.0, ohm("220"), 1e-9)
+        assertEquals(4.7, ohm("4R7"), 1e-12)
+        assertEquals(0.47, ohm("R47"), 1e-12)
+        assertEquals(0.47, ohm("047"), 1e-12)
+        assertEquals(4700.0, ohm("4K7"), 1e-9)
+        assertEquals(47000.0, ohm("4702"), 1e-9)
+        assertEquals(1.0, CodigoSmd.leer("4702").toleranciaPct)
+        assertEquals(null, CodigoSmd.leer("472").toleranciaPct)
+        assertEquals(100.0, ohm("01A"), 1e-9)
+        assertEquals(499_000.0, ohm("68D"), 1e-6)
+        assertEquals(97.6, ohm("96X"), 1e-9)
+        assertEquals(100.0, ohm("A01"), 1e-9)
+        assertEquals(10.0, CodigoSmd.leer("C49").toleranciaPct)
+        assertEquals(1.0, CodigoSmd.leer("4702F", true).toleranciaPct)
+        assertEquals(47000.0, ohm("4702F", true), 1e-9)
+        assertThrows<ErrorCalculo> { CodigoSmd.leer("12") }
+        assertThrows<ErrorCalculo> { CodigoSmd.leer("123456") }
+        assertThrows<ErrorCalculo> { CodigoSmd.leer("97A") }
+    }
+}

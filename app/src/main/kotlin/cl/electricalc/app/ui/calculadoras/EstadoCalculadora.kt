@@ -43,6 +43,7 @@ class EstadoCalculadora(val definicion: Calculadora, private val preferencias: P
             when (campo) {
                 is CampoNumerico -> textos[campo.id] = campo.inicial?.invoke(sistema, preferencias).orEmpty()
                 is CampoOpciones -> opciones[campo.id] = campo.porDefecto
+                is CampoTexto -> textos[campo.id] = ""
                 is CampoSeccion -> elegirUnidadSeccion(if (preferencias.seccionEnAwg) CalculadoraCaida.AWG else CalculadoraCaida.MM2)
             }
         }
@@ -77,6 +78,7 @@ class EstadoCalculadora(val definicion: Calculadora, private val preferencias: P
                 is CampoNumerico -> c.id to unidad(c)
                 is CampoSeccion -> c.id to unidadSeccion(c)
                 is CampoOpciones -> null
+                is CampoTexto -> null
             }
         }.toMap()
 
@@ -150,7 +152,10 @@ class EstadoCalculadora(val definicion: Calculadora, private val preferencias: P
             valores[campo.id] = base
         }
         return try {
-            val entrada = Entrada(sistema, variante, valores, unidades, opciones.toMap())
+            val entrada = Entrada(
+                sistema, variante, valores, unidades, opciones.toMap(),
+                camposVisibles.filterIsInstance<CampoTexto>().associate { it.id to textos[it.id].orEmpty() },
+            )
             resultado = definicion.calcular(entrada)
             verificaciones = definicion.verificar(entrada)
             null

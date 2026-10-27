@@ -83,3 +83,29 @@ object CalculadorasColores {
 
     val todas = listOf(lectura, desdeValor)
 }
+
+/** Código de resistencias SMD (3 y 4 cifras, R/K/M, EIA-96). */
+object CalculadoraSmd {
+    private val tipos = mapOf(
+        cl.electricalc.calc.electronica.CodigoSmd.Tipo.PUENTE to R.string.smd_puente,
+        cl.electricalc.calc.electronica.CodigoSmd.Tipo.CIFRAS to R.string.smd_cifras,
+        cl.electricalc.calc.electronica.CodigoSmd.Tipo.EIA96 to R.string.smd_eia96,
+        cl.electricalc.calc.electronica.CodigoSmd.Tipo.LETRA_DELANTE to R.string.smd_letra,
+    )
+
+    val smd = calculadoraSimple(
+        "CodiceResistoriSMD",
+        listOf(
+            CampoTexto("codigo", R.string.campo_codigo_smd, listOf(R.string.ayuda_codigo_smd), "4K7"),
+            CampoOpciones("letra", R.string.campo_letra_tolerancia, listOf(R.string.ayuda_letra_tolerancia), listOf(R.string.no, R.string.si).map { TextoOpcion.Recurso(it) }),
+        ),
+        listOf(R.string.intro_smd),
+    ) { e ->
+        val l = cl.electricalc.calc.electronica.CodigoSmd.leer(e.texto("codigo"), e.opcion("letra") == 1)
+        listOfNotNull(
+            LineaResultado(R.string.res_resistencia_colores, Formato.conPrefijo(l.ohm, "Ω")),
+            l.toleranciaPct?.let { LineaResultado(R.string.res_tolerancia, "± ${Formato.numero(it, 2)} %") },
+            LineaResultado.texto(R.string.res_tipo_codigo, tipos.getValue(l.tipo), principal = false),
+        )
+    }
+}

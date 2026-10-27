@@ -57,6 +57,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -230,6 +231,20 @@ fun CampoNumero(valor: String, alCambiar: (String) -> Unit, hint: String, modifi
         singleLine = true,
         isError = valor.isNotBlank() && Formato.leer(valor) == null,
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal, imeAction = ImeAction.Next),
+        textStyle = MaterialTheme.typography.bodyLarge,
+        modifier = modifier,
+    )
+}
+
+/** Campo de texto para códigos (letras y cifras, en mayúsculas). */
+@Composable
+fun CampoCodigo(valor: String, alCambiar: (String) -> Unit, hint: String, modifier: Modifier = Modifier) {
+    OutlinedTextField(
+        value = valor,
+        onValueChange = { alCambiar(it.uppercase()) },
+        placeholder = { Text(hint) },
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Characters, keyboardType = KeyboardType.Ascii, imeAction = ImeAction.Next),
         textStyle = MaterialTheme.typography.bodyLarge,
         modifier = modifier,
     )
