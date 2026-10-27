@@ -1,0 +1,66 @@
+{
+  "fuente": "Datos de la app de referencia (Directiva ATEX 2014/34/UE, IEC 60079-0); textos propios. Para Chile ver también el RIC N°12.",
+  "secciones": [
+    {
+      "titulo": { "es": "Grupo y categoría del equipo", "en": "Equipment group and category" },
+      "columnas": [ { "es": "Marca", "en": "Mark" }, { "es": "Significado", "en": "Meaning" } ],
+      "filas": [
+        [ "I", { "es": "Minería subterránea (grisú)", "en": "Underground mining (firedamp)" } ],
+        [ "II", { "es": "Industrias de superficie", "en": "Surface industries" } ],
+        [ "M1 / M2", { "es": "Minería: sigue funcionando con atmósfera explosiva / se desconecta", "en": "Mining: keeps operating in explosive atmosphere / is de-energized" } ],
+        [ "1", { "es": "Protección muy alta (zonas 0 / 20)", "en": "Very high protection (zones 0 / 20)" } ],
+        [ "2", { "es": "Protección alta (zonas 1 / 21)", "en": "High protection (zones 1 / 21)" } ],
+        [ "3", { "es": "Protección normal (zonas 2 / 22)", "en": "Normal protection (zones 2 / 22)" } ],
+        [ "G / D / GD", { "es": "Atmósfera de gas, de polvo o ambas", "en": "Gas, dust or both atmospheres" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Grupo de explosión", "en": "Explosion group" },
+      "columnas": [ { "es": "Grupo", "en": "Group" }, { "es": "Sustancias típicas", "en": "Typical substances" } ],
+      "filas": [
+        [ "I", { "es": "Metano en minas", "en": "Methane in mines" } ],
+        [ "IIA", { "es": "Propano, butano, metano, acetona, metanol, tolueno, queroseno", "en": "Propane, butane, methane, acetone, methanol, toluene, kerosene" } ],
+        [ "IIB", { "es": "Etileno, etanol, tetrahidrofurano", "en": "Ethylene, ethanol, tetrahydrofuran" } ],
+        [ "IIC", { "es": "Hidrógeno, acetileno", "en": "Hydrogen, acetylene" } ],
+        [ "IIIA", { "es": "Fibras y pelusas combustibles", "en": "Combustible flyings" } ],
+        [ "IIIB", { "es": "Polvo no conductor", "en": "Non-conductive dust" } ],
+        [ "IIIC", { "es": "Polvo conductor", "en": "Conductive dust" } ]
+      ],
+      "notas": [ { "es": "Un equipo IIC sirve también para IIB y IIA; uno IIIC sirve para IIIB y IIIA.", "en": "IIC equipment also suits IIB and IIA; IIIC suits IIIB and IIIA." } ]
+    },
+    {
+      "titulo": { "es": "Clase de temperatura (gas)", "en": "Temperature class (gas)" },
+      "columnas": [ { "es": "Clase", "en": "Class" }, { "es": "Temperatura superficial máxima", "en": "Maximum surface temperature" } ],
+      "filas": [ [ "T1", "450 °C" ], [ "T2", "300 °C" ], [ "T3", "200 °C" ], [ "T4", "135 °C" ], [ "T5", "100 °C" ], [ "T6", "85 °C" ] ],
+      "notas": [ { "es": "Debe quedar bajo la temperatura de ignición de la sustancia presente.", "en": "Must stay below the ignition temperature of the substance present." } ]
+    },
+    {
+      "titulo": { "es": "Nivel de protección del equipo (EPL)", "en": "Equipment protection level (EPL)" },
+      "columnas": [ "EPL", { "es": "Nivel", "en": "Level" } ],
+      "filas": [
+        [ "Ma / Mb", { "es": "Minería: muy alto / alto", "en": "Mining: very high / high" } ],
+        [ "Ga / Gb / Gc", { "es": "Gas: muy alto / alto / aumentado", "en": "Gas: very high / high / enhanced" } ],
+        [ "Da / Db / Dc", { "es": "Polvo: muy alto / alto / aumentado", "en": "Dust: very high / high / enhanced" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Modos de protección", "en": "Types of protection" },
+      "columnas": [ { "es": "Código", "en": "Code" }, { "es": "Modo", "en": "Type" } ],
+      "filas": [
+        [ "d, da, db, dc", { "es": "Envolvente antideflagrante", "en": "Flameproof enclosure" } ],
+        [ "e, eb, ec", { "es": "Seguridad aumentada", "en": "Increased safety" } ],
+        [ "ia, ib, ic", { "es": "Seguridad intrínseca", "en": "Intrinsic safety" } ],
+        [ "ma, mb, mc", { "es": "Encapsulado", "en": "Encapsulation" } ],
+        [ "px, py, pz, pxb, pyb, pzc, pD", { "es": "Presurización", "en": "Pressurization" } ],
+        [ "o, ob, oc, k", { "es": "Inmersión en aceite o líquido", "en": "Oil or liquid immersion" } ],
+        [ "q", { "es": "Relleno pulverulento", "en": "Powder filling" } ],
+        [ "n, nA", { "es": "No productor de chispas (zona 2)", "en": "Non-sparking (zone 2)" } ],
+        [ "fr", { "es": "Envolvente de respiración restringida", "en": "Restricted breathing enclosure" } ],
+        [ "b", { "es": "Control de fuentes de ignición (no eléctrico)", "en": "Control of ignition sources (non-electrical)" } ],
+        [ "s, sa, sb, sc", { "es": "Protección especial", "en": "Special protection" } ],
+        [ "t, ta, tb, tc", { "es": "Protección por envolvente contra polvo", "en": "Dust protection by enclosure" } ],
+        [ "op is, op pr, op sh", { "es": "Radiación óptica: intrínsecamente segura, protegida o con bloqueo", "en": "Optical radiation: inherently safe, protected or with interlock" } ]
+      ]
+    }
+  ]
+}

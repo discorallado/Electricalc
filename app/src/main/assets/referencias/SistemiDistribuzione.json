@@ -1,0 +1,31 @@
+{
+  "fuente": "Datos de la app de referencia (IEC 60364-1); textos propios. Para Chile ver el RIC N°05.",
+  "secciones": [
+    {
+      "titulo": { "es": "Primera letra: el sistema respecto a tierra", "en": "First letter: system relation to earth" },
+      "columnas": [ { "es": "Letra", "en": "Letter" }, { "es": "Significado", "en": "Meaning" } ],
+      "filas": [
+        [ "T", { "es": "Un punto (normalmente el neutro) conectado directo a tierra", "en": "One point (usually the neutral) directly earthed" } ],
+        [ "I", { "es": "Aislado de tierra, o conectado a través de una impedancia", "en": "Isolated from earth, or earthed through an impedance" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Segunda letra: las masas", "en": "Second letter: exposed conductive parts" },
+      "columnas": [ { "es": "Letra", "en": "Letter" }, { "es": "Significado", "en": "Meaning" } ],
+      "filas": [
+        [ "T", { "es": "Masas a una tierra propia, independiente de la del sistema", "en": "Exposed parts to their own earth, independent of the system earth" } ],
+        [ "N", { "es": "Masas unidas al punto puesto a tierra del sistema", "en": "Exposed parts bonded to the earthed point of the system" } ]
+      ]
+    },
+    {
+      "titulo": { "es": "Letras siguientes (TN): neutro y protección", "en": "Following letters (TN): neutral and protective conductors" },
+      "columnas": [ { "es": "Letra", "en": "Letter" }, { "es": "Significado", "en": "Meaning" } ],
+      "filas": [
+        [ "S", { "es": "Conductor de protección (PE) separado del neutro", "en": "Protective conductor (PE) separate from the neutral" } ],
+        [ "C", { "es": "Neutro y protección en un solo conductor (PEN)", "en": "Neutral and protection in a single conductor (PEN)" } ],
+        [ "C-S", { "es": "PEN en una parte de la instalación y PE + N separados en el resto", "en": "PEN in part of the installation, separate PE + N in the rest" } ]
+      ],
+      "notas": [ { "es": "Esquemas resultantes: TT, TN-S, TN-C, TN-C-S e IT.", "en": "Resulting systems: TT, TN-S, TN-C, TN-C-S and IT." } ]
+    }
+  ]
+}
