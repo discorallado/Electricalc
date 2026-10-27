@@ -244,5 +244,8 @@ Historial de cálculos, exportación de memorias de cálculo en PDF, normativa c
   CCTV, siglas, colores de cableado, resistividad, series E, tuberías, AWG, SWG, imperial-métrico,
   reactancia de cables y termopares. Datos extraídos del APK con `rid.js`/`enum.js`
   (`~/.cache/electricalc-qa`); textos propios.
-- [ ] Pendiente del APK: países y enchufes (assets cifrados), pinouts, conectores, símbolos y
-  esquemas (dibujos), peso y dimensiones de cables, caída unitaria y fusibles.
+- [x] Pinouts (29), fusibles Diazed/Neozed/NH, códigos de condensadores (validado con vectores
+  del oráculo, `golden/condensadores.tsv`), SMD (cifras, R/K/M, EIA-96), código de colores de
+  resistencias e inductores alfanuméricos. Campo de texto (`CampoTexto`) en el modelo.
+- [ ] Pendiente del APK: países y enchufes (assets cifrados), conectores, símbolos y esquemas
+  (dibujos), código de colores de inductores, termistores, CCTV de disco, pesos de cables.
