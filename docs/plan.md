@@ -237,5 +237,12 @@ Historial de cálculos, exportación de memorias de cálculo en PDF, normativa c
 - [ ] Pendiente: esquemas (empalmes, transferencia y los de motores), tablas de referencia y
   pinouts del APK (extraer los datos del oráculo), códigos de colores, dimensionamiento de
   conductores IEC/NEC (`cn2`, `zu`).
-- [ ] Pendiente: textos en inglés de energía, servicio, tablero, transformador, motores,
-  electrónica, conversiones, conductores y cortocircuito.
+- [x] Textos en inglés de todas las calculadoras nuevas; valores de resultado traducibles
+  (`LineaResultado.texto`).
+- [x] Tablas de referencia (`assets/referencias/*.json`, bilingües): IP/IK/NEMA, curvas de disparo,
+  clases de aislamiento, prefijos SI, unidades, fusibles IEC y NEC, ANSI, ATEX, sistemas TT/TN/IT,
+  CCTV, siglas, colores de cableado, resistividad, series E, tuberías, AWG, SWG, imperial-métrico,
+  reactancia de cables y termopares. Datos extraídos del APK con `rid.js`/`enum.js`
+  (`~/.cache/electricalc-qa`); textos propios.
+- [ ] Pendiente del APK: países y enchufes (assets cifrados), pinouts, conectores, símbolos y
+  esquemas (dibujos), peso y dimensiones de cables, caída unitaria y fusibles.
