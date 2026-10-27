@@ -34,7 +34,7 @@ class SeccionReferencia(val titulo: String?, val columnas: List<String>, val fil
  */
 object Referencias {
     /** Ids del catálogo con tabla; `ReferenciasTest` comprueba que cada uno tenga su archivo. */
-    val IDS = setOf("GradoProtezione", "CurveIntervento", "ClassiIsolamento", "SiPrefix", "UnitaMisura", "SigleFusibiliIec", "ClassiFusibiliNec", "TabAnsi", "MarcaturaAtex", "SistemiDistribuzione", "RisoluzioniCCTV", "AcronimiDispositivi", "CodiceColoriCablaggio", "Resistivita", "ValoriStandardResistenze", "DiametriTubazioni", "ConversioneAWG", "ConversioneSWG", "ComparazioneImperialeMetrico")
+    val IDS = setOf("GradoProtezione", "CurveIntervento", "ClassiIsolamento", "SiPrefix", "UnitaMisura", "SigleFusibiliIec", "ClassiFusibiliNec", "TabAnsi", "MarcaturaAtex", "SistemiDistribuzione", "RisoluzioniCCTV", "AcronimiDispositivi", "CodiceColoriCablaggio", "Resistivita", "ValoriStandardResistenze", "DiametriTubazioni", "ConversioneAWG", "ConversioneSWG", "ComparazioneImperialeMetrico", "TabReattanzaCavi")
 
     fun existe(id: String) = id in IDS
 
