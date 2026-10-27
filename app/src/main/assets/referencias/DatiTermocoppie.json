@@ -1,0 +1,24 @@
+{
+  "fuente": "Datos de la app de referencia (IEC 60584).",
+  "secciones": [
+    {
+      "columnas": [ { "es": "Tipo", "en": "Type" }, { "es": "Polo +", "en": "+ leg" }, { "es": "Polo −", "en": "− leg" }, { "es": "Rango", "en": "Range" }, { "es": "FEM en el rango", "en": "EMF over range" } ],
+      "filas": [
+        [ "T", "Cu", "Cu-Ni", "−270 a 400 °C", "−6,258 a 20,872 mV" ],
+        [ "J", "Fe", "Cu-Ni", "−210 a 1200 °C", "−8,095 a 69,553 mV" ],
+        [ "E", "Ni-Cr", "Cu-Ni", "−270 a 1000 °C", "−9,835 a 76,373 mV" ],
+        [ "K", "Ni-Cr", "Ni-Al", "−270 a 1372 °C", "−6,458 a 54,886 mV" ],
+        [ "N", "Ni-Cr-Si", "Ni-Si-Mg", "−270 a 1300 °C", "−4,345 a 47,513 mV" ],
+        [ "S", "Pt-Rh 10 %", "Pt", "−50 a 1768 °C", "−0,235 a 18,693 mV" ],
+        [ "R", "Pt-Rh 13 %", "Pt", "−50 a 1768 °C", "−0,226 a 21,103 mV" ],
+        [ "B", "Pt-Rh 30 %", "Pt-Rh 6 %", "0 a 1820 °C", "0 a 13,820 mV" ],
+        [ "C", "W-Re", "W-Re 26 %", "0 a 2315 °C", "0 a 37,070 mV" ],
+        [ "A", "W-Re", "W-Re 20 %", "0 a 2500 °C", "0 a 33,640 mV" ]
+      ],
+      "notas": [
+        { "es": "La FEM es con la unión de referencia a 0 °C.", "en": "EMF with the reference junction at 0 °C." },
+        { "es": "El color del aislamiento cambia según la norma (IEC 60584-3, ANSI MC96.1, BS 1843, DIN 43710, NF C 42-324, JIS C 1610): revisa la del fabricante.", "en": "Insulation colour depends on the standard (IEC 60584-3, ANSI MC96.1, BS 1843, DIN 43710, NF C 42-324, JIS C 1610): check the manufacturer's." }
+      ]
+    }
+  ]
+}
