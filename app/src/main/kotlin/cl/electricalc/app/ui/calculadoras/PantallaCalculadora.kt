@@ -96,7 +96,7 @@ private fun informe(contexto: Context, titulo: String, estado: EstadoCalculadora
             add(contexto.getString(c.etiqueta) to valor)
         }
     }
-    val resultados = estado.resultado.orEmpty().map { contexto.getString(it.etiqueta) to it.valor }
+    val resultados = estado.resultado.orEmpty().map { contexto.getString(it.etiqueta) to it.texto(contexto) }
     return Informe(contexto, titulo, datos, resultados)
 }
 

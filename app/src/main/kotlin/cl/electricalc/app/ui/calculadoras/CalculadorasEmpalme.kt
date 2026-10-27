@@ -100,7 +100,7 @@ object CalculadorasEmpalme {
                     (proteccion?.let { "${Formato.numero(it, 0)} A" } ?: "≥ ${Formato.numero(ajuste, 1)} A") +
                         " (${Formato.numero(v.factorProteccion(inA), 2)} × In)",
                 ),
-                LineaResultado(R.string.res_diferencial, "Tipo ${dif.tipo}, ≤ ${dif.sensibilidadMa} mA"),
+                LineaResultado.texto(R.string.res_diferencial, R.string.val_diferencial_tipo, dif.tipo, dif.sensibilidadMa),
                 LineaResultado(
                     R.string.res_demanda_ve,
                     if (minKw == maxKw) "${Formato.numero(maxKw, 2)} kW" else "${Formato.numero(minKw, 2)} – ${Formato.numero(maxKw, 2)} kW",

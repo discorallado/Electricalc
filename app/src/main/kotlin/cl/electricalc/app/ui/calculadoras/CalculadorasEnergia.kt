@@ -176,12 +176,10 @@ object CalculadoraTablero {
             if (circuitos < 1 || modulos < 1) throw cl.electricalc.calc.comun.ErrorCalculo(cl.electricalc.calc.comun.MotivoError.VALOR_FUERA_DE_RANGO)
             val espacio = t.espaciosTrabajo[e.opcion("condicion")]
             listOf(
-                LineaResultado(R.string.res_modulos_gabinete, "${t.modulosConReserva(modulos)} mód."),
+                LineaResultado.texto(R.string.res_modulos_gabinete, R.string.val_modulos, t.modulosConReserva(modulos)),
                 LineaResultado(R.string.res_espacio_trabajo, "${Formato.numero(espacio.m, 2)} m"),
-                LineaResultado(
-                    R.string.res_bandeja_interna,
-                    if (t.requiereBandeja(circuitos)) "Sí, ocupación ≤ ${Formato.numero(t.bandejaOcupacionMax * 100, 0)} %" else "No exigida (< ${t.bandejaDesdeCircuitos} circuitos)",
-                ),
+                if (t.requiereBandeja(circuitos)) LineaResultado.texto(R.string.res_bandeja_interna, R.string.val_bandeja_si, Formato.numero(t.bandejaOcupacionMax * 100, 0))
+                else LineaResultado.texto(R.string.res_bandeja_interna, R.string.val_bandeja_no, t.bandejaDesdeCircuitos),
                 LineaResultado(R.string.res_referencia, "RIC N°02, numeral 6.1.16 y tabla N°2.1", principal = false),
             )
         },
@@ -195,7 +193,7 @@ object CalculadoraAutogeneracion {
     private fun siNo(id: String, etiqueta: Int, ayuda: Int, porDefecto: Int) =
         CampoOpciones(id, etiqueta, listOf(ayuda), listOf(R.string.si, R.string.no).map { TextoOpcion.Recurso(it) }, porDefecto)
 
-    private fun texto(b: Boolean) = if (b) "Exigida" else "No exigida"
+    private fun exigida(b: Boolean) = if (b) R.string.val_exigida else R.string.val_no_exigida
 
     val fv = Calculadora(
         id = "fv_netbilling",
@@ -212,14 +210,12 @@ object CalculadoraAutogeneracion {
             val kw = e.valor("p") / 1000
             val r = a.para(kw, e.valor("emp") / 1000, e.opcion("inv") == 0, e.opcion("cero") == 0)
             listOf(
-                LineaResultado(R.string.res_diferencial_fv, "Tipo A o B, ≤ ${r.diferencialMa} mA"),
-                LineaResultado(R.string.res_proteccion_ri, if (r.riCentralizada) "Centralizada" else "Complementaria o integrada al inversor"),
-                LineaResultado(
-                    R.string.res_potencia_inversa,
-                    r.tiempoInversaS?.let { "Exigida · ${Formato.numero(it, 0)} s · ajuste ${Formato.conPrefijo(r.pickupKw * 1000, "W")}" } ?: "Exenta (inyección cero)",
-                ),
-                LineaResultado(R.string.res_registrador, texto(r.registrador), principal = false),
-                LineaResultado(R.string.res_responsable_tecnico, texto(r.responsableTecnico), principal = false),
+                LineaResultado.texto(R.string.res_diferencial_fv, R.string.val_diferencial_ab, r.diferencialMa),
+                LineaResultado.texto(R.string.res_proteccion_ri, if (r.riCentralizada) R.string.val_ri_centralizada else R.string.val_ri_complementaria),
+                r.tiempoInversaS?.let { LineaResultado.texto(R.string.res_potencia_inversa, R.string.val_inversa, Formato.numero(it, 0), Formato.conPrefijo(r.pickupKw * 1000, "W")) }
+                    ?: LineaResultado.texto(R.string.res_potencia_inversa, R.string.val_inversa_exenta),
+                LineaResultado.texto(R.string.res_registrador, exigida(r.registrador), principal = false),
+                LineaResultado.texto(R.string.res_responsable_tecnico, exigida(r.responsableTecnico), principal = false),
                 LineaResultado(R.string.res_referencia, "RIC N°09, numerales 6.4.2.4, 6.6.7, 6.6.8 y anexo 9.1", principal = false),
             )
         },
@@ -249,12 +245,12 @@ object CalculadoraVolumenesBano {
         val techo = if (e.tiene("techo")) e.valor("techo") else null
         val n = v.volumen(t, e.valor("d"), e.valor("h"), techo)
             ?: return@calculadoraSimple listOf(
-                LineaResultado(R.string.res_volumen, "Fuera de los volúmenes"),
+                LineaResultado.texto(R.string.res_volumen, R.string.val_fuera_volumenes),
                 LineaResultado(R.string.res_referencia, "RIC N°11, numeral 6.4.1", principal = false),
             )
         val r = v.requisitos(n)
         listOf(
-            LineaResultado(R.string.res_volumen, "Volumen $n"),
+            LineaResultado.texto(R.string.res_volumen, R.string.val_volumen, n),
             LineaResultado(R.string.res_grado_ip, r.ip),
             LineaResultado(R.string.res_mecanismos, r.mecanismos, principal = false),
             LineaResultado(R.string.res_aparatos, r.aparatos, principal = false),
@@ -274,7 +270,7 @@ object CalculadoraImpedanciaBucle {
         "impedancia_bucle",
         listOf(
             CampoOpciones("esquema", R.string.campo_esquema_bucle, listOf(R.string.ayuda_esquema_bucle), listOf("TN", "TT").map { TextoOpcion.Literal(it) }),
-            CampoOpciones("curva", R.string.campo_curva, listOf(R.string.ayuda_curva), CURVAS.map { TextoOpcion.Literal("Curva $it") }, 1),
+            CampoOpciones("curva", R.string.campo_curva, listOf(R.string.ayuda_curva), CURVAS.map { TextoOpcion.Literal("$it") }, 1),
             CampoOpciones("in", R.string.campo_in_bucle, listOf(R.string.ayuda_in_bucle), listOf(2, 4, 6, 10, 16, 20, 25, 32, 35, 40, 50, 63).map { TextoOpcion.Literal("$it A") }, 4),
             campo("zs", R.string.campo_zs_medida, R.string.ayuda_zs_medida, listOf(Unidades.ohm), "1,2"),
         ),
@@ -329,28 +325,33 @@ object CalculadoraTransformador {
             LineaResultado(R.string.res_in_primario, Formato.conPrefijo(i1, "A")),
             LineaResultado(R.string.res_in_secundario, Formato.conPrefijo(i2, "A")),
             LineaResultado(R.string.res_icc_secundario, Formato.conPrefijo(i2 / z, "A")),
-            LineaResultado(
-                R.string.res_proteccion_primario,
-                "Fusible ≤ ${Formato.conPrefijo(i1 * t.fusiblePrimarioMaxIn, "A")} · automático ≤ ${Formato.conPrefijo(i1 * t.automaticoPrimarioMaxIn, "A")}",
+            LineaResultado.texto(
+                R.string.res_proteccion_primario, R.string.val_proteccion_primario,
+                Formato.conPrefijo(i1 * t.fusiblePrimarioMaxIn, "A"), Formato.conPrefijo(i1 * t.automaticoPrimarioMaxIn, "A"),
             ),
-            LineaResultado(
-                R.string.res_sin_proteccion_individual,
-                "Primario: automático ≤ ${Formato.numero(p.primarioAutomatico, 0)} In o fusible ≤ ${Formato.numero(p.primarioFusible, 0)} In · secundario: " +
-                    if (bt) "≤ ${Formato.numero(p.secundarioBt, 1)} In (${Formato.conPrefijo(i2 * p.secundarioBt, "A")})"
-                    else "automático ≤ ${Formato.numero(p.secundarioMtAutomatico, 1)} In o fusible ≤ ${Formato.numero(p.secundarioMtFusible, 2)} In",
-                principal = false,
+            if (bt) {
+                LineaResultado.texto(
+                    R.string.res_sin_proteccion_individual, R.string.val_sin_individual_bt,
+                    Formato.numero(p.primarioAutomatico, 0), Formato.numero(p.primarioFusible, 0),
+                    Formato.numero(p.secundarioBt, 1), Formato.conPrefijo(i2 * p.secundarioBt, "A"), principal = false,
+                )
+            } else {
+                LineaResultado.texto(
+                    R.string.res_sin_proteccion_individual, R.string.val_sin_individual_mt,
+                    Formato.numero(p.primarioAutomatico, 0), Formato.numero(p.primarioFusible, 0),
+                    Formato.numero(p.secundarioMtAutomatico, 1), Formato.numero(p.secundarioMtFusible, 2), principal = false,
+                )
+            },
+            LineaResultado.texto(
+                R.string.res_ventilacion, R.string.val_ventilacion,
+                Formato.numero(t.ventilacionM2(kva), 2), Formato.numero(t.renovacionesHora, 0), principal = false,
             ),
-            LineaResultado(
-                R.string.res_ventilacion,
-                "Natural: ${Formato.numero(t.ventilacionM2(kva), 2)} m² libres · forzada: ${Formato.numero(t.renovacionesHora, 0)} renovaciones/h",
-                principal = false,
-            ),
-            LineaResultado(
+            LineaResultado.texto(
                 R.string.res_vigilancia_termica,
                 when {
-                    !t.vigilanciaTermica(kva, e.opcion("tipo") == 1) -> "No exigida"
-                    e.opcion("tipo") == 1 -> "Detector de sobretemperatura o relé Buchholz"
-                    else -> "Sondas PT100 o equivalentes"
+                    !t.vigilanciaTermica(kva, e.opcion("tipo") == 1) -> R.string.val_no_exigida
+                    e.opcion("tipo") == 1 -> R.string.val_buchholz
+                    else -> R.string.val_pt100
                 },
                 principal = false,
             ),
@@ -378,8 +379,8 @@ object CalculadoraAreasPeligrosas {
         val polvo = e.opcion("sustancia") == 1
         val z = a.zonas[e.opcion("presencia")]
         listOfNotNull(
-            LineaResultado(R.string.res_zona, "Zona ${if (polvo) z.polvo else z.gas} (Grupo ${if (polvo) "III" else "II"})"),
-            LineaResultado(R.string.res_nivel_proteccion, z.proteccion),
+            LineaResultado.texto(R.string.res_zona, R.string.val_zona, if (polvo) z.polvo else z.gas, if (polvo) "III" else "II"),
+            LineaResultado.texto(R.string.res_nivel_proteccion, listOf(R.string.val_nivel_muy_alto, R.string.val_nivel_alto, R.string.val_nivel_normal)[z.nivel]),
             if (e.tiene("iz")) LineaResultado(R.string.res_iz_reducida, Formato.conPrefijo(a.corrienteAdmisible(e.valor("iz")), "A")) else null,
         ) + a.modos(z.nivel, polvo).map { LineaResultado(R.string.res_modo_admitido, it, principal = false) } +
             LineaResultado(R.string.res_referencia, "RIC N°12, numerales 5, 7.5 y 11.1.5", principal = false)
@@ -400,7 +401,7 @@ object CalculadoraMantenimiento {
         listOf(R.string.intro_mantenimiento),
     ) { e ->
         val exige = m.exigePrograma(e.valor("p") / 1000, e.opcion("mt") == 0, e.opcion("uso") == 0)
-        listOf(LineaResultado(R.string.res_programa_seguridad, if (exige) "Obligatorio (numeral 5.3)" else "No obligatorio; se recomienda")) +
+        listOf(LineaResultado.texto(R.string.res_programa_seguridad, if (exige) R.string.val_obligatorio else R.string.val_recomendado)) +
             m.componentes.mapIndexed { i, c -> LineaResultado(R.string.res_componente, "${i + 1}. $c", principal = false) } +
             m.reglasOro.mapIndexed { i, r -> LineaResultado(R.string.res_regla_oro, "${i + 1}. $r", principal = false) } +
             LineaResultado(R.string.res_referencia, "RIC N°17, numerales 5.3, 6.1 y 6.3.2", principal = false)

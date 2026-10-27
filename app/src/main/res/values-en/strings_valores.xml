@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="val_modulos">%1$d mod.</string>
+    <string name="val_bandeja_si">Yes, fill ≤ %1$s %%</string>
+    <string name="val_bandeja_no">Not required (fewer than %1$d circuits)</string>
+    <string name="val_exigida">Required</string>
+    <string name="val_no_exigida">Not required</string>
+    <string name="val_diferencial_ab">Type A or B, ≤ %1$d mA</string>
+    <string name="val_diferencial_tipo">Type %1$s, ≤ %2$d mA</string>
+    <string name="val_ri_centralizada">Centralized</string>
+    <string name="val_ri_complementaria">Complementary or built into the inverter</string>
+    <string name="val_inversa">Required · %1$s s · setting %2$s</string>
+    <string name="val_inversa_exenta">Exempt (zero export)</string>
+    <string name="val_fuera_volumenes">Outside the zones</string>
+    <string name="val_volumen">Zone %1$d</string>
+    <string name="val_proteccion_primario">Fuse ≤ %1$s · breaker ≤ %2$s</string>
+    <string name="val_sin_individual_bt">Primary: breaker ≤ %1$s In or fuse ≤ %2$s In · secondary: ≤ %3$s In (%4$s)</string>
+    <string name="val_sin_individual_mt">Primary: breaker ≤ %1$s In or fuse ≤ %2$s In · secondary: breaker ≤ %3$s In or fuse ≤ %4$s In</string>
+    <string name="val_ventilacion">Natural: %1$s m² free area · forced: %2$s air changes/h</string>
+    <string name="val_buchholz">Over-temperature detector or Buchholz relay</string>
+    <string name="val_pt100">PT100 probes or equivalent</string>
+    <string name="val_zona">Zone %1$d (Group %2$s)</string>
+    <string name="val_nivel_muy_alto">Very high</string>
+    <string name="val_nivel_alto">High</string>
+    <string name="val_nivel_normal">Normal</string>
+    <string name="val_obligatorio">Mandatory (clause 5.3)</string>
+    <string name="val_recomendado">Not mandatory; recommended</string>
+    <string name="val_coordinacion_ok">Pass: Ib ≤ In ≤ Iz</string>
+    <string name="val_coordinacion_no">Fail: Ib ≤ In ≤ Iz</string>
+</resources>

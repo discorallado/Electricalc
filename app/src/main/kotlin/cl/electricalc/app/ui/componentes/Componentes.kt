@@ -50,6 +50,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -289,7 +290,7 @@ fun TarjetaResultado(lineas: List<LineaResultado>?, modifier: Modifier = Modifie
                         )
                         Spacer(Modifier.width(8.dp))
                         Text(
-                            linea.valor,
+                            linea.texto(LocalContext.current),
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -306,7 +307,7 @@ fun TarjetaResultado(lineas: List<LineaResultado>?, modifier: Modifier = Modifie
                                 color = MaterialTheme.colorScheme.onPrimaryContainer,
                                 modifier = Modifier.weight(1f),
                             )
-                            Text(linea.valor, style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onPrimaryContainer)
+                            Text(linea.texto(LocalContext.current), style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onPrimaryContainer)
                         }
                     }
                 }

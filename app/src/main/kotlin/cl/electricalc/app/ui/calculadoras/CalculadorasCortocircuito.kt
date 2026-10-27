@@ -56,7 +56,7 @@ object CalculadorasCortocircuito {
     ) { e ->
         val ok = Coordinacion.cumple(e.valor("ib"), e.valor("in"), e.valor("iz"))
         listOf(
-            LineaResultado(R.string.res_coordinacion, if (ok) "Cumple: Ib ≤ In ≤ Iz" else "No cumple: Ib ≤ In ≤ Iz"),
+            LineaResultado.texto(R.string.res_coordinacion, if (ok) R.string.val_coordinacion_ok else R.string.val_coordinacion_no),
             LineaResultado(R.string.res_margen_conductor, "${Formato.numero((e.valor("iz") - e.valor("in")) / e.valor("iz") * 100, 0)} %", principal = false),
         )
     }

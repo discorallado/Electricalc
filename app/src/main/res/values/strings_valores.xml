@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="val_modulos">%1$d mód.</string>
+    <string name="val_bandeja_si">Sí, ocupación ≤ %1$s %%</string>
+    <string name="val_bandeja_no">No exigida (menos de %1$d circuitos)</string>
+    <string name="val_exigida">Exigida</string>
+    <string name="val_no_exigida">No exigida</string>
+    <string name="val_diferencial_ab">Tipo A o B, ≤ %1$d mA</string>
+    <string name="val_diferencial_tipo">Tipo %1$s, ≤ %2$d mA</string>
+    <string name="val_ri_centralizada">Centralizada</string>
+    <string name="val_ri_complementaria">Complementaria o integrada al inversor</string>
+    <string name="val_inversa">Exigida · %1$s s · ajuste %2$s</string>
+    <string name="val_inversa_exenta">Exenta (inyección cero)</string>
+    <string name="val_fuera_volumenes">Fuera de los volúmenes</string>
+    <string name="val_volumen">Volumen %1$d</string>
+    <string name="val_proteccion_primario">Fusible ≤ %1$s · automático ≤ %2$s</string>
+    <string name="val_sin_individual_bt">Primario: automático ≤ %1$s In o fusible ≤ %2$s In · secundario: ≤ %3$s In (%4$s)</string>
+    <string name="val_sin_individual_mt">Primario: automático ≤ %1$s In o fusible ≤ %2$s In · secundario: automático ≤ %3$s In o fusible ≤ %4$s In</string>
+    <string name="val_ventilacion">Natural: %1$s m² libres · forzada: %2$s renovaciones/h</string>
+    <string name="val_buchholz">Detector de sobretemperatura o relé Buchholz</string>
+    <string name="val_pt100">Sondas PT100 o equivalentes</string>
+    <string name="val_zona">Zona %1$d (Grupo %2$s)</string>
+    <string name="val_nivel_muy_alto">Muy alto</string>
+    <string name="val_nivel_alto">Alto</string>
+    <string name="val_nivel_normal">Normal</string>
+    <string name="val_obligatorio">Obligatorio (numeral 5.3)</string>
+    <string name="val_recomendado">No obligatorio; se recomienda</string>
+    <string name="val_coordinacion_ok">Cumple: Ib ≤ In ≤ Iz</string>
+    <string name="val_coordinacion_no">No cumple: Ib ≤ In ≤ Iz</string>
+</resources>

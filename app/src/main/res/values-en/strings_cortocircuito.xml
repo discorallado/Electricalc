@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_k_cable">Conductor k factor</string>
+    <string name="ayuda_k_cable">Depends on the conductor material and insulation; take it from the standard or the cable manufacturer\'s datasheet.</string>
+    <string name="ayuda_seccion_cc">Phase conductor cross-section.</string>
+    <string name="campo_icc">Short-circuit current</string>
+    <string name="ayuda_icc">Prospective short-circuit current at the installation point.</string>
+    <string name="ayuda_icc_tiempo">Optional: with the fault current, the time the cable can withstand it is calculated.</string>
+    <string name="campo_icc_origen">Isc at the start of the line</string>
+    <string name="ayuda_icc_origen">Three-phase short-circuit current at the panel the line leaves from.</string>
+    <string name="ayuda_icc_origen_opcional">Optional: without it, a zero-impedance upstream network is assumed.</string>
+    <string name="campo_tiempo_despeje">Clearing time</string>
+    <string name="ayuda_tiempo_despeje">Time for the protective device to clear the fault, from its curve.</string>
+    <string name="campo_corriente_empleo">Design current (Ib)</string>
+    <string name="ayuda_ib">Current the circuit draws in normal service.</string>
+    <string name="campo_corriente_nominal_prot">Device rated current (In)</string>
+    <string name="ayuda_in_prot">Rated or set current of the breaker or fuse.</string>
+    <string name="ayuda_potencia_trafo_cc">Transformer rating.</string>
+    <string name="campo_scc_red">Network short-circuit power</string>
+    <string name="ayuda_scc_red">Optional: utility value at the MV connection point. Without it an infinite network is assumed.</string>
+    <string name="campo_tension_fn">Phase-to-neutral voltage</string>
+    <string name="ayuda_tension_fn">Voltage between phase and neutral or phase and protective conductor.</string>
+    <string name="campo_corriente_disparo">Magnetic trip current</string>
+    <string name="ayuda_corriente_disparo">Current that trips the device within the required time, for example 10 × In for curve C.</string>
+    <string name="res_k2s2">Let-through energy withstand (k²S²)</string>
+    <string name="res_tiempo_maximo">Maximum fault duration</string>
+    <string name="res_seccion_minima_cc">Minimum cross-section for short circuit</string>
+    <string name="res_coordinacion">Coordination</string>
+    <string name="res_margen_conductor">Conductor margin over the device</string>
+    <string name="res_icc_trifasica">Three-phase Isc</string>
+    <string name="res_impedancia_trafo">Transformer impedance</string>
+    <string name="res_impedancia_linea">Impedance of one line phase</string>
+    <string name="res_icc_minima">Minimum phase-neutral Isc at the end</string>
+    <string name="res_largo_maximo">Maximum line length</string>
+    <string name="intro_energia_especifica">Calculates the let-through energy (k²S²) a cable withstands in a short circuit; the protective device must let through less I²t than this.</string>
+    <string name="intro_proteccion_cable_cc">Calculates the minimum cross-section that withstands a short-circuit current for the clearing time: S = I × √t / k.</string>
+    <string name="intro_dispositivo">Checks that the device rated current lies between the circuit design current and the conductor current rating.</string>
+    <string name="intro_icc_trafo">Calculates the three-phase short-circuit current at a transformer\'s low-voltage terminals, including the medium-voltage network if known.</string>
+    <string name="intro_icc_aguas_abajo">Calculates the three-phase short-circuit current at the end of a line from the one at the source panel.</string>
+    <string name="intro_icc_minima">Calculates the minimum short-circuit current (phase-to-neutral fault at the end of the line), which must trip the protective device.</string>
+    <string name="intro_largo_maximo_cc">Calculates the maximum line length so that a phase-to-neutral fault at the end reaches the device\'s magnetic trip current.</string>
+    <string name="intro_cc_supuestos">Impedance method with nominal voltage and the conductor at operating temperature; standard voltage and fault-temperature factors are not applied, so check with a margin.</string>
+    <string name="sim_k">Conductor factor</string>
+    <string name="sim_icc">Short-circuit current</string>
+    <string name="sim_tiempo_despeje">Clearing time</string>
+    <string name="sim_ib">Design current</string>
+    <string name="sim_in">Device rated current</string>
+    <string name="sim_potencia_trafo">Transformer rating</string>
+    <string name="sim_ucc">Short-circuit voltage (per unit)</string>
+    <string name="sim_scc">Network short-circuit power</string>
+    <string name="sim_impedancia_origen">Upstream impedance</string>
+    <string name="sim_corriente_disparo">Trip current</string>
+</resources>

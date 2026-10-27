@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_potencia_equipo">Appliance power</string>
+    <string name="campo_horas_dia">Daily use</string>
+    <string name="campo_dias">Days in period</string>
+    <string name="campo_tarifa">Energy price</string>
+    <string name="ayuda_potencia_equipo">Rated or measured power of the appliance or group of appliances.</string>
+    <string name="ayuda_horas_dia">Operating hours per day.</string>
+    <string name="ayuda_dias">Length of the period in days (30 for a month).</string>
+    <string name="ayuda_tarifa">Price per kWh from your bill, including taxes if you want the final cost.</string>
+    <string name="res_energia">Energy consumed</string>
+    <string name="res_costo">Cost for the period</string>
+    <string name="res_costo_dia">Cost per day</string>
+    <string name="intro_consumo">Calculates the energy an appliance uses over a period and what it costs at the given kWh price.</string>
+    <string name="campo_iluminancia">Required illuminance</string>
+    <string name="campo_largo">Room length</string>
+    <string name="campo_ancho">Room width</string>
+    <string name="campo_altura_montaje">Mounting height</string>
+    <string name="campo_flujo_luminaria">Luminous flux per luminaire</string>
+    <string name="campo_utilizacion">Utilization factor</string>
+    <string name="campo_mantenimiento">Maintenance factor</string>
+    <string name="ayuda_iluminancia">Average illuminance the task requires. The annex of RIC No. 10 gives reference values by room and activity.</string>
+    <string name="ayuda_largo">Floor dimension of the room.</string>
+    <string name="ayuda_altura_montaje">Height between the luminaires and the working plane (usually 0.85 m above the floor).</string>
+    <string name="ayuda_flujo_luminaria">Total luminous flux of each luminaire, from its datasheet.</string>
+    <string name="ayuda_utilizacion">Fraction of the flux that reaches the working plane; it depends on the luminaire, the room index and the reflectances. Take it from the manufacturer\'s tables.</string>
+    <string name="ayuda_mantenimiento">Loss from ageing and dirt: 0.8 in clean rooms, 0.7 or less in dirty ones.</string>
+    <string name="res_luminarias">Luminaires needed</string>
+    <string name="res_iluminancia_obtenida">Resulting illuminance</string>
+    <string name="res_flujo_total">Total flux needed</string>
+    <string name="res_indice_local">Room index K</string>
+    <string name="intro_iluminacion">Calculates how many luminaires a room needs using the lumen method: Φ = E·S / (UF·MF).</string>
+    <string name="campo_cos_actual">Current cosφ</string>
+    <string name="campo_cos_objetivo">Target cosφ</string>
+    <string name="campo_tension_linea">Line-to-line voltage</string>
+    <string name="ayuda_cos_actual">Measured power factor of the installation.</string>
+    <string name="ayuda_cos_objetivo">Power factor you want to reach, for example the minimum your tariff requires to avoid a surcharge.</string>
+    <string name="ayuda_tension_linea">Voltage the capacitor bank is connected to.</string>
+    <string name="res_reactiva_banco">Capacitor bank rating</string>
+    <string name="res_capacidad_fase">Capacitance per phase (star, 50 Hz)</string>
+    <string name="intro_fp">Calculates the reactive power of capacitors needed to improve the power factor: Qc = P·(tan φ1 − tan φ2).</string>
+    <string name="campo_carga_respaldada">Load to back up</string>
+    <string name="campo_reserva">Margin</string>
+    <string name="campo_autonomia">Backup time</string>
+    <string name="campo_tension_banco">Battery bank voltage</string>
+    <string name="campo_rendimiento_inversor">Inverter efficiency</string>
+    <string name="campo_descarga">Depth of discharge</string>
+    <string name="ayuda_carga_respaldada">Active power of the loads that must keep running.</string>
+    <string name="ayuda_reserva">Margin over the load for growth and starting currents (usually 20 to 30 %).</string>
+    <string name="ayuda_autonomia">How long the batteries must last without mains (UPS).</string>
+    <string name="ayuda_tension_banco">Nominal voltage of the UPS or inverter battery bank.</string>
+    <string name="ayuda_rendimiento_inversor">Efficiency of the conversion from the batteries to the load.</string>
+    <string name="ayuda_descarga">Usable fraction of the capacity: about 50 % for lead-acid and 80 to 90 % for lithium.</string>
+    <string name="res_potencia_equipo">UPS or generator rating</string>
+    <string name="res_capacidad_baterias">Battery capacity</string>
+    <string name="intro_respaldo">Sizes a UPS or generator set for the load to back up, and the battery capacity for the required backup time. Requirements for emergency systems are in RIC No. 08.</string>
+</resources>

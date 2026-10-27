@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_circuitos_tablero">Number of circuits</string>
+    <string name="ayuda_circuitos_tablero">Circuits fed by the panel. From 8 circuits on, internal wiring must run in trays.</string>
+    <string name="campo_modulos_din">DIN modules used</string>
+    <string name="ayuda_modulos_din">Sum of the widths of the breakers and devices (1 module = 18 mm). A two-pole breaker takes 2.</string>
+    <string name="campo_condicion_trabajo">Working space condition</string>
+    <string name="ayuda_condicion_trabajo">Table No. 2.1 of RIC No. 02: depends on what faces the panel.</string>
+    <string name="condicion_1">1: opposite side non-conductive</string>
+    <string name="condicion_2">2: opposite side earthed and conductive</string>
+    <string name="condicion_3">3: live parts on both sides</string>
+    <string name="res_modulos_gabinete">Minimum enclosure capacity</string>
+    <string name="res_espacio_trabajo">Clear working space</string>
+    <string name="res_bandeja_interna">Internal tray</string>
+    <string name="intro_tablero">Sizes a panel according to RIC No. 02: enclosure capacity with the 25 % expansion required for a new installation, internal trays and clear working space in front of the panel.</string>
+    <string name="campo_potencia_generacion">Installed generation power</string>
+    <string name="ayuda_potencia_generacion">AC rated power of the inverters or generators.</string>
+    <string name="campo_empalme_fv">Service connection capacity</string>
+    <string name="ayuda_empalme_fv">Total capacity of the consumer installation\'s service connection (LV or MV).</string>
+    <string name="campo_con_inversor">Does it generate through an inverter?</string>
+    <string name="ayuda_con_inversor">Without an inverter the grid protection (RI) must be centralized.</string>
+    <string name="campo_inyeccion_cero">Does it have zero-export control?</string>
+    <string name="ayuda_inyeccion_cero">A SEC-approved system that prevents exporting to the grid; it can exempt the reverse power protection.</string>
+    <string name="res_diferencial_fv">RCD</string>
+    <string name="res_proteccion_ri">Grid protection (RI)</string>
+    <string name="res_potencia_inversa">Reverse power</string>
+    <string name="res_registrador">Dedicated energy recorder</string>
+    <string name="res_responsable_tecnico">Appointed technical manager</string>
+    <string name="intro_autogeneracion">Shows the protections RIC No. 09 requires for a self-generation system (for example, solar PV with net billing) based on its power and the service connection. Overcurrent and earth fault protection are always required.</string>
+    <string name="campo_tipo_ducha">Bathtub or shower type</string>
+    <string name="ayuda_tipo_ducha">Without a tray, zones 0 and 1 are measured as a radius from the water outlet (movable head) or from the fixed head.</string>
+    <string name="ducha_receptaculo">Bathtub or shower with tray</string>
+    <string name="ducha_difusor_fijo">Walk-in shower, fixed head</string>
+    <string name="ducha_difusor_movil">Walk-in shower, movable head</string>
+    <string name="campo_distancia_ducha">Horizontal distance</string>
+    <string name="ayuda_distancia_ducha">From the edge of the bathtub or tray (0 = above it), or from the outlet or head if there is no tray.</string>
+    <string name="campo_altura_punto">Height above floor</string>
+    <string name="ayuda_altura_punto">Height of the appliance, socket or switch.</string>
+    <string name="campo_altura_techo">Ceiling height</string>
+    <string name="ayuda_altura_techo">Optional. Above 2.25 m, zones 2 and 3 extend to the ceiling or up to 3 m.</string>
+    <string name="res_volumen">Zone</string>
+    <string name="res_grado_ip">Minimum IP rating</string>
+    <string name="res_mecanismos">Switches and sockets</string>
+    <string name="res_aparatos">Fixed appliances</string>
+    <string name="res_cableado">Wiring</string>
+    <string name="intro_volumenes_bano">Shows which RIC No. 11 zone a point in a bathroom or shower falls in, and the IP rating, devices and appliances it allows. Washbasins are treated as zone 2 up to 0.3 m around and above.</string>
+</resources>

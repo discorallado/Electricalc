@@ -83,8 +83,26 @@ class Entrada(
 /** Algún campo visible está vacío o no es un número. */
 class FaltanDatos : Exception()
 
-/** Una línea de la tarjeta de resultados: etiqueta, valor y unidad ya formateados. */
-data class LineaResultado(@StringRes val etiqueta: Int, val valor: String, val principal: Boolean = true)
+/**
+ * Una línea de la tarjeta de resultados: etiqueta, valor y unidad ya formateados. Si el valor es
+ * texto, [plantilla] lo da traducido con [args] (números ya formateados).
+ */
+data class LineaResultado(
+    @StringRes val etiqueta: Int,
+    val valor: String,
+    val principal: Boolean = true,
+    @StringRes val plantilla: Int? = null,
+    val args: List<Any> = emptyList(),
+) {
+    fun texto(contexto: android.content.Context): String =
+        plantilla?.let { contexto.getString(it, *args.toTypedArray()) } ?: valor
+
+    companion object {
+        /** Línea cuyo valor es un texto traducible. */
+        fun texto(@StringRes etiqueta: Int, @StringRes plantilla: Int, vararg args: Any, principal: Boolean = true) =
+            LineaResultado(etiqueta, "", principal, plantilla, args.toList())
+    }
+}
 
 /** Explicación de la pantalla: párrafos de introducción; los parámetros salen de los campos. */
 class Guia(val intro: List<Int>)

@@ -14,7 +14,7 @@ class CalculadorasEmpalmeTest {
     }
 
     private fun calcular(c: Calculadora, s: SistemaElectrico, valores: Map<String, Double>, opciones: Map<String, Int>) =
-        c.calcular(Entrada(s, null, valores, valores.keys.associateWith { Unidad("") }, opciones)).map { it.valor }
+        c.calcular(Entrada(s, null, valores, valores.keys.associateWith { Unidad("") }, opciones)).map { if (it.plantilla != null) it.args.joinToString("|") else it.valor }
 
     @Test
     fun `empalme monofasico de vivienda con minimo de 25 A`() {
@@ -33,6 +33,6 @@ class CalculadorasEmpalmeTest {
             mapOf(Ids.TENSION to 220.0, "potencia_save" to 7400.0, "cantidad" to 1.0, "empalme_kw" to 10000.0),
             mapOf("modo" to 2, "tipo_irve" to 0, "sgc" to 0),
         )
-        assertEquals(listOf("33.6 A", "50 A (1.25 × In)", "Tipo B, ≤ 30 mA", "7.4 kW", "2.6 kW"), r.take(5))
+        assertEquals(listOf("33.6 A", "50 A (1.25 × In)", "B|30", "7.4 kW", "2.6 kW"), r.take(5))
     }
 }

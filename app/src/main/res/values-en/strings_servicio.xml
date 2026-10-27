@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="campo_circuito_ensayo">Circuit nominal voltage</string>
+    <string name="ayuda_circuito_ensayo">Sets the test voltage and the minimum resistance from table No. 19.1 of RIC No. 19.</string>
+    <string name="circuito_mbts">Safety extra-low voltage (SELV, PELV)</string>
+    <string name="circuito_hasta_500">Up to 500 V</string>
+    <string name="circuito_sobre_500">Above 500 V</string>
+    <string name="campo_aislamiento_medido">Measured insulation resistance</string>
+    <string name="ayuda_aislamiento_medido">Megohmmeter reading, with appliances disconnected and the test voltage applied for one minute.</string>
+    <string name="res_tension_ensayo">Test voltage</string>
+    <string name="res_aislamiento_minimo">Minimum resistance</string>
+    <string name="res_ensayo">Test</string>
+    <string name="res_medir">Measure insulation</string>
+    <string name="ver_aislamiento">Insulation resistance</string>
+    <string name="col_circuito">Circuit</string>
+    <string name="col_ensayo">DC test</string>
+    <string name="intro_protocolo">Commissioning protocol according to RIC No. 19: the tests in the order the standard requires, and the insulation resistance check against table No. 19.1.</string>
+    <string name="campo_esquema_bucle">Earthing system</string>
+    <string name="ayuda_esquema_bucle">In TN the maximum depends on the protective device; in TT the loop impedance must stay below 80 Ω.</string>
+    <string name="campo_curva">Breaker curve</string>
+    <string name="ayuda_curva">B trips at 5 In, C at 10 In and D at 20 In.</string>
+    <string name="campo_in_bucle">Breaker rated current</string>
+    <string name="ayuda_in_bucle">Currents from table 19.2.1 of RIC No. 19.</string>
+    <string name="campo_zs_medida">Measured loop impedance</string>
+    <string name="ayuda_zs_medida">Phase-to-protective-conductor loop tester reading at the farthest point of the circuit.</string>
+    <string name="res_zs_maxima">Maximum impedance</string>
+    <string name="res_ipcc">Prospective short-circuit current (Ipsc)</string>
+    <string name="res_corriente_disparo">Magnetic trip current</string>
+    <string name="ver_impedancia_bucle">Loop impedance</string>
+    <string name="intro_bucle">Checks the measured fault loop impedance against the maximum in RIC No. 19 (220 V phase-to-neutral, tripping in 0.2 s) and calculates the prospective short-circuit current Ipsc = Vn × 1.06 / Zs.</string>
+</resources>

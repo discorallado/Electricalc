@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ayuda_demanda_trafo">Maximum demand of the installation, from the load schedule with its demand factors.</string>
+    <string name="campo_potencia_trafo">Transformer rating</string>
+    <string name="ayuda_potencia_trafo">Optional: the chosen rating. If left blank the required one is used.</string>
+    <string name="campo_tension_primario">Primary voltage</string>
+    <string name="ayuda_tension_primario">Line-to-line voltage of the medium-voltage network.</string>
+    <string name="campo_tension_secundario">Secondary voltage</string>
+    <string name="ayuda_tension_secundario">Line-to-line low voltage.</string>
+    <string name="campo_impedancia_trafo">Short-circuit impedance</string>
+    <string name="ayuda_impedancia_trafo">Nameplate value (Z %). Sets the short-circuit current and the column of table No. 13.3.</string>
+    <string name="campo_tipo_trafo">Transformer type</string>
+    <string name="ayuda_tipo_trafo">Inside general-use buildings only dry-type or class K liquid transformers are allowed.</string>
+    <string name="trafo_seco">Dry-type</string>
+    <string name="trafo_aceite">Oil-immersed</string>
+    <string name="res_potencia_requerida">Required rating</string>
+    <string name="res_in_primario">Primary rated current</string>
+    <string name="res_in_secundario">Secondary rated current</string>
+    <string name="res_icc_secundario">Short circuit at LV terminals</string>
+    <string name="res_proteccion_primario">Individual primary protection</string>
+    <string name="res_sin_proteccion_individual">Without individual protection (table No. 13.3)</string>
+    <string name="res_ventilacion">Room ventilation</string>
+    <string name="res_vigilancia_termica">Thermal monitoring in buildings</string>
+    <string name="intro_transformador">Calculates the transformer rating from the demand and margin, its rated currents and the short circuit at the low-voltage terminals (infinite network, Isc = In / Z), and lists the RIC No. 13 requirements for protection, ventilation and thermal monitoring.</string>
+    <string name="campo_sustancia">Flammable substance</string>
+    <string name="ayuda_sustancia">Gases, vapours or mists (Group II) or combustible dust (Group III).</string>
+    <string name="sustancia_gas">Gas, vapour or mist</string>
+    <string name="sustancia_polvo">Combustible dust</string>
+    <string name="campo_presencia">Explosive atmosphere presence</string>
+    <string name="ayuda_presencia">In normal operation, not counting ruptures or catastrophic leaks.</string>
+    <string name="presencia_permanente">Continuous, long or frequent</string>
+    <string name="presencia_ocasional">Occasional in normal operation</string>
+    <string name="presencia_rara">Rare or very short</string>
+    <string name="campo_iz_convencional">Conventional current rating</string>
+    <string name="ayuda_iz_convencional">Optional: the conductor\'s rating in a normal installation, to apply the 15 % reduction.</string>
+    <string name="res_zona">Zone</string>
+    <string name="res_nivel_proteccion">Equipment protection level</string>
+    <string name="res_iz_reducida">Current rating in classified zone</string>
+    <string name="res_modo_admitido">Allowed type of protection</string>
+    <string name="intro_areas">Classifies a location with explosion risk according to RIC No. 12 and lists the allowed types of protection for equipment. Formal classification requires an area drawing showing the extent of each zone.</string>
+    <string name="campo_potencia_instalada_mant">Installed power</string>
+    <string name="ayuda_potencia_instalada_mant">Above 300 kW the electrical safety program is mandatory for non-residential uses.</string>
+    <string name="campo_empalme_mt">Medium-voltage service connection?</string>
+    <string name="ayuda_empalme_mt">With an MV connection the program is mandatory regardless of power (non-residential uses).</string>
+    <string name="campo_uso_instalacion">Installation use</string>
+    <string name="ayuda_uso_instalacion">Industrial, commercial, educational, healthcare or public assembly.</string>
+    <string name="uso_no_residencial">Industrial, commercial, educational, healthcare or assembly</string>
+    <string name="uso_vivienda">Dwelling or other</string>
+    <string name="res_programa_seguridad">Electrical safety program</string>
+    <string name="res_componente">Program component</string>
+    <string name="res_regla_oro">Golden rule</string>
+    <string name="intro_mantenimiento">Shows whether the installation needs an electrical safety program under RIC No. 17 and lists its components and the five golden rules for de-energized work. The standard sets no frequencies: the program defines them from the manufacturer and operating conditions.</string>
+</resources>
