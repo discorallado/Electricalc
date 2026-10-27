@@ -1,0 +1,23 @@
+{
+  "fuente": "Datos de la app de referencia; textos propios.",
+  "secciones": [
+    {
+      "columnas": [ { "es": "Sigla", "en": "Acronym" }, { "es": "Dispositivo", "en": "Device" } ],
+      "filas": [
+        [ "MCB", { "es": "Miniature Circuit Breaker: interruptor termomagnético modular para circuitos de BT", "en": "Miniature Circuit Breaker: modular thermal-magnetic breaker for LV circuits" } ],
+        [ "MCCB", { "es": "Molded Case Circuit Breaker: interruptor de caja moldeada para corrientes mayores", "en": "Molded Case Circuit Breaker: moulded-case breaker for higher currents" } ],
+        [ "RCD", { "es": "Residual Current Device: nombre general de todo dispositivo diferencial", "en": "Residual Current Device: general name for any residual-current device" } ],
+        [ "RCCB", { "es": "Residual Current Circuit Breaker: diferencial puro, sin protección de sobrecorriente", "en": "Residual Current Circuit Breaker: RCD without overcurrent protection" } ],
+        [ "RCBO", { "es": "RCCB con protección de sobrecorriente: termomagnético diferencial", "en": "RCCB with overcurrent protection: combined breaker and RCD" } ],
+        [ "RCB", { "es": "Residual Current Breaker: nombre antiguo del RCD", "en": "Residual Current Breaker: older name for an RCD" } ],
+        [ "ELCB", { "es": "Earth Leakage Circuit Breaker: corta al detectar fuga a tierra (término antiguo)", "en": "Earth Leakage Circuit Breaker: trips on earth leakage (older term)" } ],
+        [ "RCM", { "es": "Residual Current Monitor: mide la corriente diferencial y avisa al superar un umbral, sin cortar", "en": "Residual Current Monitor: measures residual current and alarms above a threshold, without tripping" } ],
+        [ "IMD", { "es": "Insulation Monitoring Device: vigila la aislación en esquemas IT", "en": "Insulation Monitoring Device: monitors insulation in IT systems" } ],
+        [ "AFDD", { "es": "Arc Fault Detection Device: detecta arcos eléctricos y desconecta", "en": "Arc Fault Detection Device: detects arc faults and disconnects" } ],
+        [ "OCPD", { "es": "Over-Current Protective Device: cualquier protección de sobrecorriente", "en": "Over-Current Protective Device: any overcurrent protection" } ],
+        [ "SCPD", { "es": "Short-Circuit Protective Device: cualquier protección de cortocircuito", "en": "Short-Circuit Protective Device: any short-circuit protection" } ],
+        [ "SPD", { "es": "Surge Protective Device: protector de sobretensiones", "en": "Surge Protective Device: surge protector" } ]
+      ]
+    }
+  ]
+}

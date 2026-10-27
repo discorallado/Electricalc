@@ -1,0 +1,245 @@
+{
+ "fuente": "Datos de la app de referencia. Para Chile rige la tabla de colores del RIC N°04.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Norma",
+     "en": "Standard"
+    },
+    {
+     "es": "Conductores",
+     "en": "Conductors"
+    }
+   ],
+   "filas": [
+    [
+     {
+      "es": "RIC Chile AC",
+      "en": "RIC Chile AC"
+     },
+     {
+      "es": "L1 azul · L2 negro · L3 rojo · N blanco · PE verde/amarillo",
+      "en": "L1 blue · L2 black · L3 red · N white · PE green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "IEC AC",
+      "en": "IEC AC"
+     },
+     {
+      "es": "L café · N azul · L1 café · L2 negro · L3 gris · PE verde/amarillo",
+      "en": "L brown · N blue · L1 brown · L2 black · L3 grey · PE green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "IEC AC (Alternativo)",
+      "en": "IEC AC (Alternative)"
+     },
+     {
+      "es": "L café · N azul · L1 negro · L2 café · L3 gris · PE verde/amarillo",
+      "en": "L brown · N blue · L1 black · L2 brown · L3 grey · PE green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "IEC DC",
+      "en": "IEC DC"
+     },
+     {
+      "es": "L+ rojo · M azul · L- blanco · PE verde/amarillo",
+      "en": "L+ red · M blue · L- white · PE green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "CEI AC",
+      "en": "CEI AC"
+     },
+     {
+      "es": "L1 negro · L2 café · L3 gris · N azul · PE verde/amarillo · FE rosado",
+      "en": "L1 black · L2 brown · L3 grey · N blue · PE green/yellow · FE pink"
+     }
+    ],
+    [
+     {
+      "es": "CEI DC",
+      "en": "CEI DC"
+     },
+     {
+      "es": "L+ rojo · M azul · L- blanco · PE verde/amarillo · FE rosado",
+      "en": "L+ red · M blue · L- white · PE green/yellow · FE pink"
+     }
+    ],
+    [
+     {
+      "es": "NEC AC (120/208/240V)",
+      "en": "NEC AC (120/208/240V)"
+     },
+     {
+      "es": "L negro · N blanco · L1 negro · L2 rojo · L3 azul · PG verde (o verde/amarillo)",
+      "en": "L black · N white · L1 black · L2 red · L3 blue · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "NEC AC (277/480V)",
+      "en": "NEC AC (277/480V)"
+     },
+     {
+      "es": "L1 café · L2 naranja · L3 amarillo · N gris · PG verde (o verde/amarillo)",
+      "en": "L1 brown · L2 orange · L3 yellow · N grey · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "NEC DC",
+      "en": "NEC DC"
+     },
+     {
+      "es": "L+ rojo · N blanco · L- negro · PG verde (o verde/amarillo)",
+      "en": "L+ red · N white · L- black · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "CEC AC (120/208/240V)",
+      "en": "CEC AC (120/208/240V)"
+     },
+     {
+      "es": "L rojo · N blanco · L1 rojo · L2 negro · L3 azul · PG verde (o verde/amarillo)",
+      "en": "L red · N white · L1 red · L2 black · L3 blue · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "CEC AC (277/480V)",
+      "en": "CEC AC (277/480V)"
+     },
+     {
+      "es": "L1 café · L2 naranja · L3 amarillo · N blanco (o gris) · PG verde (o verde/amarillo)",
+      "en": "L1 brown · L2 orange · L3 yellow · N white (or grey) · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "China AC (Antiguo)",
+      "en": "China AC (Old)"
+     },
+     {
+      "es": "L amarillo · N azul (o negro) · L1 amarillo · L2 verde · L3 rojo · PG verde/amarillo",
+      "en": "L yellow · N blue (or black) · L1 yellow · L2 green · L3 red · PG green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "AS/NZS AC (Antiguo)",
+      "en": "AS/NZS AC (Old)"
+     },
+     {
+      "es": "L rojo (o café) · N negro (o azul) · L1 rojo · L2 blanco · L3 azul oscuro · PG verde",
+      "en": "L red (or brown) · N black (or blue) · L1 red · L2 white · L3 dark blue · PG green"
+     }
+    ],
+    [
+     {
+      "es": "AS/NZS DC",
+      "en": "AS/NZS DC"
+     },
+     {
+      "es": "L+ rojo (o café) · L- negro (o azul) · PG verde (o verde/amarillo)",
+      "en": "L+ red (or brown) · L- black (or blue) · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "AS/NZS DC (Alternativo)",
+      "en": "AS/NZS DC (Alternative)"
+     },
+     {
+      "es": "L+ gris · L- rosado · PG verde (o verde/amarillo)",
+      "en": "L+ grey · L- pink · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "Japón AC",
+      "en": "Japan AC"
+     },
+     {
+      "es": "L negro (o rojo) · N blanco · L1 negro · L2 rojo · L3 blanco · PG verde",
+      "en": "L black (or red) · N white · L1 black · L2 red · L3 white · PG green"
+     }
+    ],
+    [
+     {
+      "es": "ABNT Brasil AC",
+      "en": "ABNT Brazil AC"
+     },
+     {
+      "es": "L negro · N azul · L1 negro · L2 blanco · L3 rojo · PG verde (o verde/amarillo)",
+      "en": "L black · N blue · L1 black · L2 white · L3 red · PG green (or green/yellow)"
+     }
+    ],
+    [
+     {
+      "es": "AEA Argentina AC",
+      "en": "AEA Argentina AC"
+     },
+     {
+      "es": "L1 café · L2 negro · L3 rojo · N azul · PE verde/amarillo",
+      "en": "L1 brown · L2 black · L3 red · N blue · PE green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "UK AC (Antiguo)",
+      "en": "UK AC (Old)"
+     },
+     {
+      "es": "L rojo · N negro · L1 rojo · L2 amarillo · L3 azul · PE verde/amarillo",
+      "en": "L red · N black · L1 red · L2 yellow · L3 blue · PE green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "IS India y Pakistán AC (Antiguo)",
+      "en": "IS India and Pakistan AC (Old)"
+     },
+     {
+      "es": "L rojo · N negro · L1 rojo · L2 amarillo · L3 azul · PE verde/amarillo",
+      "en": "L red · N black · L1 red · L2 yellow · L3 blue · PE green/yellow"
+     }
+    ],
+    [
+     {
+      "es": "Marruecos AC",
+      "en": "Morocco AC"
+     },
+     {
+      "es": "L1 negro · L2 negro · L3 negro · N azul",
+      "en": "L1 black · L2 black · L3 black · N blue"
+     }
+    ],
+    [
+     {
+      "es": "Marruecos DC",
+      "en": "Morocco DC"
+     },
+     {
+      "es": "L+ rojo · L- blanco",
+      "en": "L+ red · L- white"
+     }
+    ]
+   ],
+   "notas": [
+    {
+     "es": "PE: protección; PG: tierra (Norteamérica); FE: tierra funcional; M: punto medio.",
+     "en": "PE: protective; PG: ground (North America); FE: functional earth; M: midpoint."
+    }
+   ]
+  }
+ ]
+}
