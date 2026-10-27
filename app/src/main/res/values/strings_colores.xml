@@ -41,4 +41,10 @@
     <string name="smd_eia96">EIA-96 (serie E96 y letra multiplicadora)</string>
     <string name="smd_letra">Letra delante (series E24 y E12)</string>
     <string name="intro_smd">Interpreta el código de una resistencia SMD. En 3 y 4 cifras la última es la cantidad de ceros; R, K y M marcan la coma (4R7 = 4,7 Ω); en EIA-96 las dos cifras indican un valor de la serie E96 y la letra el multiplicador.</string>
+    <string name="campo_codigo_condensador">Código impreso</string>
+    <string name="ayuda_codigo_condensador">Lo que está escrito sobre el condensador: 104, 104J, 4N7, 2A104J, .1…</string>
+    <string name="res_capacidad">Capacidad</string>
+    <string name="res_capacidad_pf">En picofaradios</string>
+    <string name="res_tension_nominal">Tensión nominal</string>
+    <string name="intro_codigo_condensador">Interpreta el código de un condensador cerámico o de película. Tres cifras: dos cifras y la cantidad de ceros en pF (104 = 100 nF). R, P, N y U marcan la coma (4N7 = 4,7 nF). La letra final es la tolerancia y, en códigos largos, un prefijo como 2A indica la tensión.</string>
 </resources>

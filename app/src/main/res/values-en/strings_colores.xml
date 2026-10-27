@@ -41,4 +41,10 @@
     <string name="smd_eia96">EIA-96 (E96 series and multiplier letter)</string>
     <string name="smd_letra">Leading letter (E24 and E12 series)</string>
     <string name="intro_smd">Decodes an SMD resistor marking. In 3 and 4 digit codes the last digit is the number of zeros; R, K and M mark the decimal point (4R7 = 4.7 Ω); in EIA-96 the two digits give an E96 series value and the letter the multiplier.</string>
+    <string name="campo_codigo_condensador">Printed code</string>
+    <string name="ayuda_codigo_condensador">What is printed on the capacitor: 104, 104J, 4N7, 2A104J, .1…</string>
+    <string name="res_capacidad">Capacitance</string>
+    <string name="res_capacidad_pf">In picofarads</string>
+    <string name="res_tension_nominal">Rated voltage</string>
+    <string name="intro_codigo_condensador">Decodes a ceramic or film capacitor marking. Three digits: two digits and the number of zeros in pF (104 = 100 nF). R, P, N and U mark the decimal point (4N7 = 4.7 nF). The last letter is the tolerance and, in long codes, a prefix such as 2A gives the voltage.</string>
 </resources>

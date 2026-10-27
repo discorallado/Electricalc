@@ -109,3 +109,20 @@ object CalculadoraSmd {
         )
     }
 }
+
+/** Código impreso en condensadores (pF, R/P/N/U, tolerancia y tensión). */
+object CalculadoraCondensador {
+    val codigo = calculadoraSimple(
+        "CodiceCondensatori",
+        listOf(CampoTexto("codigo", R.string.campo_codigo_condensador, listOf(R.string.ayuda_codigo_condensador), "104J")),
+        listOf(R.string.intro_codigo_condensador),
+    ) { e ->
+        val l = cl.electricalc.calc.electronica.CodigoCondensador.leer(e.texto("codigo"))
+        listOfNotNull(
+            LineaResultado(R.string.res_capacidad, Formato.conPrefijo(l.pf * 1e-12, "F")),
+            LineaResultado(R.string.res_capacidad_pf, "${Formato.numero(l.pf, 2)} pF", principal = false),
+            l.tolerancia?.let { LineaResultado(R.string.res_tolerancia, it) },
+            l.tensionV?.let { LineaResultado(R.string.res_tension_nominal, "${Formato.numero(it, 1)} V") },
+        )
+    }
+}
