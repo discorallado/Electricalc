@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="col_negro">Negro</string>
+    <string name="col_marron">Café</string>
+    <string name="col_rojo">Rojo</string>
+    <string name="col_naranja">Naranja</string>
+    <string name="col_amarillo">Amarillo</string>
+    <string name="col_verde">Verde</string>
+    <string name="col_azul">Azul</string>
+    <string name="col_violeta">Violeta</string>
+    <string name="col_gris">Gris</string>
+    <string name="col_blanco">Blanco</string>
+    <string name="col_oro">Dorado</string>
+    <string name="col_plata">Plateado</string>
+    <string name="col_sin">Sin banda</string>
+    <string name="bandas_4">4 bandas</string>
+    <string name="bandas_5">5 o 6 bandas</string>
+    <string name="campo_banda_1">1.ª banda (cifra)</string>
+    <string name="campo_banda_2">2.ª banda (cifra)</string>
+    <string name="campo_banda_3">3.ª banda (cifra)</string>
+    <string name="campo_multiplicador">Multiplicador</string>
+    <string name="campo_tolerancia">Tolerancia</string>
+    <string name="ayuda_banda">Lee las bandas desde el extremo opuesto a la de tolerancia, que suele estar más separada. La 6.ª banda (coeficiente de temperatura) no cambia el valor.</string>
+    <string name="ayuda_valor_resistencia">Valor nominal de la resistencia.</string>
+    <string name="res_resistencia_colores">Resistencia</string>
+    <string name="res_tolerancia">Tolerancia</string>
+    <string name="res_rango">Rango admisible</string>
+    <string name="res_bandas_4">4 bandas</string>
+    <string name="res_bandas_5">5 bandas</string>
+    <string name="val_colores_3">%1$s · %2$s · %3$s</string>
+    <string name="val_colores_4">%1$s · %2$s · %3$s · %4$s</string>
+    <string name="intro_colores_lectura">Calcula el valor y la tolerancia de una resistencia a partir de sus bandas de colores (IEC 60062).</string>
+    <string name="intro_colores_valor">Entrega los colores de las bandas de cifras y multiplicador para un valor de resistencia, en 4 y 5 bandas. El valor se redondea a 2 o 3 cifras significativas.</string>
+</resources>

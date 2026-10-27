@@ -83,6 +83,9 @@ class Entrada(
 /** Algún campo visible está vacío o no es un número. */
 class FaltanDatos : Exception()
 
+/** Argumento de una plantilla que también se traduce (por ejemplo, el nombre de un color). */
+data class TextoRecurso(@StringRes val id: Int)
+
 /**
  * Una línea de la tarjeta de resultados: etiqueta, valor y unidad ya formateados. Si el valor es
  * texto, [plantilla] lo da traducido con [args] (números ya formateados).
@@ -95,7 +98,7 @@ data class LineaResultado(
     val args: List<Any> = emptyList(),
 ) {
     fun texto(contexto: android.content.Context): String =
-        plantilla?.let { contexto.getString(it, *args.toTypedArray()) } ?: valor
+        plantilla?.let { p -> contexto.getString(p, *args.map { if (it is TextoRecurso) contexto.getString(it.id) else it }.toTypedArray()) } ?: valor
 
     companion object {
         /** Línea cuyo valor es un texto traducible. */

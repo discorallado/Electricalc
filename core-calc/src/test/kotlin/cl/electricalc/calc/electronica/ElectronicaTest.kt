@@ -36,3 +36,17 @@ class ElectronicaTest {
         assertThrows<ErrorCalculo> { Circuitos.resistenciaSerie(5.0, 6.0, 0.01) }
     }
 }
+
+class CodigoColoresTest {
+    @Test
+    fun lecturaYBandas() {
+        assertEquals(4700.0, CodigoColores.valor(listOf(4, 7), 2), 1e-9)
+        assertEquals(0.47, CodigoColores.valor(listOf(4, 7), -2), 1e-12)
+        assertEquals(10_000.0, CodigoColores.valor(listOf(1, 0, 0), 2), 1e-9)
+        assertEquals(listOf(4, 7) to 2, CodigoColores.bandas(4700.0, 2))
+        assertEquals(listOf(1, 0, 0) to 2, CodigoColores.bandas(10_000.0, 3))
+        assertEquals(listOf(1, 0) to 0, CodigoColores.bandas(9.96, 2))
+        assertEquals(listOf(2, 2) to -1, CodigoColores.bandas(2.2, 2))
+        assertThrows<cl.electricalc.calc.comun.ErrorCalculo> { CodigoColores.bandas(1e13, 2) }
+    }
+}

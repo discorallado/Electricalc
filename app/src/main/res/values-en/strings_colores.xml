@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="col_negro">Black</string>
+    <string name="col_marron">Brown</string>
+    <string name="col_rojo">Red</string>
+    <string name="col_naranja">Orange</string>
+    <string name="col_amarillo">Yellow</string>
+    <string name="col_verde">Green</string>
+    <string name="col_azul">Blue</string>
+    <string name="col_violeta">Violet</string>
+    <string name="col_gris">Grey</string>
+    <string name="col_blanco">White</string>
+    <string name="col_oro">Gold</string>
+    <string name="col_plata">Silver</string>
+    <string name="col_sin">No band</string>
+    <string name="bandas_4">4 bands</string>
+    <string name="bandas_5">5 or 6 bands</string>
+    <string name="campo_banda_1">1st band (digit)</string>
+    <string name="campo_banda_2">2nd band (digit)</string>
+    <string name="campo_banda_3">3rd band (digit)</string>
+    <string name="campo_multiplicador">Multiplier</string>
+    <string name="campo_tolerancia">Tolerance</string>
+    <string name="ayuda_banda">Read the bands starting from the end opposite the tolerance band, which is usually set apart. The 6th band (temperature coefficient) does not change the value.</string>
+    <string name="ayuda_valor_resistencia">Nominal resistance value.</string>
+    <string name="res_resistencia_colores">Resistance</string>
+    <string name="res_tolerancia">Tolerance</string>
+    <string name="res_rango">Allowed range</string>
+    <string name="res_bandas_4">4 bands</string>
+    <string name="res_bandas_5">5 bands</string>
+    <string name="val_colores_3">%1$s · %2$s · %3$s</string>
+    <string name="val_colores_4">%1$s · %2$s · %3$s · %4$s</string>
+    <string name="intro_colores_lectura">Calculates the value and tolerance of a resistor from its colour bands (IEC 60062).</string>
+    <string name="intro_colores_valor">Gives the digit and multiplier band colours for a resistance value, for 4 and 5 bands. The value is rounded to 2 or 3 significant figures.</string>
+</resources>
