@@ -1,0 +1,1070 @@
+{
+ "fuente": "Datos de la app de referencia (IEEE C37.2).",
+ "secciones": [
+  {
+   "titulo": {
+    "es": "Números de dispositivo",
+    "en": "Device numbers"
+   },
+   "columnas": [
+    {
+     "es": "N°",
+     "en": "No."
+    },
+    {
+     "es": "Función",
+     "en": "Function"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     {
+      "es": "Elemento principal",
+      "en": "Master Element"
+     }
+    ],
+    [
+     "2",
+     {
+      "es": "Relé de cierre o arranque temporizado",
+      "en": "Time Delay Starting or Closing Relay"
+     }
+    ],
+    [
+     "3",
+     {
+      "es": "Relé de comprobación o de bloqueo",
+      "en": "Checking or Interlocking Relay"
+     }
+    ],
+    [
+     "4",
+     {
+      "es": "Contactor principal",
+      "en": "Master Contactor"
+     }
+    ],
+    [
+     "5",
+     {
+      "es": "Dispositivo de parada",
+      "en": "Stopping Device"
+     }
+    ],
+    [
+     "6",
+     {
+      "es": "Interruptor de arranque",
+      "en": "Starting Circuit Breaker"
+     }
+    ],
+    [
+     "7",
+     {
+      "es": "Relé de tasa de variación",
+      "en": "Rate of Change Relay"
+     }
+    ],
+    [
+     "8",
+     {
+      "es": "Dispositivo de desconexión de energía de control",
+      "en": "Control Power Disconnecting Device"
+     }
+    ],
+    [
+     "9",
+     {
+      "es": "Dispositivo de inversión",
+      "en": "Reversing Device"
+     }
+    ],
+    [
+     "10",
+     {
+      "es": "Conmutador de secuencia",
+      "en": "Unit Sequence Switch"
+     }
+    ],
+    [
+     "11",
+     {
+      "es": "Dispositivo multifunción",
+      "en": "Multi-function Device"
+     }
+    ],
+    [
+     "12",
+     {
+      "es": "Dispositivo de exceso de velocidad",
+      "en": "Overspeed Device"
+     }
+    ],
+    [
+     "13",
+     {
+      "es": "Dispositivo de velocidad síncrona",
+      "en": "Synchronous-speed Device"
+     }
+    ],
+    [
+     "14",
+     {
+      "es": "Dispositivo de falta de velocidad",
+      "en": "Underspeed Device"
+     }
+    ],
+    [
+     "15",
+     {
+      "es": "Dispositivo de regulador de velocidad o frecuencia",
+      "en": "Speed – or Frequency, Matching Device"
+     }
+    ],
+    [
+     "16",
+     {
+      "es": "Dispositivo de comunicación de datos",
+      "en": "Data Communications Device"
+     }
+    ],
+    [
+     "17",
+     {
+      "es": "Conmutador de derivación o descarga",
+      "en": "Shunting or Discharge Switch"
+     }
+    ],
+    [
+     "18",
+     {
+      "es": "Dispositivo de aceleración o desaceleración",
+      "en": "Accelerating or Decelerating Device"
+     }
+    ],
+    [
+     "19",
+     {
+      "es": "Contactos de transición de arranque a marcha normal",
+      "en": "Starting to Running Transition Contactor"
+     }
+    ],
+    [
+     "20",
+     {
+      "es": "Válvula maniobrada eléctricamente",
+      "en": "Electrically Operated Valve"
+     }
+    ],
+    [
+     "21",
+     {
+      "es": "Relé de distancia",
+      "en": "Distance Relay"
+     }
+    ],
+    [
+     "22",
+     {
+      "es": "Interruptor de circuito de ecualizador",
+      "en": "Equalizer Circuit Breaker"
+     }
+    ],
+    [
+     "23",
+     {
+      "es": "Dispositivo regulador de temperatura",
+      "en": "Temperature Control Device"
+     }
+    ],
+    [
+     "24",
+     {
+      "es": "Relé voltios por hercio",
+      "en": "Volts Per Hertz Relay"
+     }
+    ],
+    [
+     "25",
+     {
+      "es": "Dispositivo de sincronización o puesta en paralelo",
+      "en": "Synchronizing or Synchronism-Check Device"
+     }
+    ],
+    [
+     "26",
+     {
+      "es": "Dispositivo térmico",
+      "en": "Apparatus Thermal Device"
+     }
+    ],
+    [
+     "27",
+     {
+      "es": "Relé de mínima tensión",
+      "en": "Undervoltage Relay"
+     }
+    ],
+    [
+     "28",
+     {
+      "es": "Detector de llama",
+      "en": "Flame detector"
+     }
+    ],
+    [
+     "29",
+     {
+      "es": "Contactor de aislamiento",
+      "en": "Isolating Contactor or Switch"
+     }
+    ],
+    [
+     "30",
+     {
+      "es": "Relé anunciador",
+      "en": "Annunciator Relay"
+     }
+    ],
+    [
+     "31",
+     {
+      "es": "Dispositivo de excitación separada",
+      "en": "Separate Excitation Device"
+     }
+    ],
+    [
+     "32",
+     {
+      "es": "Relé direccional de potencia",
+      "en": "Directional Power Relay"
+     }
+    ],
+    [
+     "33",
+     {
+      "es": "Conmutador de posición",
+      "en": "Position Switch"
+     }
+    ],
+    [
+     "34",
+     {
+      "es": "Dispositivo de secuencia maestra",
+      "en": "Master Sequence Device"
+     }
+    ],
+    [
+     "35",
+     {
+      "es": "Dispositivo de cortocircuito de las escobillas o anillos rozantes",
+      "en": "Brush-Operating or Slip-Ring Short-Circuiting Device"
+     }
+    ],
+    [
+     "36",
+     {
+      "es": "Dispositivo de polaridad o tensión de polarización",
+      "en": "Polarity or Polarizing Voltage Devices"
+     }
+    ],
+    [
+     "37",
+     {
+      "es": "Relé de baja intensidad o baja potencia",
+      "en": "Undercurrent or Underpower Relay"
+     }
+    ],
+    [
+     "38",
+     {
+      "es": "Dispositivo de protección de cojinetes",
+      "en": "Bearing Protective Device"
+     }
+    ],
+    [
+     "39",
+     {
+      "es": "Detector de condiciones mecánicas",
+      "en": "Mechanical Condition Monitor"
+     }
+    ],
+    [
+     "40",
+     {
+      "es": "Relé de campo",
+      "en": "Field (over/under excitation) Relay"
+     }
+    ],
+    [
+     "41",
+     {
+      "es": "Interruptor de campo",
+      "en": "Field Circuit Breaker"
+     }
+    ],
+    [
+     "42",
+     {
+      "es": "Interruptor de marcha",
+      "en": "Running Circuit Breaker"
+     }
+    ],
+    [
+     "43",
+     {
+      "es": "Dispositivo de transferencia",
+      "en": "Manual Transfer or Selector Device"
+     }
+    ],
+    [
+     "44",
+     {
+      "es": "Relé de secuencia de arranque del grupo",
+      "en": "Unit Sequence Starting Relay"
+     }
+    ],
+    [
+     "45",
+     {
+      "es": "Detector de condiciones atmosféricas",
+      "en": "Abnormal Atmospheric Condition Monitor"
+     }
+    ],
+    [
+     "46",
+     {
+      "es": "Relé de intensidad para equilibrio o inversión de fases",
+      "en": "Reverse-phase or Phase-Balance Current Relay"
+     }
+    ],
+    [
+     "47",
+     {
+      "es": "Relé de tensión para secuencia de fase",
+      "en": "Phase-Sequence or Phase-Balance Voltage Relay"
+     }
+    ],
+    [
+     "48",
+     {
+      "es": "Relé de secuencia incompleta",
+      "en": "Incomplete Sequence Relay"
+     }
+    ],
+    [
+     "49",
+     {
+      "es": "Relé térmico para máquina, aparato o transformador",
+      "en": "Machine or Transformer, Thermal Relay"
+     }
+    ],
+    [
+     "50",
+     {
+      "es": "Relé de sobreintensidad instantáneo",
+      "en": "Instantaneous Overcurrent Relay"
+     }
+    ],
+    [
+     "51",
+     {
+      "es": "Relé de sobreintensidad de tiempo inverso de c.a.",
+      "en": "AC Inverse Time Overcurrent Relay"
+     }
+    ],
+    [
+     "52",
+     {
+      "es": "Interruptor de c.a.",
+      "en": "AC Circuit Breaker"
+     }
+    ],
+    [
+     "53",
+     {
+      "es": "Relé de la excitatriz o del generador de c.c.",
+      "en": "Exciter or DC Generator Relay"
+     }
+    ],
+    [
+     "54",
+     {
+      "es": "Dispositivo de acoplamiento del viraje",
+      "en": "Turning Gear Engaging Device"
+     }
+    ],
+    [
+     "55",
+     {
+      "es": "Relé de factor de potencia",
+      "en": "Power Factor Relay"
+     }
+    ],
+    [
+     "56",
+     {
+      "es": "Relé de aplicación de campo",
+      "en": "Field Application Relay"
+     }
+    ],
+    [
+     "57",
+     {
+      "es": "Dispositivo de cortocircuito o puesta a tierra",
+      "en": "Short-Circuiting or Grounding Device"
+     }
+    ],
+    [
+     "58",
+     {
+      "es": "Relé de fallo de rectificación",
+      "en": "Rectification Failure Relay"
+     }
+    ],
+    [
+     "59",
+     {
+      "es": "Relé de sobretensión",
+      "en": "Overvoltage Relay"
+     }
+    ],
+    [
+     "60",
+     {
+      "es": "Relé de equilibrio de tensión o corriente",
+      "en": "Voltage or Current Balance Relay"
+     }
+    ],
+    [
+     "61",
+     {
+      "es": "Interruptor o sensor de densidad",
+      "en": "Density Switch or Sensor"
+     }
+    ],
+    [
+     "62",
+     {
+      "es": "Relé de parada o apertura temporizada",
+      "en": "Time-Delay Stopping or Opening Relay"
+     }
+    ],
+    [
+     "63",
+     {
+      "es": "Presostato",
+      "en": "Pressure Switch"
+     }
+    ],
+    [
+     "64",
+     {
+      "es": "Relé detector de tierra",
+      "en": "Ground Detector Relay"
+     }
+    ],
+    [
+     "65",
+     {
+      "es": "Regulador mecánico",
+      "en": "Governor"
+     }
+    ],
+    [
+     "66",
+     {
+      "es": "Relé de pasos",
+      "en": "Notching or Jogging Device"
+     }
+    ],
+    [
+     "67",
+     {
+      "es": "Relé direccional de sobreintensidad de c.a.",
+      "en": "AC Directional Overcurrent Relay"
+     }
+    ],
+    [
+     "68",
+     {
+      "es": "Relé de bloqueo o de pérdida de sincronismo",
+      "en": "Blocking or \\\"Out-of-Step\\\" Relay"
+     }
+    ],
+    [
+     "69",
+     {
+      "es": "Dispositivo de control permisivo",
+      "en": "Permissive Control Device"
+     }
+    ],
+    [
+     "70",
+     {
+      "es": "Reóstato",
+      "en": "Rheostat"
+     }
+    ],
+    [
+     "71",
+     {
+      "es": "Interruptor de nivel de líquido",
+      "en": "Liquid Level Switch"
+     }
+    ],
+    [
+     "72",
+     {
+      "es": "Interruptor de c.c.",
+      "en": "DC Circuit Breaker"
+     }
+    ],
+    [
+     "73",
+     {
+      "es": "Contactor de resistencia de carga",
+      "en": "Load-Resistor Contactor"
+     }
+    ],
+    [
+     "74",
+     {
+      "es": "Relé de alarma",
+      "en": "Alarm Relay"
+     }
+    ],
+    [
+     "75",
+     {
+      "es": "Mecanismo de cambio de posición",
+      "en": "Position Changing Mechanism"
+     }
+    ],
+    [
+     "76",
+     {
+      "es": "Relé de sobreintensidad de c.c.",
+      "en": "DC Overcurrent Relay"
+     }
+    ],
+    [
+     "77",
+     {
+      "es": "Dispositivo de telemedida",
+      "en": "Telemetering Device"
+     }
+    ],
+    [
+     "78",
+     {
+      "es": "Relé de medición de ángulo de fase",
+      "en": "Phase-Angle Measuring Relay"
+     }
+    ],
+    [
+     "79",
+     {
+      "es": "Relé de reenganche de c.a.",
+      "en": "AC Reclosing Relay"
+     }
+    ],
+    [
+     "80",
+     {
+      "es": "Interruptor de caudal",
+      "en": "Flow Switch"
+     }
+    ],
+    [
+     "81",
+     {
+      "es": "Relé de frecuencia",
+      "en": "Frequency Relay"
+     }
+    ],
+    [
+     "82",
+     {
+      "es": "Relé de reenganche de c.c.",
+      "en": "DC Reclosing Relay"
+     }
+    ],
+    [
+     "83",
+     {
+      "es": "Relé de selección o transferencia del control automático",
+      "en": "Automatic Selective Control or Transfer Relay"
+     }
+    ],
+    [
+     "84",
+     {
+      "es": "Mecanismo de accionamiento",
+      "en": "Operating Mechanism"
+     }
+    ],
+    [
+     "85",
+     {
+      "es": "Relé de comunicaciones, portadora o cable piloto",
+      "en": "Communications, Carrier or Pilot-Wire Relay"
+     }
+    ],
+    [
+     "86",
+     {
+      "es": "Relé de enclavamiento",
+      "en": "Lockout Relay"
+     }
+    ],
+    [
+     "87",
+     {
+      "es": "Relé de protección diferencial",
+      "en": "Differential Protective Relay"
+     }
+    ],
+    [
+     "88",
+     {
+      "es": "Motor auxiliar o moto-generador",
+      "en": "Auxiliary Motor or Motor Generator"
+     }
+    ],
+    [
+     "89",
+     {
+      "es": "Interruptor de línea",
+      "en": "Line Switch"
+     }
+    ],
+    [
+     "90",
+     {
+      "es": "Dispositivo de regulación",
+      "en": "Regulating Device"
+     }
+    ],
+    [
+     "91",
+     {
+      "es": "Relé direccional de tensión",
+      "en": "Voltage Directional Relay"
+     }
+    ],
+    [
+     "92",
+     {
+      "es": "Relé direccional de tensión y potencia",
+      "en": "Voltage and Power Directional Relay"
+     }
+    ],
+    [
+     "93",
+     {
+      "es": "Contactor de cambio de campo",
+      "en": "Field Changing Contactor"
+     }
+    ],
+    [
+     "94",
+     {
+      "es": "Relé de disparo o disparo libre",
+      "en": "Tripping or Trip-Free Relay"
+     }
+    ],
+    [
+     "95-99",
+     {
+      "es": "Para aplicaciones específicas en las que los otros números no son adecuados",
+      "en": "For specific applications where other numbers are not suitable"
+     }
+    ]
+   ]
+  },
+  {
+   "titulo": {
+    "es": "Sufijos",
+    "en": "Suffixes"
+   },
+   "columnas": [
+    {
+     "es": "Sufijo",
+     "en": "Suffix"
+    },
+    {
+     "es": "Significado",
+     "en": "Meaning"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     {
+      "es": "Secuencia positiva",
+      "en": "Positive-Sequence"
+     }
+    ],
+    [
+     "2",
+     {
+      "es": "Secuencia negativa",
+      "en": "Negative-Sequence"
+     }
+    ],
+    [
+     "A",
+     {
+      "es": "Alarma o potencia auxiliar",
+      "en": "Alarm, Auxiliary Power"
+     }
+    ],
+    [
+     "AC",
+     {
+      "es": "Corriente alterna",
+      "en": "Alternating Current"
+     }
+    ],
+    [
+     "AN",
+     {
+      "es": "Ánodo",
+      "en": "Anode"
+     }
+    ],
+    [
+     "B",
+     {
+      "es": "Barra omnibus, batería o soplante",
+      "en": "Bus, Battery, or Blower"
+     }
+    ],
+    [
+     "BF",
+     {
+      "es": "Falla del interruptor",
+      "en": "Breaker Failure"
+     }
+    ],
+    [
+     "BK",
+     {
+      "es": "Freno",
+      "en": "Brake"
+     }
+    ],
+    [
+     "BL",
+     {
+      "es": "Bloque (Válvula)",
+      "en": "Block (Valve)"
+     }
+    ],
+    [
+     "BP",
+     {
+      "es": "Derivación",
+      "en": "Bypass"
+     }
+    ],
+    [
+     "BT",
+     {
+      "es": "Enlace de barras",
+      "en": "Bus Tie"
+     }
+    ],
+    [
+     "BU",
+     {
+      "es": "Respaldo",
+      "en": "Backup"
+     }
+    ],
+    [
+     "C",
+     {
+      "es": "Condensador, compensador, corriente portadora, caja o compresor",
+      "en": "Capacitor, Condenser, Compensator, Carrier Current, Case, or Compressor"
+     }
+    ],
+    [
+     "CA",
+     {
+      "es": "Cátodo",
+      "en": "Cathode"
+     }
+    ],
+    [
+     "CH",
+     {
+      "es": "Retención (Válvula)",
+      "en": "Check (Valve)"
+     }
+    ],
+    [
+     "D",
+     {
+      "es": "Descarga (Válvula)",
+      "en": "Discharge (Valve)"
+     }
+    ],
+    [
+     "DC",
+     {
+      "es": "Corriente continua",
+      "en": "Direct Current"
+     }
+    ],
+    [
+     "DCB",
+     {
+      "es": "Bloqueo de comparación direccional",
+      "en": "Directional Comparison Blocking"
+     }
+    ],
+    [
+     "DCUB",
+     {
+      "es": "Desbloqueo de comparación direccional",
+      "en": "Directional Comparison Unblocking"
+     }
+    ],
+    [
+     "DD",
+     {
+      "es": "Detector de perturbaciones",
+      "en": "Disturbance Detector"
+     }
+    ],
+    [
+     "DUTT",
+     {
+      "es": "Viaje de transferencia de sub-alcance directo",
+      "en": "Direct Underreaching Transfer Trip"
+     }
+    ],
+    [
+     "E",
+     {
+      "es": "Excitatriz",
+      "en": "Exciter"
+     }
+    ],
+    [
+     "F",
+     {
+      "es": "Alimentador, campo, filamento, filtro o ventilador",
+      "en": "Feeder, Field, Filament, Filter, or Fan"
+     }
+    ],
+    [
+     "G",
+     {
+      "es": "Generador o tierra",
+      "en": "Ground or Generator"
+     }
+    ],
+    [
+     "GC",
+     {
+      "es": "Comprobación de tierra",
+      "en": "Ground Check"
+     }
+    ],
+    [
+     "H",
+     {
+      "es": "Calentador o carcasa",
+      "en": "Heater or Housing"
+     }
+    ],
+    [
+     "L",
+     {
+      "es": "Línea o lógica",
+      "en": "Line or Logic"
+     }
+    ],
+    [
+     "M",
+     {
+      "es": "Motor o medición",
+      "en": "Motor or Metering"
+     }
+    ],
+    [
+     "MOC",
+     {
+      "es": "Contacto operado por mecanismo",
+      "en": "Mechanism Operated Contact"
+     }
+    ],
+    [
+     "N",
+     {
+      "es": "Red o neutro",
+      "en": "Neutral or Network"
+     }
+    ],
+    [
+     "O",
+     {
+      "es": "Sobre- / Máximo",
+      "en": "Over"
+     }
+    ],
+    [
+     "P",
+     {
+      "es": "Fase o bomba",
+      "en": "Phase or Pump"
+     }
+    ],
+    [
+     "PC",
+     {
+      "es": "Comparación de fase",
+      "en": "Phase Comparison"
+     }
+    ],
+    [
+     "POTT",
+     {
+      "es": "Viaje de transferencia de sobrealcance permisivo",
+      "en": "Permissive Overreaching Transfer Trip"
+     }
+    ],
+    [
+     "PUTT",
+     {
+      "es": "Viaje de transferencia de sub-alcance permisivo",
+      "en": "Permissive Underreaching Transfer Trip"
+     }
+    ],
+    [
+     "R",
+     {
+      "es": "Reactor, rectificador o sala",
+      "en": "Reactor, Rectifier, or Room"
+     }
+    ],
+    [
+     "S",
+     {
+      "es": "Sincronización, secundario, colador, sumidero o aspiración (válvula)",
+      "en": "Synchronizing, Secondary, Strainer, Sump, or Suction (Valve)"
+     }
+    ],
+    [
+     "SOTF",
+     {
+      "es": "Cierre sobre defecto",
+      "en": "Switch On To Fault"
+     }
+    ],
+    [
+     "T",
+     {
+      "es": "Transformador o thyratron",
+      "en": "Transformer or Thyratron"
+     }
+    ],
+    [
+     "TD",
+     {
+      "es": "Tiempo de retardo",
+      "en": "Time Delay"
+     }
+    ],
+    [
+     "TDC",
+     {
+      "es": "Contacto de cierre con retraso de tiempo",
+      "en": "Time-Delay Closing Contact"
+     }
+    ],
+    [
+     "TDDO",
+     {
+      "es": "Desenganche temporizado de la bobina del relé",
+      "en": "Time Delayed Relay Coil Drop-Out"
+     }
+    ],
+    [
+     "TDO",
+     {
+      "es": "Contacto de apertura con retraso de tiempo",
+      "en": "Time-Delay Opening Contact"
+     }
+    ],
+    [
+     "TDPU",
+     {
+      "es": "Excitación temporizada de la bobina del relé",
+      "en": "Time Delayed Relay Coil Pickup"
+     }
+    ],
+    [
+     "TH",
+     {
+      "es": "Transformador (Lado Alta Tensión)",
+      "en": "Transformer (High-Voltage Side)"
+     }
+    ],
+    [
+     "THD",
+     {
+      "es": "Distorsión armónica total",
+      "en": "Total Harmonic Distortion"
+     }
+    ],
+    [
+     "TL",
+     {
+      "es": "Transformador (Lado Baja Tensión)",
+      "en": "Transformer (Low-Voltage Side)"
+     }
+    ],
+    [
+     "TM",
+     {
+      "es": "Telémetro",
+      "en": "Telemeter"
+     }
+    ],
+    [
+     "TT",
+     {
+      "es": "Transformador (Lado Tensión Terciario)",
+      "en": "Transformer (Tertiary-Voltage Side)"
+     }
+    ],
+    [
+     "U",
+     {
+      "es": "Sub- / Mínimo o unidad",
+      "en": "Under or Unit"
+     }
+    ],
+    [
+     "X",
+     {
+      "es": "Auxiliar",
+      "en": "Auxiliary"
+     }
+    ],
+    [
+     "Z",
+     {
+      "es": "Impedancia",
+      "en": "Impedance"
+     }
+    ]
+   ]
+  }
+ ]
+}
