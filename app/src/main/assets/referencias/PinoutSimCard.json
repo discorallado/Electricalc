@@ -1,0 +1,61 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[VCC] Power supply: 5 V (class A), 3 V (class B) or 1.8 V (class C)"
+    ],
+    [
+     "2",
+     "[RESET] Card reset"
+    ],
+    [
+     "3",
+     "[CLOCK] Card clock"
+    ],
+    [
+     "4",
+     "[RESERVED] AUX1, optionally used for USB interfaces and other uses"
+    ],
+    [
+     "5",
+     "[GND] Ground"
+    ],
+    [
+     "6",
+     "[SPU] Formerly VPP programming voltage, no longer used; SWP for NFC (optional)"
+    ],
+    [
+     "7",
+     "[I/O] Input or Output for serial data (half-duplex)"
+    ],
+    [
+     "8",
+     "[RESERVED] AUX2, optionally used for USB interfaces and other uses"
+    ]
+   ],
+   "titulo": {
+    "es": "Sim Card",
+    "en": "Sim Card"
+   },
+   "notas": [
+    {
+     "es": "Connector at the card",
+     "en": "Connector at the card"
+    }
+   ]
+  }
+ ]
+}

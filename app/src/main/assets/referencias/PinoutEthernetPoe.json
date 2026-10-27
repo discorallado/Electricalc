@@ -1,0 +1,355 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "RX, DC-"
+    ],
+    [
+     "2",
+     "RX, DC-"
+    ],
+    [
+     "3",
+     "TX, DC+"
+    ],
+    [
+     "4",
+     "Spare"
+    ],
+    [
+     "5",
+     "Spare"
+    ],
+    [
+     "6",
+     "TX, DC+"
+    ],
+    [
+     "7",
+     "Spare"
+    ],
+    [
+     "8",
+     "Spare"
+    ]
+   ],
+   "titulo": {
+    "es": "IEEE 802.3af/at – Alternative A (data pairs)",
+    "en": "IEEE 802.3af/at – Alternative A (data pairs)"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "RX"
+    ],
+    [
+     "2",
+     "RX"
+    ],
+    [
+     "3",
+     "TX"
+    ],
+    [
+     "4",
+     "DC+"
+    ],
+    [
+     "5",
+     "DC+"
+    ],
+    [
+     "6",
+     "TX"
+    ],
+    [
+     "7",
+     "DC-"
+    ],
+    [
+     "8",
+     "DC-"
+    ]
+   ],
+   "titulo": {
+    "es": "IEEE 802.3af/at – Alternative B (spare pairs)",
+    "en": "IEEE 802.3af/at – Alternative B (spare pairs)"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Data, DC-"
+    ],
+    [
+     "2",
+     "Data, DC-"
+    ],
+    [
+     "3",
+     "Data, DC+"
+    ],
+    [
+     "4",
+     "Data, DC+"
+    ],
+    [
+     "5",
+     "Data, DC+"
+    ],
+    [
+     "6",
+     "Data, DC+"
+    ],
+    [
+     "7",
+     "Data, DC-"
+    ],
+    [
+     "8",
+     "Data, DC-"
+    ]
+   ],
+   "titulo": {
+    "es": "IEEE 802.3bt – 4 pairs (Type 4 polarity)",
+    "en": "IEEE 802.3bt – 4 pairs (Type 4 polarity)"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "RX"
+    ],
+    [
+     "2",
+     "RX"
+    ],
+    [
+     "3",
+     "TX"
+    ],
+    [
+     "4",
+     "DC-"
+    ],
+    [
+     "5",
+     "DC-"
+    ],
+    [
+     "6",
+     "TX"
+    ],
+    [
+     "7",
+     "DC+"
+    ],
+    [
+     "8",
+     "DC+"
+    ]
+   ],
+   "titulo": {
+    "es": "Cisco (Old old standard)",
+    "en": "Cisco (Old old standard)"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "RX"
+    ],
+    [
+     "2",
+     "RX"
+    ],
+    [
+     "3",
+     "TX"
+    ],
+    [
+     "4",
+     "DC?"
+    ],
+    [
+     "5",
+     "DC?"
+    ],
+    [
+     "6",
+     "TX"
+    ],
+    [
+     "7",
+     "DC?"
+    ],
+    [
+     "8",
+     "DC?"
+    ]
+   ],
+   "titulo": {
+    "es": "Apple MacIntosh AirPort PoE, Extreme",
+    "en": "Apple MacIntosh AirPort PoE, Extreme"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "RX"
+    ],
+    [
+     "2",
+     "RX"
+    ],
+    [
+     "3",
+     "TX"
+    ],
+    [
+     "4",
+     "Spare"
+    ],
+    [
+     "5",
+     "Spare"
+    ],
+    [
+     "6",
+     "TX"
+    ],
+    [
+     "7",
+     "DC+"
+    ],
+    [
+     "8",
+     "DC-"
+    ]
+   ],
+   "titulo": {
+    "es": "3Com AirConnect",
+    "en": "3Com AirConnect"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "RX"
+    ],
+    [
+     "2",
+     "RX"
+    ],
+    [
+     "3",
+     "TX"
+    ],
+    [
+     "4",
+     "DC+"
+    ],
+    [
+     "5",
+     "DC-"
+    ],
+    [
+     "6",
+     "TX"
+    ],
+    [
+     "7",
+     "DC+"
+    ],
+    [
+     "8",
+     "DC-"
+    ]
+   ],
+   "titulo": {
+    "es": "Alvarion VL",
+    "en": "Alvarion VL"
+   }
+  }
+ ]
+}

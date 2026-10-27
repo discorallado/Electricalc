@@ -1,0 +1,189 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Data Carrier Detect (DCE → DTE)"
+    ],
+    [
+     "2",
+     "Receive Data (DCE → DTE)"
+    ],
+    [
+     "3",
+     "Transmit Data (DTE → DCE)"
+    ],
+    [
+     "4",
+     "Data Terminal Ready (DTE → DCE)"
+    ],
+    [
+     "5",
+     "System Ground"
+    ],
+    [
+     "6",
+     "Data Set Ready (DCE → DTE)"
+    ],
+    [
+     "7",
+     "Request to Send (DTE → DCE)"
+    ],
+    [
+     "8",
+     "Clear to Send (DCE → DTE)"
+    ],
+    [
+     "9",
+     "Ring Indicator (DCE → DTE)"
+    ]
+   ],
+   "titulo": {
+    "es": "RS-232 DE9",
+    "en": "RS-232 DE9"
+   },
+   "notas": [
+    {
+     "es": "9 pin male connector at the computer",
+     "en": "9 pin male connector at the computer"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Protective ground"
+    ],
+    [
+     "2",
+     "Transmit Data (DTE → DCE)"
+    ],
+    [
+     "3",
+     "Receive Data (DCE → DTE)"
+    ],
+    [
+     "4",
+     "Request to Send (DTE → DCE)"
+    ],
+    [
+     "5",
+     "Clear to Send (DCE → DTE)"
+    ],
+    [
+     "6",
+     "Data Set Ready (DCE → DTE)"
+    ],
+    [
+     "7",
+     "Signal ground"
+    ],
+    [
+     "8",
+     "Data Carrier Detect (DCE → DTE)"
+    ],
+    [
+     "9",
+     "Test pin"
+    ],
+    [
+     "10",
+     "Test pin"
+    ],
+    [
+     "11",
+     "Not assigned"
+    ],
+    [
+     "12",
+     "Secondary Carrier Detect"
+    ],
+    [
+     "13",
+     "Secondary Clear To Send"
+    ],
+    [
+     "14",
+     "Secondary Transmit Data"
+    ],
+    [
+     "15",
+     "Transmitter Clock (DCE → DTE)"
+    ],
+    [
+     "16",
+     "Secondary Receive Data"
+    ],
+    [
+     "17",
+     "Receiving Clock (DCE → DTE)"
+    ],
+    [
+     "18",
+     "Local Loopback (DTE → DCE)"
+    ],
+    [
+     "19",
+     "Secondary Request To Send"
+    ],
+    [
+     "20",
+     "Data Terminal Ready (DTE → DCE)"
+    ],
+    [
+     "21",
+     "Remote Loopback (DTE → DCE)"
+    ],
+    [
+     "22",
+     "Ring Indicator (DCE → DTE)"
+    ],
+    [
+     "23",
+     "Data Signal Rate Selector"
+    ],
+    [
+     "24",
+     "Transmitter Clock (DTE → DCE)"
+    ],
+    [
+     "25",
+     "Test mode"
+    ]
+   ],
+   "titulo": {
+    "es": "RS-232 DB25",
+    "en": "RS-232 DB25"
+   },
+   "notas": [
+    {
+     "es": "25 pin male connector at the computer",
+     "en": "25 pin male connector at the computer"
+    }
+   ]
+  }
+ ]
+}

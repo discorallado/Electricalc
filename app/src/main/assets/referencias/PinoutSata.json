@@ -1,0 +1,109 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground"
+    ],
+    [
+     "2",
+     "Tx A+"
+    ],
+    [
+     "3",
+     "Tx A-"
+    ],
+    [
+     "4",
+     "Ground"
+    ],
+    [
+     "5",
+     "Rx B-"
+    ],
+    [
+     "6",
+     "Rx B+"
+    ],
+    [
+     "7",
+     "Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "Sata",
+    "en": "Sata"
+   },
+   "notas": [
+    {
+     "es": "Male connector",
+     "en": "Male connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground"
+    ],
+    [
+     "2",
+     "Tx A+"
+    ],
+    [
+     "3",
+     "Tx A-"
+    ],
+    [
+     "4",
+     "Ground"
+    ],
+    [
+     "5",
+     "Rx B-"
+    ],
+    [
+     "6",
+     "Rx B+"
+    ],
+    [
+     "7",
+     "Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "eSata",
+    "en": "eSata"
+   },
+   "notas": [
+    {
+     "es": "Female connector",
+     "en": "Female connector"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Not connected"
+    ],
+    [
+     "2",
+     "Shield (grounded only on MIDI OUT/THRU)"
+    ],
+    [
+     "3",
+     "Not connected"
+    ],
+    [
+     "4",
+     "Current Source (CSRC)"
+    ],
+    [
+     "5",
+     "Current Sink (CSINK)"
+    ]
+   ],
+   "titulo": {
+    "es": "5 pin DIN",
+    "en": "5 pin DIN"
+   },
+   "notas": [
+    {
+     "es": "Female connector at peripheral",
+     "en": "Female connector at peripheral"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "+5V DC"
+    ],
+    [
+     "2",
+     "Button 1"
+    ],
+    [
+     "3",
+     "X axis for joystick 1 (0–100 kΩ)"
+    ],
+    [
+     "4",
+     "Ground for Button 1"
+    ],
+    [
+     "5",
+     "Ground for Button 2"
+    ],
+    [
+     "6",
+     "Y axis for joystick 1 (0–100 kΩ)"
+    ],
+    [
+     "7",
+     "Button 2"
+    ],
+    [
+     "8",
+     "+5V DC"
+    ],
+    [
+     "9",
+     "+5V DC"
+    ],
+    [
+     "10",
+     "Button 4"
+    ],
+    [
+     "11",
+     "X axis for joystick 2 (0–100 kΩ)"
+    ],
+    [
+     "12",
+     "Ground for buttons 3 and 4 (or MIDI out)"
+    ],
+    [
+     "13",
+     "Y axis for joystick 2 (0–100 kΩ)"
+    ],
+    [
+     "14",
+     "Button 3"
+    ],
+    [
+     "15",
+     "+5V DC (or MIDI in)"
+    ]
+   ],
+   "titulo": {
+    "es": "15 pin D-SUB (PC Game Port)",
+    "en": "15 pin D-SUB (PC Game Port)"
+   },
+   "notas": [
+    {
+     "es": "Female connector at peripheral",
+     "en": "Female connector at peripheral"
+    }
+   ]
+  }
+ ]
+}

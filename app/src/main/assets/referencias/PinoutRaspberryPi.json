@@ -1,0 +1,499 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "+3.3V"
+    ],
+    [
+     "2",
+     "+5V"
+    ],
+    [
+     "3",
+     "GPIO2 - I2C1 SDA"
+    ],
+    [
+     "4",
+     "+5V"
+    ],
+    [
+     "5",
+     "GPIO3 - I2C1 SCL"
+    ],
+    [
+     "6",
+     "Ground"
+    ],
+    [
+     "7",
+     "GPIO4 - 1-wire default"
+    ],
+    [
+     "8",
+     "GPIO14 - UART0 TX"
+    ],
+    [
+     "9",
+     "Ground"
+    ],
+    [
+     "10",
+     "GPIO15 - UART0 RX"
+    ],
+    [
+     "11",
+     "GPIO17 - SPI1 CE1"
+    ],
+    [
+     "12",
+     "GPIO18 - SPI1 CE0"
+    ],
+    [
+     "13",
+     "GPIO27"
+    ],
+    [
+     "14",
+     "Ground"
+    ],
+    [
+     "15",
+     "GPIO22"
+    ],
+    [
+     "16",
+     "GPIO23"
+    ],
+    [
+     "17",
+     "+3.3V"
+    ],
+    [
+     "18",
+     "GPIO24"
+    ],
+    [
+     "19",
+     "GPIO10 - SPI0 MOSI"
+    ],
+    [
+     "20",
+     "Ground"
+    ],
+    [
+     "21",
+     "GPIO9 - SPI0 MISO"
+    ],
+    [
+     "22",
+     "GPIO25"
+    ],
+    [
+     "23",
+     "GPIO11 - SPI0 SCLK"
+    ],
+    [
+     "24",
+     "GPIO8 - SPI0 CE0 N"
+    ],
+    [
+     "25",
+     "Ground"
+    ],
+    [
+     "26",
+     "GPIO7 - SPI0 CE1 N"
+    ],
+    [
+     "27",
+     "GPIO0 - I2C0 SDA"
+    ],
+    [
+     "28",
+     "GPIO1 - I2C0 SCL"
+    ],
+    [
+     "29",
+     "GPIO5"
+    ],
+    [
+     "30",
+     "Ground"
+    ],
+    [
+     "31",
+     "GPIO6"
+    ],
+    [
+     "32",
+     "GPIO12"
+    ],
+    [
+     "33",
+     "GPIO13"
+    ],
+    [
+     "34",
+     "Ground"
+    ],
+    [
+     "35",
+     "GPIO19 - SPI1 MISO"
+    ],
+    [
+     "36",
+     "GPIO16 - SPI1 CE2"
+    ],
+    [
+     "37",
+     "GPIO26"
+    ],
+    [
+     "38",
+     "GPIO20 - SPI1 MOSI"
+    ],
+    [
+     "39",
+     "Ground"
+    ],
+    [
+     "40",
+     "GPIO21 - SPI1 SCLK"
+    ]
+   ],
+   "titulo": {
+    "es": "40 pin header",
+    "en": "40 pin header"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "+3.3V (50mA max)"
+    ],
+    [
+     "2",
+     "+5V"
+    ],
+    [
+     "3",
+     "Rev1: GPIO0 - I2C0 SDA / Rev2: GPIO2 - I2C1 SDA"
+    ],
+    [
+     "4",
+     "+5V"
+    ],
+    [
+     "5",
+     "Rev1: GPIO1 - I2C0 SCL / Rev2: GPIO3 - I2C1 SCL"
+    ],
+    [
+     "6",
+     "Ground"
+    ],
+    [
+     "7",
+     "GPIO4 - 1-wire default"
+    ],
+    [
+     "8",
+     "GPIO14 - UART TX"
+    ],
+    [
+     "9",
+     "Ground"
+    ],
+    [
+     "10",
+     "GPIO15 - UART RX"
+    ],
+    [
+     "11",
+     "GPIO17"
+    ],
+    [
+     "12",
+     "GPIO18"
+    ],
+    [
+     "13",
+     "Rev1: GPIO21 / Rev2: GPIO27"
+    ],
+    [
+     "14",
+     "Ground"
+    ],
+    [
+     "15",
+     "GPIO22"
+    ],
+    [
+     "16",
+     "GPIO23"
+    ],
+    [
+     "17",
+     "+3.3V (50mA max)"
+    ],
+    [
+     "18",
+     "GPIO24"
+    ],
+    [
+     "19",
+     "GPIO10 - SPI0 MOSI"
+    ],
+    [
+     "20",
+     "Ground"
+    ],
+    [
+     "21",
+     "GPIO9 - SPI0 MISO"
+    ],
+    [
+     "22",
+     "GPIO25"
+    ],
+    [
+     "23",
+     "GPIO11 - SPI0 SCLK"
+    ],
+    [
+     "24",
+     "GPIO8 - SPI0 CE0 N"
+    ],
+    [
+     "25",
+     "Ground"
+    ],
+    [
+     "26",
+     "GPIO7 - SPI0 CE1 N"
+    ]
+   ],
+   "titulo": {
+    "es": "26 pin header",
+    "en": "26 pin header"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "GPIO 0 - SPI0 RX - I2C0 SDA - UART0 TX (Default)"
+    ],
+    [
+     "2",
+     "GPIO 1 - SPI0 CS - I2C0 SCL - UART0 RX (Default)"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "GPIO 2 - SPI0 SCLK - I2C1 SDA"
+    ],
+    [
+     "5",
+     "GPIO 3 - SPI0 TX - I2C1 SCL"
+    ],
+    [
+     "6",
+     "GPIO 4 - SPI0 RX - I2C0 SDA - UART1 TX"
+    ],
+    [
+     "7",
+     "GPIO 5 - SPI0 CS - I2C0 SCL - UART1 RX"
+    ],
+    [
+     "8",
+     "Ground"
+    ],
+    [
+     "9",
+     "GPIO 6 - SPI0 SCLK - I2C1 SDA"
+    ],
+    [
+     "10",
+     "GPIO 7 - SPI0 TX - I2C1 SCL"
+    ],
+    [
+     "11",
+     "GPIO 8 - SPI1 RX - I2C0 SDA - UART1 TX"
+    ],
+    [
+     "12",
+     "GPIO 9 - SPI1 CS - I2C0 SCL - UART1 RX"
+    ],
+    [
+     "13",
+     "Ground"
+    ],
+    [
+     "14",
+     "GPIO 10 - SPI1 SCLK - I2C1 SDA"
+    ],
+    [
+     "15",
+     "GPIO 11 - SPI1 TX - I2C1 SCL"
+    ],
+    [
+     "16",
+     "GPIO 12 - SPI1 RX - I2C0 SDA - UART0 TX"
+    ],
+    [
+     "17",
+     "GPIO 13 - SPI1 CS - I2C0 SCL - UART0 RX"
+    ],
+    [
+     "18",
+     "Ground"
+    ],
+    [
+     "19",
+     "GPIO 14 - SPI1 SCLK - I2C1 SDA"
+    ],
+    [
+     "20",
+     "GPIO 15 - SPI1 TX - I2C1 SCL"
+    ],
+    [
+     "21",
+     "GPIO 16 - SPI0 RX - I2C0 SDA - UART0 TX"
+    ],
+    [
+     "22",
+     "GPIO 17 - SPI0 CS - I2C0 SCL - UART0 RX"
+    ],
+    [
+     "23",
+     "Ground"
+    ],
+    [
+     "24",
+     "GPIO 18 - SPI0 SCLK - I2C1 SDA"
+    ],
+    [
+     "25",
+     "GPIO 19 - SPI0 TX - I2C1 SCL"
+    ],
+    [
+     "26",
+     "GPIO 20 - I2C0 SDA"
+    ],
+    [
+     "27",
+     "GPIO 21 - I2C0 SCL"
+    ],
+    [
+     "28",
+     "Ground"
+    ],
+    [
+     "29",
+     "GPIO 22"
+    ],
+    [
+     "30",
+     "Run"
+    ],
+    [
+     "31",
+     "GPIO 26 - ADC0 - I2C1 SDA"
+    ],
+    [
+     "32",
+     "GPIO 27 - ADC1 - I2C1 SCL"
+    ],
+    [
+     "33",
+     "Ground - AGND"
+    ],
+    [
+     "34",
+     "GPIO 28 - ADC2"
+    ],
+    [
+     "35",
+     "ADC VREF"
+    ],
+    [
+     "36",
+     "3.3V (out)"
+    ],
+    [
+     "37",
+     "3.3V EN"
+    ],
+    [
+     "38",
+     "Ground"
+    ],
+    [
+     "39",
+     "VSYS"
+    ],
+    [
+     "40",
+     "VBUS"
+    ],
+    [
+     "D1",
+     "SWDIO"
+    ],
+    [
+     "D2",
+     "Ground"
+    ],
+    [
+     "D3",
+     "SWCLK"
+    ],
+    [
+     "LED",
+     "GPIO 25 (Pico, Pico 2)"
+    ]
+   ],
+   "titulo": {
+    "es": "Raspberry Pi Pico",
+    "en": "Raspberry Pi Pico"
+   }
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground (-), internally connected with Pin 2 on iPod motherboard"
+    ],
+    [
+     "2",
+     "Audio and Video ground (-), internally connected with Pin 1 on iPod motherboard"
+    ],
+    [
+     "3",
+     "Line Out R+ (Audio output, right channel)"
+    ],
+    [
+     "4",
+     "Line Out L+ (Audio output, left channel)"
+    ],
+    [
+     "5",
+     "Line In R+ (Audio input, right channel)"
+    ],
+    [
+     "6",
+     "Line In L+ (Audio input, left channel)"
+    ],
+    [
+     "7",
+     "Unknown"
+    ],
+    [
+     "8",
+     "Composite video output (only when the slideshow mode is active on iPod Photo) or Component Video Pb"
+    ],
+    [
+     "9",
+     "S-Video Chrominance output for iPod Color (Photo only) or Component Video Y"
+    ],
+    [
+     "10",
+     "S-Video Luminance output for iPod Color (Photo only) or Component Video Pr"
+    ],
+    [
+     "11",
+     "Serial ground"
+    ],
+    [
+     "12",
+     "iPod sending line (Serial Tx)"
+    ],
+    [
+     "13",
+     "iPod receiving line (Serial Rx)"
+    ],
+    [
+     "14",
+     "Reserved"
+    ],
+    [
+     "15",
+     "Ground (-), internally connected with pin 16 on iPod motherboard"
+    ],
+    [
+     "16",
+     "USB Ground (-), internally connected with pin 15 on iPod motherboard"
+    ],
+    [
+     "17",
+     "Reserved"
+    ],
+    [
+     "18",
+     "3.3V Power (+)"
+    ],
+    [
+     "19",
+     "Firewire Power 12V (+)"
+    ],
+    [
+     "20",
+     "Firewire Power 12V (+)"
+    ],
+    [
+     "21",
+     "Accessory Indicator/Serial enable"
+    ],
+    [
+     "22",
+     "FireWire Data TPA (-)"
+    ],
+    [
+     "23",
+     "USB Power 5V (+)"
+    ],
+    [
+     "24",
+     "FireWire Data TPA (+)"
+    ],
+    [
+     "25",
+     "USB Data (-)"
+    ],
+    [
+     "26",
+     "FireWire Data TPB (-)"
+    ],
+    [
+     "27",
+     "USB Data (+)"
+    ],
+    [
+     "28",
+     "FireWire Data TPB (+)"
+    ],
+    [
+     "29",
+     "FireWire Ground (-)"
+    ],
+    [
+     "30",
+     "FireWire Ground (-)"
+    ]
+   ],
+   "titulo": {
+    "es": "Patillaje Apple Dock Connector",
+    "en": "Pinout Apple Dock Connector"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  }
+ ]
+}

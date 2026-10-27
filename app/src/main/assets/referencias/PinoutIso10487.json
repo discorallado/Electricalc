@@ -1,0 +1,117 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Speed-dependent volume control"
+    ],
+    [
+     "2",
+     "Mute control"
+    ],
+    [
+     "3",
+     "Reversing light switch"
+    ],
+    [
+     "4",
+     "Permanent +12V input to the radio from the battery"
+    ],
+    [
+     "5",
+     "+12V output from the radio (max 350 mA)"
+    ],
+    [
+     "6",
+     "+12V input to the radio when the car's lights are on"
+    ],
+    [
+     "7",
+     "+12V input to the radio when the ignition is on"
+    ],
+    [
+     "8",
+     "Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "Iso 10487 - A",
+    "en": "Iso 10487 - A"
+   },
+   "notas": [
+    {
+     "es": "Connector at the back of head unit",
+     "en": "Connector at the back of head unit"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Right rear speaker +"
+    ],
+    [
+     "2",
+     "Right rear speaker -"
+    ],
+    [
+     "3",
+     "Right front speaker +"
+    ],
+    [
+     "4",
+     "Right front speaker -"
+    ],
+    [
+     "5",
+     "Left front speaker +"
+    ],
+    [
+     "6",
+     "Left front speaker -"
+    ],
+    [
+     "7",
+     "Left rear speaker +"
+    ],
+    [
+     "8",
+     "Left rear speaker -"
+    ]
+   ],
+   "titulo": {
+    "es": "Iso 10487 - B",
+    "en": "Iso 10487 - B"
+   },
+   "notas": [
+    {
+     "es": "Connector at the back of head unit",
+     "en": "Connector at the back of head unit"
+    }
+   ]
+  }
+ ]
+}

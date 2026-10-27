@@ -1,0 +1,89 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Red video"
+    ],
+    [
+     "2",
+     "Green video"
+    ],
+    [
+     "3",
+     "Blue video"
+    ],
+    [
+     "4",
+     "Formerly Monitor ID bit 2, reserved since E-DDC"
+    ],
+    [
+     "5",
+     "Ground (HSync)"
+    ],
+    [
+     "6",
+     "Red return"
+    ],
+    [
+     "7",
+     "Green return"
+    ],
+    [
+     "8",
+     "Blue return"
+    ],
+    [
+     "9",
+     "Formerly key, now +5V DC"
+    ],
+    [
+     "10",
+     "Ground (VSync, DDC)"
+    ],
+    [
+     "11",
+     "Formerly Monitor ID bit 0, reserved since E-DDC"
+    ],
+    [
+     "12",
+     "Formerly Monitor ID bit 1, I²C data since DDC2"
+    ],
+    [
+     "13",
+     "Horizontal sync"
+    ],
+    [
+     "14",
+     "Vertical sync"
+    ],
+    [
+     "15",
+     "Formerly Monitor ID bit 3, I²C clock since DDC2"
+    ]
+   ],
+   "titulo": {
+    "es": "Patillaje VGA",
+    "en": "Pinout VGA"
+   },
+   "notas": [
+    {
+     "es": "Female DE15 socket (videocard side)",
+     "en": "Female DE15 socket (videocard side)"
+    }
+   ]
+  }
+ ]
+}

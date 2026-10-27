@@ -1,0 +1,105 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "TMDS Data2+"
+    ],
+    [
+     "2",
+     "TMDS Data2 Shield"
+    ],
+    [
+     "3",
+     "TMDS Data2-"
+    ],
+    [
+     "4",
+     "TMDS Data1+"
+    ],
+    [
+     "5",
+     "TMDS Data1 Shield"
+    ],
+    [
+     "6",
+     "TMDS Data1-"
+    ],
+    [
+     "7",
+     "TMDS Data0+"
+    ],
+    [
+     "8",
+     "TMDS Data0 Shield"
+    ],
+    [
+     "9",
+     "TMDS Data0-"
+    ],
+    [
+     "10",
+     "TMDS Clock+"
+    ],
+    [
+     "11",
+     "TMDS Clock Shield"
+    ],
+    [
+     "12",
+     "TMDS Clock-"
+    ],
+    [
+     "13",
+     "CEC"
+    ],
+    [
+     "14",
+     "Reserved (HDMI 1.0–1.3c), HEAC+ (optional: ARC and HEC since HDMI 1.4, eARC since HDMI 2.1)"
+    ],
+    [
+     "15",
+     "SCL (I²C Serial Clock for DDC)"
+    ],
+    [
+     "16",
+     "SDA (I²C Serial Data Line for DDC)"
+    ],
+    [
+     "17",
+     "DDC/CEC/HEC Ground"
+    ],
+    [
+     "18",
+     "+5 V (max 0.05A)"
+    ],
+    [
+     "19",
+     "Hot Plug Detect (all versions) and HEAC− (optional: ARC and HEC since HDMI 1.4, eARC since HDMI 2.1)"
+    ]
+   ],
+   "titulo": {
+    "es": "Patillaje HDMI",
+    "en": "Pinout HDMI"
+   },
+   "notas": [
+    {
+     "es": "Type A (Female) HDMI",
+     "en": "Type A (Female) HDMI"
+    }
+   ]
+  }
+ ]
+}

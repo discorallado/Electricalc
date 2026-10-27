@@ -1,0 +1,53 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Data"
+    ],
+    [
+     "2",
+     "Not connected (Data2 for dual PS2)"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "Power +5V"
+    ],
+    [
+     "5",
+     "Clock"
+    ],
+    [
+     "6",
+     "Not connected (Clock2 for dual PS2)"
+    ]
+   ],
+   "titulo": {
+    "es": "Patillaje PS/2",
+    "en": "Pinout PS/2"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  }
+ ]
+}

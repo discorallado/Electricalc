@@ -1,0 +1,95 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[T] Signal"
+    ],
+    [
+     "2",
+     "[S] Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "TS",
+    "en": "TS"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[T] Unbalanced stereo: Left / [T] Balanced mono: Hot (+)"
+    ],
+    [
+     "2",
+     "[R] Unbalanced stereo: Right / [R] Balanced mono: Cold (-)"
+    ],
+    [
+     "3",
+     "[S] Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "TRS",
+    "en": "TRS"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[T] Left"
+    ],
+    [
+     "2",
+     "[R1] Right"
+    ],
+    [
+     "3",
+     "[R2] Variant A (OMTP): Microphone / [R2] Variant B (CTIA): Ground"
+    ],
+    [
+     "4",
+     "[S] Variant A (OMTP): Ground / [S] Variant B (CTIA): Microphone"
+    ]
+   ],
+   "titulo": {
+    "es": "TRRS",
+    "en": "TRRS"
+   }
+  }
+ ]
+}

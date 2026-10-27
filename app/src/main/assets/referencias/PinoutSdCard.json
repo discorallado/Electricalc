@@ -1,0 +1,189 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "SD Mode: Card detection / Connector data line 3 / SPI Mode: Chip selection in low status"
+    ],
+    [
+     "2",
+     "SD Mode: Command/Response line / SPI Mode: Master Out / Slave In"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "Power supply"
+    ],
+    [
+     "5",
+     "Clock"
+    ],
+    [
+     "6",
+     "Ground"
+    ],
+    [
+     "7",
+     "SD Mode: Connector data line 0 / SPI Mode: Master In / Slave Out"
+    ],
+    [
+     "8",
+     "SD Mode: Connector data line 1 / SPI Mode: Unused or IRQ"
+    ],
+    [
+     "9",
+     "SD Mode: Connector data line 2 / SPI Mode: Unused"
+    ]
+   ],
+   "titulo": {
+    "es": "SD",
+    "en": "SD"
+   },
+   "notas": [
+    {
+     "es": "Connector at the card",
+     "en": "Connector at the card"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "SD Mode: Card detection / Connector data line 3 / SPI Mode: Chip selection in low status"
+    ],
+    [
+     "2",
+     "SD Mode: Command/Response line / SPI Mode: Master Out / Slave In"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "Power supply"
+    ],
+    [
+     "5",
+     "Clock"
+    ],
+    [
+     "6",
+     "Ground"
+    ],
+    [
+     "7",
+     "SD Mode: Connector data line 0 / SPI Mode: Master In / Slave Out"
+    ],
+    [
+     "8",
+     "SD Mode: Connector data line 1 / SPI Mode: Unused"
+    ],
+    [
+     "9",
+     "SD Mode: Connector data line 2 / SPI Mode: Unused"
+    ],
+    [
+     "10",
+     "Reserved"
+    ],
+    [
+     "11",
+     "Reserved"
+    ]
+   ],
+   "titulo": {
+    "es": "Mini SD",
+    "en": "Mini SD"
+   },
+   "notas": [
+    {
+     "es": "Connector at the card",
+     "en": "Connector at the card"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "SD Mode: Data bit 2 / SPI Mode: Not connected"
+    ],
+    [
+     "2",
+     "SD Mode: Card Detect / Data Bit 3 / SPI Mode: Chip Select"
+    ],
+    [
+     "3",
+     "SD Mode: Command Line / SPI Mode: Master Out / Slave In"
+    ],
+    [
+     "4",
+     "Power supply"
+    ],
+    [
+     "5",
+     "Clock"
+    ],
+    [
+     "6",
+     "Ground"
+    ],
+    [
+     "7",
+     "SD Mode: Data Bit 0 / SPI Mode: Master In / Slave Out"
+    ],
+    [
+     "8",
+     "SD Mode: Data Bit 1 / SPI Mode: Reserved"
+    ]
+   ],
+   "titulo": {
+    "es": "Micro SD",
+    "en": "Micro SD"
+   },
+   "notas": [
+    {
+     "es": "Connector at the card",
+     "en": "Connector at the card"
+    }
+   ]
+  }
+ ]
+}

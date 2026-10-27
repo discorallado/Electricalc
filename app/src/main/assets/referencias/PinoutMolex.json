@@ -1,0 +1,413 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "+12 V"
+    ],
+    [
+     "2",
+     "Ground"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "+5 V"
+    ]
+   ],
+   "titulo": {
+    "es": "4 pin Molex peripheral",
+    "en": "4 pin Molex peripheral"
+   },
+   "notas": [
+    {
+     "es": "Power connector at cable",
+     "en": "Power connector at cable"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "+3.3 V"
+    ],
+    [
+     "2",
+     "+3.3 V"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "+5 V"
+    ],
+    [
+     "5",
+     "Ground"
+    ],
+    [
+     "6",
+     "+5 V"
+    ],
+    [
+     "7",
+     "Ground"
+    ],
+    [
+     "8",
+     "Power OK"
+    ],
+    [
+     "9",
+     "+5 V Standby"
+    ],
+    [
+     "10",
+     "+12 V"
+    ],
+    [
+     "11",
+     "+3.3 V"
+    ],
+    [
+     "12",
+     "-12 V"
+    ],
+    [
+     "13",
+     "Ground"
+    ],
+    [
+     "14",
+     "Power On"
+    ],
+    [
+     "15",
+     "Ground"
+    ],
+    [
+     "16",
+     "Ground"
+    ],
+    [
+     "17",
+     "Ground"
+    ],
+    [
+     "18",
+     "-5 V"
+    ],
+    [
+     "19",
+     "+5 V"
+    ],
+    [
+     "20",
+     "+5 V"
+    ]
+   ],
+   "titulo": {
+    "es": "ATX 20 pin Molex Main Power",
+    "en": "ATX 20 pin Molex Main Power"
+   },
+   "notas": [
+    {
+     "es": "Power supply connector at cable",
+     "en": "Power supply connector at cable"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "+3.3 V"
+    ],
+    [
+     "2",
+     "+3.3 V"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "+5 V"
+    ],
+    [
+     "5",
+     "Ground"
+    ],
+    [
+     "6",
+     "+5 V"
+    ],
+    [
+     "7",
+     "Ground"
+    ],
+    [
+     "8",
+     "Power OK"
+    ],
+    [
+     "9",
+     "+5 V Standby"
+    ],
+    [
+     "10",
+     "+12 V"
+    ],
+    [
+     "11",
+     "+12 V"
+    ],
+    [
+     "12",
+     "+3.3 V"
+    ],
+    [
+     "13",
+     "+3.3 V"
+    ],
+    [
+     "14",
+     "-12 V"
+    ],
+    [
+     "15",
+     "Ground"
+    ],
+    [
+     "16",
+     "Power On"
+    ],
+    [
+     "17",
+     "Ground"
+    ],
+    [
+     "18",
+     "Ground"
+    ],
+    [
+     "19",
+     "Ground"
+    ],
+    [
+     "20",
+     "Reserved (N/C, formerly -5 V)"
+    ],
+    [
+     "21",
+     "+5 V"
+    ],
+    [
+     "22",
+     "+5 V"
+    ],
+    [
+     "23",
+     "+5 V"
+    ],
+    [
+     "24",
+     "Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "ATX 24 pin Molex Main Power",
+    "en": "ATX 24 pin Molex Main Power"
+   },
+   "notas": [
+    {
+     "es": "Power supply connector at cable",
+     "en": "Power supply connector at cable"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground"
+    ],
+    [
+     "2",
+     "Ground"
+    ],
+    [
+     "3",
+     "+12 V"
+    ],
+    [
+     "4",
+     "+12 V"
+    ]
+   ],
+   "titulo": {
+    "es": "ATX 4 pin Molex P4",
+    "en": "ATX 4 pin Molex P4"
+   },
+   "notas": [
+    {
+     "es": "Connector at the motherboard",
+     "en": "Connector at the motherboard"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "+12 V"
+    ],
+    [
+     "2",
+     "+12 V"
+    ],
+    [
+     "3",
+     "+12 V"
+    ],
+    [
+     "4",
+     "Ground"
+    ],
+    [
+     "5",
+     "Ground"
+    ],
+    [
+     "6",
+     "Ground"
+    ],
+    [
+     "7",
+     "Ground"
+    ],
+    [
+     "8",
+     "Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "PCI Express power cable",
+    "en": "PCI Express power cable"
+   },
+   "notas": [
+    {
+     "es": "Male connector",
+     "en": "Male connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground"
+    ],
+    [
+     "2",
+     "Ground"
+    ],
+    [
+     "3",
+     "Ground"
+    ],
+    [
+     "4",
+     "+3.3 V"
+    ],
+    [
+     "5",
+     "+3.3 V"
+    ],
+    [
+     "6",
+     "+5 V"
+    ]
+   ],
+   "titulo": {
+    "es": "6 pin Aux",
+    "en": "6 pin Aux"
+   },
+   "notas": [
+    {
+     "es": "Power connector at cable",
+     "en": "Power connector at cable"
+    }
+   ]
+  }
+ ]
+}

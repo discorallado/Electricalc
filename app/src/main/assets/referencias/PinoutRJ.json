@@ -1,0 +1,221 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Microphone -"
+    ],
+    [
+     "2",
+     "Speaker +"
+    ],
+    [
+     "3",
+     "Speaker -"
+    ],
+    [
+     "4",
+     "Microphone +"
+    ]
+   ],
+   "titulo": {
+    "es": "RJ-9",
+    "en": "RJ-9"
+   },
+   "notas": [
+    {
+     "es": "4P4C Plug - Inside the handset",
+     "en": "4P4C Plug - Inside the handset"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "R1 -"
+    ],
+    [
+     "2",
+     "T1 +"
+    ]
+   ],
+   "titulo": {
+    "es": "RJ-11",
+    "en": "RJ-11"
+   },
+   "notas": [
+    {
+     "es": "6P2C Plug",
+     "en": "6P2C Plug"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "T2 +"
+    ],
+    [
+     "2",
+     "R1 -"
+    ],
+    [
+     "3",
+     "T1 +"
+    ],
+    [
+     "4",
+     "R2 -"
+    ]
+   ],
+   "titulo": {
+    "es": "RJ-14",
+    "en": "RJ-14"
+   },
+   "notas": [
+    {
+     "es": "6P4C Plug",
+     "en": "6P4C Plug"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "T3 +"
+    ],
+    [
+     "2",
+     "T2 +"
+    ],
+    [
+     "3",
+     "R1 -"
+    ],
+    [
+     "4",
+     "T1 +"
+    ],
+    [
+     "5",
+     "R2 -"
+    ],
+    [
+     "6",
+     "R3 -"
+    ]
+   ],
+   "titulo": {
+    "es": "RJ-25",
+    "en": "RJ-25"
+   },
+   "notas": [
+    {
+     "es": "6P6C Plug",
+     "en": "6P6C Plug"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "RX Ring -"
+    ],
+    [
+     "2",
+     "RX Tip +"
+    ],
+    [
+     "3",
+     "Reserved"
+    ],
+    [
+     "4",
+     "TX Ring -"
+    ],
+    [
+     "5",
+     "TX Tip +"
+    ],
+    [
+     "6",
+     "Reserved"
+    ],
+    [
+     "7",
+     "Shield"
+    ],
+    [
+     "8",
+     "Shield"
+    ]
+   ],
+   "titulo": {
+    "es": "RJ-48",
+    "en": "RJ-48"
+   },
+   "notas": [
+    {
+     "es": "E1 and T1 Plug",
+     "en": "E1 and T1 Plug"
+    }
+   ]
+  }
+ ]
+}

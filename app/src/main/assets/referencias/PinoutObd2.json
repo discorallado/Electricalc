@@ -1,0 +1,93 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Manufacturer discretion"
+    ],
+    [
+     "2",
+     "[J1850 Bus+] SAE J1850 PWM and VPW"
+    ],
+    [
+     "3",
+     "Manufacturer discretion"
+    ],
+    [
+     "4",
+     "[CGND] Ground"
+    ],
+    [
+     "5",
+     "[SGND] Ground"
+    ],
+    [
+     "6",
+     "[CAN High] CAN ISO 15765-4 and SAE J2284"
+    ],
+    [
+     "7",
+     "[ISO 9141-2 K-LINE] K-Line of ISO 9141-2 and ISO 14230-4"
+    ],
+    [
+     "8",
+     "Manufacturer discretion"
+    ],
+    [
+     "9",
+     "Manufacturer discretion"
+    ],
+    [
+     "10",
+     "[J1850 Bus-] SAE J1850 PWM only"
+    ],
+    [
+     "11",
+     "Manufacturer discretion"
+    ],
+    [
+     "12",
+     "Manufacturer discretion"
+    ],
+    [
+     "13",
+     "Manufacturer discretion"
+    ],
+    [
+     "14",
+     "[CAN Low] CAN ISO 15765-4 and SAE J2284"
+    ],
+    [
+     "15",
+     "[ISO 9141-2 L-LINE] L-Line of ISO 9141-2 and ISO 14230-4 (optional)"
+    ],
+    [
+     "16",
+     "[+12V] Battery power (+24V with type B connector)"
+    ]
+   ],
+   "titulo": {
+    "es": "OBD II",
+    "en": "OBD II"
+   },
+   "notas": [
+    {
+     "es": "SAE J1962 16-pin connector, vehicle side (female)",
+     "en": "SAE J1962 16-pin connector, vehicle side (female)"
+    }
+   ]
+  }
+ ]
+}

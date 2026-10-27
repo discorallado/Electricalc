@@ -1,0 +1,109 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[ML_Lane 0 +] Lane 0 (positive)"
+    ],
+    [
+     "2",
+     "[GND] Ground"
+    ],
+    [
+     "3",
+     "[ML_Lane 0 -] Lane 0 (negative)"
+    ],
+    [
+     "4",
+     "[ML_Lane 1 +] Lane 1 (positive)"
+    ],
+    [
+     "5",
+     "[GND] Ground"
+    ],
+    [
+     "6",
+     "[ML_Lane 1 -] Lane 1 (negative)"
+    ],
+    [
+     "7",
+     "[ML_Lane 2 +] Lane 2 (positive)"
+    ],
+    [
+     "8",
+     "[GND] Ground"
+    ],
+    [
+     "9",
+     "[ML_Lane 2 -] Lane 2 (negative)"
+    ],
+    [
+     "10",
+     "[ML_Lane 3 +] Lane 3 (positive)"
+    ],
+    [
+     "11",
+     "[GND] Ground"
+    ],
+    [
+     "12",
+     "[ML_Lane 3 -] Lane 3 (negative)"
+    ],
+    [
+     "13",
+     "[CONFIG1] Ground via pull-down (DP++: cable adapter detect)"
+    ],
+    [
+     "14",
+     "[CONFIG2] Ground via pull-down (DP++: CEC)"
+    ],
+    [
+     "15",
+     "[AUX CH +] Auxiliary channel (positive)"
+    ],
+    [
+     "16",
+     "[GND] Ground"
+    ],
+    [
+     "17",
+     "[AUX CH -] Auxiliary channel (negative)"
+    ],
+    [
+     "18",
+     "[HOT PLUG] Hot plug detect"
+    ],
+    [
+     "19",
+     "[RETURN] Return for power"
+    ],
+    [
+     "20",
+     "[DP_PWR] Power for connector (3.3V 500mA)"
+    ]
+   ],
+   "titulo": {
+    "es": "DisplayPort",
+    "en": "DisplayPort"
+   },
+   "notas": [
+    {
+     "es": "External connector (source-side) on PCB",
+     "en": "External connector (source-side) on PCB"
+    }
+   ]
+  }
+ ]
+}

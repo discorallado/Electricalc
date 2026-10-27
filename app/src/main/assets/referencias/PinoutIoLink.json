@@ -1,0 +1,169 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[L+] +24V DC device power [Brown]"
+    ],
+    [
+     "2",
+     "[I/Q] Manufacturer's discretion for input, output or configurable I/O with common on pin 3 [White]"
+    ],
+    [
+     "3",
+     "[L-] 0V DC ground for device power [Blue]"
+    ],
+    [
+     "4",
+     "[C/Q] SIO standard input/output or IO-Link communication [Black]"
+    ]
+   ],
+   "titulo": {
+    "es": "M5 (Class A)",
+    "en": "M5 (Class A)"
+   },
+   "notas": [
+    {
+     "es": "Plug connector (Device)",
+     "en": "Plug connector (Device)"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[L+] +24V DC device power [Brown]"
+    ],
+    [
+     "2",
+     "[I/Q] Manufacturer's discretion for input, output or configurable I/O with common on pin 3 [White]"
+    ],
+    [
+     "3",
+     "[L-] 0V DC ground for device power [Blue]"
+    ],
+    [
+     "4",
+     "[C/Q] SIO standard input/output or IO-Link communication [Black]"
+    ]
+   ],
+   "titulo": {
+    "es": "M8 (Class A)",
+    "en": "M8 (Class A)"
+   },
+   "notas": [
+    {
+     "es": "Plug connector (Device)",
+     "en": "Plug connector (Device)"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[L+] +24V DC device power [Brown]"
+    ],
+    [
+     "2",
+     "[I/Q] Manufacturer's discretion for input, output or configurable I/O with common on pin 3 [White]"
+    ],
+    [
+     "3",
+     "[L-] 0V DC ground for device power [Blue]"
+    ],
+    [
+     "4",
+     "[C/Q] SIO standard input/output or IO-Link communication [Black]"
+    ]
+   ],
+   "titulo": {
+    "es": "M12–4 (Class A)",
+    "en": "M12–4 (Class A)"
+   },
+   "notas": [
+    {
+     "es": "Plug connector (Device)",
+     "en": "Plug connector (Device)"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[L+] +24V DC device power [Brown]"
+    ],
+    [
+     "2",
+     "[2L+] +24V DC additional power [Color not defined]"
+    ],
+    [
+     "3",
+     "[L-] 0V DC ground for device power [Blue]"
+    ],
+    [
+     "4",
+     "[C/Q] SIO standard input/output or IO-Link communication [Black]"
+    ],
+    [
+     "5",
+     "[2L-] 0V DC ground for additional power [Color not defined]"
+    ]
+   ],
+   "titulo": {
+    "es": "M12–5 (Class B)",
+    "en": "M12–5 (Class B)"
+   },
+   "notas": [
+    {
+     "es": "Plug connector (Device)",
+     "en": "Plug connector (Device)"
+    }
+   ]
+  }
+ ]
+}

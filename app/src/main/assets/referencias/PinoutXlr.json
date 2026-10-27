@@ -1,0 +1,85 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Audio: Chassis ground (cable shield) / DMX: Ground"
+    ],
+    [
+     "2",
+     "Audio: Positive polarity terminal for balanced audio circuits (Hot) / DMX: Data 1- (Primary Data Link) / Old audio: Negative (Cold)"
+    ],
+    [
+     "3",
+     "Audio: Negative polarity terminal for balanced audio circuits (Cold) / DMX: Data 1+ (Primary Data Link) / Old audio: Positive (Hot)"
+    ]
+   ],
+   "titulo": {
+    "es": "XLR 3 pin",
+    "en": "XLR 3 pin"
+   },
+   "notas": [
+    {
+     "es": "Front view",
+     "en": "Front view"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "DMX: Ground"
+    ],
+    [
+     "2",
+     "DMX: Data 1- (Primary Data Link)"
+    ],
+    [
+     "3",
+     "DMX: Data 1+ (Primary Data Link)"
+    ],
+    [
+     "4",
+     "DMX: Data 2- (Optional Secondary Data Link)"
+    ],
+    [
+     "5",
+     "DMX: Data 2+ (Optional Secondary Data Link)"
+    ]
+   ],
+   "titulo": {
+    "es": "XLR 5 pin",
+    "en": "XLR 5 pin"
+   },
+   "notas": [
+    {
+     "es": "Front view",
+     "en": "Front view"
+    }
+   ]
+  }
+ ]
+}

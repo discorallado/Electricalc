@@ -1,0 +1,161 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground"
+    ],
+    [
+     "2",
+     "Signal"
+    ]
+   ],
+   "titulo": {
+    "es": "RCA",
+    "en": "RCA"
+   },
+   "notas": [
+    {
+     "es": "Male connector",
+     "en": "Male connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "Left/Mono"
+    ],
+    [
+     "Right"
+    ],
+    [
+     "Center"
+    ],
+    [
+     "Left surround"
+    ],
+    [
+     "Right surround"
+    ],
+    [
+     "Left back surround"
+    ],
+    [
+     "Right back surround"
+    ],
+    [
+     "Subwoofer"
+    ]
+   ],
+   "titulo": {
+    "es": "Analog audio",
+    "en": "Analog audio"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "S/PDIF"
+    ]
+   ],
+   "titulo": {
+    "es": "Digital audio",
+    "en": "Digital audio"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "Composite"
+    ]
+   ],
+   "titulo": {
+    "es": "Composite analog video",
+    "en": "Composite analog video"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "Y"
+    ],
+    [
+     "Pb/Cb"
+    ],
+    [
+     "Pr/Cr"
+    ]
+   ],
+   "titulo": {
+    "es": "Component analog video",
+    "en": "Component analog video"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "R"
+    ],
+    [
+     "G"
+    ],
+    [
+     "B"
+    ],
+    [
+     "H (Horizontal sync) / S (Composite sync)"
+    ],
+    [
+     "V (Vertical sync)"
+    ]
+   ],
+   "titulo": {
+    "es": "Component analog video / VGA (RGB/HV)",
+    "en": "Component analog video / VGA (RGB/HV)"
+   }
+  }
+ ]
+}

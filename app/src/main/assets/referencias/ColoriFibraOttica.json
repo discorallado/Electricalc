@@ -1,0 +1,161 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Blue"
+    ],
+    [
+     "2",
+     "Orange"
+    ],
+    [
+     "3",
+     "Green"
+    ],
+    [
+     "4",
+     "Brown"
+    ],
+    [
+     "5",
+     "Slate"
+    ],
+    [
+     "6",
+     "White"
+    ],
+    [
+     "7",
+     "Red"
+    ],
+    [
+     "8",
+     "Black"
+    ],
+    [
+     "9",
+     "Yellow"
+    ],
+    [
+     "10",
+     "Violet"
+    ],
+    [
+     "11",
+     "Rose"
+    ],
+    [
+     "12",
+     "Aqua"
+    ],
+    [
+     "13",
+     "Blue/Black"
+    ],
+    [
+     "14",
+     "Orange/Black"
+    ],
+    [
+     "15",
+     "Green/Black"
+    ],
+    [
+     "16",
+     "Brown/Black"
+    ],
+    [
+     "17",
+     "Slate/Black"
+    ],
+    [
+     "18",
+     "White/Black"
+    ],
+    [
+     "19",
+     "Red/Black"
+    ],
+    [
+     "20",
+     "Black/Yellow"
+    ],
+    [
+     "21",
+     "Yellow/Black"
+    ],
+    [
+     "22",
+     "Violet/Black"
+    ],
+    [
+     "23",
+     "Rose/Black"
+    ],
+    [
+     "24",
+     "Aqua/Black"
+    ]
+   ],
+   "titulo": {
+    "es": "TIA-598-D",
+    "en": "TIA-598-D"
+   }
+  },
+  {
+   "columnas": [
+    {
+     "es": "Fibra y color",
+     "en": "Fibre and colour"
+    },
+    {
+     "es": "Tipo",
+     "en": "Type"
+    }
+   ],
+   "filas": [
+    [
+     "Multimode 62.5/125 µm (Orange)",
+     "OM1"
+    ],
+    [
+     "Multimode 50/125 µm (Orange)",
+     "OM2"
+    ],
+    [
+     "Multimode 50/125 µm laser-optimized (Aqua)",
+     "OM3"
+    ],
+    [
+     "Multimode 50/125 µm laser-optimized (Aqua; in Europe often Erika violet)",
+     "OM4"
+    ],
+    [
+     "Multimode 50/125 µm wideband (Lime green)",
+     "OM5"
+    ],
+    [
+     "Singlemode 9/125 µm (Yellow)",
+     "OS1a/OS2"
+    ]
+   ],
+   "titulo": {
+    "es": "Color coding of Premises Fiber Cable",
+    "en": "Color coding of Premises Fiber Cable"
+   }
+  }
+ ]
+}

@@ -1,0 +1,401 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Vcc (+5V) [Red]"
+    ],
+    [
+     "2",
+     "Data - [White]"
+    ],
+    [
+     "3",
+     "Data + [Green]"
+    ],
+    [
+     "4",
+     "Ground [Black]"
+    ]
+   ],
+   "titulo": {
+    "es": "Usb 2.0",
+    "en": "Usb 2.0"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Vcc (+5V)"
+    ],
+    [
+     "2",
+     "Data -"
+    ],
+    [
+     "3",
+     "Data +"
+    ],
+    [
+     "4",
+     "None (Permits distinction of host connection from slave connection / • host: connected to Signal ground / • slave: not connected)"
+    ],
+    [
+     "5",
+     "Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "Mini/Micro Usb 2.0",
+    "en": "Mini/Micro Usb 2.0"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Vcc (+5V)"
+    ],
+    [
+     "2",
+     "USB 2.0 differential pair (D−)"
+    ],
+    [
+     "3",
+     "USB 2.0 differential pair (D+)"
+    ],
+    [
+     "4",
+     "Ground for power"
+    ],
+    [
+     "5",
+     "USB 3.0 signal receiving line (−)"
+    ],
+    [
+     "6",
+     "USB 3.0 signal receiving line (+)"
+    ],
+    [
+     "7",
+     "Ground for signal"
+    ],
+    [
+     "8",
+     "USB 3.0 signal transmission line (−)"
+    ],
+    [
+     "9",
+     "USB 3.0 signal transmission line (+)"
+    ]
+   ],
+   "titulo": {
+    "es": "Usb 3.0 A",
+    "en": "Usb 3.0 A"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Vcc (+5V)"
+    ],
+    [
+     "2",
+     "USB 2.0 differential pair (D−)"
+    ],
+    [
+     "3",
+     "USB 2.0 differential pair (D+)"
+    ],
+    [
+     "4",
+     "Ground for power"
+    ],
+    [
+     "5",
+     "USB 3.0 signal transmission line (−)"
+    ],
+    [
+     "6",
+     "USB 3.0 signal transmission line (+)"
+    ],
+    [
+     "7",
+     "Ground for signal"
+    ],
+    [
+     "8",
+     "USB 3.0 signal receiving line (−)"
+    ],
+    [
+     "9",
+     "USB 3.0 signal receiving line (+)"
+    ],
+    [
+     "10",
+     "Power provided by device"
+    ],
+    [
+     "11",
+     "Ground return for DPWR"
+    ]
+   ],
+   "titulo": {
+    "es": "Usb 3.0 B",
+    "en": "Usb 3.0 B"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Vcc (+5V)"
+    ],
+    [
+     "2",
+     "USB 2.0 differential pair (D−)"
+    ],
+    [
+     "3",
+     "USB 2.0 differential pair (D+)"
+    ],
+    [
+     "4",
+     "USB OTG ID for identifying lines"
+    ],
+    [
+     "5",
+     "Ground for power"
+    ],
+    [
+     "6",
+     "USB 3.0 signal transmission line (−)"
+    ],
+    [
+     "7",
+     "USB 3.0 signal transmission line (+)"
+    ],
+    [
+     "8",
+     "Ground for signal"
+    ],
+    [
+     "9",
+     "USB 3.0 signal receiving line (−)"
+    ],
+    [
+     "10",
+     "USB 3.0 signal receiving line (+)"
+    ]
+   ],
+   "titulo": {
+    "es": "Micro Usb 3.0",
+    "en": "Micro Usb 3.0"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground (A1)"
+    ],
+    [
+     "2",
+     "TX1+ (A2)"
+    ],
+    [
+     "3",
+     "TX1- (A3)"
+    ],
+    [
+     "4",
+     "Vbus (A4)"
+    ],
+    [
+     "5",
+     "CC1 (A5)"
+    ],
+    [
+     "6",
+     "D+ (A6)"
+    ],
+    [
+     "7",
+     "D- (A7)"
+    ],
+    [
+     "8",
+     "SBU1 (A8)"
+    ],
+    [
+     "9",
+     "Vbus (A9)"
+    ],
+    [
+     "10",
+     "RX2- (A10)"
+    ],
+    [
+     "11",
+     "RX2+ (A11)"
+    ],
+    [
+     "12",
+     "Ground (A12)"
+    ],
+    [
+     "13",
+     "Ground (B12)"
+    ],
+    [
+     "14",
+     "RX1+ (B11)"
+    ],
+    [
+     "15",
+     "RX1- (B10)"
+    ],
+    [
+     "16",
+     "Vbus (B9)"
+    ],
+    [
+     "17",
+     "SBU2 (B8)"
+    ],
+    [
+     "18",
+     "D- (B7)"
+    ],
+    [
+     "19",
+     "D+ (B6)"
+    ],
+    [
+     "20",
+     "CC2 (B5)"
+    ],
+    [
+     "21",
+     "Vbus (B4)"
+    ],
+    [
+     "22",
+     "TX2- (B3)"
+    ],
+    [
+     "23",
+     "TX2+ (B2)"
+    ],
+    [
+     "24",
+     "Ground (B1)"
+    ]
+   ],
+   "titulo": {
+    "es": "USB Type-C",
+    "en": "USB Type-C"
+   },
+   "notas": [
+    {
+     "es": "Receptacle (front view)",
+     "en": "Receptacle (front view)"
+    }
+   ]
+  }
+ ]
+}

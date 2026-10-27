@@ -1,0 +1,51 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "(TX D1+) Transmit data +"
+    ],
+    [
+     "2",
+     "(TX D1-) Transmit data -"
+    ],
+    [
+     "3",
+     "(RX D2+) Receive data +"
+    ],
+    [
+     "4",
+     "(BI D3+) Bi-directional data +"
+    ],
+    [
+     "5",
+     "(BI D3-) Bi-directional data -"
+    ],
+    [
+     "6",
+     "(RX D2-) Receive data -"
+    ],
+    [
+     "7",
+     "(BI D4+) Bi-directional data +"
+    ],
+    [
+     "8",
+     "(BI D4-) Bi-directional data -"
+    ]
+   ]
+  }
+ ]
+}

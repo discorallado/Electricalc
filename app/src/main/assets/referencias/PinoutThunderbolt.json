@@ -1,0 +1,109 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[GND] Ground"
+    ],
+    [
+     "2",
+     "[HPD] Hot plug detect"
+    ],
+    [
+     "3",
+     "[HS0TX+] HighSpeed transmit 0 (positive)"
+    ],
+    [
+     "4",
+     "[HS0RX+] HighSpeed receive 0 (positive)"
+    ],
+    [
+     "5",
+     "[HS0TX-] HighSpeed transmit 0 (negative)"
+    ],
+    [
+     "6",
+     "[HS0RX-] HighSpeed receive 0 (negative)"
+    ],
+    [
+     "7",
+     "[GND] Ground"
+    ],
+    [
+     "8",
+     "[GND] Ground"
+    ],
+    [
+     "9",
+     "[LSR2P TX] LowSpeed transmit"
+    ],
+    [
+     "10",
+     "[GND] Ground (reserved)"
+    ],
+    [
+     "11",
+     "[LSP2R RX] LowSpeed receive"
+    ],
+    [
+     "12",
+     "[GND] Ground (reserved)"
+    ],
+    [
+     "13",
+     "[GND] Ground"
+    ],
+    [
+     "14",
+     "[GND] Ground"
+    ],
+    [
+     "15",
+     "[HS1TX+] HighSpeed transmit 1 (positive)"
+    ],
+    [
+     "16",
+     "[HS1RX+] HighSpeed receive 1 (positive)"
+    ],
+    [
+     "17",
+     "[HS1TX-] HighSpeed transmit 1 (negative)"
+    ],
+    [
+     "18",
+     "[HS1RX-] HighSpeed receive 1 (negative)"
+    ],
+    [
+     "19",
+     "[GND] Ground"
+    ],
+    [
+     "20",
+     "[DPPWR] Power"
+    ]
+   ],
+   "titulo": {
+    "es": "20 pin Thunderbolt",
+    "en": "20 pin Thunderbolt"
+   },
+   "notas": [
+    {
+     "es": "Male connector",
+     "en": "Male connector"
+    }
+   ]
+  }
+ ]
+}

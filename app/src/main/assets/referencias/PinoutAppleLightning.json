@@ -1,0 +1,61 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Ground"
+    ],
+    [
+     "2",
+     "Lane 0 positive"
+    ],
+    [
+     "3",
+     "Lane 0 negative"
+    ],
+    [
+     "4",
+     "Identification/control 0"
+    ],
+    [
+     "5",
+     "Power (charger or battery)"
+    ],
+    [
+     "6",
+     "Lane 1 negative"
+    ],
+    [
+     "7",
+     "Lane 1 positive"
+    ],
+    [
+     "8",
+     "Identification/control 1"
+    ]
+   ],
+   "titulo": {
+    "es": "Patillaje Apple Lightning",
+    "en": "Pinout Apple Lightning"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  }
+ ]
+}

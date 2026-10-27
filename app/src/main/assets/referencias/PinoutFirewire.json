@@ -1,0 +1,153 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Twisted-pair B-, differential signals"
+    ],
+    [
+     "2",
+     "Twisted-pair B+, differential signals"
+    ],
+    [
+     "3",
+     "Twisted-pair A-, differential signals"
+    ],
+    [
+     "4",
+     "Twisted-pair A+, differential signals"
+    ]
+   ],
+   "titulo": {
+    "es": "FireWire 4 pin",
+    "en": "FireWire 4 pin"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Unregulated DC; 30 V no load"
+    ],
+    [
+     "2",
+     "Ground return for power and inner cable shield"
+    ],
+    [
+     "3",
+     "Twisted-pair B-, differential signals"
+    ],
+    [
+     "4",
+     "Twisted-pair B+, differential signals"
+    ],
+    [
+     "5",
+     "Twisted-pair A-, differential signals"
+    ],
+    [
+     "6",
+     "Twisted-pair A+, differential signals"
+    ]
+   ],
+   "titulo": {
+    "es": "FireWire 6 pin",
+    "en": "FireWire 6 pin"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  },
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Twisted-pair B-, differential signals"
+    ],
+    [
+     "2",
+     "Twisted-pair B+, differential signals"
+    ],
+    [
+     "3",
+     "Twisted-pair A-, differential signals"
+    ],
+    [
+     "4",
+     "Twisted-pair A+, differential signals"
+    ],
+    [
+     "5",
+     "A shield"
+    ],
+    [
+     "6",
+     "Ground return for power and inner cable shield"
+    ],
+    [
+     "7",
+     "-"
+    ],
+    [
+     "8",
+     "Unregulated DC; 30 V no load"
+    ],
+    [
+     "9",
+     "B shield"
+    ]
+   ],
+   "titulo": {
+    "es": "FireWire 9 pin",
+    "en": "FireWire 9 pin"
+   },
+   "notas": [
+    {
+     "es": "Plug Connector",
+     "en": "Plug Connector"
+    }
+   ]
+  }
+ ]
+}

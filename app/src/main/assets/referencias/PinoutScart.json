@@ -1,0 +1,113 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "Audio output (Right)"
+    ],
+    [
+     "2",
+     "Audio input (Right)"
+    ],
+    [
+     "3",
+     "Audio output (Left/Mono)"
+    ],
+    [
+     "4",
+     "Audio ground"
+    ],
+    [
+     "5",
+     "RGB Blue ground"
+    ],
+    [
+     "6",
+     "Audio input (Left/Mono)"
+    ],
+    [
+     "7",
+     "RGB Blue input / S-Video C output / Component PB input"
+    ],
+    [
+     "8",
+     "Status & aspect ratio input"
+    ],
+    [
+     "9",
+     "RGB Green ground"
+    ],
+    [
+     "10",
+     "Clock / Data 2 / Control bus (AV.link)"
+    ],
+    [
+     "11",
+     "RGB Green input / Component Y input"
+    ],
+    [
+     "12",
+     "Reserved / Data 1"
+    ],
+    [
+     "13",
+     "RGB Red ground"
+    ],
+    [
+     "14",
+     "Usually Data signal ground"
+    ],
+    [
+     "15",
+     "RGB Red input / S-Video C input / Component PR input"
+    ],
+    [
+     "16",
+     "Blanking signal input / RGB-selection voltage input"
+    ],
+    [
+     "17",
+     "Composite video ground"
+    ],
+    [
+     "18",
+     "Blanking signal ground"
+    ],
+    [
+     "19",
+     "Composite video output / S-Video Y output"
+    ],
+    [
+     "20",
+     "Composite video input / S-Video Y input"
+    ],
+    [
+     "21",
+     "Shell/Chassis"
+    ]
+   ],
+   "titulo": {
+    "es": "Patillaje SCART",
+    "en": "Pinout Scart"
+   },
+   "notas": [
+    {
+     "es": "Female connector (front view). Inputs and outputs refer to the TV",
+     "en": "Female connector (front view). Inputs and outputs refer to the TV"
+    }
+   ]
+  }
+ ]
+}

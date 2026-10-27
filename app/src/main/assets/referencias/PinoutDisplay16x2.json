@@ -1,0 +1,87 @@
+{
+ "fuente": "Datos de la app de referencia.",
+ "secciones": [
+  {
+   "columnas": [
+    {
+     "es": "Pin",
+     "en": "Pin"
+    },
+    {
+     "es": "Señal",
+     "en": "Signal"
+    }
+   ],
+   "filas": [
+    [
+     "1",
+     "[GND] Ground"
+    ],
+    [
+     "2",
+     "[Vcc] Supply voltage 4.7–5.3V"
+    ],
+    [
+     "3",
+     "[Vo/VEE] Contrast adjustment"
+    ],
+    [
+     "4",
+     "[RS] Command register when low and data register when high"
+    ],
+    [
+     "5",
+     "[R/W] Low to write to the register, high to read from the register"
+    ],
+    [
+     "6",
+     "[EN] Sends data to data pins when a high to low pulse is given"
+    ],
+    [
+     "7",
+     "[DB0] 8-bit data line 0"
+    ],
+    [
+     "8",
+     "[DB1] 8-bit data line 1"
+    ],
+    [
+     "9",
+     "[DB2] 8-bit data line 2"
+    ],
+    [
+     "10",
+     "[DB3] 8-bit data line 3"
+    ],
+    [
+     "11",
+     "[DB4] 8-bit data line 4"
+    ],
+    [
+     "12",
+     "[DB5] 8-bit data line 5"
+    ],
+    [
+     "13",
+     "[DB6] 8-bit data line 6"
+    ],
+    [
+     "14",
+     "[DB7] 8-bit data line 7"
+    ],
+    [
+     "15",
+     "[LED+] Backlight VCC (5V)"
+    ],
+    [
+     "16",
+     "[LED-] Backlight Ground"
+    ]
+   ],
+   "titulo": {
+    "es": "Display LCD 16x2",
+    "en": "Display LCD 16x2"
+   }
+  }
+ ]
+}
