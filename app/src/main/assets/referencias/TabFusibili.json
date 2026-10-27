@@ -1,0 +1,228 @@
+{
+ "fuente": "Datos de la app de referencia (IEC 60269-2, DIN VDE 0636).",
+ "secciones": [
+  {
+   "titulo": {
+    "es": "Fusibles D (Diazed) y D0 (Neozed)",
+    "en": "D (Diazed) and D0 (Neozed) fuses"
+   },
+   "columnas": [
+    {
+     "es": "Tipo",
+     "en": "Type"
+    },
+    {
+     "es": "Rosca",
+     "en": "Thread"
+    },
+    {
+     "es": "Largo × Ø (mm)",
+     "en": "Length × Ø (mm)"
+    },
+    {
+     "es": "Corriente y color del indicador",
+     "en": "Current and indicator colour"
+    }
+   ],
+   "filas": [
+    [
+     "DI (Diazed)",
+     "E16",
+     {
+      "es": "50 × 13,2",
+      "en": "50 × 13.2"
+     },
+     {
+      "es": "2 A rosa · 4 A marrón · 6 A verde · 10 A rojo · 16 A gris · 20 A azul · 25 A amarillo",
+      "en": "2 A pink · 4 A brown · 6 A green · 10 A red · 16 A gray · 20 A blue · 25 A yellow"
+     }
+    ],
+    [
+     "DII (Diazed)",
+     "E27",
+     {
+      "es": "50 × 22",
+      "en": "50 × 22"
+     },
+     {
+      "es": "2 A rosa · 4 A marrón · 6 A verde · 10 A rojo · 13 A negro · 16 A gris · 20 A azul · 25 A amarillo",
+      "en": "2 A pink · 4 A brown · 6 A green · 10 A red · 13 A black · 16 A gray · 20 A blue · 25 A yellow"
+     }
+    ],
+    [
+     "DIII (Diazed)",
+     "E33",
+     {
+      "es": "50 × 27",
+      "en": "50 × 27"
+     },
+     {
+      "es": "32 A violeta · 32 A negro · 35 A negro · 40 A negro · 50 A blanco · 63 A cobre",
+      "en": "32 A violet · 32 A black · 35 A black · 40 A black · 50 A white · 63 A copper"
+     }
+    ],
+    [
+     "DIV (Diazed)",
+     "G 1¼″",
+     {
+      "es": "56 × 33",
+      "en": "56 × 33"
+     },
+     {
+      "es": "80 A plata · 100 A rojo",
+      "en": "80 A silver · 100 A red"
+     }
+    ],
+    [
+     "DV (Diazed)",
+     "G 2″",
+     {
+      "es": "56 × 46",
+      "en": "56 × 46"
+     },
+     {
+      "es": "125 A amarillo · 160 A cobre · 200 A azul",
+      "en": "125 A yellow · 160 A copper · 200 A blue"
+     }
+    ],
+    [
+     "D01 (Neozed)",
+     "E14",
+     {
+      "es": "36 × 11",
+      "en": "36 × 11"
+     },
+     {
+      "es": "2 A rosa · 4 A marrón · 6 A verde · 10 A rojo · 13 A negro · 16 A gris",
+      "en": "2 A pink · 4 A brown · 6 A green · 10 A red · 13 A black · 16 A gray"
+     }
+    ],
+    [
+     "D02 (Neozed)",
+     "E18",
+     {
+      "es": "36 × 15,3",
+      "en": "36 × 15.3"
+     },
+     {
+      "es": "20 A azul · 25 A amarillo · 32 A violeta · 32 A negro · 35 A negro · 40 A negro · 50 A blanco · 63 A cobre",
+      "en": "20 A blue · 25 A yellow · 32 A violet · 32 A black · 35 A black · 40 A black · 50 A white · 63 A copper"
+     }
+    ]
+   ],
+   "notas": [
+    {
+     "es": "El color del indicador permite reconocer la corriente nominal del cartucho.",
+     "en": "The indicator colour identifies the cartridge rated current."
+    }
+   ]
+  },
+  {
+   "titulo": {
+    "es": "Fusibles NH (cuchilla)",
+    "en": "NH (blade) fuses"
+   },
+   "columnas": [
+    {
+     "es": "Tamaño",
+     "en": "Size"
+    },
+    {
+     "es": "Dimensiones (mm)",
+     "en": "Dimensions (mm)"
+    },
+    {
+     "es": "Corriente nominal",
+     "en": "Rated current"
+    }
+   ],
+   "filas": [
+    [
+     "NH000",
+     "79 × 53 × 21",
+     "6 … 100 A"
+    ],
+    [
+     "NH00C",
+     "79 × 53 × 21",
+     "6 … 125 A"
+    ],
+    [
+     "NH00",
+     "79 × 53 × 28",
+     "6 … 160 A"
+    ],
+    [
+     "NH0",
+     "125 × 68 × 28",
+     "6 … 160 A"
+    ],
+    [
+     "NH1C",
+     "135 × 68 × 28",
+     "40 … 160 A"
+    ],
+    [
+     "NH1",
+     "135 × 72 × 46",
+     "40 … 250 A"
+    ],
+    [
+     "NH1L",
+     "155 × 90 × 46",
+     "40 … 250 A"
+    ],
+    [
+     "NH1XL",
+     "194 × 129 × 46",
+     "40 … 250 A"
+    ],
+    [
+     "NH2C",
+     "150 × 72 × 46",
+     "80 … 250 A"
+    ],
+    [
+     "NH2",
+     "150 × 72 × 54",
+     "80 … 400 A"
+    ],
+    [
+     "NH2L",
+     "185 × 112 × 54",
+     "80 … 400 A"
+    ],
+    [
+     "NH2XL",
+     "209 × 129 × 54",
+     "80 … 400 A"
+    ],
+    [
+     "NH3C",
+     "150 × 72 × 54",
+     "250 … 400 A"
+    ],
+    [
+     "NH3",
+     "150 × 72 × 65",
+     "250 … 800 A"
+    ],
+    [
+     "NH3L",
+     "209 × 129 × 65",
+     "250 … 800 A"
+    ],
+    [
+     "NH4",
+     "200 × 75 × 100",
+     "500 … 1250 A"
+    ],
+    [
+     "NH4a",
+     "200 × 98 × 95",
+     "500 … 1600 A"
+    ]
+   ]
+  }
+ ]
+}
